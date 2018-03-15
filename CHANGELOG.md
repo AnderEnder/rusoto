@@ -3,6 +3,8 @@
 ## [Unreleased]
 (Please put an entry here in each PR)
 
+- Add GuardDuty service
+
 ## [0.33.0] - 2018-07-31
 
 - Remove `impl Display for Region` since it was of little use and confusingly similar to `Region::name()`.
