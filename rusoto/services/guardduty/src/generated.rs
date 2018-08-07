@@ -17,21 +17,20 @@ use std::io;
 #[allow(warnings)]
 use futures::future;
 use futures::Future;
-use rusoto_core::reactor::{CredentialsProvider, RequestDispatcher};
-use rusoto_core::request::DispatchSignedRequest;
 use rusoto_core::region;
-use rusoto_core::{ClientInner, RusotoFuture};
+use rusoto_core::request::DispatchSignedRequest;
+use rusoto_core::{Client, RusotoFuture};
 
-use rusoto_core::request::HttpDispatchError;
 use rusoto_core::credential::{CredentialsError, ProvideAwsCredentials};
+use rusoto_core::request::HttpDispatchError;
 
-use serde_json;
 use rusoto_core::param::{Params, ServiceParams};
 use rusoto_core::signature::SignedRequest;
+use serde_json;
 use serde_json::from_str;
 use serde_json::Value as SerdeJsonValue;
 /// <p>AcceptInvitation request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct AcceptInvitationRequest {
     /// <p>The unique ID of the detector of the GuardDuty member account.</p>
     #[serde(rename = "DetectorId")]
@@ -46,11 +45,32 @@ pub struct AcceptInvitationRequest {
     pub master_id: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct AcceptInvitationResponse {}
 
+/// <p>The IAM access key details (IAM user information) of a user that engaged in the activity that prompted GuardDuty to generate a finding.</p>
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
+pub struct AccessKeyDetails {
+    /// <p>Access key ID of the user.</p>
+    #[serde(rename = "AccessKeyId")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub access_key_id: Option<String>,
+    /// <p>The principal ID of the user.</p>
+    #[serde(rename = "PrincipalId")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub principal_id: Option<String>,
+    /// <p>The name of the user.</p>
+    #[serde(rename = "UserName")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub user_name: Option<String>,
+    /// <p>The type of the user.</p>
+    #[serde(rename = "UserType")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub user_type: Option<String>,
+}
+
 /// <p>An object containing the member&#39;s accountId and email address.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct AccountDetail {
     /// <p>Member account ID.</p>
     #[serde(rename = "AccountId")]
@@ -63,7 +83,7 @@ pub struct AccountDetail {
 }
 
 /// <p>Information about the activity described in a finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Action {
     /// <p>GuardDuty Finding activity type.</p>
     #[serde(rename = "ActionType")]
@@ -81,10 +101,14 @@ pub struct Action {
     #[serde(rename = "NetworkConnectionAction")]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub network_connection_action: Option<NetworkConnectionAction>,
+    /// <p>Information about the PORT_PROBE action described in this finding.</p>
+    #[serde(rename = "PortProbeAction")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub port_probe_action: Option<PortProbeAction>,
 }
 
 /// <p>ArchiveFindings request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ArchiveFindingsRequest {
     /// <p>The ID of the detector that specifies the GuardDuty service whose findings you want to archive.</p>
     #[serde(rename = "DetectorId")]
@@ -95,11 +119,11 @@ pub struct ArchiveFindingsRequest {
     pub finding_ids: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ArchiveFindingsResponse {}
 
 /// <p>Information about the AWS<em>API</em>CALL action described in this finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct AwsApiCallAction {
     /// <p>AWS API name.</p>
     #[serde(rename = "Api")]
@@ -124,7 +148,7 @@ pub struct AwsApiCallAction {
 }
 
 /// <p>City information of the remote IP address.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct City {
     /// <p>City name of the remote IP address.</p>
     #[serde(rename = "CityName")]
@@ -133,7 +157,7 @@ pub struct City {
 }
 
 /// <p>Finding attribute (for example, accountId) for which conditions and values must be specified when querying findings.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct Condition {
     /// <p>Represents the equal condition to be applied to a single field when querying for findings.</p>
     #[serde(rename = "Eq")]
@@ -162,7 +186,7 @@ pub struct Condition {
 }
 
 /// <p>Country information of the remote IP address.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Country {
     /// <p>Country code of the remote IP address.</p>
     #[serde(rename = "CountryCode")]
@@ -175,7 +199,7 @@ pub struct Country {
 }
 
 /// <p>CreateDetector request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct CreateDetectorRequest {
     /// <p>A boolean value that specifies whether the detector is to be enabled.</p>
     #[serde(rename = "Enable")]
@@ -183,7 +207,7 @@ pub struct CreateDetectorRequest {
     pub enable: Option<bool>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct CreateDetectorResponse {
     /// <p>The unique ID of the created detector.</p>
     #[serde(rename = "DetectorId")]
@@ -192,7 +216,7 @@ pub struct CreateDetectorResponse {
 }
 
 /// <p>CreateIPSet request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct CreateIPSetRequest {
     /// <p>A boolean value that indicates whether GuardDuty is to start using the uploaded IPSet.</p>
     #[serde(rename = "Activate")]
@@ -215,7 +239,7 @@ pub struct CreateIPSetRequest {
     pub name: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct CreateIPSetResponse {
     #[serde(rename = "IpSetId")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -223,7 +247,7 @@ pub struct CreateIPSetResponse {
 }
 
 /// <p>CreateMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct CreateMembersRequest {
     /// <p>A list of account ID and email address pairs of the accounts that you want to associate with the master GuardDuty account.</p>
     #[serde(rename = "AccountDetails")]
@@ -234,7 +258,7 @@ pub struct CreateMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct CreateMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -243,7 +267,7 @@ pub struct CreateMembersResponse {
 }
 
 /// <p>CreateSampleFindings request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct CreateSampleFindingsRequest {
     /// <p>The ID of the detector to create sample findings for.</p>
     #[serde(rename = "DetectorId")]
@@ -254,11 +278,11 @@ pub struct CreateSampleFindingsRequest {
     pub finding_types: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct CreateSampleFindingsResponse {}
 
 /// <p>CreateThreatIntelSet request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct CreateThreatIntelSetRequest {
     /// <p>A boolean value that indicates whether GuardDuty is to start using the uploaded ThreatIntelSet.</p>
     #[serde(rename = "Activate")]
@@ -281,7 +305,7 @@ pub struct CreateThreatIntelSetRequest {
     pub name: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct CreateThreatIntelSetResponse {
     #[serde(rename = "ThreatIntelSetId")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -289,7 +313,7 @@ pub struct CreateThreatIntelSetResponse {
 }
 
 /// <p>DeclineInvitations request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeclineInvitationsRequest {
     /// <p>A list of account IDs of the AWS accounts that sent invitations to the current member account that you want to decline invitations from.</p>
     #[serde(rename = "AccountIds")]
@@ -297,7 +321,7 @@ pub struct DeclineInvitationsRequest {
     pub account_ids: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeclineInvitationsResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -305,17 +329,17 @@ pub struct DeclineInvitationsResponse {
     pub unprocessed_accounts: Option<Vec<UnprocessedAccount>>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeleteDetectorRequest {
     /// <p>The unique ID that specifies the detector that you want to delete.</p>
     #[serde(rename = "DetectorId")]
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeleteDetectorResponse {}
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeleteIPSetRequest {
     /// <p>The detectorID that specifies the GuardDuty service whose IPSet you want to delete.</p>
     #[serde(rename = "DetectorId")]
@@ -325,11 +349,11 @@ pub struct DeleteIPSetRequest {
     pub ip_set_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeleteIPSetResponse {}
 
 /// <p>DeleteInvitations request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeleteInvitationsRequest {
     /// <p>A list of account IDs of the AWS accounts that sent invitations to the current member account that you want to delete invitations from.</p>
     #[serde(rename = "AccountIds")]
@@ -337,7 +361,7 @@ pub struct DeleteInvitationsRequest {
     pub account_ids: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeleteInvitationsResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -346,7 +370,7 @@ pub struct DeleteInvitationsResponse {
 }
 
 /// <p>DeleteMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeleteMembersRequest {
     /// <p>A list of account IDs of the GuardDuty member accounts that you want to delete.</p>
     #[serde(rename = "AccountIds")]
@@ -357,7 +381,7 @@ pub struct DeleteMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeleteMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -365,7 +389,7 @@ pub struct DeleteMembersResponse {
     pub unprocessed_accounts: Option<Vec<UnprocessedAccount>>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DeleteThreatIntelSetRequest {
     /// <p>The detectorID that specifies the GuardDuty service whose ThreatIntelSet you want to delete.</p>
     #[serde(rename = "DetectorId")]
@@ -375,21 +399,21 @@ pub struct DeleteThreatIntelSetRequest {
     pub threat_intel_set_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DeleteThreatIntelSetResponse {}
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DisassociateFromMasterAccountRequest {
     /// <p>The unique ID of the detector of the GuardDuty member account.</p>
     #[serde(rename = "DetectorId")]
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DisassociateFromMasterAccountResponse {}
 
 /// <p>DisassociateMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct DisassociateMembersRequest {
     /// <p>A list of account IDs of the GuardDuty member accounts that you want to disassociate from master.</p>
     #[serde(rename = "AccountIds")]
@@ -400,7 +424,7 @@ pub struct DisassociateMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DisassociateMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -409,7 +433,7 @@ pub struct DisassociateMembersResponse {
 }
 
 /// <p>Information about the DNS_REQUEST action described in this finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DnsRequestAction {
     /// <p>Domain information for the DNS request.</p>
     #[serde(rename = "Domain")]
@@ -418,11 +442,11 @@ pub struct DnsRequestAction {
 }
 
 /// <p>Domain information for the AWS API call.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct DomainDetails {}
 
 /// <p>Error response object.</p>
-#[derive(Default, Debug, Clone)]
+#[derive(Default, Debug, Clone, PartialEq)]
 pub struct ErrorResponse {
     /// <p>The error message.</p>
     pub message: Option<String>,
@@ -431,7 +455,7 @@ pub struct ErrorResponse {
 }
 
 /// <p>Representation of a abnormal or suspicious activity.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Finding {
     /// <p>AWS account ID where the activity occurred that prompted GuardDuty to generate a finding.</p>
     #[serde(rename = "AccountId")]
@@ -496,7 +520,7 @@ pub struct Finding {
 }
 
 /// <p>Represents the criteria used for querying findings.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct FindingCriteria {
     /// <p>Represents a map of finding properties that match specified conditions and values when querying findings.</p>
     #[serde(rename = "Criterion")]
@@ -505,7 +529,7 @@ pub struct FindingCriteria {
 }
 
 /// <p>Finding statistics object.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct FindingStatistics {
     /// <p>Represents a map of severity to count statistic for a set of findings</p>
     #[serde(rename = "CountBySeverity")]
@@ -514,7 +538,7 @@ pub struct FindingStatistics {
 }
 
 /// <p>Location information of the remote IP address.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GeoLocation {
     /// <p>Latitude information of remote IP address.</p>
     #[serde(rename = "Lat")]
@@ -526,14 +550,14 @@ pub struct GeoLocation {
     pub lon: Option<f64>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetDetectorRequest {
     /// <p>The unique ID of the detector that you want to retrieve.</p>
     #[serde(rename = "DetectorId")]
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetDetectorResponse {
     #[serde(rename = "CreatedAt")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -550,7 +574,7 @@ pub struct GetDetectorResponse {
 }
 
 /// <p>GetFindings request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetFindingsRequest {
     /// <p>The ID of the detector that specifies the GuardDuty service whose findings you want to retrieve.</p>
     #[serde(rename = "DetectorId")]
@@ -565,7 +589,7 @@ pub struct GetFindingsRequest {
     pub sort_criteria: Option<SortCriteria>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetFindingsResponse {
     #[serde(rename = "Findings")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -573,7 +597,7 @@ pub struct GetFindingsResponse {
 }
 
 /// <p>GetFindingsStatistics request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetFindingsStatisticsRequest {
     /// <p>The ID of the detector that specifies the GuardDuty service whose findings&#39; statistics you want to retrieve.</p>
     #[serde(rename = "DetectorId")]
@@ -588,7 +612,7 @@ pub struct GetFindingsStatisticsRequest {
     pub finding_statistic_types: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetFindingsStatisticsResponse {
     /// <p>Finding statistics object.</p>
     #[serde(rename = "FindingStatistics")]
@@ -596,7 +620,7 @@ pub struct GetFindingsStatisticsResponse {
     pub finding_statistics: Option<FindingStatistics>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetIPSetRequest {
     /// <p>The detectorID that specifies the GuardDuty service whose IPSet you want to retrieve.</p>
     #[serde(rename = "DetectorId")]
@@ -606,7 +630,7 @@ pub struct GetIPSetRequest {
     pub ip_set_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetIPSetResponse {
     /// <p>The format of the file that contains the IPSet.</p>
     #[serde(rename = "Format")]
@@ -626,10 +650,10 @@ pub struct GetIPSetResponse {
     pub status: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetInvitationsCountRequest {}
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetInvitationsCountResponse {
     /// <p>The number of received invitations.</p>
     #[serde(rename = "InvitationsCount")]
@@ -637,14 +661,14 @@ pub struct GetInvitationsCountResponse {
     pub invitations_count: Option<i64>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetMasterAccountRequest {
     /// <p>The unique ID of the detector of the GuardDuty member account.</p>
     #[serde(rename = "DetectorId")]
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetMasterAccountResponse {
     #[serde(rename = "Master")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -652,7 +676,7 @@ pub struct GetMasterAccountResponse {
 }
 
 /// <p>GetMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetMembersRequest {
     /// <p>A list of account IDs of the GuardDuty member accounts that you want to describe.</p>
     #[serde(rename = "AccountIds")]
@@ -663,7 +687,7 @@ pub struct GetMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetMembersResponse {
     #[serde(rename = "Members")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -674,7 +698,7 @@ pub struct GetMembersResponse {
     pub unprocessed_accounts: Option<Vec<UnprocessedAccount>>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct GetThreatIntelSetRequest {
     /// <p>The detectorID that specifies the GuardDuty service whose ThreatIntelSet you want to describe.</p>
     #[serde(rename = "DetectorId")]
@@ -684,7 +708,7 @@ pub struct GetThreatIntelSetRequest {
     pub threat_intel_set_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct GetThreatIntelSetResponse {
     /// <p>The format of the threatIntelSet.</p>
     #[serde(rename = "Format")]
@@ -705,7 +729,7 @@ pub struct GetThreatIntelSetResponse {
 }
 
 /// <p>The profile information of the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct IamInstanceProfile {
     /// <p>AWS EC2 instance profile ARN.</p>
     #[serde(rename = "Arn")]
@@ -718,7 +742,7 @@ pub struct IamInstanceProfile {
 }
 
 /// <p>The information about the EC2 instance associated with the activity that prompted GuardDuty to generate a finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct InstanceDetails {
     /// <p>The availability zone of the EC2 instance.</p>
     #[serde(rename = "AvailabilityZone")]
@@ -766,7 +790,7 @@ pub struct InstanceDetails {
 }
 
 /// <p>Invitation from an AWS account to become the current account&#39;s master.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Invitation {
     /// <p>Inviter account ID</p>
     #[serde(rename = "AccountId")]
@@ -787,7 +811,7 @@ pub struct Invitation {
 }
 
 /// <p>InviteMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct InviteMembersRequest {
     /// <p>A list of account IDs of the accounts that you want to invite to GuardDuty as members.</p>
     #[serde(rename = "AccountIds")]
@@ -802,7 +826,7 @@ pub struct InviteMembersRequest {
     pub message: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct InviteMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -810,7 +834,7 @@ pub struct InviteMembersResponse {
     pub unprocessed_accounts: Option<Vec<UnprocessedAccount>>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListDetectorsRequest {
     /// <p>You can use this parameter to indicate the maximum number of detectors that you want in the response.</p>
     #[serde(rename = "MaxResults")]
@@ -822,7 +846,7 @@ pub struct ListDetectorsRequest {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListDetectorsResponse {
     #[serde(rename = "DetectorIds")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -833,7 +857,7 @@ pub struct ListDetectorsResponse {
 }
 
 /// <p>ListFindings request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListFindingsRequest {
     /// <p>The ID of the detector that specifies the GuardDuty service whose findings you want to list.</p>
     #[serde(rename = "DetectorId")]
@@ -856,7 +880,7 @@ pub struct ListFindingsRequest {
     pub sort_criteria: Option<SortCriteria>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListFindingsResponse {
     #[serde(rename = "FindingIds")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -866,7 +890,7 @@ pub struct ListFindingsResponse {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListIPSetsRequest {
     /// <p>The unique ID of the detector that you want to retrieve.</p>
     #[serde(rename = "DetectorId")]
@@ -881,7 +905,7 @@ pub struct ListIPSetsRequest {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListIPSetsResponse {
     #[serde(rename = "IpSetIds")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -891,7 +915,7 @@ pub struct ListIPSetsResponse {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListInvitationsRequest {
     /// <p>You can use this parameter to indicate the maximum number of invitations you want in the response. The default value is 50. The maximum value is 50.</p>
     #[serde(rename = "MaxResults")]
@@ -903,7 +927,7 @@ pub struct ListInvitationsRequest {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListInvitationsResponse {
     #[serde(rename = "Invitations")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -913,7 +937,7 @@ pub struct ListInvitationsResponse {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListMembersRequest {
     /// <p>The unique ID of the detector of the GuardDuty account whose members you want to list.</p>
     #[serde(rename = "DetectorId")]
@@ -932,7 +956,7 @@ pub struct ListMembersRequest {
     pub only_associated: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListMembersResponse {
     #[serde(rename = "Members")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -942,7 +966,7 @@ pub struct ListMembersResponse {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct ListThreatIntelSetsRequest {
     /// <p>The detectorID that specifies the GuardDuty service whose ThreatIntelSets you want to list.</p>
     #[serde(rename = "DetectorId")]
@@ -957,7 +981,7 @@ pub struct ListThreatIntelSetsRequest {
     pub next_token: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ListThreatIntelSetsResponse {
     #[serde(rename = "NextToken")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -968,7 +992,7 @@ pub struct ListThreatIntelSetsResponse {
 }
 
 /// <p>Local port information of the connection.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct LocalPortDetails {
     /// <p>Port number of the local connection.</p>
     #[serde(rename = "Port")]
@@ -981,7 +1005,7 @@ pub struct LocalPortDetails {
 }
 
 /// <p>Contains details about the master account.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Master {
     /// <p>Master account ID</p>
     #[serde(rename = "AccountId")]
@@ -1002,7 +1026,7 @@ pub struct Master {
 }
 
 /// <p>Contains details about the member account.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Member {
     #[serde(rename = "AccountId")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -1031,7 +1055,7 @@ pub struct Member {
 }
 
 /// <p>Information about the NETWORK_CONNECTION action described in this finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct NetworkConnectionAction {
     /// <p>Network connection blocked information.</p>
     #[serde(rename = "Blocked")]
@@ -1060,7 +1084,7 @@ pub struct NetworkConnectionAction {
 }
 
 /// <p>The network interface information of the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct NetworkInterface {
     /// <p>A list of EC2 instance IPv6 address information.</p>
     #[serde(rename = "Ipv6Addresses")]
@@ -1101,7 +1125,7 @@ pub struct NetworkInterface {
 }
 
 /// <p>ISP Organization information of the remote IP address.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Organization {
     /// <p>Autonomous system number of the internet provider of the remote IP address.</p>
     #[serde(rename = "Asn")]
@@ -1121,8 +1145,34 @@ pub struct Organization {
     pub org: Option<String>,
 }
 
+/// <p>Information about the PORT_PROBE action described in this finding.</p>
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
+pub struct PortProbeAction {
+    /// <p>Port probe blocked information.</p>
+    #[serde(rename = "Blocked")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub blocked: Option<bool>,
+    /// <p>A list of port probe details objects.</p>
+    #[serde(rename = "PortProbeDetails")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub port_probe_details: Option<Vec<PortProbeDetail>>,
+}
+
+/// <p>Details about the port probe finding.</p>
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
+pub struct PortProbeDetail {
+    /// <p>Local port information of the connection.</p>
+    #[serde(rename = "LocalPortDetails")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub local_port_details: Option<LocalPortDetails>,
+    /// <p>Remote IP information of the connection.</p>
+    #[serde(rename = "RemoteIpDetails")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub remote_ip_details: Option<RemoteIpDetails>,
+}
+
 /// <p>Other private IP address information of the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct PrivateIpAddressDetails {
     /// <p>Private DNS name of the EC2 instance.</p>
     #[serde(rename = "PrivateDnsName")]
@@ -1135,7 +1185,7 @@ pub struct PrivateIpAddressDetails {
 }
 
 /// <p>The product code of the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct ProductCode {
     /// <p>Product code information.</p>
     #[serde(rename = "Code")]
@@ -1148,7 +1198,7 @@ pub struct ProductCode {
 }
 
 /// <p>Remote IP information of the connection.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct RemoteIpDetails {
     /// <p>City information of the remote IP address.</p>
     #[serde(rename = "City")]
@@ -1173,7 +1223,7 @@ pub struct RemoteIpDetails {
 }
 
 /// <p>Remote port information of the connection.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct RemotePortDetails {
     /// <p>Port number of the remote connection.</p>
     #[serde(rename = "Port")]
@@ -1186,8 +1236,11 @@ pub struct RemotePortDetails {
 }
 
 /// <p>The AWS resource associated with the activity that prompted GuardDuty to generate a finding.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Resource {
+    #[serde(rename = "AccessKeyDetails")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub access_key_details: Option<AccessKeyDetails>,
     #[serde(rename = "InstanceDetails")]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub instance_details: Option<InstanceDetails>,
@@ -1198,7 +1251,7 @@ pub struct Resource {
 }
 
 /// <p>Security groups associated with the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct SecurityGroup {
     /// <p>EC2 instance&#39;s security group ID.</p>
     #[serde(rename = "GroupId")]
@@ -1211,7 +1264,7 @@ pub struct SecurityGroup {
 }
 
 /// <p>Additional information assigned to the generated finding by GuardDuty.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Service {
     /// <p>Information about the activity described in a finding.</p>
     #[serde(rename = "Action")]
@@ -1252,7 +1305,7 @@ pub struct Service {
 }
 
 /// <p>Represents the criteria used for sorting findings.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct SortCriteria {
     /// <p>Represents the finding attribute (for example, accountId) by which to sort findings.</p>
     #[serde(rename = "AttributeName")]
@@ -1265,7 +1318,7 @@ pub struct SortCriteria {
 }
 
 /// <p>StartMonitoringMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct StartMonitoringMembersRequest {
     /// <p>A list of account IDs of the GuardDuty member accounts whose findings you want the master account to monitor.</p>
     #[serde(rename = "AccountIds")]
@@ -1276,7 +1329,7 @@ pub struct StartMonitoringMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct StartMonitoringMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -1285,7 +1338,7 @@ pub struct StartMonitoringMembersResponse {
 }
 
 /// <p>StopMonitoringMembers request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct StopMonitoringMembersRequest {
     /// <p>A list of account IDs of the GuardDuty member accounts whose findings you want the master account to stop monitoring.</p>
     #[serde(rename = "AccountIds")]
@@ -1296,7 +1349,7 @@ pub struct StopMonitoringMembersRequest {
     pub detector_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct StopMonitoringMembersResponse {
     /// <p>A list of objects containing the unprocessed account and a result string explaining why it was unprocessed.</p>
     #[serde(rename = "UnprocessedAccounts")]
@@ -1305,7 +1358,7 @@ pub struct StopMonitoringMembersResponse {
 }
 
 /// <p>A tag of the EC2 instance.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Tag {
     /// <p>EC2 instance tag key.</p>
     #[serde(rename = "Key")]
@@ -1318,7 +1371,7 @@ pub struct Tag {
 }
 
 /// <p>UnarchiveFindings request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct UnarchiveFindingsRequest {
     /// <p>The ID of the detector that specifies the GuardDuty service whose findings you want to unarchive.</p>
     #[serde(rename = "DetectorId")]
@@ -1329,11 +1382,11 @@ pub struct UnarchiveFindingsRequest {
     pub finding_ids: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UnarchiveFindingsResponse {}
 
 /// <p>An object containing the unprocessed account and a result string explaining why it was unprocessed.</p>
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UnprocessedAccount {
     /// <p>AWS Account ID.</p>
     #[serde(rename = "AccountId")]
@@ -1346,7 +1399,7 @@ pub struct UnprocessedAccount {
 }
 
 /// <p>UpdateDetector request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct UpdateDetectorRequest {
     /// <p>The unique ID of the detector that you want to update.</p>
     #[serde(rename = "DetectorId")]
@@ -1357,11 +1410,11 @@ pub struct UpdateDetectorRequest {
     pub enable: Option<bool>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UpdateDetectorResponse {}
 
 /// <p>UpdateFindingsFeedback request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct UpdateFindingsFeedbackRequest {
     /// <p>Additional feedback about the GuardDuty findings.</p>
     #[serde(rename = "Comments")]
@@ -1380,11 +1433,11 @@ pub struct UpdateFindingsFeedbackRequest {
     pub finding_ids: Option<Vec<String>>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UpdateFindingsFeedbackResponse {}
 
 /// <p>UpdateIPSet request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct UpdateIPSetRequest {
     /// <p>The updated boolean value that specifies whether the IPSet is active or not.</p>
     #[serde(rename = "Activate")]
@@ -1406,11 +1459,11 @@ pub struct UpdateIPSetRequest {
     pub name: Option<String>,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UpdateIPSetResponse {}
 
 /// <p>UpdateThreatIntelSet request body.</p>
-#[derive(Default, Debug, Clone, Serialize)]
+#[derive(Default, Debug, Clone, PartialEq, Serialize)]
 pub struct UpdateThreatIntelSetRequest {
     /// <p>The updated boolean value that specifies whether the ThreateIntelSet is active or not.</p>
     #[serde(rename = "Activate")]
@@ -1432,7 +1485,7 @@ pub struct UpdateThreatIntelSetRequest {
     pub threat_intel_set_id: String,
 }
 
-#[derive(Default, Debug, Clone, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct UpdateThreatIntelSetResponse {}
 
 /// Errors returned by AcceptInvitation
@@ -1456,7 +1509,8 @@ impl AcceptInvitationError {
     pub fn from_body(body: &str) -> AcceptInvitationError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1540,7 +1594,8 @@ impl ArchiveFindingsError {
     pub fn from_body(body: &str) -> ArchiveFindingsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1624,7 +1679,8 @@ impl CreateDetectorError {
     pub fn from_body(body: &str) -> CreateDetectorError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1708,7 +1764,8 @@ impl CreateIPSetError {
     pub fn from_body(body: &str) -> CreateIPSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1792,7 +1849,8 @@ impl CreateMembersError {
     pub fn from_body(body: &str) -> CreateMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1876,7 +1934,8 @@ impl CreateSampleFindingsError {
     pub fn from_body(body: &str) -> CreateSampleFindingsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -1962,7 +2021,8 @@ impl CreateThreatIntelSetError {
     pub fn from_body(body: &str) -> CreateThreatIntelSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2048,7 +2108,8 @@ impl DeclineInvitationsError {
     pub fn from_body(body: &str) -> DeclineInvitationsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2134,7 +2195,8 @@ impl DeleteDetectorError {
     pub fn from_body(body: &str) -> DeleteDetectorError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2218,7 +2280,8 @@ impl DeleteIPSetError {
     pub fn from_body(body: &str) -> DeleteIPSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2302,7 +2365,8 @@ impl DeleteInvitationsError {
     pub fn from_body(body: &str) -> DeleteInvitationsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2388,7 +2452,8 @@ impl DeleteMembersError {
     pub fn from_body(body: &str) -> DeleteMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2472,7 +2537,8 @@ impl DeleteThreatIntelSetError {
     pub fn from_body(body: &str) -> DeleteThreatIntelSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2558,7 +2624,8 @@ impl DisassociateFromMasterAccountError {
     pub fn from_body(body: &str) -> DisassociateFromMasterAccountError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2646,7 +2713,8 @@ impl DisassociateMembersError {
     pub fn from_body(body: &str) -> DisassociateMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2732,7 +2800,8 @@ impl GetDetectorError {
     pub fn from_body(body: &str) -> GetDetectorError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2816,7 +2885,8 @@ impl GetFindingsError {
     pub fn from_body(body: &str) -> GetFindingsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2900,7 +2970,8 @@ impl GetFindingsStatisticsError {
     pub fn from_body(body: &str) -> GetFindingsStatisticsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -2986,7 +3057,8 @@ impl GetIPSetError {
     pub fn from_body(body: &str) -> GetIPSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3066,7 +3138,8 @@ impl GetInvitationsCountError {
     pub fn from_body(body: &str) -> GetInvitationsCountError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3152,7 +3225,8 @@ impl GetMasterAccountError {
     pub fn from_body(body: &str) -> GetMasterAccountError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3236,7 +3310,8 @@ impl GetMembersError {
     pub fn from_body(body: &str) -> GetMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3318,7 +3393,8 @@ impl GetThreatIntelSetError {
     pub fn from_body(body: &str) -> GetThreatIntelSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3404,7 +3480,8 @@ impl InviteMembersError {
     pub fn from_body(body: &str) -> InviteMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3488,7 +3565,8 @@ impl ListDetectorsError {
     pub fn from_body(body: &str) -> ListDetectorsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3572,7 +3650,8 @@ impl ListFindingsError {
     pub fn from_body(body: &str) -> ListFindingsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3656,7 +3735,8 @@ impl ListIPSetsError {
     pub fn from_body(body: &str) -> ListIPSetsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3738,7 +3818,8 @@ impl ListInvitationsError {
     pub fn from_body(body: &str) -> ListInvitationsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3822,7 +3903,8 @@ impl ListMembersError {
     pub fn from_body(body: &str) -> ListMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3906,7 +3988,8 @@ impl ListThreatIntelSetsError {
     pub fn from_body(body: &str) -> ListThreatIntelSetsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -3992,7 +4075,8 @@ impl StartMonitoringMembersError {
     pub fn from_body(body: &str) -> StartMonitoringMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4080,7 +4164,8 @@ impl StopMonitoringMembersError {
     pub fn from_body(body: &str) -> StopMonitoringMembersError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4166,7 +4251,8 @@ impl UnarchiveFindingsError {
     pub fn from_body(body: &str) -> UnarchiveFindingsError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4252,7 +4338,8 @@ impl UpdateDetectorError {
     pub fn from_body(body: &str) -> UpdateDetectorError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4336,7 +4423,8 @@ impl UpdateFindingsFeedbackError {
     pub fn from_body(body: &str) -> UpdateFindingsFeedbackError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4424,7 +4512,8 @@ impl UpdateIPSetError {
     pub fn from_body(body: &str) -> UpdateIPSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4508,7 +4597,8 @@ impl UpdateThreatIntelSetError {
     pub fn from_body(body: &str) -> UpdateThreatIntelSetError {
         match from_str::<SerdeJsonValue>(body) {
             Ok(json) => {
-                let raw_error_type = json.get("__type")
+                let raw_error_type = json
+                    .get("__type")
                     .and_then(|e| e.as_str())
                     .unwrap_or("Unknown");
                 let error_message = json.get("message").and_then(|m| m.as_str()).unwrap_or(body);
@@ -4578,113 +4668,113 @@ pub trait GuardDuty {
     /// <p>Accepts the invitation to be monitored by a master GuardDuty account.</p>
     fn accept_invitation(
         &self,
-        input: &AcceptInvitationRequest,
+        input: AcceptInvitationRequest,
     ) -> RusotoFuture<AcceptInvitationResponse, AcceptInvitationError>;
 
     /// <p>Archives Amazon GuardDuty findings specified by the list of finding IDs.</p>
     fn archive_findings(
         &self,
-        input: &ArchiveFindingsRequest,
+        input: ArchiveFindingsRequest,
     ) -> RusotoFuture<ArchiveFindingsResponse, ArchiveFindingsError>;
 
     /// <p>Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector must be created in order for GuardDuty to become operational.</p>
     fn create_detector(
         &self,
-        input: &CreateDetectorRequest,
+        input: CreateDetectorRequest,
     ) -> RusotoFuture<CreateDetectorResponse, CreateDetectorError>;
 
     /// <p>Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS infrastructure and applications.</p>
     fn create_ip_set(
         &self,
-        input: &CreateIPSetRequest,
+        input: CreateIPSetRequest,
     ) -> RusotoFuture<CreateIPSetResponse, CreateIPSetError>;
 
     /// <p>Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can then invite these members to manage GuardDuty in their accounts.</p>
     fn create_members(
         &self,
-        input: &CreateMembersRequest,
+        input: CreateMembersRequest,
     ) -> RusotoFuture<CreateMembersResponse, CreateMembersError>;
 
     /// <p>Generates example findings of types specified by the list of finding types. If &#39;NULL&#39; is specified for findingTypes, the API generates example findings of all supported finding types.</p>
     fn create_sample_findings(
         &self,
-        input: &CreateSampleFindingsRequest,
+        input: CreateSampleFindingsRequest,
     ) -> RusotoFuture<CreateSampleFindingsResponse, CreateSampleFindingsError>;
 
     /// <p>Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based on ThreatIntelSets.</p>
     fn create_threat_intel_set(
         &self,
-        input: &CreateThreatIntelSetRequest,
+        input: CreateThreatIntelSetRequest,
     ) -> RusotoFuture<CreateThreatIntelSetResponse, CreateThreatIntelSetError>;
 
     /// <p>Declines invitations sent to the current member account by AWS account specified by their account IDs.</p>
     fn decline_invitations(
         &self,
-        input: &DeclineInvitationsRequest,
+        input: DeclineInvitationsRequest,
     ) -> RusotoFuture<DeclineInvitationsResponse, DeclineInvitationsError>;
 
     /// <p>Deletes a Amazon GuardDuty detector specified by the detector ID.</p>
     fn delete_detector(
         &self,
-        input: &DeleteDetectorRequest,
+        input: DeleteDetectorRequest,
     ) -> RusotoFuture<DeleteDetectorResponse, DeleteDetectorError>;
 
     /// <p>Deletes the IPSet specified by the IPSet ID.</p>
     fn delete_ip_set(
         &self,
-        input: &DeleteIPSetRequest,
+        input: DeleteIPSetRequest,
     ) -> RusotoFuture<DeleteIPSetResponse, DeleteIPSetError>;
 
     /// <p>Deletes invitations sent to the current member account by AWS accounts specified by their account IDs.</p>
     fn delete_invitations(
         &self,
-        input: &DeleteInvitationsRequest,
+        input: DeleteInvitationsRequest,
     ) -> RusotoFuture<DeleteInvitationsResponse, DeleteInvitationsError>;
 
     /// <p>Deletes GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn delete_members(
         &self,
-        input: &DeleteMembersRequest,
+        input: DeleteMembersRequest,
     ) -> RusotoFuture<DeleteMembersResponse, DeleteMembersError>;
 
     /// <p>Deletes ThreatIntelSet specified by the ThreatIntelSet ID.</p>
     fn delete_threat_intel_set(
         &self,
-        input: &DeleteThreatIntelSetRequest,
+        input: DeleteThreatIntelSetRequest,
     ) -> RusotoFuture<DeleteThreatIntelSetResponse, DeleteThreatIntelSetError>;
 
     /// <p>Disassociates the current GuardDuty member account from its master account.</p>
     fn disassociate_from_master_account(
         &self,
-        input: &DisassociateFromMasterAccountRequest,
+        input: DisassociateFromMasterAccountRequest,
     ) -> RusotoFuture<DisassociateFromMasterAccountResponse, DisassociateFromMasterAccountError>;
 
     /// <p>Disassociates GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn disassociate_members(
         &self,
-        input: &DisassociateMembersRequest,
+        input: DisassociateMembersRequest,
     ) -> RusotoFuture<DisassociateMembersResponse, DisassociateMembersError>;
 
     /// <p>Retrieves an Amazon GuardDuty detector specified by the detectorId.</p>
     fn get_detector(
         &self,
-        input: &GetDetectorRequest,
+        input: GetDetectorRequest,
     ) -> RusotoFuture<GetDetectorResponse, GetDetectorError>;
 
     /// <p>Describes Amazon GuardDuty findings specified by finding IDs.</p>
     fn get_findings(
         &self,
-        input: &GetFindingsRequest,
+        input: GetFindingsRequest,
     ) -> RusotoFuture<GetFindingsResponse, GetFindingsError>;
 
     /// <p>Lists Amazon GuardDuty findings&#39; statistics for the specified detector ID.</p>
     fn get_findings_statistics(
         &self,
-        input: &GetFindingsStatisticsRequest,
+        input: GetFindingsStatisticsRequest,
     ) -> RusotoFuture<GetFindingsStatisticsResponse, GetFindingsStatisticsError>;
 
     /// <p>Retrieves the IPSet specified by the IPSet ID.</p>
-    fn get_ip_set(&self, input: &GetIPSetRequest) -> RusotoFuture<GetIPSetResponse, GetIPSetError>;
+    fn get_ip_set(&self, input: GetIPSetRequest) -> RusotoFuture<GetIPSetResponse, GetIPSetError>;
 
     /// <p>Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation.</p>
     fn get_invitations_count(
@@ -4694,152 +4784,145 @@ pub trait GuardDuty {
     /// <p>Provides the details for the GuardDuty master account to the current GuardDuty member account.</p>
     fn get_master_account(
         &self,
-        input: &GetMasterAccountRequest,
+        input: GetMasterAccountRequest,
     ) -> RusotoFuture<GetMasterAccountResponse, GetMasterAccountError>;
 
     /// <p>Retrieves GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn get_members(
         &self,
-        input: &GetMembersRequest,
+        input: GetMembersRequest,
     ) -> RusotoFuture<GetMembersResponse, GetMembersError>;
 
     /// <p>Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID.</p>
     fn get_threat_intel_set(
         &self,
-        input: &GetThreatIntelSetRequest,
+        input: GetThreatIntelSetRequest,
     ) -> RusotoFuture<GetThreatIntelSetResponse, GetThreatIntelSetError>;
 
     /// <p>Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and allow the current AWS account to view and manage these accounts&#39; GuardDuty findings on their behalf as the master account.</p>
     fn invite_members(
         &self,
-        input: &InviteMembersRequest,
+        input: InviteMembersRequest,
     ) -> RusotoFuture<InviteMembersResponse, InviteMembersError>;
 
     /// <p>Lists detectorIds of all the existing Amazon GuardDuty detector resources.</p>
     fn list_detectors(
         &self,
-        input: &ListDetectorsRequest,
+        input: ListDetectorsRequest,
     ) -> RusotoFuture<ListDetectorsResponse, ListDetectorsError>;
 
     /// <p>Lists Amazon GuardDuty findings for the specified detector ID.</p>
     fn list_findings(
         &self,
-        input: &ListFindingsRequest,
+        input: ListFindingsRequest,
     ) -> RusotoFuture<ListFindingsResponse, ListFindingsError>;
 
     /// <p>Lists the IPSets of the GuardDuty service specified by the detector ID.</p>
     fn list_ip_sets(
         &self,
-        input: &ListIPSetsRequest,
+        input: ListIPSetsRequest,
     ) -> RusotoFuture<ListIPSetsResponse, ListIPSetsError>;
 
     /// <p>Lists all GuardDuty membership invitations that were sent to the current AWS account.</p>
     fn list_invitations(
         &self,
-        input: &ListInvitationsRequest,
+        input: ListInvitationsRequest,
     ) -> RusotoFuture<ListInvitationsResponse, ListInvitationsError>;
 
     /// <p>Lists details about all member accounts for the current GuardDuty master account.</p>
     fn list_members(
         &self,
-        input: &ListMembersRequest,
+        input: ListMembersRequest,
     ) -> RusotoFuture<ListMembersResponse, ListMembersError>;
 
     /// <p>Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID.</p>
     fn list_threat_intel_sets(
         &self,
-        input: &ListThreatIntelSetsRequest,
+        input: ListThreatIntelSetsRequest,
     ) -> RusotoFuture<ListThreatIntelSetsResponse, ListThreatIntelSetsError>;
 
     /// <p>Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account can run this command after disabling GuardDuty from monitoring these members&#39; findings by running StopMonitoringMembers.</p>
     fn start_monitoring_members(
         &self,
-        input: &StartMonitoringMembersRequest,
+        input: StartMonitoringMembersRequest,
     ) -> RusotoFuture<StartMonitoringMembersResponse, StartMonitoringMembersError>;
 
     /// <p>Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members&#39; findings.</p>
     fn stop_monitoring_members(
         &self,
-        input: &StopMonitoringMembersRequest,
+        input: StopMonitoringMembersRequest,
     ) -> RusotoFuture<StopMonitoringMembersResponse, StopMonitoringMembersError>;
 
     /// <p>Unarchives Amazon GuardDuty findings specified by the list of finding IDs.</p>
     fn unarchive_findings(
         &self,
-        input: &UnarchiveFindingsRequest,
+        input: UnarchiveFindingsRequest,
     ) -> RusotoFuture<UnarchiveFindingsResponse, UnarchiveFindingsError>;
 
     /// <p>Updates an Amazon GuardDuty detector specified by the detectorId.</p>
     fn update_detector(
         &self,
-        input: &UpdateDetectorRequest,
+        input: UpdateDetectorRequest,
     ) -> RusotoFuture<UpdateDetectorResponse, UpdateDetectorError>;
 
     /// <p>Marks specified Amazon GuardDuty findings as useful or not useful.</p>
     fn update_findings_feedback(
         &self,
-        input: &UpdateFindingsFeedbackRequest,
+        input: UpdateFindingsFeedbackRequest,
     ) -> RusotoFuture<UpdateFindingsFeedbackResponse, UpdateFindingsFeedbackError>;
 
     /// <p>Updates the IPSet specified by the IPSet ID.</p>
     fn update_ip_set(
         &self,
-        input: &UpdateIPSetRequest,
+        input: UpdateIPSetRequest,
     ) -> RusotoFuture<UpdateIPSetResponse, UpdateIPSetError>;
 
     /// <p>Updates the ThreatIntelSet specified by ThreatIntelSet ID.</p>
     fn update_threat_intel_set(
         &self,
-        input: &UpdateThreatIntelSetRequest,
+        input: UpdateThreatIntelSetRequest,
     ) -> RusotoFuture<UpdateThreatIntelSetResponse, UpdateThreatIntelSetError>;
 }
 /// A client for the Amazon GuardDuty API.
-pub struct GuardDutyClient<P = CredentialsProvider, D = RequestDispatcher>
-where
-    P: ProvideAwsCredentials,
-    D: DispatchSignedRequest,
-{
-    inner: ClientInner<P, D>,
+pub struct GuardDutyClient {
+    client: Client,
     region: region::Region,
 }
 
 impl GuardDutyClient {
-    /// Creates a simple client backed by an implicit event loop.
+    /// Creates a client backed by the default tokio event loop.
     ///
     /// The client will use the default credentials provider and tls client.
-    ///
-    /// See the `rusoto_core::reactor` module for more details.
-    pub fn simple(region: region::Region) -> GuardDutyClient {
-        GuardDutyClient::new(
-            RequestDispatcher::default(),
-            CredentialsProvider::default(),
-            region,
-        )
-    }
-}
-
-impl<P, D> GuardDutyClient<P, D>
-where
-    P: ProvideAwsCredentials,
-    D: DispatchSignedRequest,
-{
-    pub fn new(request_dispatcher: D, credentials_provider: P, region: region::Region) -> Self {
+    pub fn new(region: region::Region) -> GuardDutyClient {
         GuardDutyClient {
-            inner: ClientInner::new(credentials_provider, request_dispatcher),
+            client: Client::shared(),
+            region: region,
+        }
+    }
+
+    pub fn new_with<P, D>(
+        request_dispatcher: D,
+        credentials_provider: P,
+        region: region::Region,
+    ) -> GuardDutyClient
+    where
+        P: ProvideAwsCredentials + Send + Sync + 'static,
+        P::Future: Send,
+        D: DispatchSignedRequest + Send + Sync + 'static,
+        D::Future: Send,
+    {
+        GuardDutyClient {
+            client: Client::new_with(credentials_provider, request_dispatcher),
             region: region,
         }
     }
 }
 
-impl<P, D> GuardDuty for GuardDutyClient<P, D>
-where
-    P: ProvideAwsCredentials + 'static,
-    D: DispatchSignedRequest + 'static,
-{
+impl GuardDuty for GuardDutyClient {
     /// <p>Accepts the invitation to be monitored by a master GuardDuty account.</p>
     fn accept_invitation(
         &self,
-        input: &AcceptInvitationRequest,
+        input: AcceptInvitationRequest,
     ) -> RusotoFuture<AcceptInvitationResponse, AcceptInvitationError> {
         let request_uri = format!(
             "/detector/{detector_id}/master",
@@ -4849,12 +4932,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -4868,21 +4951,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(AcceptInvitationError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Archives Amazon GuardDuty findings specified by the list of finding IDs.</p>
     fn archive_findings(
         &self,
-        input: &ArchiveFindingsRequest,
+        input: ArchiveFindingsRequest,
     ) -> RusotoFuture<ArchiveFindingsResponse, ArchiveFindingsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/archive",
@@ -4892,12 +4973,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -4911,33 +4992,31 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ArchiveFindingsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector must be created in order for GuardDuty to become operational.</p>
     fn create_detector(
         &self,
-        input: &CreateDetectorRequest,
+        input: CreateDetectorRequest,
     ) -> RusotoFuture<CreateDetectorResponse, CreateDetectorError> {
         let request_uri = "/detector";
 
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -4951,21 +5030,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(CreateDetectorError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS infrastructure and applications.</p>
     fn create_ip_set(
         &self,
-        input: &CreateIPSetRequest,
+        input: CreateIPSetRequest,
     ) -> RusotoFuture<CreateIPSetResponse, CreateIPSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/ipset",
@@ -4975,12 +5052,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -4994,21 +5071,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(CreateIPSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can then invite these members to manage GuardDuty in their accounts.</p>
     fn create_members(
         &self,
-        input: &CreateMembersRequest,
+        input: CreateMembersRequest,
     ) -> RusotoFuture<CreateMembersResponse, CreateMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member",
@@ -5018,12 +5093,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5037,21 +5112,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(CreateMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Generates example findings of types specified by the list of finding types. If &#39;NULL&#39; is specified for findingTypes, the API generates example findings of all supported finding types.</p>
     fn create_sample_findings(
         &self,
-        input: &CreateSampleFindingsRequest,
+        input: CreateSampleFindingsRequest,
     ) -> RusotoFuture<CreateSampleFindingsResponse, CreateSampleFindingsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/create",
@@ -5061,12 +5134,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5081,21 +5154,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(CreateSampleFindingsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based on ThreatIntelSets.</p>
     fn create_threat_intel_set(
         &self,
-        input: &CreateThreatIntelSetRequest,
+        input: CreateThreatIntelSetRequest,
     ) -> RusotoFuture<CreateThreatIntelSetResponse, CreateThreatIntelSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/threatintelset",
@@ -5105,12 +5176,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5125,33 +5196,31 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(CreateThreatIntelSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Declines invitations sent to the current member account by AWS account specified by their account IDs.</p>
     fn decline_invitations(
         &self,
-        input: &DeclineInvitationsRequest,
+        input: DeclineInvitationsRequest,
     ) -> RusotoFuture<DeclineInvitationsResponse, DeclineInvitationsError> {
         let request_uri = "/invitation/decline";
 
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5166,30 +5235,28 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeclineInvitationsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Deletes a Amazon GuardDuty detector specified by the detector ID.</p>
     fn delete_detector(
         &self,
-        input: &DeleteDetectorRequest,
+        input: DeleteDetectorRequest,
     ) -> RusotoFuture<DeleteDetectorResponse, DeleteDetectorError> {
         let request_uri = format!("/detector/{detector_id}", detector_id = input.detector_id);
 
         let mut request = SignedRequest::new("DELETE", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5203,21 +5270,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeleteDetectorError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Deletes the IPSet specified by the IPSet ID.</p>
     fn delete_ip_set(
         &self,
-        input: &DeleteIPSetRequest,
+        input: DeleteIPSetRequest,
     ) -> RusotoFuture<DeleteIPSetResponse, DeleteIPSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/ipset/{ip_set_id}",
@@ -5228,9 +5293,9 @@ where
         let mut request = SignedRequest::new("DELETE", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5244,33 +5309,31 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeleteIPSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Deletes invitations sent to the current member account by AWS accounts specified by their account IDs.</p>
     fn delete_invitations(
         &self,
-        input: &DeleteInvitationsRequest,
+        input: DeleteInvitationsRequest,
     ) -> RusotoFuture<DeleteInvitationsResponse, DeleteInvitationsError> {
         let request_uri = "/invitation/delete";
 
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5285,21 +5348,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeleteInvitationsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Deletes GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn delete_members(
         &self,
-        input: &DeleteMembersRequest,
+        input: DeleteMembersRequest,
     ) -> RusotoFuture<DeleteMembersResponse, DeleteMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/delete",
@@ -5309,12 +5370,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5328,21 +5389,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeleteMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Deletes ThreatIntelSet specified by the ThreatIntelSet ID.</p>
     fn delete_threat_intel_set(
         &self,
-        input: &DeleteThreatIntelSetRequest,
+        input: DeleteThreatIntelSetRequest,
     ) -> RusotoFuture<DeleteThreatIntelSetResponse, DeleteThreatIntelSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/threatintelset/{threat_intel_set_id}",
@@ -5353,9 +5412,9 @@ where
         let mut request = SignedRequest::new("DELETE", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5370,21 +5429,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DeleteThreatIntelSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Disassociates the current GuardDuty member account from its master account.</p>
     fn disassociate_from_master_account(
         &self,
-        input: &DisassociateFromMasterAccountRequest,
+        input: DisassociateFromMasterAccountRequest,
     ) -> RusotoFuture<DisassociateFromMasterAccountResponse, DisassociateFromMasterAccountError>
     {
         let request_uri = format!(
@@ -5395,9 +5452,9 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5406,28 +5463,26 @@ where
 
                     debug!("Response body: {:?}", body);
                     debug!("Response status: {}", response.status);
-                    let result = serde_json::from_slice::<DisassociateFromMasterAccountResponse>(
-                        &body,
-                    ).unwrap();
+                    let result =
+                        serde_json::from_slice::<DisassociateFromMasterAccountResponse>(&body)
+                            .unwrap();
 
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DisassociateFromMasterAccountError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Disassociates GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn disassociate_members(
         &self,
-        input: &DisassociateMembersRequest,
+        input: DisassociateMembersRequest,
     ) -> RusotoFuture<DisassociateMembersResponse, DisassociateMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/disassociate",
@@ -5437,12 +5492,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5457,30 +5512,28 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(DisassociateMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Retrieves an Amazon GuardDuty detector specified by the detectorId.</p>
     fn get_detector(
         &self,
-        input: &GetDetectorRequest,
+        input: GetDetectorRequest,
     ) -> RusotoFuture<GetDetectorResponse, GetDetectorError> {
         let request_uri = format!("/detector/{detector_id}", detector_id = input.detector_id);
 
         let mut request = SignedRequest::new("GET", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5494,21 +5547,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetDetectorError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Describes Amazon GuardDuty findings specified by finding IDs.</p>
     fn get_findings(
         &self,
-        input: &GetFindingsRequest,
+        input: GetFindingsRequest,
     ) -> RusotoFuture<GetFindingsResponse, GetFindingsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/get",
@@ -5518,12 +5569,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5537,21 +5588,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetFindingsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists Amazon GuardDuty findings&#39; statistics for the specified detector ID.</p>
     fn get_findings_statistics(
         &self,
-        input: &GetFindingsStatisticsRequest,
+        input: GetFindingsStatisticsRequest,
     ) -> RusotoFuture<GetFindingsStatisticsResponse, GetFindingsStatisticsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/statistics",
@@ -5561,12 +5610,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5581,19 +5630,17 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetFindingsStatisticsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Retrieves the IPSet specified by the IPSet ID.</p>
-    fn get_ip_set(&self, input: &GetIPSetRequest) -> RusotoFuture<GetIPSetResponse, GetIPSetError> {
+    fn get_ip_set(&self, input: GetIPSetRequest) -> RusotoFuture<GetIPSetResponse, GetIPSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/ipset/{ip_set_id}",
             detector_id = input.detector_id,
@@ -5603,9 +5650,9 @@ where
         let mut request = SignedRequest::new("GET", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5619,15 +5666,13 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetIPSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation.</p>
@@ -5639,9 +5684,9 @@ where
         let mut request = SignedRequest::new("GET", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5656,21 +5701,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetInvitationsCountError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Provides the details for the GuardDuty master account to the current GuardDuty member account.</p>
     fn get_master_account(
         &self,
-        input: &GetMasterAccountRequest,
+        input: GetMasterAccountRequest,
     ) -> RusotoFuture<GetMasterAccountResponse, GetMasterAccountError> {
         let request_uri = format!(
             "/detector/{detector_id}/master",
@@ -5680,9 +5723,9 @@ where
         let mut request = SignedRequest::new("GET", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5696,21 +5739,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetMasterAccountError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Retrieves GuardDuty member accounts (to the current GuardDuty master account) specified by the account IDs.</p>
     fn get_members(
         &self,
-        input: &GetMembersRequest,
+        input: GetMembersRequest,
     ) -> RusotoFuture<GetMembersResponse, GetMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/get",
@@ -5720,12 +5761,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5739,21 +5780,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID.</p>
     fn get_threat_intel_set(
         &self,
-        input: &GetThreatIntelSetRequest,
+        input: GetThreatIntelSetRequest,
     ) -> RusotoFuture<GetThreatIntelSetResponse, GetThreatIntelSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/threatintelset/{threat_intel_set_id}",
@@ -5764,9 +5803,9 @@ where
         let mut request = SignedRequest::new("GET", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5781,21 +5820,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(GetThreatIntelSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and allow the current AWS account to view and manage these accounts&#39; GuardDuty findings on their behalf as the master account.</p>
     fn invite_members(
         &self,
-        input: &InviteMembersRequest,
+        input: InviteMembersRequest,
     ) -> RusotoFuture<InviteMembersResponse, InviteMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/invite",
@@ -5805,12 +5842,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5824,21 +5861,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(InviteMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists detectorIds of all the existing Amazon GuardDuty detector resources.</p>
     fn list_detectors(
         &self,
-        input: &ListDetectorsRequest,
+        input: ListDetectorsRequest,
     ) -> RusotoFuture<ListDetectorsResponse, ListDetectorsError> {
         let request_uri = "/detector";
 
@@ -5854,9 +5889,9 @@ where
         }
         request.set_params(params);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5870,21 +5905,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListDetectorsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists Amazon GuardDuty findings for the specified detector ID.</p>
     fn list_findings(
         &self,
-        input: &ListFindingsRequest,
+        input: ListFindingsRequest,
     ) -> RusotoFuture<ListFindingsResponse, ListFindingsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings",
@@ -5894,12 +5927,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5913,21 +5946,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListFindingsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists the IPSets of the GuardDuty service specified by the detector ID.</p>
     fn list_ip_sets(
         &self,
-        input: &ListIPSetsRequest,
+        input: ListIPSetsRequest,
     ) -> RusotoFuture<ListIPSetsResponse, ListIPSetsError> {
         let request_uri = format!(
             "/detector/{detector_id}/ipset",
@@ -5946,9 +5977,9 @@ where
         }
         request.set_params(params);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -5962,21 +5993,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListIPSetsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists all GuardDuty membership invitations that were sent to the current AWS account.</p>
     fn list_invitations(
         &self,
-        input: &ListInvitationsRequest,
+        input: ListInvitationsRequest,
     ) -> RusotoFuture<ListInvitationsResponse, ListInvitationsError> {
         let request_uri = "/invitation";
 
@@ -5992,9 +6021,9 @@ where
         }
         request.set_params(params);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6008,21 +6037,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListInvitationsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists details about all member accounts for the current GuardDuty master account.</p>
     fn list_members(
         &self,
-        input: &ListMembersRequest,
+        input: ListMembersRequest,
     ) -> RusotoFuture<ListMembersResponse, ListMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member",
@@ -6044,9 +6071,9 @@ where
         }
         request.set_params(params);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6060,21 +6087,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID.</p>
     fn list_threat_intel_sets(
         &self,
-        input: &ListThreatIntelSetsRequest,
+        input: ListThreatIntelSetsRequest,
     ) -> RusotoFuture<ListThreatIntelSetsResponse, ListThreatIntelSetsError> {
         let request_uri = format!(
             "/detector/{detector_id}/threatintelset",
@@ -6093,9 +6118,9 @@ where
         }
         request.set_params(params);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6110,21 +6135,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(ListThreatIntelSetsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account can run this command after disabling GuardDuty from monitoring these members&#39; findings by running StopMonitoringMembers.</p>
     fn start_monitoring_members(
         &self,
-        input: &StartMonitoringMembersRequest,
+        input: StartMonitoringMembersRequest,
     ) -> RusotoFuture<StartMonitoringMembersResponse, StartMonitoringMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/start",
@@ -6134,12 +6157,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6154,21 +6177,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(StartMonitoringMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members&#39; findings.</p>
     fn stop_monitoring_members(
         &self,
-        input: &StopMonitoringMembersRequest,
+        input: StopMonitoringMembersRequest,
     ) -> RusotoFuture<StopMonitoringMembersResponse, StopMonitoringMembersError> {
         let request_uri = format!(
             "/detector/{detector_id}/member/stop",
@@ -6178,12 +6199,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6198,21 +6219,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(StopMonitoringMembersError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Unarchives Amazon GuardDuty findings specified by the list of finding IDs.</p>
     fn unarchive_findings(
         &self,
-        input: &UnarchiveFindingsRequest,
+        input: UnarchiveFindingsRequest,
     ) -> RusotoFuture<UnarchiveFindingsResponse, UnarchiveFindingsError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/unarchive",
@@ -6222,12 +6241,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6242,33 +6261,31 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(UnarchiveFindingsError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Updates an Amazon GuardDuty detector specified by the detectorId.</p>
     fn update_detector(
         &self,
-        input: &UpdateDetectorRequest,
+        input: UpdateDetectorRequest,
     ) -> RusotoFuture<UpdateDetectorResponse, UpdateDetectorError> {
         let request_uri = format!("/detector/{detector_id}", detector_id = input.detector_id);
 
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6282,21 +6299,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(UpdateDetectorError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Marks specified Amazon GuardDuty findings as useful or not useful.</p>
     fn update_findings_feedback(
         &self,
-        input: &UpdateFindingsFeedbackRequest,
+        input: UpdateFindingsFeedbackRequest,
     ) -> RusotoFuture<UpdateFindingsFeedbackResponse, UpdateFindingsFeedbackError> {
         let request_uri = format!(
             "/detector/{detector_id}/findings/feedback",
@@ -6306,12 +6321,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6326,21 +6341,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(UpdateFindingsFeedbackError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Updates the IPSet specified by the IPSet ID.</p>
     fn update_ip_set(
         &self,
-        input: &UpdateIPSetRequest,
+        input: UpdateIPSetRequest,
     ) -> RusotoFuture<UpdateIPSetResponse, UpdateIPSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/ipset/{ip_set_id}",
@@ -6351,12 +6364,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6370,21 +6383,19 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(UpdateIPSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 
     /// <p>Updates the ThreatIntelSet specified by ThreatIntelSet ID.</p>
     fn update_threat_intel_set(
         &self,
-        input: &UpdateThreatIntelSetRequest,
+        input: UpdateThreatIntelSetRequest,
     ) -> RusotoFuture<UpdateThreatIntelSetResponse, UpdateThreatIntelSetError> {
         let request_uri = format!(
             "/detector/{detector_id}/threatintelset/{threat_intel_set_id}",
@@ -6395,12 +6406,12 @@ where
         let mut request = SignedRequest::new("POST", "guardduty", &self.region, &request_uri);
         request.set_content_type("application/x-amz-json-1.1".to_owned());
 
-        let encoded = Some(serde_json::to_vec(input).unwrap());
+        let encoded = Some(serde_json::to_vec(&input).unwrap());
         request.set_payload(encoded);
 
-        let future = self.inner.sign_and_dispatch(request, |response| {
+        self.client.sign_and_dispatch(request, |response| {
             if response.status.as_u16() == 200 {
-                future::Either::A(response.buffer().from_err().map(|response| {
+                Box::new(response.buffer().from_err().map(|response| {
                     let mut body = response.body;
 
                     if body == b"null" {
@@ -6415,15 +6426,13 @@ where
                     result
                 }))
             } else {
-                future::Either::B(response.buffer().from_err().and_then(|response| {
+                Box::new(response.buffer().from_err().and_then(|response| {
                     Err(UpdateThreatIntelSetError::from_body(
                         String::from_utf8_lossy(response.body.as_ref()).as_ref(),
                     ))
                 }))
             }
-        });
-
-        RusotoFuture::new(future)
+        })
     }
 }
 

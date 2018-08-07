@@ -10,12 +10,12 @@ use rusoto_core::Region;
 #[test]
 fn should_list_invitations() {
     let _ = env_logger::try_init();
-    let client = GuardDutyClient::simple(Region::UsWest2);
+    let client = GuardDutyClient::new(Region::UsWest2);
     let request = ListInvitationsRequest{
         ..Default::default()
     };
 
-    let result = client.list_invitations(&request).sync();
+    let result = client.list_invitations(request).sync();
     println!("{:#?}", result);
     assert!(result.is_ok());
 }

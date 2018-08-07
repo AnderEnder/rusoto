@@ -318,8 +318,8 @@
     "baseTypeName": "GreenGrass"
   },
   "guardduty": {
-    "version": "0.32.0",
-    "coreVersion": "0.32.0",
+    "version": "0.33.0",
+    "coreVersion": "0.33.0",
     "protocolVersion": "2017-11-28",
     "baseTypeName": "GuardDuty"
   },
