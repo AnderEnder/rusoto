@@ -1,0 +1,1985 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_waf_regional` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_waf_regional"><title>rusoto_waf_regional - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_waf_regional/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_waf_regional</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_waf_regional', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_waf_regional</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_waf_regional/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load Balancers. You can use these actions and data types by means of the endpoints listed in <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer Guide</a>.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.WAFRegionalClient.html">WAFRegionalClient</a> and <a href="trait.WAFRegional.html">WAFRegional</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivatedRule.html"
+                                  title='struct rusoto_waf_regional::ActivatedRule'>ActivatedRule</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>ActivatedRule</code> object in an <a>UpdateWebACL</a> request specifies a <code>Rule</code> that you want to insert or delete, the priority of the <code>Rule</code> in the <code>WebACL</code>, and the action that you want AWS WAF to take when a web request matches the <code>Rule</code> (<code>ALLOW</code>, <code>BLOCK</code>, or <code>COUNT</code>).</p> <p>To specify whether to insert or delete a <code>Rule</code>, use the <code>Action</code> parameter in the <a>WebACLUpdate</a> data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::AssociateWebACLRequest'>AssociateWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::AssociateWebACLResponse'>AssociateWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ByteMatchSet.html"
+                                  title='struct rusoto_waf_regional::ByteMatchSet'>ByteMatchSet</a></td>
+                           <td class='docblock-short'>
+                                <p>In a <a>GetByteMatchSet</a> request, <code>ByteMatchSet</code> is a complex type that contains the <code>ByteMatchSetId</code> and <code>Name</code> of a <code>ByteMatchSet</code>, and the values that you specified when you updated the <code>ByteMatchSet</code>. </p> <p>A complex type that contains <code>ByteMatchTuple</code> objects, which specify the parts of web requests that you want AWS WAF to inspect and the values that you want AWS WAF to search for. If a <code>ByteMatchSet</code> contains more than one <code>ByteMatchTuple</code> object, a request needs to match the settings in only one <code>ByteMatchTuple</code> to be considered a match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ByteMatchSetSummary.html"
+                                  title='struct rusoto_waf_regional::ByteMatchSetSummary'>ByteMatchSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <a>ListByteMatchSets</a>. Each <code>ByteMatchSetSummary</code> object includes the <code>Name</code> and <code>ByteMatchSetId</code> for one <a>ByteMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ByteMatchSetUpdate.html"
+                                  title='struct rusoto_waf_regional::ByteMatchSetUpdate'>ByteMatchSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>In an <a>UpdateByteMatchSet</a> request, <code>ByteMatchSetUpdate</code> specifies whether to insert or delete a <a>ByteMatchTuple</a> and includes the settings for the <code>ByteMatchTuple</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ByteMatchTuple.html"
+                                  title='struct rusoto_waf_regional::ByteMatchTuple'>ByteMatchTuple</a></td>
+                           <td class='docblock-short'>
+                                <p>The bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateByteMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateByteMatchSetRequest'>CreateByteMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateByteMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateByteMatchSetResponse'>CreateByteMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGeoMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateGeoMatchSetRequest'>CreateGeoMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGeoMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateGeoMatchSetResponse'>CreateGeoMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateIPSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateIPSetRequest'>CreateIPSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateIPSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateIPSetResponse'>CreateIPSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRateBasedRuleRequest.html"
+                                  title='struct rusoto_waf_regional::CreateRateBasedRuleRequest'>CreateRateBasedRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRateBasedRuleResponse.html"
+                                  title='struct rusoto_waf_regional::CreateRateBasedRuleResponse'>CreateRateBasedRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRegexMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateRegexMatchSetRequest'>CreateRegexMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRegexMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateRegexMatchSetResponse'>CreateRegexMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRegexPatternSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateRegexPatternSetRequest'>CreateRegexPatternSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRegexPatternSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateRegexPatternSetResponse'>CreateRegexPatternSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleGroupRequest.html"
+                                  title='struct rusoto_waf_regional::CreateRuleGroupRequest'>CreateRuleGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleGroupResponse.html"
+                                  title='struct rusoto_waf_regional::CreateRuleGroupResponse'>CreateRuleGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleRequest.html"
+                                  title='struct rusoto_waf_regional::CreateRuleRequest'>CreateRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleResponse.html"
+                                  title='struct rusoto_waf_regional::CreateRuleResponse'>CreateRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSizeConstraintSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateSizeConstraintSetRequest'>CreateSizeConstraintSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSizeConstraintSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateSizeConstraintSetResponse'>CreateSizeConstraintSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSqlInjectionMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateSqlInjectionMatchSetRequest'>CreateSqlInjectionMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to create a <a>SqlInjectionMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSqlInjectionMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateSqlInjectionMatchSetResponse'>CreateSqlInjectionMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <code>CreateSqlInjectionMatchSet</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::CreateWebACLRequest'>CreateWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::CreateWebACLResponse'>CreateWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateXssMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::CreateXssMatchSetRequest'>CreateXssMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to create an <a>XssMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateXssMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::CreateXssMatchSetResponse'>CreateXssMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <code>CreateXssMatchSet</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteByteMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteByteMatchSetRequest'>DeleteByteMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteByteMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteByteMatchSetResponse'>DeleteByteMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGeoMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteGeoMatchSetRequest'>DeleteGeoMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGeoMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteGeoMatchSetResponse'>DeleteGeoMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteIPSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteIPSetRequest'>DeleteIPSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteIPSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteIPSetResponse'>DeleteIPSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePermissionPolicyRequest.html"
+                                  title='struct rusoto_waf_regional::DeletePermissionPolicyRequest'>DeletePermissionPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePermissionPolicyResponse.html"
+                                  title='struct rusoto_waf_regional::DeletePermissionPolicyResponse'>DeletePermissionPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRateBasedRuleRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteRateBasedRuleRequest'>DeleteRateBasedRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRateBasedRuleResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteRateBasedRuleResponse'>DeleteRateBasedRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegexMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteRegexMatchSetRequest'>DeleteRegexMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegexMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteRegexMatchSetResponse'>DeleteRegexMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegexPatternSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteRegexPatternSetRequest'>DeleteRegexPatternSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegexPatternSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteRegexPatternSetResponse'>DeleteRegexPatternSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleGroupRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteRuleGroupRequest'>DeleteRuleGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleGroupResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteRuleGroupResponse'>DeleteRuleGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteRuleRequest'>DeleteRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteRuleResponse'>DeleteRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSizeConstraintSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteSizeConstraintSetRequest'>DeleteSizeConstraintSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSizeConstraintSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteSizeConstraintSetResponse'>DeleteSizeConstraintSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSqlInjectionMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteSqlInjectionMatchSetRequest'>DeleteSqlInjectionMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete a <a>SqlInjectionMatchSet</a> from AWS WAF.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSqlInjectionMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteSqlInjectionMatchSetResponse'>DeleteSqlInjectionMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a request to delete a <a>SqlInjectionMatchSet</a> from AWS WAF.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteWebACLRequest'>DeleteWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteWebACLResponse'>DeleteWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteXssMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::DeleteXssMatchSetRequest'>DeleteXssMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete an <a>XssMatchSet</a> from AWS WAF.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteXssMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::DeleteXssMatchSetResponse'>DeleteXssMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a request to delete an <a>XssMatchSet</a> from AWS WAF.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::DisassociateWebACLRequest'>DisassociateWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::DisassociateWebACLResponse'>DisassociateWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FieldToMatch.html"
+                                  title='struct rusoto_waf_regional::FieldToMatch'>FieldToMatch</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies where in a web request to look for <code>TargetString</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GeoMatchConstraint.html"
+                                  title='struct rusoto_waf_regional::GeoMatchConstraint'>GeoMatchConstraint</a></td>
+                           <td class='docblock-short'>
+                                <p>The country from which web requests originate that you want AWS WAF to search for.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GeoMatchSet.html"
+                                  title='struct rusoto_waf_regional::GeoMatchSet'>GeoMatchSet</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains one or more countries that AWS WAF will search for.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GeoMatchSetSummary.html"
+                                  title='struct rusoto_waf_regional::GeoMatchSetSummary'>GeoMatchSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the identifier and the name of the <code>GeoMatchSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GeoMatchSetUpdate.html"
+                                  title='struct rusoto_waf_regional::GeoMatchSetUpdate'>GeoMatchSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the type of update to perform to an <a>GeoMatchSet</a> with <a>UpdateGeoMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetByteMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetByteMatchSetRequest'>GetByteMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetByteMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetByteMatchSetResponse'>GetByteMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetChangeTokenRequest.html"
+                                  title='struct rusoto_waf_regional::GetChangeTokenRequest'>GetChangeTokenRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetChangeTokenResponse.html"
+                                  title='struct rusoto_waf_regional::GetChangeTokenResponse'>GetChangeTokenResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetChangeTokenStatusRequest.html"
+                                  title='struct rusoto_waf_regional::GetChangeTokenStatusRequest'>GetChangeTokenStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetChangeTokenStatusResponse.html"
+                                  title='struct rusoto_waf_regional::GetChangeTokenStatusResponse'>GetChangeTokenStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGeoMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetGeoMatchSetRequest'>GetGeoMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGeoMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetGeoMatchSetResponse'>GetGeoMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIPSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetIPSetRequest'>GetIPSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIPSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetIPSetResponse'>GetIPSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPermissionPolicyRequest.html"
+                                  title='struct rusoto_waf_regional::GetPermissionPolicyRequest'>GetPermissionPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPermissionPolicyResponse.html"
+                                  title='struct rusoto_waf_regional::GetPermissionPolicyResponse'>GetPermissionPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRateBasedRuleManagedKeysRequest.html"
+                                  title='struct rusoto_waf_regional::GetRateBasedRuleManagedKeysRequest'>GetRateBasedRuleManagedKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRateBasedRuleManagedKeysResponse.html"
+                                  title='struct rusoto_waf_regional::GetRateBasedRuleManagedKeysResponse'>GetRateBasedRuleManagedKeysResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRateBasedRuleRequest.html"
+                                  title='struct rusoto_waf_regional::GetRateBasedRuleRequest'>GetRateBasedRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRateBasedRuleResponse.html"
+                                  title='struct rusoto_waf_regional::GetRateBasedRuleResponse'>GetRateBasedRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegexMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetRegexMatchSetRequest'>GetRegexMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegexMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetRegexMatchSetResponse'>GetRegexMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegexPatternSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetRegexPatternSetRequest'>GetRegexPatternSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegexPatternSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetRegexPatternSetResponse'>GetRegexPatternSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRuleGroupRequest.html"
+                                  title='struct rusoto_waf_regional::GetRuleGroupRequest'>GetRuleGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRuleGroupResponse.html"
+                                  title='struct rusoto_waf_regional::GetRuleGroupResponse'>GetRuleGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRuleRequest.html"
+                                  title='struct rusoto_waf_regional::GetRuleRequest'>GetRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRuleResponse.html"
+                                  title='struct rusoto_waf_regional::GetRuleResponse'>GetRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSampledRequestsRequest.html"
+                                  title='struct rusoto_waf_regional::GetSampledRequestsRequest'>GetSampledRequestsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSampledRequestsResponse.html"
+                                  title='struct rusoto_waf_regional::GetSampledRequestsResponse'>GetSampledRequestsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSizeConstraintSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetSizeConstraintSetRequest'>GetSizeConstraintSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSizeConstraintSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetSizeConstraintSetResponse'>GetSizeConstraintSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSqlInjectionMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetSqlInjectionMatchSetRequest'>GetSqlInjectionMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get a <a>SqlInjectionMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSqlInjectionMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetSqlInjectionMatchSetResponse'>GetSqlInjectionMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <a>GetSqlInjectionMatchSet</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetWebACLForResourceRequest.html"
+                                  title='struct rusoto_waf_regional::GetWebACLForResourceRequest'>GetWebACLForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetWebACLForResourceResponse.html"
+                                  title='struct rusoto_waf_regional::GetWebACLForResourceResponse'>GetWebACLForResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::GetWebACLRequest'>GetWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::GetWebACLResponse'>GetWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetXssMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::GetXssMatchSetRequest'>GetXssMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get an <a>XssMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetXssMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::GetXssMatchSetResponse'>GetXssMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <a>GetXssMatchSet</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HTTPHeader.html"
+                                  title='struct rusoto_waf_regional::HTTPHeader'>HTTPHeader</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from a <a>GetSampledRequests</a> request includes an <code>HTTPHeader</code> complex type that appears as <code>Headers</code> in the response syntax. <code>HTTPHeader</code> contains the names and values of all of the headers that appear in one of the web requests that were returned by <code>GetSampledRequests</code>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HTTPRequest.html"
+                                  title='struct rusoto_waf_regional::HTTPRequest'>HTTPRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from a <a>GetSampledRequests</a> request includes an <code>HTTPRequest</code> complex type that appears as <code>Request</code> in the response syntax. <code>HTTPRequest</code> contains information about one of the web requests that were returned by <code>GetSampledRequests</code>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IPSet.html"
+                                  title='struct rusoto_waf_regional::IPSet'>IPSet</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains one or more IP addresses or blocks of IP addresses specified in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports /8, /16, /24, and /32 IP address ranges for IPv4, and /24, /32, /48, /56, /64 and /128 for IPv6.</p> <p>To specify an individual IP address, you specify the four-part IP address followed by a <code>/32</code>, for example, 192.0.2.0/31. To block a range of IP addresses, you can specify a <code>/128</code>, <code>/64</code>, <code>/56</code>, <code>/48</code>, <code>/32</code>, <code>/24</code>, <code>/16</code>, or <code>/8</code> CIDR. For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IPSetDescriptor.html"
+                                  title='struct rusoto_waf_regional::IPSetDescriptor'>IPSetDescriptor</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the IP address type (<code>IPV4</code> or <code>IPV6</code>) and the IP address range (in CIDR format) that web requests originate from.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IPSetSummary.html"
+                                  title='struct rusoto_waf_regional::IPSetSummary'>IPSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the identifier and the name of the <code>IPSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IPSetUpdate.html"
+                                  title='struct rusoto_waf_regional::IPSetUpdate'>IPSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the type of update to perform to an <a>IPSet</a> with <a>UpdateIPSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListActivatedRulesInRuleGroupRequest.html"
+                                  title='struct rusoto_waf_regional::ListActivatedRulesInRuleGroupRequest'>ListActivatedRulesInRuleGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListActivatedRulesInRuleGroupResponse.html"
+                                  title='struct rusoto_waf_regional::ListActivatedRulesInRuleGroupResponse'>ListActivatedRulesInRuleGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListByteMatchSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListByteMatchSetsRequest'>ListByteMatchSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListByteMatchSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListByteMatchSetsResponse'>ListByteMatchSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGeoMatchSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListGeoMatchSetsRequest'>ListGeoMatchSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGeoMatchSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListGeoMatchSetsResponse'>ListGeoMatchSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIPSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListIPSetsRequest'>ListIPSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIPSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListIPSetsResponse'>ListIPSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRateBasedRulesRequest.html"
+                                  title='struct rusoto_waf_regional::ListRateBasedRulesRequest'>ListRateBasedRulesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRateBasedRulesResponse.html"
+                                  title='struct rusoto_waf_regional::ListRateBasedRulesResponse'>ListRateBasedRulesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRegexMatchSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListRegexMatchSetsRequest'>ListRegexMatchSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRegexMatchSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListRegexMatchSetsResponse'>ListRegexMatchSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRegexPatternSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListRegexPatternSetsRequest'>ListRegexPatternSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRegexPatternSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListRegexPatternSetsResponse'>ListRegexPatternSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourcesForWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::ListResourcesForWebACLRequest'>ListResourcesForWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourcesForWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::ListResourcesForWebACLResponse'>ListResourcesForWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRuleGroupsRequest.html"
+                                  title='struct rusoto_waf_regional::ListRuleGroupsRequest'>ListRuleGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRuleGroupsResponse.html"
+                                  title='struct rusoto_waf_regional::ListRuleGroupsResponse'>ListRuleGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRulesRequest.html"
+                                  title='struct rusoto_waf_regional::ListRulesRequest'>ListRulesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRulesResponse.html"
+                                  title='struct rusoto_waf_regional::ListRulesResponse'>ListRulesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSizeConstraintSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListSizeConstraintSetsRequest'>ListSizeConstraintSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSizeConstraintSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListSizeConstraintSetsResponse'>ListSizeConstraintSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSqlInjectionMatchSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListSqlInjectionMatchSetsRequest'>ListSqlInjectionMatchSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to list the <a>SqlInjectionMatchSet</a> objects created by the current AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSqlInjectionMatchSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListSqlInjectionMatchSetsResponse'>ListSqlInjectionMatchSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <a>ListSqlInjectionMatchSets</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscribedRuleGroupsRequest.html"
+                                  title='struct rusoto_waf_regional::ListSubscribedRuleGroupsRequest'>ListSubscribedRuleGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscribedRuleGroupsResponse.html"
+                                  title='struct rusoto_waf_regional::ListSubscribedRuleGroupsResponse'>ListSubscribedRuleGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListWebACLsRequest.html"
+                                  title='struct rusoto_waf_regional::ListWebACLsRequest'>ListWebACLsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListWebACLsResponse.html"
+                                  title='struct rusoto_waf_regional::ListWebACLsResponse'>ListWebACLsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListXssMatchSetsRequest.html"
+                                  title='struct rusoto_waf_regional::ListXssMatchSetsRequest'>ListXssMatchSetsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to list the <a>XssMatchSet</a> objects created by the current AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListXssMatchSetsResponse.html"
+                                  title='struct rusoto_waf_regional::ListXssMatchSetsResponse'>ListXssMatchSetsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <a>ListXssMatchSets</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Predicate.html"
+                                  title='struct rusoto_waf_regional::Predicate'>Predicate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the <a>ByteMatchSet</a>, <a>IPSet</a>, <a>SqlInjectionMatchSet</a>, <a>XssMatchSet</a>, <a>RegexMatchSet</a>, <a>GeoMatchSet</a>, and <a>SizeConstraintSet</a> objects that you want to add to a <code>Rule</code> and, for each object, indicates whether you want to negate the settings, for example, requests that do NOT originate from the IP address 192.0.2.44. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutPermissionPolicyRequest.html"
+                                  title='struct rusoto_waf_regional::PutPermissionPolicyRequest'>PutPermissionPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutPermissionPolicyResponse.html"
+                                  title='struct rusoto_waf_regional::PutPermissionPolicyResponse'>PutPermissionPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RateBasedRule.html"
+                                  title='struct rusoto_waf_regional::RateBasedRule'>RateBasedRule</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>RateBasedRule</code> is identical to a regular <a>Rule</a>, with one addition: a <code>RateBasedRule</code> counts the number of requests that arrive from a specified IP address every five minutes. For example, based on recent requests that you've seen from an attacker, you might create a <code>RateBasedRule</code> that includes the following conditions: </p> <ul> <li> <p>The requests come from 192.0.2.44.</p> </li> <li> <p>They contain the value <code>BadBot</code> in the <code>User-Agent</code> header.</p> </li> </ul> <p>In the rule, you also define the rate limit as 15,000.</p> <p>Requests that meet both of these conditions and exceed 15,000 requests every five minutes trigger the rule's action (block or count), which is defined in the web ACL.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexMatchSet.html"
+                                  title='struct rusoto_waf_regional::RegexMatchSet'>RegexMatchSet</a></td>
+                           <td class='docblock-short'>
+                                <p>In a <a>GetRegexMatchSet</a> request, <code>RegexMatchSet</code> is a complex type that contains the <code>RegexMatchSetId</code> and <code>Name</code> of a <code>RegexMatchSet</code>, and the values that you specified when you updated the <code>RegexMatchSet</code>.</p> <p> The values are contained in a <code>RegexMatchTuple</code> object, which specify the parts of web requests that you want AWS WAF to inspect and the values that you want AWS WAF to search for. If a <code>RegexMatchSet</code> contains more than one <code>RegexMatchTuple</code> object, a request needs to match the settings in only one <code>ByteMatchTuple</code> to be considered a match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexMatchSetSummary.html"
+                                  title='struct rusoto_waf_regional::RegexMatchSetSummary'>RegexMatchSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <a>ListRegexMatchSets</a>. Each <code>RegexMatchSetSummary</code> object includes the <code>Name</code> and <code>RegexMatchSetId</code> for one <a>RegexMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexMatchSetUpdate.html"
+                                  title='struct rusoto_waf_regional::RegexMatchSetUpdate'>RegexMatchSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>In an <a>UpdateRegexMatchSet</a> request, <code>RegexMatchSetUpdate</code> specifies whether to insert or delete a <a>RegexMatchTuple</a> and includes the settings for the <code>RegexMatchTuple</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexMatchTuple.html"
+                                  title='struct rusoto_waf_regional::RegexMatchTuple'>RegexMatchTuple</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. Each <code>RegexMatchTuple</code> object contains: </p> <ul> <li> <p>The part of a web request that you want AWS WAF to inspect, such as a query string or the value of the <code>User-Agent</code> header. </p> </li> <li> <p>The identifier of the pattern (a regular expression) that you want AWS WAF to look for. For more information, see <a>RegexPatternSet</a>. </p> </li> <li> <p>Whether to perform any conversions on the request, such as converting it to lowercase, before inspecting it for the specified string.</p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexPatternSet.html"
+                                  title='struct rusoto_waf_regional::RegexPatternSet'>RegexPatternSet</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>RegexPatternSet</code> specifies the regular expression (regex) pattern that you want AWS WAF to search for, such as <code>B[a@]dB[o0]t</code>. You can then configure AWS WAF to reject those requests.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexPatternSetSummary.html"
+                                  title='struct rusoto_waf_regional::RegexPatternSetSummary'>RegexPatternSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Returned by <a>ListRegexPatternSets</a>. Each <code>RegexPatternSetSummary</code> object includes the <code>Name</code> and <code>RegexPatternSetId</code> for one <a>RegexPatternSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegexPatternSetUpdate.html"
+                                  title='struct rusoto_waf_regional::RegexPatternSetUpdate'>RegexPatternSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>In an <a>UpdateRegexPatternSet</a> request, <code>RegexPatternSetUpdate</code> specifies whether to insert or delete a <code>RegexPatternString</code> and includes the settings for the <code>RegexPatternString</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Rule.html"
+                                  title='struct rusoto_waf_regional::Rule'>Rule</a></td>
+                           <td class='docblock-short'>
+                                <p>A combination of <a>ByteMatchSet</a>, <a>IPSet</a>, and/or <a>SqlInjectionMatchSet</a> objects that identify the web requests that you want to allow, block, or count. For example, you might create a <code>Rule</code> that includes the following predicates:</p> <ul> <li> <p>An <code>IPSet</code> that causes AWS WAF to search for web requests that originate from the IP address <code>192.0.2.44</code> </p> </li> <li> <p>A <code>ByteMatchSet</code> that causes AWS WAF to search for web requests for which the value of the <code>User-Agent</code> header is <code>BadBot</code>.</p> </li> </ul> <p>To match the settings in this <code>Rule</code>, a request must originate from <code>192.0.2.44</code> AND include a <code>User-Agent</code> header for which the value is <code>BadBot</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleGroup.html"
+                                  title='struct rusoto_waf_regional::RuleGroup'>RuleGroup</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A collection of predefined rules that you can add to a web ACL.</p> <p>Rule groups are subject to the following limits:</p> <ul> <li> <p>Three rule groups per account. You can request an increase to this limit by contacting customer support.</p> </li> <li> <p>One rule group per web ACL.</p> </li> <li> <p>Ten rules per rule group.</p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleGroupSummary.html"
+                                  title='struct rusoto_waf_regional::RuleGroupSummary'>RuleGroupSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the identifier and the friendly name or description of the <code>RuleGroup</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleGroupUpdate.html"
+                                  title='struct rusoto_waf_regional::RuleGroupUpdate'>RuleGroupUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies an <code>ActivatedRule</code> and indicates whether you want to add it to a <code>RuleGroup</code> or delete it from a <code>RuleGroup</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleSummary.html"
+                                  title='struct rusoto_waf_regional::RuleSummary'>RuleSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the identifier and the friendly name or description of the <code>Rule</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleUpdate.html"
+                                  title='struct rusoto_waf_regional::RuleUpdate'>RuleUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies a <code>Predicate</code> (such as an <code>IPSet</code>) and indicates whether you want to add it to a <code>Rule</code> or delete it from a <code>Rule</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SampledHTTPRequest.html"
+                                  title='struct rusoto_waf_regional::SampledHTTPRequest'>SampledHTTPRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from a <a>GetSampledRequests</a> request includes a <code>SampledHTTPRequests</code> complex type that appears as <code>SampledRequests</code> in the response syntax. <code>SampledHTTPRequests</code> contains one <code>SampledHTTPRequest</code> object for each web request that is returned by <code>GetSampledRequests</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SizeConstraint.html"
+                                  title='struct rusoto_waf_regional::SizeConstraint'>SizeConstraint</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies a constraint on the size of a part of the web request. AWS WAF uses the <code>Size</code>, <code>ComparisonOperator</code>, and <code>FieldToMatch</code> to build an expression in the form of "<code>Size</code> <code>ComparisonOperator</code> size in bytes of <code>FieldToMatch</code>". If that expression is true, the <code>SizeConstraint</code> is considered to match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SizeConstraintSet.html"
+                                  title='struct rusoto_waf_regional::SizeConstraintSet'>SizeConstraintSet</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains <code>SizeConstraint</code> objects, which specify the parts of web requests that you want AWS WAF to inspect the size of. If a <code>SizeConstraintSet</code> contains more than one <code>SizeConstraint</code> object, a request only needs to match one constraint to be considered a match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SizeConstraintSetSummary.html"
+                                  title='struct rusoto_waf_regional::SizeConstraintSetSummary'>SizeConstraintSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Id</code> and <code>Name</code> of a <code>SizeConstraintSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SizeConstraintSetUpdate.html"
+                                  title='struct rusoto_waf_regional::SizeConstraintSetUpdate'>SizeConstraintSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the part of a web request that you want to inspect the size of and indicates whether you want to add the specification to a <a>SizeConstraintSet</a> or delete it from a <code>SizeConstraintSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SqlInjectionMatchSet.html"
+                                  title='struct rusoto_waf_regional::SqlInjectionMatchSet'>SqlInjectionMatchSet</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains <code>SqlInjectionMatchTuple</code> objects, which specify the parts of web requests that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header. If a <code>SqlInjectionMatchSet</code> contains more than one <code>SqlInjectionMatchTuple</code> object, a request needs to include snippets of SQL code in only one of the specified parts of the request to be considered a match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SqlInjectionMatchSetSummary.html"
+                                  title='struct rusoto_waf_regional::SqlInjectionMatchSetSummary'>SqlInjectionMatchSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Id</code> and <code>Name</code> of a <code>SqlInjectionMatchSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SqlInjectionMatchSetUpdate.html"
+                                  title='struct rusoto_waf_regional::SqlInjectionMatchSetUpdate'>SqlInjectionMatchSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the part of a web request that you want to inspect for snippets of malicious SQL code and indicates whether you want to add the specification to a <a>SqlInjectionMatchSet</a> or delete it from a <code>SqlInjectionMatchSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SqlInjectionMatchTuple.html"
+                                  title='struct rusoto_waf_regional::SqlInjectionMatchTuple'>SqlInjectionMatchTuple</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the part of a web request that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubscribedRuleGroupSummary.html"
+                                  title='struct rusoto_waf_regional::SubscribedRuleGroupSummary'>SubscribedRuleGroupSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of the rule groups you are subscribed to.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimeWindow.html"
+                                  title='struct rusoto_waf_regional::TimeWindow'>TimeWindow</a></td>
+                           <td class='docblock-short'>
+                                <p>In a <a>GetSampledRequests</a> request, the <code>StartTime</code> and <code>EndTime</code> objects specify the time range for which you want AWS WAF to return a sample of web requests.</p> <p>In a <a>GetSampledRequests</a> response, the <code>StartTime</code> and <code>EndTime</code> objects specify the time range for which AWS WAF actually returned a sample of web requests. AWS WAF gets the specified number of requests from among the first 5,000 requests that your AWS resource receives during the specified time period. If your resource receives more than 5,000 requests during that period, AWS WAF stops sampling after the 5,000th request. In that case, <code>EndTime</code> is the time that AWS WAF received the 5,000th request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateByteMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateByteMatchSetRequest'>UpdateByteMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateByteMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateByteMatchSetResponse'>UpdateByteMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGeoMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateGeoMatchSetRequest'>UpdateGeoMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGeoMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateGeoMatchSetResponse'>UpdateGeoMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIPSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateIPSetRequest'>UpdateIPSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIPSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateIPSetResponse'>UpdateIPSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRateBasedRuleRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateRateBasedRuleRequest'>UpdateRateBasedRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRateBasedRuleResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateRateBasedRuleResponse'>UpdateRateBasedRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRegexMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateRegexMatchSetRequest'>UpdateRegexMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRegexMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateRegexMatchSetResponse'>UpdateRegexMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRegexPatternSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateRegexPatternSetRequest'>UpdateRegexPatternSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRegexPatternSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateRegexPatternSetResponse'>UpdateRegexPatternSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRuleGroupRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateRuleGroupRequest'>UpdateRuleGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRuleGroupResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateRuleGroupResponse'>UpdateRuleGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRuleRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateRuleRequest'>UpdateRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRuleResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateRuleResponse'>UpdateRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSizeConstraintSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateSizeConstraintSetRequest'>UpdateSizeConstraintSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSizeConstraintSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateSizeConstraintSetResponse'>UpdateSizeConstraintSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSqlInjectionMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateSqlInjectionMatchSetRequest'>UpdateSqlInjectionMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to update a <a>SqlInjectionMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSqlInjectionMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateSqlInjectionMatchSetResponse'>UpdateSqlInjectionMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to an <a>UpdateSqlInjectionMatchSets</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateWebACLRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateWebACLRequest'>UpdateWebACLRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateWebACLResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateWebACLResponse'>UpdateWebACLResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateXssMatchSetRequest.html"
+                                  title='struct rusoto_waf_regional::UpdateXssMatchSetRequest'>UpdateXssMatchSetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to update an <a>XssMatchSet</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateXssMatchSetResponse.html"
+                                  title='struct rusoto_waf_regional::UpdateXssMatchSetResponse'>UpdateXssMatchSetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to an <a>UpdateXssMatchSets</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WAFRegionalClient.html"
+                                  title='struct rusoto_waf_regional::WAFRegionalClient'>WAFRegionalClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the WAF Regional API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WafAction.html"
+                                  title='struct rusoto_waf_regional::WafAction'>WafAction</a></td>
+                           <td class='docblock-short'>
+                                <p>For the action that is associated with a rule in a <code>WebACL</code>, specifies the action that you want AWS WAF to perform when a web request matches all of the conditions in a rule. For the default action in a <code>WebACL</code>, specifies the action that you want AWS WAF to take when a web request doesn't match all of the conditions in any of the rules in a <code>WebACL</code>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WafOverrideAction.html"
+                                  title='struct rusoto_waf_regional::WafOverrideAction'>WafOverrideAction</a></td>
+                           <td class='docblock-short'>
+                                <p>The action to take if any rule within the <code>RuleGroup</code> matches a request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WebACL.html"
+                                  title='struct rusoto_waf_regional::WebACL'>WebACL</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the <code>Rules</code> that identify the requests that you want to allow, block, or count. In a <code>WebACL</code>, you also specify a default action (<code>ALLOW</code> or <code>BLOCK</code>), and the action for each <code>Rule</code> that you add to a <code>WebACL</code>, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the <code>WebACL</code> with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one <code>Rule</code> to a <code>WebACL</code>, a request needs to match only one of the specifications to be allowed, blocked, or counted. For more information, see <a>UpdateWebACL</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WebACLSummary.html"
+                                  title='struct rusoto_waf_regional::WebACLSummary'>WebACLSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the identifier and the name or description of the <a>WebACL</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WebACLUpdate.html"
+                                  title='struct rusoto_waf_regional::WebACLUpdate'>WebACLUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies whether to insert a <code>Rule</code> into or delete a <code>Rule</code> from a <code>WebACL</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.XssMatchSet.html"
+                                  title='struct rusoto_waf_regional::XssMatchSet'>XssMatchSet</a></td>
+                           <td class='docblock-short'>
+                                <p>A complex type that contains <code>XssMatchTuple</code> objects, which specify the parts of web requests that you want AWS WAF to inspect for cross-site scripting attacks and, if you want AWS WAF to inspect a header, the name of the header. If a <code>XssMatchSet</code> contains more than one <code>XssMatchTuple</code> object, a request needs to include cross-site scripting attacks in only one of the specified parts of the request to be considered a match.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.XssMatchSetSummary.html"
+                                  title='struct rusoto_waf_regional::XssMatchSetSummary'>XssMatchSetSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Id</code> and <code>Name</code> of an <code>XssMatchSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.XssMatchSetUpdate.html"
+                                  title='struct rusoto_waf_regional::XssMatchSetUpdate'>XssMatchSetUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the part of a web request that you want to inspect for cross-site scripting attacks and indicates whether you want to add the specification to an <a>XssMatchSet</a> or delete it from an <code>XssMatchSet</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.XssMatchTuple.html"
+                                  title='struct rusoto_waf_regional::XssMatchTuple'>XssMatchTuple</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the part of a web request that you want AWS WAF to inspect for cross-site scripting attacks and, if you want AWS WAF to inspect a header, the name of the header.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateWebACLError.html"
+                                  title='enum rusoto_waf_regional::AssociateWebACLError'>AssociateWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateByteMatchSetError.html"
+                                  title='enum rusoto_waf_regional::CreateByteMatchSetError'>CreateByteMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateByteMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGeoMatchSetError.html"
+                                  title='enum rusoto_waf_regional::CreateGeoMatchSetError'>CreateGeoMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGeoMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateIPSetError.html"
+                                  title='enum rusoto_waf_regional::CreateIPSetError'>CreateIPSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateIPSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRateBasedRuleError.html"
+                                  title='enum rusoto_waf_regional::CreateRateBasedRuleError'>CreateRateBasedRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRateBasedRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRegexMatchSetError.html"
+                                  title='enum rusoto_waf_regional::CreateRegexMatchSetError'>CreateRegexMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRegexMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRegexPatternSetError.html"
+                                  title='enum rusoto_waf_regional::CreateRegexPatternSetError'>CreateRegexPatternSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRegexPatternSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRuleError.html"
+                                  title='enum rusoto_waf_regional::CreateRuleError'>CreateRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRuleGroupError.html"
+                                  title='enum rusoto_waf_regional::CreateRuleGroupError'>CreateRuleGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRuleGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSizeConstraintSetError.html"
+                                  title='enum rusoto_waf_regional::CreateSizeConstraintSetError'>CreateSizeConstraintSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSizeConstraintSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSqlInjectionMatchSetError.html"
+                                  title='enum rusoto_waf_regional::CreateSqlInjectionMatchSetError'>CreateSqlInjectionMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSqlInjectionMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateWebACLError.html"
+                                  title='enum rusoto_waf_regional::CreateWebACLError'>CreateWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateXssMatchSetError.html"
+                                  title='enum rusoto_waf_regional::CreateXssMatchSetError'>CreateXssMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateXssMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteByteMatchSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteByteMatchSetError'>DeleteByteMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteByteMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGeoMatchSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteGeoMatchSetError'>DeleteGeoMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGeoMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteIPSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteIPSetError'>DeleteIPSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteIPSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePermissionPolicyError.html"
+                                  title='enum rusoto_waf_regional::DeletePermissionPolicyError'>DeletePermissionPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePermissionPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRateBasedRuleError.html"
+                                  title='enum rusoto_waf_regional::DeleteRateBasedRuleError'>DeleteRateBasedRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRateBasedRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRegexMatchSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteRegexMatchSetError'>DeleteRegexMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRegexMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRegexPatternSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteRegexPatternSetError'>DeleteRegexPatternSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRegexPatternSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRuleError.html"
+                                  title='enum rusoto_waf_regional::DeleteRuleError'>DeleteRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRuleGroupError.html"
+                                  title='enum rusoto_waf_regional::DeleteRuleGroupError'>DeleteRuleGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRuleGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSizeConstraintSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteSizeConstraintSetError'>DeleteSizeConstraintSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSizeConstraintSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSqlInjectionMatchSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteSqlInjectionMatchSetError'>DeleteSqlInjectionMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSqlInjectionMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteWebACLError.html"
+                                  title='enum rusoto_waf_regional::DeleteWebACLError'>DeleteWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteXssMatchSetError.html"
+                                  title='enum rusoto_waf_regional::DeleteXssMatchSetError'>DeleteXssMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteXssMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateWebACLError.html"
+                                  title='enum rusoto_waf_regional::DisassociateWebACLError'>DisassociateWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetByteMatchSetError.html"
+                                  title='enum rusoto_waf_regional::GetByteMatchSetError'>GetByteMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetByteMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetChangeTokenError.html"
+                                  title='enum rusoto_waf_regional::GetChangeTokenError'>GetChangeTokenError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetChangeToken</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetChangeTokenStatusError.html"
+                                  title='enum rusoto_waf_regional::GetChangeTokenStatusError'>GetChangeTokenStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetChangeTokenStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGeoMatchSetError.html"
+                                  title='enum rusoto_waf_regional::GetGeoMatchSetError'>GetGeoMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGeoMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetIPSetError.html"
+                                  title='enum rusoto_waf_regional::GetIPSetError'>GetIPSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetIPSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPermissionPolicyError.html"
+                                  title='enum rusoto_waf_regional::GetPermissionPolicyError'>GetPermissionPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPermissionPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRateBasedRuleError.html"
+                                  title='enum rusoto_waf_regional::GetRateBasedRuleError'>GetRateBasedRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRateBasedRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRateBasedRuleManagedKeysError.html"
+                                  title='enum rusoto_waf_regional::GetRateBasedRuleManagedKeysError'>GetRateBasedRuleManagedKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRateBasedRuleManagedKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRegexMatchSetError.html"
+                                  title='enum rusoto_waf_regional::GetRegexMatchSetError'>GetRegexMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRegexMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRegexPatternSetError.html"
+                                  title='enum rusoto_waf_regional::GetRegexPatternSetError'>GetRegexPatternSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRegexPatternSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRuleError.html"
+                                  title='enum rusoto_waf_regional::GetRuleError'>GetRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRuleGroupError.html"
+                                  title='enum rusoto_waf_regional::GetRuleGroupError'>GetRuleGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRuleGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSampledRequestsError.html"
+                                  title='enum rusoto_waf_regional::GetSampledRequestsError'>GetSampledRequestsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSampledRequests</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSizeConstraintSetError.html"
+                                  title='enum rusoto_waf_regional::GetSizeConstraintSetError'>GetSizeConstraintSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSizeConstraintSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSqlInjectionMatchSetError.html"
+                                  title='enum rusoto_waf_regional::GetSqlInjectionMatchSetError'>GetSqlInjectionMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSqlInjectionMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetWebACLError.html"
+                                  title='enum rusoto_waf_regional::GetWebACLError'>GetWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetWebACLForResourceError.html"
+                                  title='enum rusoto_waf_regional::GetWebACLForResourceError'>GetWebACLForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetWebACLForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetXssMatchSetError.html"
+                                  title='enum rusoto_waf_regional::GetXssMatchSetError'>GetXssMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetXssMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListActivatedRulesInRuleGroupError.html"
+                                  title='enum rusoto_waf_regional::ListActivatedRulesInRuleGroupError'>ListActivatedRulesInRuleGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListActivatedRulesInRuleGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListByteMatchSetsError.html"
+                                  title='enum rusoto_waf_regional::ListByteMatchSetsError'>ListByteMatchSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListByteMatchSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGeoMatchSetsError.html"
+                                  title='enum rusoto_waf_regional::ListGeoMatchSetsError'>ListGeoMatchSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGeoMatchSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListIPSetsError.html"
+                                  title='enum rusoto_waf_regional::ListIPSetsError'>ListIPSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListIPSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRateBasedRulesError.html"
+                                  title='enum rusoto_waf_regional::ListRateBasedRulesError'>ListRateBasedRulesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRateBasedRules</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRegexMatchSetsError.html"
+                                  title='enum rusoto_waf_regional::ListRegexMatchSetsError'>ListRegexMatchSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRegexMatchSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRegexPatternSetsError.html"
+                                  title='enum rusoto_waf_regional::ListRegexPatternSetsError'>ListRegexPatternSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRegexPatternSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourcesForWebACLError.html"
+                                  title='enum rusoto_waf_regional::ListResourcesForWebACLError'>ListResourcesForWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourcesForWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRuleGroupsError.html"
+                                  title='enum rusoto_waf_regional::ListRuleGroupsError'>ListRuleGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRuleGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRulesError.html"
+                                  title='enum rusoto_waf_regional::ListRulesError'>ListRulesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRules</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSizeConstraintSetsError.html"
+                                  title='enum rusoto_waf_regional::ListSizeConstraintSetsError'>ListSizeConstraintSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSizeConstraintSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSqlInjectionMatchSetsError.html"
+                                  title='enum rusoto_waf_regional::ListSqlInjectionMatchSetsError'>ListSqlInjectionMatchSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSqlInjectionMatchSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSubscribedRuleGroupsError.html"
+                                  title='enum rusoto_waf_regional::ListSubscribedRuleGroupsError'>ListSubscribedRuleGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSubscribedRuleGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListWebACLsError.html"
+                                  title='enum rusoto_waf_regional::ListWebACLsError'>ListWebACLsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListWebACLs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListXssMatchSetsError.html"
+                                  title='enum rusoto_waf_regional::ListXssMatchSetsError'>ListXssMatchSetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListXssMatchSets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutPermissionPolicyError.html"
+                                  title='enum rusoto_waf_regional::PutPermissionPolicyError'>PutPermissionPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutPermissionPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateByteMatchSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateByteMatchSetError'>UpdateByteMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateByteMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGeoMatchSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateGeoMatchSetError'>UpdateGeoMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGeoMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateIPSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateIPSetError'>UpdateIPSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateIPSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRateBasedRuleError.html"
+                                  title='enum rusoto_waf_regional::UpdateRateBasedRuleError'>UpdateRateBasedRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRateBasedRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRegexMatchSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateRegexMatchSetError'>UpdateRegexMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRegexMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRegexPatternSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateRegexPatternSetError'>UpdateRegexPatternSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRegexPatternSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRuleError.html"
+                                  title='enum rusoto_waf_regional::UpdateRuleError'>UpdateRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRuleGroupError.html"
+                                  title='enum rusoto_waf_regional::UpdateRuleGroupError'>UpdateRuleGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRuleGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSizeConstraintSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateSizeConstraintSetError'>UpdateSizeConstraintSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSizeConstraintSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSqlInjectionMatchSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateSqlInjectionMatchSetError'>UpdateSqlInjectionMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSqlInjectionMatchSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateWebACLError.html"
+                                  title='enum rusoto_waf_regional::UpdateWebACLError'>UpdateWebACLError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateWebACL</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateXssMatchSetError.html"
+                                  title='enum rusoto_waf_regional::UpdateXssMatchSetError'>UpdateXssMatchSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateXssMatchSet</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.WAFRegional.html"
+                                  title='trait rusoto_waf_regional::WAFRegional'>WAFRegional</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the WAF Regional API. WAF Regional clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_waf_regional";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,2263 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_apigateway` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_apigateway"><title>rusoto_apigateway - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_apigateway/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_apigateway</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_apigateway', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_apigateway</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_apigateway/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Amazon API Gateway</fullname> <p>Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or other publicly addressable web services that are hosted outside of AWS.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.ApiGatewayClient.html">ApiGatewayClient</a> and <a href="trait.ApiGateway.html">ApiGateway</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccessLogSettings.html"
+                                  title='struct rusoto_apigateway::AccessLogSettings'>AccessLogSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Access log settings, including the access log format and access log destination ARN.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Account.html"
+                                  title='struct rusoto_apigateway::Account'>Account</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents an AWS account that is associated with API Gateway.</p> <div class="remarks"> <p>To view the account info, call <code>GET</code> on this resource.</p> <h4>Error Codes</h4> <p>The following exception may be thrown when the request fails.</p> <ul> <li>UnauthorizedException</li> <li>NotFoundException</li> <li>TooManyRequestsException</li> </ul> <p>For detailed error code information, including the corresponding HTTP Status Codes, see <a href="http://docs.aws.amazon.com/apigateway/api-reference/handling-errors/#api-error-codes">API Gateway Error Codes</a></p> <h4>Example: Get the information about an account.</h4> <h5>Request</h5> <pre><code>GET /account HTTP/1.1 Content-Type: application/json Host: apigateway.us-east-1.amazonaws.com X-Amz-Date: 20160531T184618Z Authorization: AWS4-HMAC-SHA256 Credential={access<em>key</em>ID}/us-east-1/apigateway/aws4<em>request, SignedHeaders=content-type;host;x-amz-date, Signature={sig4</em>hash} </code></pre> <h5>Response</h5> <p>The successful response returns a <code>200 OK</code> status code and a payload similar to the following:</p> <pre><code>{ &quot;_links&quot;: { &quot;curies&quot;: { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/account-apigateway-{rel}.html&quot;, &quot;name&quot;: &quot;account&quot;, &quot;templated&quot;: true }, &quot;self&quot;: { &quot;href&quot;: &quot;/account&quot; }, &quot;account:update&quot;: { &quot;href&quot;: &quot;/account&quot; } }, &quot;cloudwatchRoleArn&quot;: &quot;arn:aws:iam::123456789012:role/apigAwsProxyRole&quot;, &quot;throttleSettings&quot;: { &quot;rateLimit&quot;: 500, &quot;burstLimit&quot;: 1000 } } </code></pre> <p>In addition to making the REST API call directly, you can use the AWS CLI and an AWS SDK to access this resource.</p> </div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html">API Gateway Limits</a> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html">Developer Guide</a>, <a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-account.html">AWS CLI</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApiGatewayClient.html"
+                                  title='struct rusoto_apigateway::ApiGatewayClient'>ApiGatewayClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon API Gateway API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApiKey.html"
+                                  title='struct rusoto_apigateway::ApiKey'>ApiKey</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A resource that can be distributed to callers for executing <a>Method</a> resources that require an API key. API keys can be mapped to any <a>Stage</a> on any <a>RestApi</a>, which indicates that the callers with the API key can make requests to that stage.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-api-keys.html">Use API Keys</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApiKeyIds.html"
+                                  title='struct rusoto_apigateway::ApiKeyIds'>ApiKeyIds</a></td>
+                           <td class='docblock-short'>
+                                <p>The identifier of an <a>ApiKey</a> used in a <a>UsagePlan</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApiKeys.html"
+                                  title='struct rusoto_apigateway::ApiKeys'>ApiKeys</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of API keys as represented by an <a>ApiKeys</a> resource.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-api-keys.html">Use API Keys</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApiStage.html"
+                                  title='struct rusoto_apigateway::ApiStage'>ApiStage</a></td>
+                           <td class='docblock-short'>
+                                <p>API stage name of the associated API stage in a usage plan.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Authorizer.html"
+                                  title='struct rusoto_apigateway::Authorizer'>Authorizer</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom authorization</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Authorizers.html"
+                                  title='struct rusoto_apigateway::Authorizers'>Authorizers</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>Authorizer</a> resources.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom authorization</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BasePathMapping.html"
+                                  title='struct rusoto_apigateway::BasePathMapping'>BasePathMapping</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the base path that callers of the API must provide as part of the URL after the domain name.</p> <div class="remarks">A custom domain name plus a <code>BasePathMapping</code> specification identifies a deployed <a>RestApi</a> in a given stage of the owner <a>Account</a>.</div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Use Custom Domain Names</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BasePathMappings.html"
+                                  title='struct rusoto_apigateway::BasePathMappings'>BasePathMappings</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>BasePathMapping</a> resources.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Use Custom Domain Names</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CanarySettings.html"
+                                  title='struct rusoto_apigateway::CanarySettings'>CanarySettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration settings of a canary deployment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClientCertificate.html"
+                                  title='struct rusoto_apigateway::ClientCertificate'>ClientCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a client certificate used to configure client-side SSL authentication while sending requests to the integration endpoint.</p> <div class="remarks">Client certificates are used to authenticate an API by the backend server. To authenticate an API client (or user), use IAM roles and policies, a custom <a>Authorizer</a> or an Amazon Cognito user pool.</div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-client-side-ssl-authentication.html">Use Client-Side Certificate</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClientCertificates.html"
+                                  title='struct rusoto_apigateway::ClientCertificates'>ClientCertificates</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>ClientCertificate</a> resources.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-client-side-ssl-authentication.html">Use Client-Side Certificate</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApiKeyRequest.html"
+                                  title='struct rusoto_apigateway::CreateApiKeyRequest'>CreateApiKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to create an <a>ApiKey</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAuthorizerRequest.html"
+                                  title='struct rusoto_apigateway::CreateAuthorizerRequest'>CreateAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to add a new <a>Authorizer</a> to an existing <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBasePathMappingRequest.html"
+                                  title='struct rusoto_apigateway::CreateBasePathMappingRequest'>CreateBasePathMappingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to create a new <a>BasePathMapping</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeploymentRequest.html"
+                                  title='struct rusoto_apigateway::CreateDeploymentRequest'>CreateDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to create a <a>Deployment</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDocumentationPartRequest.html"
+                                  title='struct rusoto_apigateway::CreateDocumentationPartRequest'>CreateDocumentationPartRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a new documentation part of a given API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDocumentationVersionRequest.html"
+                                  title='struct rusoto_apigateway::CreateDocumentationVersionRequest'>CreateDocumentationVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a new documentation version of a given API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDomainNameRequest.html"
+                                  title='struct rusoto_apigateway::CreateDomainNameRequest'>CreateDomainNameRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to create a new domain name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateModelRequest.html"
+                                  title='struct rusoto_apigateway::CreateModelRequest'>CreateModelRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to add a new <a>Model</a> to an existing <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRequestValidatorRequest.html"
+                                  title='struct rusoto_apigateway::CreateRequestValidatorRequest'>CreateRequestValidatorRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a <a>RequestValidator</a> of a given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceRequest.html"
+                                  title='struct rusoto_apigateway::CreateResourceRequest'>CreateResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to create a <a>Resource</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRestApiRequest.html"
+                                  title='struct rusoto_apigateway::CreateRestApiRequest'>CreateRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The POST Request to add a new <a>RestApi</a> resource to your collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStageRequest.html"
+                                  title='struct rusoto_apigateway::CreateStageRequest'>CreateStageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to create a <a>Stage</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUsagePlanKeyRequest.html"
+                                  title='struct rusoto_apigateway::CreateUsagePlanKeyRequest'>CreateUsagePlanKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The POST request to create a usage plan key for adding an existing API key to a usage plan.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUsagePlanRequest.html"
+                                  title='struct rusoto_apigateway::CreateUsagePlanRequest'>CreateUsagePlanRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The POST request to create a usage plan with the name, description, throttle limits and quota limits, as well as the associated API stages, specified in the payload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateVpcLinkRequest.html"
+                                  title='struct rusoto_apigateway::CreateVpcLinkRequest'>CreateVpcLinkRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint services.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteApiKeyRequest.html"
+                                  title='struct rusoto_apigateway::DeleteApiKeyRequest'>DeleteApiKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete the <a>ApiKey</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAuthorizerRequest.html"
+                                  title='struct rusoto_apigateway::DeleteAuthorizerRequest'>DeleteAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete an existing <a>Authorizer</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBasePathMappingRequest.html"
+                                  title='struct rusoto_apigateway::DeleteBasePathMappingRequest'>DeleteBasePathMappingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete the <a>BasePathMapping</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteClientCertificateRequest.html"
+                                  title='struct rusoto_apigateway::DeleteClientCertificateRequest'>DeleteClientCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete the <a>ClientCertificate</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDeploymentRequest.html"
+                                  title='struct rusoto_apigateway::DeleteDeploymentRequest'>DeleteDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to delete a <a>Deployment</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDocumentationPartRequest.html"
+                                  title='struct rusoto_apigateway::DeleteDocumentationPartRequest'>DeleteDocumentationPartRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes an existing documentation part of an API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDocumentationVersionRequest.html"
+                                  title='struct rusoto_apigateway::DeleteDocumentationVersionRequest'>DeleteDocumentationVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes an existing documentation version of an API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDomainNameRequest.html"
+                                  title='struct rusoto_apigateway::DeleteDomainNameRequest'>DeleteDomainNameRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete the <a>DomainName</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGatewayResponseRequest.html"
+                                  title='struct rusoto_apigateway::DeleteGatewayResponseRequest'>DeleteGatewayResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets it with the default settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteIntegrationRequest.html"
+                                  title='struct rusoto_apigateway::DeleteIntegrationRequest'>DeleteIntegrationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a delete integration request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteIntegrationResponseRequest.html"
+                                  title='struct rusoto_apigateway::DeleteIntegrationResponseRequest'>DeleteIntegrationResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a delete integration response request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMethodRequest.html"
+                                  title='struct rusoto_apigateway::DeleteMethodRequest'>DeleteMethodRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete an existing <a>Method</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMethodResponseRequest.html"
+                                  title='struct rusoto_apigateway::DeleteMethodResponseRequest'>DeleteMethodResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to delete an existing <a>MethodResponse</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteModelRequest.html"
+                                  title='struct rusoto_apigateway::DeleteModelRequest'>DeleteModelRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete an existing model in an existing <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRequestValidatorRequest.html"
+                                  title='struct rusoto_apigateway::DeleteRequestValidatorRequest'>DeleteRequestValidatorRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes a specified <a>RequestValidator</a> of a given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceRequest.html"
+                                  title='struct rusoto_apigateway::DeleteResourceRequest'>DeleteResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete a <a>Resource</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRestApiRequest.html"
+                                  title='struct rusoto_apigateway::DeleteRestApiRequest'>DeleteRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete the specified API from your collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteStageRequest.html"
+                                  title='struct rusoto_apigateway::DeleteStageRequest'>DeleteStageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to delete a <a>Stage</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUsagePlanKeyRequest.html"
+                                  title='struct rusoto_apigateway::DeleteUsagePlanKeyRequest'>DeleteUsagePlanKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The DELETE request to delete a usage plan key and remove the underlying API key from the associated usage plan.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUsagePlanRequest.html"
+                                  title='struct rusoto_apigateway::DeleteUsagePlanRequest'>DeleteUsagePlanRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The DELETE request to delete a usage plan of a given plan Id.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVpcLinkRequest.html"
+                                  title='struct rusoto_apigateway::DeleteVpcLinkRequest'>DeleteVpcLinkRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes an existing <a>VpcLink</a> of a specified identifier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deployment.html"
+                                  title='struct rusoto_apigateway::Deployment'>Deployment</a></td>
+                           <td class='docblock-short'>
+                                <p><p>An immutable representation of a <a>RestApi</a> resource that can be called by users using <a>Stages</a>. A deployment must be associated with a <a>Stage</a> for it to be callable over the Internet.</p> <div class="remarks">To create a deployment, call <code>POST</code> on the <a>Deployments</a> resource of a <a>RestApi</a>. To view, update, or delete a deployment, call <code>GET</code>, <code>PATCH</code>, or <code>DELETE</code> on the specified deployment resource (<code>/restapis/{restapi<em>id}/deployments/{deployment</em>id}</code>).</div> <div class="seeAlso"><a>RestApi</a>, <a>Deployments</a>, <a>Stage</a>, <a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-deployment.html">AWS CLI</a>, <a href="https://aws.amazon.com/tools/">AWS SDKs</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeploymentCanarySettings.html"
+                                  title='struct rusoto_apigateway::DeploymentCanarySettings'>DeploymentCanarySettings</a></td>
+                           <td class='docblock-short'>
+                                <p>The input configuration for a canary deployment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deployments.html"
+                                  title='struct rusoto_apigateway::Deployments'>Deployments</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection resource that contains zero or more references to your existing deployments, and links that guide you on how to interact with your collection. The collection offers a paginated view of the contained deployments.</p> <div class="remarks">To create a new deployment of a <a>RestApi</a>, make a <code>POST</code> request against this resource. To view, update, or delete an existing deployment, make a <code>GET</code>, <code>PATCH</code>, or <code>DELETE</code> request, respectively, on a specified <a>Deployment</a> resource.</div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html">Deploying an API</a>, <a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/get-deployment.html">AWS CLI</a>, <a href="https://aws.amazon.com/tools/">AWS SDKs</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationPart.html"
+                                  title='struct rusoto_apigateway::DocumentationPart'>DocumentationPart</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A documentation part for a targeted API entity.</p> <div class="remarks"> <p>A documentation part consists of a content map (<code>properties</code>) and a target (<code>location</code>). The target specifies an API entity to which the documentation content applies. The supported API entity types are <code>API</code>, <code>AUTHORIZER</code>, <code>MODEL</code>, <code>RESOURCE</code>, <code>METHOD</code>, <code>PATH<em>PARAMETER</code>, <code>QUERY</em>PARAMETER</code>, <code>REQUEST<em>HEADER</code>, <code>REQUEST</em>BODY</code>, <code>RESPONSE</code>, <code>RESPONSE<em>HEADER</code>, and <code>RESPONSE</em>BODY</code>. Valid <code>location</code> fields depend on the API entity type. All valid fields are not required.</p> <p>The content map is a JSON string of API-specific key-value pairs. Although an API can use any shape for the content map, only the Swagger-compliant documentation fields will be injected into the associated API entity definition in the exported Swagger definition file.</p></div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting an API</a>, <a>DocumentationParts</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationPartIds.html"
+                                  title='struct rusoto_apigateway::DocumentationPartIds'>DocumentationPartIds</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A collection of the imported <a>DocumentationPart</a> identifiers.</p> <div class="remarks">This is used to return the result when documentation parts in an external (e.g., Swagger) file are imported into API Gateway</div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting an API</a>, <a href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-import/">documentationpart:import</a>, <a>DocumentationPart</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationPartLocation.html"
+                                  title='struct rusoto_apigateway::DocumentationPartLocation'>DocumentationPartLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the target API entity to which the documentation applies.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationParts.html"
+                                  title='struct rusoto_apigateway::DocumentationParts'>DocumentationParts</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The collection of documentation parts of an API.</p> <div class="remarks"/> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting an API</a>, <a>DocumentationPart</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationVersion.html"
+                                  title='struct rusoto_apigateway::DocumentationVersion'>DocumentationVersion</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A snapshot of the documentation of an API.</p> <div class="remarks"><p>Publishing API documentation involves creating a documentation version associated with an API stage and exporting the versioned documentation to an external (e.g., Swagger) file.</p></div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting an API</a>, <a>DocumentationPart</a>, <a>DocumentationVersions</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentationVersions.html"
+                                  title='struct rusoto_apigateway::DocumentationVersions'>DocumentationVersions</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The collection of documentation snapshots of an API. </p> <div class="remarks"><p>Use the <a>DocumentationVersions</a> to manage documentation snapshots associated with various API stages.</p></div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting an API</a>, <a>DocumentationPart</a>, <a>DocumentationVersion</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainName.html"
+                                  title='struct rusoto_apigateway::DomainName'>DomainName</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a custom domain name as a user-friendly host name of an API (<a>RestApi</a>).</p> <div class="Remarks"> <p>When you deploy an API, API Gateway creates a default host name for the API. This default API host name is of the <code>{restapi-id}.execute-api.{region}.amazonaws.com</code> format. With the default host name, you can access the API&#39;s root resource with the URL of <code>https://{restapi-id}.execute-api.{region}.amazonaws.com/{stage}/</code>. When you set up a custom domain name of <code>apis.example.com</code> for this API, you can then access the same resource using the URL of the <code>https://apis.examples.com/myApi</code>, where <code>myApi</code> is the base path mapping (<a>BasePathMapping</a>) of your API under the custom domain name. </p> </div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Set a Custom Host Name for an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainNames.html"
+                                  title='struct rusoto_apigateway::DomainNames'>DomainNames</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>DomainName</a> resources.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Use Client-Side Certificate</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EndpointConfiguration.html"
+                                  title='struct rusoto_apigateway::EndpointConfiguration'>EndpointConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The endpoint configuration to indicate the types of endpoints an API (<a>RestApi</a>) or its custom domain name (<a>DomainName</a>) has. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportResponse.html"
+                                  title='struct rusoto_apigateway::ExportResponse'>ExportResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The binary blob response to <a>GetExport</a>, which contains the generated SDK.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FlushStageAuthorizersCacheRequest.html"
+                                  title='struct rusoto_apigateway::FlushStageAuthorizersCacheRequest'>FlushStageAuthorizersCacheRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to flush authorizer cache entries on a specified stage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FlushStageCacheRequest.html"
+                                  title='struct rusoto_apigateway::FlushStageCacheRequest'>FlushStageCacheRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to flush a stage's cache.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GatewayResponse.html"
+                                  title='struct rusoto_apigateway::GatewayResponse'>GatewayResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A gateway response of a given response type and status code, with optional response parameters and mapping templates.</p> <div class="remarks"> For more information about valid gateway response types, see <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/supported-gateway-response-types.html">Gateway Response Types Supported by API Gateway</a> <div class="example"> <h4>Example: Get a Gateway Response of a given response type</h4> <h5>Request</h5> <p>This example shows how to get a gateway response of the <code>MISSING<em>AUTHENTICATION</em>TOKEN</code> type.</p> <pre><code>GET /restapis/o81lxisefl/gatewayresponses/MISSING<em>AUTHENTICATION</em>TOKEN HTTP/1.1 Host: beta-apigateway.us-east-1.amazonaws.com Content-Type: application/json X-Amz-Date: 20170503T202516Z Authorization: AWS4-HMAC-SHA256 Credential={access-key-id}/20170503/us-east-1/apigateway/aws4<em>request, SignedHeaders=content-type;host;x-amz-date, Signature=1b52460e3159c1a26cff29093855d50ea141c1c5b937528fecaf60f51129697a Cache-Control: no-cache Postman-Token: 3b2a1ce9-c848-2e26-2e2f-9c2caefbed45 </code></pre> <p>The response type is specified as a URL path.</p> <h5>Response</h5> <p>The successful operation returns the <code>200 OK</code> status code and a payload similar to the following:</p> <pre><code>{ &quot;</em>links&quot;: { &quot;curies&quot;: { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-gatewayresponse-{rel}.html&quot;, &quot;name&quot;: &quot;gatewayresponse&quot;, &quot;templated&quot;: true }, &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING<em>AUTHENTICATION</em>TOKEN&quot; }, &quot;gatewayresponse:delete&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING<em>AUTHENTICATION</em>TOKEN&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING</em>AUTHENTICATION<em>TOKEN&quot; } }, &quot;defaultResponse&quot;: false, &quot;responseParameters&quot;: { &quot;gatewayresponse.header.x-request-path&quot;: &quot;method.request.path.petId&quot;, &quot;gatewayresponse.header.Access-Control-Allow-Origin&quot;: &quot;&apos;a.b.c&apos;&quot;, &quot;gatewayresponse.header.x-request-query&quot;: &quot;method.request.querystring.q&quot;, &quot;gatewayresponse.header.x-request-header&quot;: &quot;method.request.header.Accept&quot; }, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{\n &quot;message&quot;: $context.error.messageString,\n &quot;type&quot;: &quot;$context.error.responseType&quot;,\n &quot;stage&quot;: &quot;$context.stage&quot;,\n &quot;resourcePath&quot;: &quot;$context.resourcePath&quot;,\n &quot;stageVariables.a&quot;: &quot;$stageVariables.a&quot;,\n &quot;statusCode&quot;: &quot;&apos;404&apos;&quot;\n}&quot; }, &quot;responseType&quot;: &quot;MISSING</em>AUTHENTICATION_TOKEN&quot;, &quot;statusCode&quot;: &quot;404&quot; }</code></pre> <p></p> </div> </div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html">Customize Gateway Responses</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GatewayResponses.html"
+                                  title='struct rusoto_apigateway::GatewayResponses'>GatewayResponses</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The collection of the <a>GatewayResponse</a> instances of a <a>RestApi</a> as a <code>responseType</code>-to-<a>GatewayResponse</a> object map of key-value pairs. As such, pagination is not supported for querying this collection.</p> <div class="remarks"> For more information about valid gateway response types, see <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/supported-gateway-response-types.html">Gateway Response Types Supported by API Gateway</a> <div class="example"> <h4>Example: Get the collection of gateway responses of an API</h4> <h5>Request</h5> <p>This example request shows how to retrieve the <a>GatewayResponses</a> collection from an API.</p> <pre><code>GET /restapis/o81lxisefl/gatewayresponses HTTP/1.1 Host: beta-apigateway.us-east-1.amazonaws.com Content-Type: application/json X-Amz-Date: 20170503T220604Z Authorization: AWS4-HMAC-SHA256 Credential={access-key-id}/20170503/us-east-1/apigateway/aws4<em>request, SignedHeaders=content-type;host;x-amz-date, Signature=59b42fe54a76a5de8adf2c67baa6d39206f8e9ad49a1d77ccc6a5da3103a398a Cache-Control: no-cache Postman-Token: 5637af27-dc29-fc5c-9dfe-0645d52cb515 </code></pre> <p></p> <h5>Response</h5> <p>The successful operation returns the <code>200 OK</code> status code and a payload similar to the following:</p> <pre><code>{ &quot;</em>links&quot;: { &quot;curies&quot;: { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-gatewayresponse-{rel}.html&quot;, &quot;name&quot;: &quot;gatewayresponse&quot;, &quot;templated&quot;: true }, &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses&quot; }, &quot;first&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses&quot; }, &quot;gatewayresponse:by-type&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;item&quot;: [ { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION</em>FAILURE&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/RESOURCE<em>NOT</em>FOUND&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/REQUEST<em>TOO</em>LARGE&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/THROTTLED&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNSUPPORTED<em>MEDIA</em>TYPE&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER<em>CONFIGURATION</em>ERROR&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT<em>5XX&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT</em>4XX&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD<em>REQUEST</em>PARAMETERS&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD<em>REQUEST</em>BODY&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/EXPIRED<em>TOKEN&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/ACCESS</em>DENIED&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID<em>API</em>KEY&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNAUTHORIZED&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/API<em>CONFIGURATION</em>ERROR&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/QUOTA<em>EXCEEDED&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION</em>TIMEOUT&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING<em>AUTHENTICATION</em>TOKEN&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID<em>SIGNATURE&quot; }, { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER</em>FAILURE&quot; } ] }, &quot;<em>embedded&quot;: { &quot;item&quot;: [ { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION<em>FAILURE&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION<em>FAILURE&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;INTEGRATION</em>FAILURE&quot;, &quot;statusCode&quot;: &quot;504&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/RESOURCE</em>NOT<em>FOUND&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/RESOURCE<em>NOT</em>FOUND&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;RESOURCE<em>NOT</em>FOUND&quot;, &quot;statusCode&quot;: &quot;404&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/REQUEST</em>TOO<em>LARGE&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/REQUEST<em>TOO</em>LARGE&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;REQUEST<em>TOO</em>LARGE&quot;, &quot;statusCode&quot;: &quot;413&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/THROTTLED&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/THROTTLED&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;THROTTLED&quot;, &quot;statusCode&quot;: &quot;429&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNSUPPORTED</em>MEDIA<em>TYPE&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNSUPPORTED<em>MEDIA</em>TYPE&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;UNSUPPORTED<em>MEDIA</em>TYPE&quot;, &quot;statusCode&quot;: &quot;415&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER</em>CONFIGURATION<em>ERROR&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER<em>CONFIGURATION</em>ERROR&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;AUTHORIZER<em>CONFIGURATION</em>ERROR&quot;, &quot;statusCode&quot;: &quot;500&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT</em>5XX&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT</em>5XX&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;DEFAULT<em>5XX&quot; }, { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT<em>4XX&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/DEFAULT<em>4XX&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;DEFAULT</em>4XX&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD</em>REQUEST<em>PARAMETERS&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD<em>REQUEST</em>PARAMETERS&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;BAD<em>REQUEST</em>PARAMETERS&quot;, &quot;statusCode&quot;: &quot;400&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD</em>REQUEST<em>BODY&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/BAD<em>REQUEST</em>BODY&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;BAD<em>REQUEST</em>BODY&quot;, &quot;statusCode&quot;: &quot;400&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/EXPIRED</em>TOKEN&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/EXPIRED</em>TOKEN&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;EXPIRED<em>TOKEN&quot;, &quot;statusCode&quot;: &quot;403&quot; }, { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/ACCESS<em>DENIED&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/ACCESS<em>DENIED&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;ACCESS</em>DENIED&quot;, &quot;statusCode&quot;: &quot;403&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID</em>API<em>KEY&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID<em>API</em>KEY&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;INVALID<em>API</em>KEY&quot;, &quot;statusCode&quot;: &quot;403&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNAUTHORIZED&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/UNAUTHORIZED&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;UNAUTHORIZED&quot;, &quot;statusCode&quot;: &quot;401&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/API</em>CONFIGURATION<em>ERROR&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/API<em>CONFIGURATION</em>ERROR&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;API<em>CONFIGURATION</em>ERROR&quot;, &quot;statusCode&quot;: &quot;500&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/QUOTA</em>EXCEEDED&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/QUOTA</em>EXCEEDED&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;QUOTA<em>EXCEEDED&quot;, &quot;statusCode&quot;: &quot;429&quot; }, { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION<em>TIMEOUT&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INTEGRATION<em>TIMEOUT&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;INTEGRATION</em>TIMEOUT&quot;, &quot;statusCode&quot;: &quot;504&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING</em>AUTHENTICATION<em>TOKEN&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/MISSING<em>AUTHENTICATION</em>TOKEN&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;MISSING<em>AUTHENTICATION</em>TOKEN&quot;, &quot;statusCode&quot;: &quot;403&quot; }, { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID</em>SIGNATURE&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response<em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/INVALID</em>SIGNATURE&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;INVALID<em>SIGNATURE&quot;, &quot;statusCode&quot;: &quot;403&quot; }, { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER<em>FAILURE&quot; }, &quot;gatewayresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/{response</em>type}&quot;, &quot;templated&quot;: true }, &quot;gatewayresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/o81lxisefl/gatewayresponses/AUTHORIZER<em>FAILURE&quot; } }, &quot;defaultResponse&quot;: true, &quot;responseParameters&quot;: {}, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;{&quot;message&quot;:$context.error.messageString}&quot; }, &quot;responseType&quot;: &quot;AUTHORIZER</em>FAILURE&quot;, &quot;statusCode&quot;: &quot;500&quot; } ] } }</code></pre> <p></p> </div> </div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html">Customize Gateway Responses</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateClientCertificateRequest.html"
+                                  title='struct rusoto_apigateway::GenerateClientCertificateRequest'>GenerateClientCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to generate a <a>ClientCertificate</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountRequest.html"
+                                  title='struct rusoto_apigateway::GetAccountRequest'>GetAccountRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to get information about the current <a>Account</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApiKeyRequest.html"
+                                  title='struct rusoto_apigateway::GetApiKeyRequest'>GetApiKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get information about the current <a>ApiKey</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApiKeysRequest.html"
+                                  title='struct rusoto_apigateway::GetApiKeysRequest'>GetApiKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get information about the current <a>ApiKeys</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAuthorizerRequest.html"
+                                  title='struct rusoto_apigateway::GetAuthorizerRequest'>GetAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe an existing <a>Authorizer</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAuthorizersRequest.html"
+                                  title='struct rusoto_apigateway::GetAuthorizersRequest'>GetAuthorizersRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe an existing <a>Authorizers</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBasePathMappingRequest.html"
+                                  title='struct rusoto_apigateway::GetBasePathMappingRequest'>GetBasePathMappingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe a <a>BasePathMapping</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBasePathMappingsRequest.html"
+                                  title='struct rusoto_apigateway::GetBasePathMappingsRequest'>GetBasePathMappingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get information about a collection of <a>BasePathMapping</a> resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetClientCertificateRequest.html"
+                                  title='struct rusoto_apigateway::GetClientCertificateRequest'>GetClientCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get information about the current <a>ClientCertificate</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetClientCertificatesRequest.html"
+                                  title='struct rusoto_apigateway::GetClientCertificatesRequest'>GetClientCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to get information about a collection of <a>ClientCertificate</a> resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeploymentRequest.html"
+                                  title='struct rusoto_apigateway::GetDeploymentRequest'>GetDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to get information about a <a>Deployment</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeploymentsRequest.html"
+                                  title='struct rusoto_apigateway::GetDeploymentsRequest'>GetDeploymentsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to get information about a <a>Deployments</a> collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentationPartRequest.html"
+                                  title='struct rusoto_apigateway::GetDocumentationPartRequest'>GetDocumentationPartRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets a specified documentation part of a given API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentationPartsRequest.html"
+                                  title='struct rusoto_apigateway::GetDocumentationPartsRequest'>GetDocumentationPartsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the documentation parts of an API. The result may be filtered by the type, name, or path of API entities (targets).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentationVersionRequest.html"
+                                  title='struct rusoto_apigateway::GetDocumentationVersionRequest'>GetDocumentationVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets a documentation snapshot of an API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentationVersionsRequest.html"
+                                  title='struct rusoto_apigateway::GetDocumentationVersionsRequest'>GetDocumentationVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the documentation versions of an API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainNameRequest.html"
+                                  title='struct rusoto_apigateway::GetDomainNameRequest'>GetDomainNameRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to get the name of a <a>DomainName</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainNamesRequest.html"
+                                  title='struct rusoto_apigateway::GetDomainNamesRequest'>GetDomainNamesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe a collection of <a>DomainName</a> resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetExportRequest.html"
+                                  title='struct rusoto_apigateway::GetExportRequest'>GetExportRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request a new export of a <a>RestApi</a> for a particular <a>Stage</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGatewayResponseRequest.html"
+                                  title='struct rusoto_apigateway::GetGatewayResponseRequest'>GetGatewayResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGatewayResponsesRequest.html"
+                                  title='struct rusoto_apigateway::GetGatewayResponsesRequest'>GetGatewayResponsesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a> collection for the supported response types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIntegrationRequest.html"
+                                  title='struct rusoto_apigateway::GetIntegrationRequest'>GetIntegrationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to get the integration configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIntegrationResponseRequest.html"
+                                  title='struct rusoto_apigateway::GetIntegrationResponseRequest'>GetIntegrationResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a get integration response request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMethodRequest.html"
+                                  title='struct rusoto_apigateway::GetMethodRequest'>GetMethodRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe an existing <a>Method</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMethodResponseRequest.html"
+                                  title='struct rusoto_apigateway::GetMethodResponseRequest'>GetMethodResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe a <a>MethodResponse</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetModelRequest.html"
+                                  title='struct rusoto_apigateway::GetModelRequest'>GetModelRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list information about a model in an existing <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetModelTemplateRequest.html"
+                                  title='struct rusoto_apigateway::GetModelTemplateRequest'>GetModelTemplateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to generate a sample mapping template used to transform the payload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetModelsRequest.html"
+                                  title='struct rusoto_apigateway::GetModelsRequest'>GetModelsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list existing <a>Models</a> defined for a <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRequestValidatorRequest.html"
+                                  title='struct rusoto_apigateway::GetRequestValidatorRequest'>GetRequestValidatorRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRequestValidatorsRequest.html"
+                                  title='struct rusoto_apigateway::GetRequestValidatorsRequest'>GetRequestValidatorsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the <a>RequestValidators</a> collection of a given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourceRequest.html"
+                                  title='struct rusoto_apigateway::GetResourceRequest'>GetResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list information about a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourcesRequest.html"
+                                  title='struct rusoto_apigateway::GetResourcesRequest'>GetResourcesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list information about a collection of resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRestApiRequest.html"
+                                  title='struct rusoto_apigateway::GetRestApiRequest'>GetRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to list an existing <a>RestApi</a> defined for your collection. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRestApisRequest.html"
+                                  title='struct rusoto_apigateway::GetRestApisRequest'>GetRestApisRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to list existing <a>RestApis</a> defined for your collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSdkRequest.html"
+                                  title='struct rusoto_apigateway::GetSdkRequest'>GetSdkRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request a new generated client SDK for a <a>RestApi</a> and <a>Stage</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSdkTypeRequest.html"
+                                  title='struct rusoto_apigateway::GetSdkTypeRequest'>GetSdkTypeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Get an <a>SdkType</a> instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSdkTypesRequest.html"
+                                  title='struct rusoto_apigateway::GetSdkTypesRequest'>GetSdkTypesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Get the <a>SdkTypes</a> collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStageRequest.html"
+                                  title='struct rusoto_apigateway::GetStageRequest'>GetStageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to get information about a <a>Stage</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStagesRequest.html"
+                                  title='struct rusoto_apigateway::GetStagesRequest'>GetStagesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to get information about one or more <a>Stage</a> resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetTagsRequest.html"
+                                  title='struct rusoto_apigateway::GetTagsRequest'>GetTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the <a>Tags</a> collection for a given resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUsagePlanKeyRequest.html"
+                                  title='struct rusoto_apigateway::GetUsagePlanKeyRequest'>GetUsagePlanKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to get a usage plan key of a given key identifier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUsagePlanKeysRequest.html"
+                                  title='struct rusoto_apigateway::GetUsagePlanKeysRequest'>GetUsagePlanKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to get all the usage plan keys representing the API keys added to a specified usage plan.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUsagePlanRequest.html"
+                                  title='struct rusoto_apigateway::GetUsagePlanRequest'>GetUsagePlanRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to get a usage plan of a given plan identifier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUsagePlansRequest.html"
+                                  title='struct rusoto_apigateway::GetUsagePlansRequest'>GetUsagePlansRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to get all the usage plans of the caller's account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUsageRequest.html"
+                                  title='struct rusoto_apigateway::GetUsageRequest'>GetUsageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The GET request to get the usage data of a usage plan in a specified time interval.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVpcLinkRequest.html"
+                                  title='struct rusoto_apigateway::GetVpcLinkRequest'>GetVpcLinkRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets a specified VPC link under the caller's account in a region.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVpcLinksRequest.html"
+                                  title='struct rusoto_apigateway::GetVpcLinksRequest'>GetVpcLinksRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the <a>VpcLinks</a> collection under the caller's account in a selected region.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportApiKeysRequest.html"
+                                  title='struct rusoto_apigateway::ImportApiKeysRequest'>ImportApiKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The POST request to import API keys from an external source, such as a CSV-formatted file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportDocumentationPartsRequest.html"
+                                  title='struct rusoto_apigateway::ImportDocumentationPartsRequest'>ImportDocumentationPartsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Import documentation parts from an external (e.g., Swagger) definition file. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportRestApiRequest.html"
+                                  title='struct rusoto_apigateway::ImportRestApiRequest'>ImportRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A POST request to import an API to API Gateway using an input of an API definition file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Integration.html"
+                                  title='struct rusoto_apigateway::Integration'>Integration</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents an HTTP, HTTP<em>PROXY, AWS, AWS</em>PROXY, or Mock integration.</p> <div class="remarks">In the API Gateway console, the built-in Lambda integration is an AWS integration.</div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Creating an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IntegrationResponse.html"
+                                  title='struct rusoto_apigateway::IntegrationResponse'>IntegrationResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents an integration response. The status code must map to an existing <a>MethodResponse</a>, and parameters and templates can be used to transform the back-end response.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Creating an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Method.html"
+                                  title='struct rusoto_apigateway::Method'>Method</a></td>
+                           <td class='docblock-short'>
+                                <p><p> Represents a client-facing interface by which the client calls the API to access back-end resources. A <b>Method</b> resource is integrated with an <a>Integration</a> resource. Both consist of a request and one or more responses. The method request takes the client input that is passed to the back end through the integration request. A method response returns the output from the back end to the client through an integration response. A method request is embodied in a <b>Method</b> resource, whereas an integration request is embodied in an <a>Integration</a> resource. On the other hand, a method response is represented by a <a>MethodResponse</a> resource, whereas an integration response is represented by an <a>IntegrationResponse</a> resource. </p> <div class="remarks"> <p/> <h4>Example: Retrive the GET method on a specified resource</h4> <h5>Request</h5> <p>The following example request retrieves the information about the GET method on an API resource (<code>3kzxbg5sa2</code>) of an API (<code>fugvjdxtri</code>). </p> <pre><code>GET /restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET HTTP/1.1 Content-Type: application/json Host: apigateway.us-east-1.amazonaws.com X-Amz-Date: 20160603T210259Z Authorization: AWS4-HMAC-SHA256 Credential={access<em>key</em>ID}/20160603/us-east-1/apigateway/aws4<em>request, SignedHeaders=content-type;host;x-amz-date, Signature={sig4</em>hash}</code></pre> <h5>Response</h5> <p>The successful response returns a <code>200 OK</code> status code and a payload similar to the following:</p> <pre><code>{ &quot;<em>links&quot;: { &quot;curies&quot;: [ { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html&quot;, &quot;name&quot;: &quot;integration&quot;, &quot;templated&quot;: true }, { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html&quot;, &quot;name&quot;: &quot;integrationresponse&quot;, &quot;templated&quot;: true }, { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html&quot;, &quot;name&quot;: &quot;method&quot;, &quot;templated&quot;: true }, { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html&quot;, &quot;name&quot;: &quot;methodresponse&quot;, &quot;templated&quot;: true } ], &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET&quot;, &quot;name&quot;: &quot;GET&quot;, &quot;title&quot;: &quot;GET&quot; }, &quot;integration:put&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration&quot; }, &quot;method:delete&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET&quot; }, &quot;method:integration&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration&quot; }, &quot;method:responses&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot;, &quot;name&quot;: &quot;200&quot;, &quot;title&quot;: &quot;200&quot; }, &quot;method:update&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET&quot; }, &quot;methodresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/{status</em>code}&quot;, &quot;templated&quot;: true } }, &quot;apiKeyRequired&quot;: true, &quot;authorizationType&quot;: &quot;NONE&quot;, &quot;httpMethod&quot;: &quot;GET&quot;, &quot;<em>embedded&quot;: { &quot;method:integration&quot;: { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration&quot; }, &quot;integration:delete&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration&quot; }, &quot;integration:responses&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/200&quot;, &quot;name&quot;: &quot;200&quot;, &quot;title&quot;: &quot;200&quot; }, &quot;integration:update&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration&quot; }, &quot;integrationresponse:put&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/{status<em>code}&quot;, &quot;templated&quot;: true } }, &quot;cacheKeyParameters&quot;: [], &quot;cacheNamespace&quot;: &quot;3kzxbg5sa2&quot;, &quot;credentials&quot;: &quot;arn:aws:iam::123456789012:role/apigAwsProxyRole&quot;, &quot;httpMethod&quot;: &quot;POST&quot;, &quot;passthroughBehavior&quot;: &quot;WHEN</em>NO<em>MATCH&quot;, &quot;requestParameters&quot;: { &quot;integration.request.header.Content-Type&quot;: &quot;&#39;application/x-amz-json-1.1&#39;&quot; }, &quot;requestTemplates&quot;: { &quot;application/json&quot;: &quot;{\n}&quot; }, &quot;type&quot;: &quot;AWS&quot;, &quot;uri&quot;: &quot;arn:aws:apigateway:us-east-1:kinesis:action/ListStreams&quot;, &quot;</em>embedded&quot;: { &quot;integration:responses&quot;: { &quot;<em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/200&quot;, &quot;name&quot;: &quot;200&quot;, &quot;title&quot;: &quot;200&quot; }, &quot;integrationresponse:delete&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/200&quot; }, &quot;integrationresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/200&quot; } }, &quot;responseParameters&quot;: { &quot;method.response.header.Content-Type&quot;: &quot;&#39;application/xml&#39;&quot; }, &quot;responseTemplates&quot;: { &quot;application/json&quot;: &quot;$util.urlDecode(&quot;%3CkinesisStreams%3E%23foreach(%24stream%20in%20%24input.path(%27%24.StreamNames%27))%3Cstream%3E%3Cname%3E%24stream%3C%2Fname%3E%3C%2Fstream%3E%23end%3C%2FkinesisStreams%3E&quot;)&quot; }, &quot;statusCode&quot;: &quot;200&quot; } } }, &quot;method:responses&quot;: { &quot;</em>links&quot;: { &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot;, &quot;name&quot;: &quot;200&quot;, &quot;title&quot;: &quot;200&quot; }, &quot;methodresponse:delete&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot; }, &quot;methodresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot; } }, &quot;responseModels&quot;: { &quot;application/json&quot;: &quot;Empty&quot; }, &quot;responseParameters&quot;: { &quot;method.response.header.Content-Type&quot;: false }, &quot;statusCode&quot;: &quot;200&quot; } } }</code></pre> <p>In the example above, the response template for the <code>200 OK</code> response maps the JSON output from the <code>ListStreams</code> action in the back end to an XML output. The mapping template is URL-encoded as <code>%3CkinesisStreams%3E%23foreach(%24stream%20in%20%24input.path(%27%24.StreamNames%27))%3Cstream%3E%3Cname%3E%24stream%3C%2Fname%3E%3C%2Fstream%3E%23end%3C%2FkinesisStreams%3E</code> and the output is decoded using the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#util-templat-reference">$util.urlDecode()</a> helper function.</p> </div> <div class="seeAlso"> <a>MethodResponse</a>, <a>Integration</a>, <a>IntegrationResponse</a>, <a>Resource</a>, <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-method-settings.html">Set up an API&#39;s method</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MethodResponse.html"
+                                  title='struct rusoto_apigateway::MethodResponse'>MethodResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a method response of a given HTTP status code returned to the client. The method response is passed from the back end through the associated integration response that can be transformed using a mapping template. </p> <div class="remarks"> <p/> <h4>Example: A <b>MethodResponse</b> instance of an API</h4> <h5>Request</h5> <p>The example request retrieves a <b>MethodResponse</b> of the 200 status code.</p> <pre><code>GET /restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200 HTTP/1.1 Content-Type: application/json Host: apigateway.us-east-1.amazonaws.com X-Amz-Date: 20160603T222952Z Authorization: AWS4-HMAC-SHA256 Credential={access<em>key</em>ID}/20160603/us-east-1/apigateway/aws4<em>request, SignedHeaders=content-type;host;x-amz-date, Signature={sig4</em>hash}</code></pre> <h5>Response</h5> <p>The successful response returns <code>200 OK</code> status and a payload as follows:</p> <pre><code>{ &quot;_links&quot;: { &quot;curies&quot;: { &quot;href&quot;: &quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html&quot;, &quot;name&quot;: &quot;methodresponse&quot;, &quot;templated&quot;: true }, &quot;self&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot;, &quot;title&quot;: &quot;200&quot; }, &quot;methodresponse:delete&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot; }, &quot;methodresponse:update&quot;: { &quot;href&quot;: &quot;/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200&quot; } }, &quot;responseModels&quot;: { &quot;application/json&quot;: &quot;Empty&quot; }, &quot;responseParameters&quot;: { &quot;method.response.header.Content-Type&quot;: false }, &quot;statusCode&quot;: &quot;200&quot; }</code></pre> <p/> </div> <div class="seeAlso"> <a>Method</a>, <a>IntegrationResponse</a>, <a>Integration</a> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Creating an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MethodSetting.html"
+                                  title='struct rusoto_apigateway::MethodSetting'>MethodSetting</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the method setting properties.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MethodSnapshot.html"
+                                  title='struct rusoto_apigateway::MethodSnapshot'>MethodSnapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a summary of a <a>Method</a> resource, given a particular date and time.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Model.html"
+                                  title='struct rusoto_apigateway::Model'>Model</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the data structure of a method&#39;s request or response payload.</p> <div class="remarks"> <p>A request model defines the data structure of the client-supplied request payload. A response model defines the data structure of the response payload returned by the back end. Although not required, models are useful for mapping payloads between the front end and back end.</p> <p>A model is used for generating an API&#39;s SDK, validating the input request body, and creating a skeletal mapping template.</p> </div> <div class="seeAlso"> <a>Method</a>, <a>MethodResponse</a>, <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html">Models and Mappings</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Models.html"
+                                  title='struct rusoto_apigateway::Models'>Models</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>Model</a> resources.</p> <div class="seeAlso"> <a>Method</a>, <a>MethodResponse</a>, <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html">Models and Mappings</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchOperation.html"
+                                  title='struct rusoto_apigateway::PatchOperation'>PatchOperation</a></td>
+                           <td class='docblock-short'>
+                                <p>A single patch operation to apply to the specified resource. Please refer to http://tools.ietf.org/html/rfc6902#section-4 for an explanation of how each operation is used.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutGatewayResponseRequest.html"
+                                  title='struct rusoto_apigateway::PutGatewayResponseRequest'>PutGatewayResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutIntegrationRequest.html"
+                                  title='struct rusoto_apigateway::PutIntegrationRequest'>PutIntegrationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Sets up a method's integration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutIntegrationResponseRequest.html"
+                                  title='struct rusoto_apigateway::PutIntegrationResponseRequest'>PutIntegrationResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a put integration response request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutMethodRequest.html"
+                                  title='struct rusoto_apigateway::PutMethodRequest'>PutMethodRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to add a method to an existing <a>Resource</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutMethodResponseRequest.html"
+                                  title='struct rusoto_apigateway::PutMethodResponseRequest'>PutMethodResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to add a <a>MethodResponse</a> to an existing <a>Method</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRestApiRequest.html"
+                                  title='struct rusoto_apigateway::PutRestApiRequest'>PutRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A PUT request to update an existing API, with external API definitions specified as the request body.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.QuotaSettings.html"
+                                  title='struct rusoto_apigateway::QuotaSettings'>QuotaSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Quotas configured for a usage plan.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RequestValidator.html"
+                                  title='struct rusoto_apigateway::RequestValidator'>RequestValidator</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A set of validation rules for incoming <a>Method</a> requests.</p> <div class="remarks"> <p>In Swagger, a <a>RequestValidator</a> of an API is defined by the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html#api-gateway-swagger-extensions-request-validators.requestValidator.html">x-amazon-apigateway-request-validators.requestValidator</a> object. It the referenced using the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html#api-gateway-swagger-extensions-request-validator">x-amazon-apigateway-request-validator</a> property.</p> </div> <div class="seeAlso"><a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html">Enable Basic Request Validation in API Gateway</a></div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RequestValidators.html"
+                                  title='struct rusoto_apigateway::RequestValidators'>RequestValidators</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A collection of <a>RequestValidator</a> resources of a given <a>RestApi</a>.</p> <div class="remarks"> <p>In Swagger, the <a>RequestValidators</a> of an API is defined by the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html#api-gateway-swagger-extensions-request-validators.html">x-amazon-apigateway-request-validators</a> extension.</p> </div> <div class="seeAlso"><a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html">Enable Basic Request Validation in API Gateway</a></div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Resource.html"
+                                  title='struct rusoto_apigateway::Resource'>Resource</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents an API resource.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Create an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Resources.html"
+                                  title='struct rusoto_apigateway::Resources'>Resources</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of <a>Resource</a> resources.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Create an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestApi.html"
+                                  title='struct rusoto_apigateway::RestApi'>RestApi</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a REST API.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Create an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestApis.html"
+                                  title='struct rusoto_apigateway::RestApis'>RestApis</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains references to your APIs and links that guide you in how to interact with your collection. A collection offers a paginated view of your APIs.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html">Create an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SdkConfigurationProperty.html"
+                                  title='struct rusoto_apigateway::SdkConfigurationProperty'>SdkConfigurationProperty</a></td>
+                           <td class='docblock-short'>
+                                <p>A configuration property of an SDK type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SdkResponse.html"
+                                  title='struct rusoto_apigateway::SdkResponse'>SdkResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The binary blob response to <a>GetSdk</a>, which contains the generated SDK.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SdkType.html"
+                                  title='struct rusoto_apigateway::SdkType'>SdkType</a></td>
+                           <td class='docblock-short'>
+                                <p>A type of SDK that API Gateway can generate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SdkTypes.html"
+                                  title='struct rusoto_apigateway::SdkTypes'>SdkTypes</a></td>
+                           <td class='docblock-short'>
+                                <p>The collection of <a>SdkType</a> instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Stage.html"
+                                  title='struct rusoto_apigateway::Stage'>Stage</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a unique identifier for a version of a deployed <a>RestApi</a> that is callable by users.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html">Deploy an API</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StageKey.html"
+                                  title='struct rusoto_apigateway::StageKey'>StageKey</a></td>
+                           <td class='docblock-short'>
+                                <p>A reference to a unique stage identified in the format <code>{restApiId}/{stage}</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Stages.html"
+                                  title='struct rusoto_apigateway::Stages'>Stages</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A list of <a>Stage</a> resources that are associated with the <a>ApiKey</a> resource.</p> <div class="seeAlso"><a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/stages.html">Deploying API in Stages</a></div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceRequest.html"
+                                  title='struct rusoto_apigateway::TagResourceRequest'>TagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Adds or updates a tag on a given resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tags.html"
+                                  title='struct rusoto_apigateway::Tags'>Tags</a></td>
+                           <td class='docblock-short'>
+                                <p>The collection of tags. Each tag element is associated with a given resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Template.html"
+                                  title='struct rusoto_apigateway::Template'>Template</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a mapping template used to transform a payload.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-mappings">Mapping Templates</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeAuthorizerRequest.html"
+                                  title='struct rusoto_apigateway::TestInvokeAuthorizerRequest'>TestInvokeAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Make a request to simulate the execution of an <a>Authorizer</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeAuthorizerResponse.html"
+                                  title='struct rusoto_apigateway::TestInvokeAuthorizerResponse'>TestInvokeAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response of the test invoke request for a custom <a>Authorizer</a></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeMethodRequest.html"
+                                  title='struct rusoto_apigateway::TestInvokeMethodRequest'>TestInvokeMethodRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Make a request to simulate the execution of a <a>Method</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeMethodResponse.html"
+                                  title='struct rusoto_apigateway::TestInvokeMethodResponse'>TestInvokeMethodResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the response of the test invoke request in the HTTP method.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-test-method.html#how-to-test-method-console">Test API using the API Gateway console</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThrottleSettings.html"
+                                  title='struct rusoto_apigateway::ThrottleSettings'>ThrottleSettings</a></td>
+                           <td class='docblock-short'>
+                                <p> The API request rate limits.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceRequest.html"
+                                  title='struct rusoto_apigateway::UntagResourceRequest'>UntagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Removes a tag from a given resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAccountRequest.html"
+                                  title='struct rusoto_apigateway::UpdateAccountRequest'>UpdateAccountRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to change information about the current <a>Account</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApiKeyRequest.html"
+                                  title='struct rusoto_apigateway::UpdateApiKeyRequest'>UpdateApiKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to change information about an <a>ApiKey</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAuthorizerRequest.html"
+                                  title='struct rusoto_apigateway::UpdateAuthorizerRequest'>UpdateAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an existing <a>Authorizer</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateBasePathMappingRequest.html"
+                                  title='struct rusoto_apigateway::UpdateBasePathMappingRequest'>UpdateBasePathMappingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to change information about the <a>BasePathMapping</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateClientCertificateRequest.html"
+                                  title='struct rusoto_apigateway::UpdateClientCertificateRequest'>UpdateClientCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to change information about an <a>ClientCertificate</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeploymentRequest.html"
+                                  title='struct rusoto_apigateway::UpdateDeploymentRequest'>UpdateDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to change information about a <a>Deployment</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentationPartRequest.html"
+                                  title='struct rusoto_apigateway::UpdateDocumentationPartRequest'>UpdateDocumentationPartRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates an existing documentation part of a given API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentationVersionRequest.html"
+                                  title='struct rusoto_apigateway::UpdateDocumentationVersionRequest'>UpdateDocumentationVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates an existing documentation version of an API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDomainNameRequest.html"
+                                  title='struct rusoto_apigateway::UpdateDomainNameRequest'>UpdateDomainNameRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to change information about the <a>DomainName</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGatewayResponseRequest.html"
+                                  title='struct rusoto_apigateway::UpdateGatewayResponseRequest'>UpdateGatewayResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIntegrationRequest.html"
+                                  title='struct rusoto_apigateway::UpdateIntegrationRequest'>UpdateIntegrationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an update integration request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIntegrationResponseRequest.html"
+                                  title='struct rusoto_apigateway::UpdateIntegrationResponseRequest'>UpdateIntegrationResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an update integration response request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMethodRequest.html"
+                                  title='struct rusoto_apigateway::UpdateMethodRequest'>UpdateMethodRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an existing <a>Method</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMethodResponseRequest.html"
+                                  title='struct rusoto_apigateway::UpdateMethodResponseRequest'>UpdateMethodResponseRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request to update an existing <a>MethodResponse</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateModelRequest.html"
+                                  title='struct rusoto_apigateway::UpdateModelRequest'>UpdateModelRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an existing model in an existing <a>RestApi</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRequestValidatorRequest.html"
+                                  title='struct rusoto_apigateway::UpdateRequestValidatorRequest'>UpdateRequestValidatorRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateResourceRequest.html"
+                                  title='struct rusoto_apigateway::UpdateResourceRequest'>UpdateResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to change information about a <a>Resource</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRestApiRequest.html"
+                                  title='struct rusoto_apigateway::UpdateRestApiRequest'>UpdateRestApiRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an existing <a>RestApi</a> resource in your collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateStageRequest.html"
+                                  title='struct rusoto_apigateway::UpdateStageRequest'>UpdateStageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Requests API Gateway to change information about a <a>Stage</a> resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUsagePlanRequest.html"
+                                  title='struct rusoto_apigateway::UpdateUsagePlanRequest'>UpdateUsagePlanRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The PATCH request to update a usage plan of a given plan Id.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUsageRequest.html"
+                                  title='struct rusoto_apigateway::UpdateUsageRequest'>UpdateUsageRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The PATCH request to grant a temporary extension to the remaining quota of a usage plan associated with a specified API key.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateVpcLinkRequest.html"
+                                  title='struct rusoto_apigateway::UpdateVpcLinkRequest'>UpdateVpcLinkRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates an existing <a>VpcLink</a> of a specified identifier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Usage.html"
+                                  title='struct rusoto_apigateway::Usage'>Usage</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the usage data of a usage plan.</p> <div class="remarks"/> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans</a>, <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-usage-plans-with-console.html#api-gateway-usage-plan-manage-usage">Manage Usage in a Usage Plan</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UsagePlan.html"
+                                  title='struct rusoto_apigateway::UsagePlan'>UsagePlan</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a usage plan than can specify who can assess associated API stages with specified request limits and quotas.</p> <div class="remarks"> <p>In a usage plan, you associate an API by specifying the API&#39;s Id and a stage name of the specified API. You add plan customers by adding API keys to the plan. </p> </div> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UsagePlanKey.html"
+                                  title='struct rusoto_apigateway::UsagePlanKey'>UsagePlanKey</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a usage plan key to identify a plan customer.</p> <div class="remarks"> <p>To associate an API stage with a selected API key in a usage plan, you must create a UsagePlanKey resource to represent the selected <a>ApiKey</a>.</p> </div>&quot; <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UsagePlanKeys.html"
+                                  title='struct rusoto_apigateway::UsagePlanKeys'>UsagePlanKeys</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the collection of usage plan keys added to usage plans for the associated API keys and, possibly, other types of keys.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UsagePlans.html"
+                                  title='struct rusoto_apigateway::UsagePlans'>UsagePlans</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents a collection of usage plans for an AWS account.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans</a> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VpcLink.html"
+                                  title='struct rusoto_apigateway::VpcLink'>VpcLink</a></td>
+                           <td class='docblock-short'>
+                                <p><p>A API Gateway VPC link for a <a>RestApi</a> to access resources in an Amazon Virtual Private Cloud (VPC).</p> <div class="remarks"> <p><p>To enable access to a resource in an Amazon Virtual Private Cloud through Amazon API Gateway, you, as an API developer, create a <a>VpcLink</a> resource targeted for one or more network load balancers of the VPC and then integrate an API method with a private integration that uses the <a>VpcLink</a>. The private integration has an integration type of <code>HTTP</code> or <code>HTTP<em>PROXY</code> and has a connection type of <code>VPC</em>LINK</code>. The integration uses the <code>connectionId</code> property to identify the <a>VpcLink</a> used.</p> </p> </div></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VpcLinks.html"
+                                  title='struct rusoto_apigateway::VpcLinks'>VpcLinks</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The collection of VPC links under the caller&#39;s account in a region.</p> <div class="seeAlso"> <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-with-private-integration.html">Getting Started with Private Integrations</a>, <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html">Set up Private Integrations</a> </div></p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateApiKeyError.html"
+                                  title='enum rusoto_apigateway::CreateApiKeyError'>CreateApiKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApiKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAuthorizerError.html"
+                                  title='enum rusoto_apigateway::CreateAuthorizerError'>CreateAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateBasePathMappingError.html"
+                                  title='enum rusoto_apigateway::CreateBasePathMappingError'>CreateBasePathMappingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateBasePathMapping</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeploymentError.html"
+                                  title='enum rusoto_apigateway::CreateDeploymentError'>CreateDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDocumentationPartError.html"
+                                  title='enum rusoto_apigateway::CreateDocumentationPartError'>CreateDocumentationPartError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDocumentationPart</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDocumentationVersionError.html"
+                                  title='enum rusoto_apigateway::CreateDocumentationVersionError'>CreateDocumentationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDocumentationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDomainNameError.html"
+                                  title='enum rusoto_apigateway::CreateDomainNameError'>CreateDomainNameError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDomainName</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateModelError.html"
+                                  title='enum rusoto_apigateway::CreateModelError'>CreateModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRequestValidatorError.html"
+                                  title='enum rusoto_apigateway::CreateRequestValidatorError'>CreateRequestValidatorError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRequestValidator</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateResourceError.html"
+                                  title='enum rusoto_apigateway::CreateResourceError'>CreateResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRestApiError.html"
+                                  title='enum rusoto_apigateway::CreateRestApiError'>CreateRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateStageError.html"
+                                  title='enum rusoto_apigateway::CreateStageError'>CreateStageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUsagePlanError.html"
+                                  title='enum rusoto_apigateway::CreateUsagePlanError'>CreateUsagePlanError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUsagePlan</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUsagePlanKeyError.html"
+                                  title='enum rusoto_apigateway::CreateUsagePlanKeyError'>CreateUsagePlanKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUsagePlanKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateVpcLinkError.html"
+                                  title='enum rusoto_apigateway::CreateVpcLinkError'>CreateVpcLinkError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateVpcLink</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteApiKeyError.html"
+                                  title='enum rusoto_apigateway::DeleteApiKeyError'>DeleteApiKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteApiKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAuthorizerError.html"
+                                  title='enum rusoto_apigateway::DeleteAuthorizerError'>DeleteAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteBasePathMappingError.html"
+                                  title='enum rusoto_apigateway::DeleteBasePathMappingError'>DeleteBasePathMappingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteBasePathMapping</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteClientCertificateError.html"
+                                  title='enum rusoto_apigateway::DeleteClientCertificateError'>DeleteClientCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteClientCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDeploymentError.html"
+                                  title='enum rusoto_apigateway::DeleteDeploymentError'>DeleteDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDocumentationPartError.html"
+                                  title='enum rusoto_apigateway::DeleteDocumentationPartError'>DeleteDocumentationPartError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDocumentationPart</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDocumentationVersionError.html"
+                                  title='enum rusoto_apigateway::DeleteDocumentationVersionError'>DeleteDocumentationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDocumentationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDomainNameError.html"
+                                  title='enum rusoto_apigateway::DeleteDomainNameError'>DeleteDomainNameError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDomainName</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGatewayResponseError.html"
+                                  title='enum rusoto_apigateway::DeleteGatewayResponseError'>DeleteGatewayResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGatewayResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteIntegrationError.html"
+                                  title='enum rusoto_apigateway::DeleteIntegrationError'>DeleteIntegrationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteIntegration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteIntegrationResponseError.html"
+                                  title='enum rusoto_apigateway::DeleteIntegrationResponseError'>DeleteIntegrationResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteIntegrationResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteMethodError.html"
+                                  title='enum rusoto_apigateway::DeleteMethodError'>DeleteMethodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteMethod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteMethodResponseError.html"
+                                  title='enum rusoto_apigateway::DeleteMethodResponseError'>DeleteMethodResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteMethodResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteModelError.html"
+                                  title='enum rusoto_apigateway::DeleteModelError'>DeleteModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRequestValidatorError.html"
+                                  title='enum rusoto_apigateway::DeleteRequestValidatorError'>DeleteRequestValidatorError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRequestValidator</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteResourceError.html"
+                                  title='enum rusoto_apigateway::DeleteResourceError'>DeleteResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRestApiError.html"
+                                  title='enum rusoto_apigateway::DeleteRestApiError'>DeleteRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteStageError.html"
+                                  title='enum rusoto_apigateway::DeleteStageError'>DeleteStageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteStage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUsagePlanError.html"
+                                  title='enum rusoto_apigateway::DeleteUsagePlanError'>DeleteUsagePlanError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUsagePlan</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUsagePlanKeyError.html"
+                                  title='enum rusoto_apigateway::DeleteUsagePlanKeyError'>DeleteUsagePlanKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUsagePlanKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVpcLinkError.html"
+                                  title='enum rusoto_apigateway::DeleteVpcLinkError'>DeleteVpcLinkError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVpcLink</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FlushStageAuthorizersCacheError.html"
+                                  title='enum rusoto_apigateway::FlushStageAuthorizersCacheError'>FlushStageAuthorizersCacheError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by FlushStageAuthorizersCache</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FlushStageCacheError.html"
+                                  title='enum rusoto_apigateway::FlushStageCacheError'>FlushStageCacheError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by FlushStageCache</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GenerateClientCertificateError.html"
+                                  title='enum rusoto_apigateway::GenerateClientCertificateError'>GenerateClientCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GenerateClientCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccountError.html"
+                                  title='enum rusoto_apigateway::GetAccountError'>GetAccountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccount</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetApiKeyError.html"
+                                  title='enum rusoto_apigateway::GetApiKeyError'>GetApiKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetApiKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetApiKeysError.html"
+                                  title='enum rusoto_apigateway::GetApiKeysError'>GetApiKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetApiKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAuthorizerError.html"
+                                  title='enum rusoto_apigateway::GetAuthorizerError'>GetAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAuthorizersError.html"
+                                  title='enum rusoto_apigateway::GetAuthorizersError'>GetAuthorizersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAuthorizers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetBasePathMappingError.html"
+                                  title='enum rusoto_apigateway::GetBasePathMappingError'>GetBasePathMappingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetBasePathMapping</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetBasePathMappingsError.html"
+                                  title='enum rusoto_apigateway::GetBasePathMappingsError'>GetBasePathMappingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetBasePathMappings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetClientCertificateError.html"
+                                  title='enum rusoto_apigateway::GetClientCertificateError'>GetClientCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetClientCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetClientCertificatesError.html"
+                                  title='enum rusoto_apigateway::GetClientCertificatesError'>GetClientCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetClientCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeploymentError.html"
+                                  title='enum rusoto_apigateway::GetDeploymentError'>GetDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeploymentsError.html"
+                                  title='enum rusoto_apigateway::GetDeploymentsError'>GetDeploymentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeployments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentationPartError.html"
+                                  title='enum rusoto_apigateway::GetDocumentationPartError'>GetDocumentationPartError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentationPart</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentationPartsError.html"
+                                  title='enum rusoto_apigateway::GetDocumentationPartsError'>GetDocumentationPartsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentationParts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentationVersionError.html"
+                                  title='enum rusoto_apigateway::GetDocumentationVersionError'>GetDocumentationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentationVersionsError.html"
+                                  title='enum rusoto_apigateway::GetDocumentationVersionsError'>GetDocumentationVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentationVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDomainNameError.html"
+                                  title='enum rusoto_apigateway::GetDomainNameError'>GetDomainNameError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDomainName</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDomainNamesError.html"
+                                  title='enum rusoto_apigateway::GetDomainNamesError'>GetDomainNamesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDomainNames</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetExportError.html"
+                                  title='enum rusoto_apigateway::GetExportError'>GetExportError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetExport</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGatewayResponseError.html"
+                                  title='enum rusoto_apigateway::GetGatewayResponseError'>GetGatewayResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGatewayResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGatewayResponsesError.html"
+                                  title='enum rusoto_apigateway::GetGatewayResponsesError'>GetGatewayResponsesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGatewayResponses</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetIntegrationError.html"
+                                  title='enum rusoto_apigateway::GetIntegrationError'>GetIntegrationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetIntegration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetIntegrationResponseError.html"
+                                  title='enum rusoto_apigateway::GetIntegrationResponseError'>GetIntegrationResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetIntegrationResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMethodError.html"
+                                  title='enum rusoto_apigateway::GetMethodError'>GetMethodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMethod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMethodResponseError.html"
+                                  title='enum rusoto_apigateway::GetMethodResponseError'>GetMethodResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMethodResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetModelError.html"
+                                  title='enum rusoto_apigateway::GetModelError'>GetModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetModelTemplateError.html"
+                                  title='enum rusoto_apigateway::GetModelTemplateError'>GetModelTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetModelTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetModelsError.html"
+                                  title='enum rusoto_apigateway::GetModelsError'>GetModelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetModels</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRequestValidatorError.html"
+                                  title='enum rusoto_apigateway::GetRequestValidatorError'>GetRequestValidatorError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRequestValidator</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRequestValidatorsError.html"
+                                  title='enum rusoto_apigateway::GetRequestValidatorsError'>GetRequestValidatorsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRequestValidators</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetResourceError.html"
+                                  title='enum rusoto_apigateway::GetResourceError'>GetResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetResourcesError.html"
+                                  title='enum rusoto_apigateway::GetResourcesError'>GetResourcesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetResources</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRestApiError.html"
+                                  title='enum rusoto_apigateway::GetRestApiError'>GetRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRestApisError.html"
+                                  title='enum rusoto_apigateway::GetRestApisError'>GetRestApisError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRestApis</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSdkError.html"
+                                  title='enum rusoto_apigateway::GetSdkError'>GetSdkError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSdk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSdkTypeError.html"
+                                  title='enum rusoto_apigateway::GetSdkTypeError'>GetSdkTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSdkType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSdkTypesError.html"
+                                  title='enum rusoto_apigateway::GetSdkTypesError'>GetSdkTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSdkTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetStageError.html"
+                                  title='enum rusoto_apigateway::GetStageError'>GetStageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetStagesError.html"
+                                  title='enum rusoto_apigateway::GetStagesError'>GetStagesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStages</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetTagsError.html"
+                                  title='enum rusoto_apigateway::GetTagsError'>GetTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUsageError.html"
+                                  title='enum rusoto_apigateway::GetUsageError'>GetUsageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUsage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUsagePlanError.html"
+                                  title='enum rusoto_apigateway::GetUsagePlanError'>GetUsagePlanError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUsagePlan</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUsagePlanKeyError.html"
+                                  title='enum rusoto_apigateway::GetUsagePlanKeyError'>GetUsagePlanKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUsagePlanKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUsagePlanKeysError.html"
+                                  title='enum rusoto_apigateway::GetUsagePlanKeysError'>GetUsagePlanKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUsagePlanKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUsagePlansError.html"
+                                  title='enum rusoto_apigateway::GetUsagePlansError'>GetUsagePlansError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUsagePlans</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetVpcLinkError.html"
+                                  title='enum rusoto_apigateway::GetVpcLinkError'>GetVpcLinkError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetVpcLink</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetVpcLinksError.html"
+                                  title='enum rusoto_apigateway::GetVpcLinksError'>GetVpcLinksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetVpcLinks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportApiKeysError.html"
+                                  title='enum rusoto_apigateway::ImportApiKeysError'>ImportApiKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportApiKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportDocumentationPartsError.html"
+                                  title='enum rusoto_apigateway::ImportDocumentationPartsError'>ImportDocumentationPartsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportDocumentationParts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportRestApiError.html"
+                                  title='enum rusoto_apigateway::ImportRestApiError'>ImportRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutGatewayResponseError.html"
+                                  title='enum rusoto_apigateway::PutGatewayResponseError'>PutGatewayResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutGatewayResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutIntegrationError.html"
+                                  title='enum rusoto_apigateway::PutIntegrationError'>PutIntegrationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutIntegration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutIntegrationResponseError.html"
+                                  title='enum rusoto_apigateway::PutIntegrationResponseError'>PutIntegrationResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutIntegrationResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutMethodError.html"
+                                  title='enum rusoto_apigateway::PutMethodError'>PutMethodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutMethod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutMethodResponseError.html"
+                                  title='enum rusoto_apigateway::PutMethodResponseError'>PutMethodResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutMethodResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRestApiError.html"
+                                  title='enum rusoto_apigateway::PutRestApiError'>PutRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagResourceError.html"
+                                  title='enum rusoto_apigateway::TagResourceError'>TagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestInvokeAuthorizerError.html"
+                                  title='enum rusoto_apigateway::TestInvokeAuthorizerError'>TestInvokeAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestInvokeAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestInvokeMethodError.html"
+                                  title='enum rusoto_apigateway::TestInvokeMethodError'>TestInvokeMethodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestInvokeMethod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagResourceError.html"
+                                  title='enum rusoto_apigateway::UntagResourceError'>UntagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAccountError.html"
+                                  title='enum rusoto_apigateway::UpdateAccountError'>UpdateAccountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAccount</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateApiKeyError.html"
+                                  title='enum rusoto_apigateway::UpdateApiKeyError'>UpdateApiKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApiKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAuthorizerError.html"
+                                  title='enum rusoto_apigateway::UpdateAuthorizerError'>UpdateAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateBasePathMappingError.html"
+                                  title='enum rusoto_apigateway::UpdateBasePathMappingError'>UpdateBasePathMappingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateBasePathMapping</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateClientCertificateError.html"
+                                  title='enum rusoto_apigateway::UpdateClientCertificateError'>UpdateClientCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateClientCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDeploymentError.html"
+                                  title='enum rusoto_apigateway::UpdateDeploymentError'>UpdateDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentationPartError.html"
+                                  title='enum rusoto_apigateway::UpdateDocumentationPartError'>UpdateDocumentationPartError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocumentationPart</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentationVersionError.html"
+                                  title='enum rusoto_apigateway::UpdateDocumentationVersionError'>UpdateDocumentationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocumentationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDomainNameError.html"
+                                  title='enum rusoto_apigateway::UpdateDomainNameError'>UpdateDomainNameError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDomainName</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGatewayResponseError.html"
+                                  title='enum rusoto_apigateway::UpdateGatewayResponseError'>UpdateGatewayResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGatewayResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateIntegrationError.html"
+                                  title='enum rusoto_apigateway::UpdateIntegrationError'>UpdateIntegrationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateIntegration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateIntegrationResponseError.html"
+                                  title='enum rusoto_apigateway::UpdateIntegrationResponseError'>UpdateIntegrationResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateIntegrationResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMethodError.html"
+                                  title='enum rusoto_apigateway::UpdateMethodError'>UpdateMethodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMethod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMethodResponseError.html"
+                                  title='enum rusoto_apigateway::UpdateMethodResponseError'>UpdateMethodResponseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMethodResponse</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateModelError.html"
+                                  title='enum rusoto_apigateway::UpdateModelError'>UpdateModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRequestValidatorError.html"
+                                  title='enum rusoto_apigateway::UpdateRequestValidatorError'>UpdateRequestValidatorError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRequestValidator</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateResourceError.html"
+                                  title='enum rusoto_apigateway::UpdateResourceError'>UpdateResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRestApiError.html"
+                                  title='enum rusoto_apigateway::UpdateRestApiError'>UpdateRestApiError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRestApi</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateStageError.html"
+                                  title='enum rusoto_apigateway::UpdateStageError'>UpdateStageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateStage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUsageError.html"
+                                  title='enum rusoto_apigateway::UpdateUsageError'>UpdateUsageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUsage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUsagePlanError.html"
+                                  title='enum rusoto_apigateway::UpdateUsagePlanError'>UpdateUsagePlanError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUsagePlan</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateVpcLinkError.html"
+                                  title='enum rusoto_apigateway::UpdateVpcLinkError'>UpdateVpcLinkError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateVpcLink</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.ApiGateway.html"
+                                  title='trait rusoto_apigateway::ApiGateway'>ApiGateway</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon API Gateway API. Amazon API Gateway clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_apigateway";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

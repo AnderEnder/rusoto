@@ -1,0 +1,531 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_datapipeline` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_datapipeline"><title>rusoto_datapipeline - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_datapipeline/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_datapipeline</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_datapipeline', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_datapipeline</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_datapipeline/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details of scheduling and ensuring that data dependencies are met so that your application can focus on processing the data.</p> <p>AWS Data Pipeline provides a JAR implementation of a task runner called AWS Data Pipeline Task Runner. AWS Data Pipeline Task Runner provides logic for common data management scenarios, such as performing database queries and running data analysis using Amazon Elastic MapReduce (Amazon EMR). You can use AWS Data Pipeline Task Runner as your task runner, or you can write your own task runner to provide custom data management.</p> <p>AWS Data Pipeline implements two main sets of functionality. Use the first set to create a pipeline and define data sources, schedules, dependencies, and the transforms to be performed on the data. Use the second set in your task runner application to receive the next task ready for processing. The logic for performing the task, such as querying the data, running data analysis, or converting the data from one format to another, is contained within the task runner. The task runner performs the task assigned to it by the web service, reporting progress to the web service as it does so. When the task is done, the task runner reports the final success or failure of the task to the web service.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.DataPipelineClient.html">DataPipelineClient</a> and <a href="trait.DataPipeline.html">DataPipeline</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivatePipelineInput.html"
+                                  title='struct rusoto_datapipeline::ActivatePipelineInput'>ActivatePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for ActivatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivatePipelineOutput.html"
+                                  title='struct rusoto_datapipeline::ActivatePipelineOutput'>ActivatePipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of ActivatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsInput.html"
+                                  title='struct rusoto_datapipeline::AddTagsInput'>AddTagsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for AddTags.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsOutput.html"
+                                  title='struct rusoto_datapipeline::AddTagsOutput'>AddTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of AddTags.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePipelineInput.html"
+                                  title='struct rusoto_datapipeline::CreatePipelineInput'>CreatePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for CreatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePipelineOutput.html"
+                                  title='struct rusoto_datapipeline::CreatePipelineOutput'>CreatePipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of CreatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataPipelineClient.html"
+                                  title='struct rusoto_datapipeline::DataPipelineClient'>DataPipelineClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Data Pipeline API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeactivatePipelineInput.html"
+                                  title='struct rusoto_datapipeline::DeactivatePipelineInput'>DeactivatePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for DeactivatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeactivatePipelineOutput.html"
+                                  title='struct rusoto_datapipeline::DeactivatePipelineOutput'>DeactivatePipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of DeactivatePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePipelineInput.html"
+                                  title='struct rusoto_datapipeline::DeletePipelineInput'>DeletePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for DeletePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeObjectsInput.html"
+                                  title='struct rusoto_datapipeline::DescribeObjectsInput'>DescribeObjectsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for DescribeObjects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeObjectsOutput.html"
+                                  title='struct rusoto_datapipeline::DescribeObjectsOutput'>DescribeObjectsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of DescribeObjects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePipelinesInput.html"
+                                  title='struct rusoto_datapipeline::DescribePipelinesInput'>DescribePipelinesInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for DescribePipelines.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePipelinesOutput.html"
+                                  title='struct rusoto_datapipeline::DescribePipelinesOutput'>DescribePipelinesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of DescribePipelines.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EvaluateExpressionInput.html"
+                                  title='struct rusoto_datapipeline::EvaluateExpressionInput'>EvaluateExpressionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for EvaluateExpression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EvaluateExpressionOutput.html"
+                                  title='struct rusoto_datapipeline::EvaluateExpressionOutput'>EvaluateExpressionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of EvaluateExpression.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Field.html"
+                                  title='struct rusoto_datapipeline::Field'>Field</a></td>
+                           <td class='docblock-short'>
+                                <p>A key-value pair that describes a property of a pipeline object. The value is specified as either a string value (<code>StringValue</code>) or a reference to another object (<code>RefValue</code>) but not as both.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineDefinitionInput.html"
+                                  title='struct rusoto_datapipeline::GetPipelineDefinitionInput'>GetPipelineDefinitionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for GetPipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineDefinitionOutput.html"
+                                  title='struct rusoto_datapipeline::GetPipelineDefinitionOutput'>GetPipelineDefinitionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of GetPipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceIdentity.html"
+                                  title='struct rusoto_datapipeline::InstanceIdentity'>InstanceIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Identity information for the EC2 instance that is hosting the task runner. You can get this value by calling a metadata URI from the EC2 instance. For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html">Instance Metadata</a> in the <i>Amazon Elastic Compute Cloud User Guide.</i> Passing in this value proves that your task runner is running on an EC2 instance, and ensures the proper AWS Data Pipeline service charges are applied to your pipeline.</p></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelinesInput.html"
+                                  title='struct rusoto_datapipeline::ListPipelinesInput'>ListPipelinesInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for ListPipelines.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelinesOutput.html"
+                                  title='struct rusoto_datapipeline::ListPipelinesOutput'>ListPipelinesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of ListPipelines.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Operator.html"
+                                  title='struct rusoto_datapipeline::Operator'>Operator</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a logical operation for comparing the value of a field with a specified value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterAttribute.html"
+                                  title='struct rusoto_datapipeline::ParameterAttribute'>ParameterAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>The attributes allowed or specified with a parameter object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterObject.html"
+                                  title='struct rusoto_datapipeline::ParameterObject'>ParameterObject</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a parameter object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterValue.html"
+                                  title='struct rusoto_datapipeline::ParameterValue'>ParameterValue</a></td>
+                           <td class='docblock-short'>
+                                <p>A value or list of parameter values. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineDescription.html"
+                                  title='struct rusoto_datapipeline::PipelineDescription'>PipelineDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains pipeline metadata.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineIdName.html"
+                                  title='struct rusoto_datapipeline::PipelineIdName'>PipelineIdName</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the name and identifier of a pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineObject.html"
+                                  title='struct rusoto_datapipeline::PipelineObject'>PipelineObject</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a pipeline object. This can be a logical, physical, or physical attempt pipeline object. The complete set of components of a pipeline defines the pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForTaskInput.html"
+                                  title='struct rusoto_datapipeline::PollForTaskInput'>PollForTaskInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for PollForTask.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForTaskOutput.html"
+                                  title='struct rusoto_datapipeline::PollForTaskOutput'>PollForTaskOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of PollForTask.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutPipelineDefinitionInput.html"
+                                  title='struct rusoto_datapipeline::PutPipelineDefinitionInput'>PutPipelineDefinitionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for PutPipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutPipelineDefinitionOutput.html"
+                                  title='struct rusoto_datapipeline::PutPipelineDefinitionOutput'>PutPipelineDefinitionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of PutPipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Query.html"
+                                  title='struct rusoto_datapipeline::Query'>Query</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines the query to run against an object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.QueryObjectsInput.html"
+                                  title='struct rusoto_datapipeline::QueryObjectsInput'>QueryObjectsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for QueryObjects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.QueryObjectsOutput.html"
+                                  title='struct rusoto_datapipeline::QueryObjectsOutput'>QueryObjectsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of QueryObjects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsInput.html"
+                                  title='struct rusoto_datapipeline::RemoveTagsInput'>RemoveTagsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for RemoveTags.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsOutput.html"
+                                  title='struct rusoto_datapipeline::RemoveTagsOutput'>RemoveTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of RemoveTags.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReportTaskProgressInput.html"
+                                  title='struct rusoto_datapipeline::ReportTaskProgressInput'>ReportTaskProgressInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for ReportTaskProgress.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReportTaskProgressOutput.html"
+                                  title='struct rusoto_datapipeline::ReportTaskProgressOutput'>ReportTaskProgressOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of ReportTaskProgress.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReportTaskRunnerHeartbeatInput.html"
+                                  title='struct rusoto_datapipeline::ReportTaskRunnerHeartbeatInput'>ReportTaskRunnerHeartbeatInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for ReportTaskRunnerHeartbeat.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReportTaskRunnerHeartbeatOutput.html"
+                                  title='struct rusoto_datapipeline::ReportTaskRunnerHeartbeatOutput'>ReportTaskRunnerHeartbeatOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of ReportTaskRunnerHeartbeat.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Selector.html"
+                                  title='struct rusoto_datapipeline::Selector'>Selector</a></td>
+                           <td class='docblock-short'>
+                                <p>A comparision that is used to determine whether a query should return this object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetStatusInput.html"
+                                  title='struct rusoto_datapipeline::SetStatusInput'>SetStatusInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for SetStatus.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetTaskStatusInput.html"
+                                  title='struct rusoto_datapipeline::SetTaskStatusInput'>SetTaskStatusInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for SetTaskStatus.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetTaskStatusOutput.html"
+                                  title='struct rusoto_datapipeline::SetTaskStatusOutput'>SetTaskStatusOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of SetTaskStatus.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_datapipeline::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Tags are key/value pairs defined by a user and associated with a pipeline to control access. AWS Data Pipeline allows you to associate ten tags per pipeline. For more information, see <a href="http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html">Controlling User Access to Pipelines</a> in the <i>AWS Data Pipeline Developer Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TaskObject.html"
+                                  title='struct rusoto_datapipeline::TaskObject'>TaskObject</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a pipeline task that is assigned to a task runner.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidatePipelineDefinitionInput.html"
+                                  title='struct rusoto_datapipeline::ValidatePipelineDefinitionInput'>ValidatePipelineDefinitionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the parameters for ValidatePipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidatePipelineDefinitionOutput.html"
+                                  title='struct rusoto_datapipeline::ValidatePipelineDefinitionOutput'>ValidatePipelineDefinitionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of ValidatePipelineDefinition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidationError.html"
+                                  title='struct rusoto_datapipeline::ValidationError'>ValidationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines a validation error. Validation errors prevent pipeline activation. The set of validation errors that can be returned are defined by AWS Data Pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidationWarning.html"
+                                  title='struct rusoto_datapipeline::ValidationWarning'>ValidationWarning</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines a validation warning. Validation warnings do not prevent pipeline activation. The set of validation warnings that can be returned are defined by AWS Data Pipeline.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ActivatePipelineError.html"
+                                  title='enum rusoto_datapipeline::ActivatePipelineError'>ActivatePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ActivatePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsError.html"
+                                  title='enum rusoto_datapipeline::AddTagsError'>AddTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePipelineError.html"
+                                  title='enum rusoto_datapipeline::CreatePipelineError'>CreatePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeactivatePipelineError.html"
+                                  title='enum rusoto_datapipeline::DeactivatePipelineError'>DeactivatePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeactivatePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePipelineError.html"
+                                  title='enum rusoto_datapipeline::DeletePipelineError'>DeletePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeObjectsError.html"
+                                  title='enum rusoto_datapipeline::DescribeObjectsError'>DescribeObjectsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeObjects</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePipelinesError.html"
+                                  title='enum rusoto_datapipeline::DescribePipelinesError'>DescribePipelinesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePipelines</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EvaluateExpressionError.html"
+                                  title='enum rusoto_datapipeline::EvaluateExpressionError'>EvaluateExpressionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EvaluateExpression</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPipelineDefinitionError.html"
+                                  title='enum rusoto_datapipeline::GetPipelineDefinitionError'>GetPipelineDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPipelineDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPipelinesError.html"
+                                  title='enum rusoto_datapipeline::ListPipelinesError'>ListPipelinesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPipelines</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PollForTaskError.html"
+                                  title='enum rusoto_datapipeline::PollForTaskError'>PollForTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PollForTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutPipelineDefinitionError.html"
+                                  title='enum rusoto_datapipeline::PutPipelineDefinitionError'>PutPipelineDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutPipelineDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.QueryObjectsError.html"
+                                  title='enum rusoto_datapipeline::QueryObjectsError'>QueryObjectsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by QueryObjects</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsError.html"
+                                  title='enum rusoto_datapipeline::RemoveTagsError'>RemoveTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ReportTaskProgressError.html"
+                                  title='enum rusoto_datapipeline::ReportTaskProgressError'>ReportTaskProgressError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ReportTaskProgress</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ReportTaskRunnerHeartbeatError.html"
+                                  title='enum rusoto_datapipeline::ReportTaskRunnerHeartbeatError'>ReportTaskRunnerHeartbeatError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ReportTaskRunnerHeartbeat</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetStatusError.html"
+                                  title='enum rusoto_datapipeline::SetStatusError'>SetStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetTaskStatusError.html"
+                                  title='enum rusoto_datapipeline::SetTaskStatusError'>SetTaskStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetTaskStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ValidatePipelineDefinitionError.html"
+                                  title='enum rusoto_datapipeline::ValidatePipelineDefinitionError'>ValidatePipelineDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ValidatePipelineDefinition</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.DataPipeline.html"
+                                  title='trait rusoto_datapipeline::DataPipeline'>DataPipeline</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Data Pipeline API. AWS Data Pipeline clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_datapipeline";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,1187 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_autoscaling` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_autoscaling"><title>rusoto_autoscaling - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_autoscaling/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_autoscaling</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_autoscaling', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_autoscaling</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_autoscaling/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Amazon EC2 Auto Scaling</fullname> <p>Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies, schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic Load Balancing services.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.AutoscalingClient.html">AutoscalingClient</a> and <a href="trait.Autoscaling.html">Autoscaling</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivitiesType.html"
+                                  title='struct rusoto_autoscaling::ActivitiesType'>ActivitiesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Activity.html"
+                                  title='struct rusoto_autoscaling::Activity'>Activity</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes scaling activity, which is a long-running process that represents a change to your Auto Scaling group, such as changing its size or replacing an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivityType.html"
+                                  title='struct rusoto_autoscaling::ActivityType'>ActivityType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdjustmentType.html"
+                                  title='struct rusoto_autoscaling::AdjustmentType'>AdjustmentType</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a policy adjustment type.</p> <p>For more information, see <a href="http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">Dynamic Scaling</a> in the <i>Auto Scaling User Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Alarm.html"
+                                  title='struct rusoto_autoscaling::Alarm'>Alarm</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an alarm.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachInstancesQuery.html"
+                                  title='struct rusoto_autoscaling::AttachInstancesQuery'>AttachInstancesQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancerTargetGroupsResultType.html"
+                                  title='struct rusoto_autoscaling::AttachLoadBalancerTargetGroupsResultType'>AttachLoadBalancerTargetGroupsResultType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancerTargetGroupsType.html"
+                                  title='struct rusoto_autoscaling::AttachLoadBalancerTargetGroupsType'>AttachLoadBalancerTargetGroupsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancersResultType.html"
+                                  title='struct rusoto_autoscaling::AttachLoadBalancersResultType'>AttachLoadBalancersResultType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancersType.html"
+                                  title='struct rusoto_autoscaling::AttachLoadBalancersType'>AttachLoadBalancersType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingGroup.html"
+                                  title='struct rusoto_autoscaling::AutoScalingGroup'>AutoScalingGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Auto Scaling group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingGroupNamesType.html"
+                                  title='struct rusoto_autoscaling::AutoScalingGroupNamesType'>AutoScalingGroupNamesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingGroupsType.html"
+                                  title='struct rusoto_autoscaling::AutoScalingGroupsType'>AutoScalingGroupsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingInstanceDetails.html"
+                                  title='struct rusoto_autoscaling::AutoScalingInstanceDetails'>AutoScalingInstanceDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an EC2 instance associated with an Auto Scaling group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingInstancesType.html"
+                                  title='struct rusoto_autoscaling::AutoScalingInstancesType'>AutoScalingInstancesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoscalingClient.html"
+                                  title='struct rusoto_autoscaling::AutoscalingClient'>AutoscalingClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Auto Scaling API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BlockDeviceMapping.html"
+                                  title='struct rusoto_autoscaling::BlockDeviceMapping'>BlockDeviceMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a block device mapping.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompleteLifecycleActionAnswer.html"
+                                  title='struct rusoto_autoscaling::CompleteLifecycleActionAnswer'>CompleteLifecycleActionAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompleteLifecycleActionType.html"
+                                  title='struct rusoto_autoscaling::CompleteLifecycleActionType'>CompleteLifecycleActionType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAutoScalingGroupType.html"
+                                  title='struct rusoto_autoscaling::CreateAutoScalingGroupType'>CreateAutoScalingGroupType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLaunchConfigurationType.html"
+                                  title='struct rusoto_autoscaling::CreateLaunchConfigurationType'>CreateLaunchConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOrUpdateTagsType.html"
+                                  title='struct rusoto_autoscaling::CreateOrUpdateTagsType'>CreateOrUpdateTagsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CustomizedMetricSpecification.html"
+                                  title='struct rusoto_autoscaling::CustomizedMetricSpecification'>CustomizedMetricSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>Configures a customized metric for a target tracking policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAutoScalingGroupType.html"
+                                  title='struct rusoto_autoscaling::DeleteAutoScalingGroupType'>DeleteAutoScalingGroupType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLifecycleHookAnswer.html"
+                                  title='struct rusoto_autoscaling::DeleteLifecycleHookAnswer'>DeleteLifecycleHookAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLifecycleHookType.html"
+                                  title='struct rusoto_autoscaling::DeleteLifecycleHookType'>DeleteLifecycleHookType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNotificationConfigurationType.html"
+                                  title='struct rusoto_autoscaling::DeleteNotificationConfigurationType'>DeleteNotificationConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePolicyType.html"
+                                  title='struct rusoto_autoscaling::DeletePolicyType'>DeletePolicyType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteScheduledActionType.html"
+                                  title='struct rusoto_autoscaling::DeleteScheduledActionType'>DeleteScheduledActionType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTagsType.html"
+                                  title='struct rusoto_autoscaling::DeleteTagsType'>DeleteTagsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountLimitsAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeAccountLimitsAnswer'>DescribeAccountLimitsAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAdjustmentTypesAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeAdjustmentTypesAnswer'>DescribeAdjustmentTypesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutoScalingInstancesType.html"
+                                  title='struct rusoto_autoscaling::DescribeAutoScalingInstancesType'>DescribeAutoScalingInstancesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutoScalingNotificationTypesAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeAutoScalingNotificationTypesAnswer'>DescribeAutoScalingNotificationTypesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLifecycleHookTypesAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeLifecycleHookTypesAnswer'>DescribeLifecycleHookTypesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLifecycleHooksAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeLifecycleHooksAnswer'>DescribeLifecycleHooksAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLifecycleHooksType.html"
+                                  title='struct rusoto_autoscaling::DescribeLifecycleHooksType'>DescribeLifecycleHooksType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancerTargetGroupsRequest.html"
+                                  title='struct rusoto_autoscaling::DescribeLoadBalancerTargetGroupsRequest'>DescribeLoadBalancerTargetGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancerTargetGroupsResponse.html"
+                                  title='struct rusoto_autoscaling::DescribeLoadBalancerTargetGroupsResponse'>DescribeLoadBalancerTargetGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancersRequest.html"
+                                  title='struct rusoto_autoscaling::DescribeLoadBalancersRequest'>DescribeLoadBalancersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancersResponse.html"
+                                  title='struct rusoto_autoscaling::DescribeLoadBalancersResponse'>DescribeLoadBalancersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMetricCollectionTypesAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeMetricCollectionTypesAnswer'>DescribeMetricCollectionTypesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationConfigurationsAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeNotificationConfigurationsAnswer'>DescribeNotificationConfigurationsAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationConfigurationsType.html"
+                                  title='struct rusoto_autoscaling::DescribeNotificationConfigurationsType'>DescribeNotificationConfigurationsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePoliciesType.html"
+                                  title='struct rusoto_autoscaling::DescribePoliciesType'>DescribePoliciesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeScalingActivitiesType.html"
+                                  title='struct rusoto_autoscaling::DescribeScalingActivitiesType'>DescribeScalingActivitiesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeScheduledActionsType.html"
+                                  title='struct rusoto_autoscaling::DescribeScheduledActionsType'>DescribeScheduledActionsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsType.html"
+                                  title='struct rusoto_autoscaling::DescribeTagsType'>DescribeTagsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTerminationPolicyTypesAnswer.html"
+                                  title='struct rusoto_autoscaling::DescribeTerminationPolicyTypesAnswer'>DescribeTerminationPolicyTypesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachInstancesAnswer.html"
+                                  title='struct rusoto_autoscaling::DetachInstancesAnswer'>DetachInstancesAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachInstancesQuery.html"
+                                  title='struct rusoto_autoscaling::DetachInstancesQuery'>DetachInstancesQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachLoadBalancerTargetGroupsResultType.html"
+                                  title='struct rusoto_autoscaling::DetachLoadBalancerTargetGroupsResultType'>DetachLoadBalancerTargetGroupsResultType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachLoadBalancerTargetGroupsType.html"
+                                  title='struct rusoto_autoscaling::DetachLoadBalancerTargetGroupsType'>DetachLoadBalancerTargetGroupsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachLoadBalancersResultType.html"
+                                  title='struct rusoto_autoscaling::DetachLoadBalancersResultType'>DetachLoadBalancersResultType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachLoadBalancersType.html"
+                                  title='struct rusoto_autoscaling::DetachLoadBalancersType'>DetachLoadBalancersType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableMetricsCollectionQuery.html"
+                                  title='struct rusoto_autoscaling::DisableMetricsCollectionQuery'>DisableMetricsCollectionQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Ebs.html"
+                                  title='struct rusoto_autoscaling::Ebs'>Ebs</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Amazon EBS volume.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableMetricsCollectionQuery.html"
+                                  title='struct rusoto_autoscaling::EnableMetricsCollectionQuery'>EnableMetricsCollectionQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnabledMetric.html"
+                                  title='struct rusoto_autoscaling::EnabledMetric'>EnabledMetric</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an enabled metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnterStandbyAnswer.html"
+                                  title='struct rusoto_autoscaling::EnterStandbyAnswer'>EnterStandbyAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnterStandbyQuery.html"
+                                  title='struct rusoto_autoscaling::EnterStandbyQuery'>EnterStandbyQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExecutePolicyType.html"
+                                  title='struct rusoto_autoscaling::ExecutePolicyType'>ExecutePolicyType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExitStandbyAnswer.html"
+                                  title='struct rusoto_autoscaling::ExitStandbyAnswer'>ExitStandbyAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExitStandbyQuery.html"
+                                  title='struct rusoto_autoscaling::ExitStandbyQuery'>ExitStandbyQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Filter.html"
+                                  title='struct rusoto_autoscaling::Filter'>Filter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Instance.html"
+                                  title='struct rusoto_autoscaling::Instance'>Instance</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an EC2 instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceMonitoring.html"
+                                  title='struct rusoto_autoscaling::InstanceMonitoring'>InstanceMonitoring</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes whether detailed monitoring is enabled for the Auto Scaling instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchConfiguration.html"
+                                  title='struct rusoto_autoscaling::LaunchConfiguration'>LaunchConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a launch configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchConfigurationNameType.html"
+                                  title='struct rusoto_autoscaling::LaunchConfigurationNameType'>LaunchConfigurationNameType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchConfigurationNamesType.html"
+                                  title='struct rusoto_autoscaling::LaunchConfigurationNamesType'>LaunchConfigurationNamesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchConfigurationsType.html"
+                                  title='struct rusoto_autoscaling::LaunchConfigurationsType'>LaunchConfigurationsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchTemplateSpecification.html"
+                                  title='struct rusoto_autoscaling::LaunchTemplateSpecification'>LaunchTemplateSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a launch template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LifecycleHook.html"
+                                  title='struct rusoto_autoscaling::LifecycleHook'>LifecycleHook</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a lifecycle hook, which tells Auto Scaling that you want to perform an action whenever it launches instances or whenever it terminates instances.</p> <p>For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Auto Scaling Lifecycle Hooks</a> in the <i>Auto Scaling User Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LifecycleHookSpecification.html"
+                                  title='struct rusoto_autoscaling::LifecycleHookSpecification'>LifecycleHookSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a lifecycle hook, which tells Auto Scaling that you want to perform an action whenever it launches instances or whenever it terminates instances.</p> <p>For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Auto Scaling Lifecycle Hooks</a> in the <i>Auto Scaling User Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerState.html"
+                                  title='struct rusoto_autoscaling::LoadBalancerState'>LoadBalancerState</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the state of a Classic Load Balancer.</p> <p>If you specify a load balancer when creating the Auto Scaling group, the state of the load balancer is <code>InService</code>.</p> <p>If you attach a load balancer to an existing Auto Scaling group, the initial state is <code>Adding</code>. The state transitions to <code>Added</code> after all instances in the group are registered with the load balancer. If ELB health checks are enabled for the load balancer, the state transitions to <code>InService</code> after at least one instance in the group passes the health check. If EC2 health checks are enabled instead, the load balancer remains in the <code>Added</code> state.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTargetGroupState.html"
+                                  title='struct rusoto_autoscaling::LoadBalancerTargetGroupState'>LoadBalancerTargetGroupState</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the state of a target group.</p> <p>If you attach a target group to an existing Auto Scaling group, the initial state is <code>Adding</code>. The state transitions to <code>Added</code> after all Auto Scaling instances are registered with the target group. If ELB health checks are enabled, the state transitions to <code>InService</code> after at least one Auto Scaling instance passes the health check. If EC2 health checks are enabled instead, the target group remains in the <code>Added</code> state.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricCollectionType.html"
+                                  title='struct rusoto_autoscaling::MetricCollectionType'>MetricCollectionType</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDimension.html"
+                                  title='struct rusoto_autoscaling::MetricDimension'>MetricDimension</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the dimension of a metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricGranularityType.html"
+                                  title='struct rusoto_autoscaling::MetricGranularityType'>MetricGranularityType</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a granularity of a metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotificationConfiguration.html"
+                                  title='struct rusoto_autoscaling::NotificationConfiguration'>NotificationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a notification.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PoliciesType.html"
+                                  title='struct rusoto_autoscaling::PoliciesType'>PoliciesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyARNType.html"
+                                  title='struct rusoto_autoscaling::PolicyARNType'>PolicyARNType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the output of PutScalingPolicy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PredefinedMetricSpecification.html"
+                                  title='struct rusoto_autoscaling::PredefinedMetricSpecification'>PredefinedMetricSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>Configures a predefined metric for a target tracking policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProcessType.html"
+                                  title='struct rusoto_autoscaling::ProcessType'>ProcessType</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a process type.</p> <p>For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html#process-types">Auto Scaling Processes</a> in the <i>Auto Scaling User Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProcessesType.html"
+                                  title='struct rusoto_autoscaling::ProcessesType'>ProcessesType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutLifecycleHookAnswer.html"
+                                  title='struct rusoto_autoscaling::PutLifecycleHookAnswer'>PutLifecycleHookAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutLifecycleHookType.html"
+                                  title='struct rusoto_autoscaling::PutLifecycleHookType'>PutLifecycleHookType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutNotificationConfigurationType.html"
+                                  title='struct rusoto_autoscaling::PutNotificationConfigurationType'>PutNotificationConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutScalingPolicyType.html"
+                                  title='struct rusoto_autoscaling::PutScalingPolicyType'>PutScalingPolicyType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutScheduledUpdateGroupActionType.html"
+                                  title='struct rusoto_autoscaling::PutScheduledUpdateGroupActionType'>PutScheduledUpdateGroupActionType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecordLifecycleActionHeartbeatAnswer.html"
+                                  title='struct rusoto_autoscaling::RecordLifecycleActionHeartbeatAnswer'>RecordLifecycleActionHeartbeatAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecordLifecycleActionHeartbeatType.html"
+                                  title='struct rusoto_autoscaling::RecordLifecycleActionHeartbeatType'>RecordLifecycleActionHeartbeatType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingPolicy.html"
+                                  title='struct rusoto_autoscaling::ScalingPolicy'>ScalingPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a scaling policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingProcessQuery.html"
+                                  title='struct rusoto_autoscaling::ScalingProcessQuery'>ScalingProcessQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduledActionsType.html"
+                                  title='struct rusoto_autoscaling::ScheduledActionsType'>ScheduledActionsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduledUpdateGroupAction.html"
+                                  title='struct rusoto_autoscaling::ScheduledUpdateGroupAction'>ScheduledUpdateGroupAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a scheduled update to an Auto Scaling group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDesiredCapacityType.html"
+                                  title='struct rusoto_autoscaling::SetDesiredCapacityType'>SetDesiredCapacityType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetInstanceHealthQuery.html"
+                                  title='struct rusoto_autoscaling::SetInstanceHealthQuery'>SetInstanceHealthQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetInstanceProtectionAnswer.html"
+                                  title='struct rusoto_autoscaling::SetInstanceProtectionAnswer'>SetInstanceProtectionAnswer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetInstanceProtectionQuery.html"
+                                  title='struct rusoto_autoscaling::SetInstanceProtectionQuery'>SetInstanceProtectionQuery</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepAdjustment.html"
+                                  title='struct rusoto_autoscaling::StepAdjustment'>StepAdjustment</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Describes an adjustment based on the difference between the value of the aggregated CloudWatch metric and the breach threshold that you&#39;ve defined for the alarm.</p> <p>For the following examples, suppose that you have an alarm with a breach threshold of 50:</p> <ul> <li> <p>If you want the adjustment to be triggered when the metric is greater than or equal to 50 and less than 60, specify a lower bound of 0 and an upper bound of 10.</p> </li> <li> <p>If you want the adjustment to be triggered when the metric is greater than 40 and less than or equal to 50, specify a lower bound of -10 and an upper bound of 0.</p> </li> </ul> <p>There are a few rules for the step adjustments for your step policy:</p> <ul> <li> <p>The ranges of your step adjustments can&#39;t overlap or have a gap.</p> </li> <li> <p>At most one step adjustment can have a null lower bound. If one step adjustment has a negative lower bound, then there must be a step adjustment with a null lower bound.</p> </li> <li> <p>At most one step adjustment can have a null upper bound. If one step adjustment has a positive upper bound, then there must be a step adjustment with a null upper bound.</p> </li> <li> <p>The upper and lower bound can&#39;t be null in the same step adjustment.</p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SuspendedProcess.html"
+                                  title='struct rusoto_autoscaling::SuspendedProcess'>SuspendedProcess</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Auto Scaling process that has been suspended. For more information, see <a>ProcessType</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_autoscaling::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a tag for an Auto Scaling group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagDescription.html"
+                                  title='struct rusoto_autoscaling::TagDescription'>TagDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a tag for an Auto Scaling group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagsType.html"
+                                  title='struct rusoto_autoscaling::TagsType'>TagsType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetTrackingConfiguration.html"
+                                  title='struct rusoto_autoscaling::TargetTrackingConfiguration'>TargetTrackingConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a target tracking policy configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateInstanceInAutoScalingGroupType.html"
+                                  title='struct rusoto_autoscaling::TerminateInstanceInAutoScalingGroupType'>TerminateInstanceInAutoScalingGroupType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAutoScalingGroupType.html"
+                                  title='struct rusoto_autoscaling::UpdateAutoScalingGroupType'>UpdateAutoScalingGroupType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachInstancesError.html"
+                                  title='enum rusoto_autoscaling::AttachInstancesError'>AttachInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachLoadBalancerTargetGroupsError.html"
+                                  title='enum rusoto_autoscaling::AttachLoadBalancerTargetGroupsError'>AttachLoadBalancerTargetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachLoadBalancerTargetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachLoadBalancersError.html"
+                                  title='enum rusoto_autoscaling::AttachLoadBalancersError'>AttachLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CompleteLifecycleActionError.html"
+                                  title='enum rusoto_autoscaling::CompleteLifecycleActionError'>CompleteLifecycleActionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CompleteLifecycleAction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAutoScalingGroupError.html"
+                                  title='enum rusoto_autoscaling::CreateAutoScalingGroupError'>CreateAutoScalingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAutoScalingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLaunchConfigurationError.html"
+                                  title='enum rusoto_autoscaling::CreateLaunchConfigurationError'>CreateLaunchConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLaunchConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateOrUpdateTagsError.html"
+                                  title='enum rusoto_autoscaling::CreateOrUpdateTagsError'>CreateOrUpdateTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateOrUpdateTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAutoScalingGroupError.html"
+                                  title='enum rusoto_autoscaling::DeleteAutoScalingGroupError'>DeleteAutoScalingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAutoScalingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLaunchConfigurationError.html"
+                                  title='enum rusoto_autoscaling::DeleteLaunchConfigurationError'>DeleteLaunchConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLaunchConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLifecycleHookError.html"
+                                  title='enum rusoto_autoscaling::DeleteLifecycleHookError'>DeleteLifecycleHookError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLifecycleHook</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteNotificationConfigurationError.html"
+                                  title='enum rusoto_autoscaling::DeleteNotificationConfigurationError'>DeleteNotificationConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteNotificationConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePolicyError.html"
+                                  title='enum rusoto_autoscaling::DeletePolicyError'>DeletePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteScheduledActionError.html"
+                                  title='enum rusoto_autoscaling::DeleteScheduledActionError'>DeleteScheduledActionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteScheduledAction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTagsError.html"
+                                  title='enum rusoto_autoscaling::DeleteTagsError'>DeleteTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAccountLimitsError.html"
+                                  title='enum rusoto_autoscaling::DescribeAccountLimitsError'>DescribeAccountLimitsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAccountLimits</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAdjustmentTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeAdjustmentTypesError'>DescribeAdjustmentTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAdjustmentTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAutoScalingGroupsError.html"
+                                  title='enum rusoto_autoscaling::DescribeAutoScalingGroupsError'>DescribeAutoScalingGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAutoScalingGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAutoScalingInstancesError.html"
+                                  title='enum rusoto_autoscaling::DescribeAutoScalingInstancesError'>DescribeAutoScalingInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAutoScalingInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAutoScalingNotificationTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeAutoScalingNotificationTypesError'>DescribeAutoScalingNotificationTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAutoScalingNotificationTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLaunchConfigurationsError.html"
+                                  title='enum rusoto_autoscaling::DescribeLaunchConfigurationsError'>DescribeLaunchConfigurationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLaunchConfigurations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLifecycleHookTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeLifecycleHookTypesError'>DescribeLifecycleHookTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLifecycleHookTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLifecycleHooksError.html"
+                                  title='enum rusoto_autoscaling::DescribeLifecycleHooksError'>DescribeLifecycleHooksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLifecycleHooks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoadBalancerTargetGroupsError.html"
+                                  title='enum rusoto_autoscaling::DescribeLoadBalancerTargetGroupsError'>DescribeLoadBalancerTargetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoadBalancerTargetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoadBalancersError.html"
+                                  title='enum rusoto_autoscaling::DescribeLoadBalancersError'>DescribeLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMetricCollectionTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeMetricCollectionTypesError'>DescribeMetricCollectionTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMetricCollectionTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeNotificationConfigurationsError.html"
+                                  title='enum rusoto_autoscaling::DescribeNotificationConfigurationsError'>DescribeNotificationConfigurationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeNotificationConfigurations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePoliciesError.html"
+                                  title='enum rusoto_autoscaling::DescribePoliciesError'>DescribePoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeScalingActivitiesError.html"
+                                  title='enum rusoto_autoscaling::DescribeScalingActivitiesError'>DescribeScalingActivitiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeScalingActivities</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeScalingProcessTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeScalingProcessTypesError'>DescribeScalingProcessTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeScalingProcessTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeScheduledActionsError.html"
+                                  title='enum rusoto_autoscaling::DescribeScheduledActionsError'>DescribeScheduledActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeScheduledActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTagsError.html"
+                                  title='enum rusoto_autoscaling::DescribeTagsError'>DescribeTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTerminationPolicyTypesError.html"
+                                  title='enum rusoto_autoscaling::DescribeTerminationPolicyTypesError'>DescribeTerminationPolicyTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTerminationPolicyTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachInstancesError.html"
+                                  title='enum rusoto_autoscaling::DetachInstancesError'>DetachInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachLoadBalancerTargetGroupsError.html"
+                                  title='enum rusoto_autoscaling::DetachLoadBalancerTargetGroupsError'>DetachLoadBalancerTargetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachLoadBalancerTargetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachLoadBalancersError.html"
+                                  title='enum rusoto_autoscaling::DetachLoadBalancersError'>DetachLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableMetricsCollectionError.html"
+                                  title='enum rusoto_autoscaling::DisableMetricsCollectionError'>DisableMetricsCollectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableMetricsCollection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableMetricsCollectionError.html"
+                                  title='enum rusoto_autoscaling::EnableMetricsCollectionError'>EnableMetricsCollectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableMetricsCollection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnterStandbyError.html"
+                                  title='enum rusoto_autoscaling::EnterStandbyError'>EnterStandbyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnterStandby</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ExecutePolicyError.html"
+                                  title='enum rusoto_autoscaling::ExecutePolicyError'>ExecutePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ExecutePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ExitStandbyError.html"
+                                  title='enum rusoto_autoscaling::ExitStandbyError'>ExitStandbyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ExitStandby</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutLifecycleHookError.html"
+                                  title='enum rusoto_autoscaling::PutLifecycleHookError'>PutLifecycleHookError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutLifecycleHook</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutNotificationConfigurationError.html"
+                                  title='enum rusoto_autoscaling::PutNotificationConfigurationError'>PutNotificationConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutNotificationConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutScalingPolicyError.html"
+                                  title='enum rusoto_autoscaling::PutScalingPolicyError'>PutScalingPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutScalingPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutScheduledUpdateGroupActionError.html"
+                                  title='enum rusoto_autoscaling::PutScheduledUpdateGroupActionError'>PutScheduledUpdateGroupActionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutScheduledUpdateGroupAction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RecordLifecycleActionHeartbeatError.html"
+                                  title='enum rusoto_autoscaling::RecordLifecycleActionHeartbeatError'>RecordLifecycleActionHeartbeatError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RecordLifecycleActionHeartbeat</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResumeProcessesError.html"
+                                  title='enum rusoto_autoscaling::ResumeProcessesError'>ResumeProcessesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResumeProcesses</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetDesiredCapacityError.html"
+                                  title='enum rusoto_autoscaling::SetDesiredCapacityError'>SetDesiredCapacityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetDesiredCapacity</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetInstanceHealthError.html"
+                                  title='enum rusoto_autoscaling::SetInstanceHealthError'>SetInstanceHealthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetInstanceHealth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetInstanceProtectionError.html"
+                                  title='enum rusoto_autoscaling::SetInstanceProtectionError'>SetInstanceProtectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetInstanceProtection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SuspendProcessesError.html"
+                                  title='enum rusoto_autoscaling::SuspendProcessesError'>SuspendProcessesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SuspendProcesses</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TerminateInstanceInAutoScalingGroupError.html"
+                                  title='enum rusoto_autoscaling::TerminateInstanceInAutoScalingGroupError'>TerminateInstanceInAutoScalingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TerminateInstanceInAutoScalingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAutoScalingGroupError.html"
+                                  title='enum rusoto_autoscaling::UpdateAutoScalingGroupError'>UpdateAutoScalingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAutoScalingGroup</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Autoscaling.html"
+                                  title='trait rusoto_autoscaling::Autoscaling'>Autoscaling</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Auto Scaling API. Auto Scaling clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_autoscaling";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

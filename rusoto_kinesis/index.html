@@ -1,0 +1,521 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_kinesis` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_kinesis"><title>rusoto_kinesis - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_kinesis/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_kinesis</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_kinesis', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_kinesis</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_kinesis/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Amazon Kinesis Data Streams Service API Reference</fullname> <p>Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big data.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.KinesisClient.html">KinesisClient</a> and <a href="trait.Kinesis.html">Kinesis</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToStreamInput.html"
+                                  title='struct rusoto_kinesis::AddTagsToStreamInput'>AddTagsToStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>AddTagsToStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStreamInput.html"
+                                  title='struct rusoto_kinesis::CreateStreamInput'>CreateStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>CreateStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DecreaseStreamRetentionPeriodInput.html"
+                                  title='struct rusoto_kinesis::DecreaseStreamRetentionPeriodInput'>DecreaseStreamRetentionPeriodInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>DecreaseStreamRetentionPeriod</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteStreamInput.html"
+                                  title='struct rusoto_kinesis::DeleteStreamInput'>DeleteStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>DeleteStream</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLimitsInput.html"
+                                  title='struct rusoto_kinesis::DescribeLimitsInput'>DescribeLimitsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLimitsOutput.html"
+                                  title='struct rusoto_kinesis::DescribeLimitsOutput'>DescribeLimitsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamInput.html"
+                                  title='struct rusoto_kinesis::DescribeStreamInput'>DescribeStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>DescribeStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamOutput.html"
+                                  title='struct rusoto_kinesis::DescribeStreamOutput'>DescribeStreamOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>DescribeStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamSummaryInput.html"
+                                  title='struct rusoto_kinesis::DescribeStreamSummaryInput'>DescribeStreamSummaryInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamSummaryOutput.html"
+                                  title='struct rusoto_kinesis::DescribeStreamSummaryOutput'>DescribeStreamSummaryOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableEnhancedMonitoringInput.html"
+                                  title='struct rusoto_kinesis::DisableEnhancedMonitoringInput'>DisableEnhancedMonitoringInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>DisableEnhancedMonitoring</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableEnhancedMonitoringInput.html"
+                                  title='struct rusoto_kinesis::EnableEnhancedMonitoringInput'>EnableEnhancedMonitoringInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>EnableEnhancedMonitoring</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnhancedMetrics.html"
+                                  title='struct rusoto_kinesis::EnhancedMetrics'>EnhancedMetrics</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents enhanced metrics types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnhancedMonitoringOutput.html"
+                                  title='struct rusoto_kinesis::EnhancedMonitoringOutput'>EnhancedMonitoringOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <a>EnableEnhancedMonitoring</a> and <a>DisableEnhancedMonitoring</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRecordsInput.html"
+                                  title='struct rusoto_kinesis::GetRecordsInput'>GetRecordsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>GetRecords</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRecordsOutput.html"
+                                  title='struct rusoto_kinesis::GetRecordsOutput'>GetRecordsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <a>GetRecords</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetShardIteratorInput.html"
+                                  title='struct rusoto_kinesis::GetShardIteratorInput'>GetShardIteratorInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>GetShardIterator</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetShardIteratorOutput.html"
+                                  title='struct rusoto_kinesis::GetShardIteratorOutput'>GetShardIteratorOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>GetShardIterator</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HashKeyRange.html"
+                                  title='struct rusoto_kinesis::HashKeyRange'>HashKeyRange</a></td>
+                           <td class='docblock-short'>
+                                <p>The range of possible hash key values for the shard, which is a set of ordered contiguous positive integers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IncreaseStreamRetentionPeriodInput.html"
+                                  title='struct rusoto_kinesis::IncreaseStreamRetentionPeriodInput'>IncreaseStreamRetentionPeriodInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <a>IncreaseStreamRetentionPeriod</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KinesisClient.html"
+                                  title='struct rusoto_kinesis::KinesisClient'>KinesisClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Kinesis API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListShardsInput.html"
+                                  title='struct rusoto_kinesis::ListShardsInput'>ListShardsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListShardsOutput.html"
+                                  title='struct rusoto_kinesis::ListShardsOutput'>ListShardsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStreamsInput.html"
+                                  title='struct rusoto_kinesis::ListStreamsInput'>ListStreamsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>ListStreams</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStreamsOutput.html"
+                                  title='struct rusoto_kinesis::ListStreamsOutput'>ListStreamsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>ListStreams</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForStreamInput.html"
+                                  title='struct rusoto_kinesis::ListTagsForStreamInput'>ListTagsForStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>ListTagsForStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForStreamOutput.html"
+                                  title='struct rusoto_kinesis::ListTagsForStreamOutput'>ListTagsForStreamOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>ListTagsForStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MergeShardsInput.html"
+                                  title='struct rusoto_kinesis::MergeShardsInput'>MergeShardsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>MergeShards</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordInput.html"
+                                  title='struct rusoto_kinesis::PutRecordInput'>PutRecordInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>PutRecord</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordOutput.html"
+                                  title='struct rusoto_kinesis::PutRecordOutput'>PutRecordOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>PutRecord</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordsInput.html"
+                                  title='struct rusoto_kinesis::PutRecordsInput'>PutRecordsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>PutRecords</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordsOutput.html"
+                                  title='struct rusoto_kinesis::PutRecordsOutput'>PutRecordsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> <code>PutRecords</code> results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordsRequestEntry.html"
+                                  title='struct rusoto_kinesis::PutRecordsRequestEntry'>PutRecordsRequestEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <code>PutRecords</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordsResultEntry.html"
+                                  title='struct rusoto_kinesis::PutRecordsResultEntry'>PutRecordsResultEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of an individual record from a <code>PutRecords</code> request. A record that is successfully added to a stream includes <code>SequenceNumber</code> and <code>ShardId</code> in the result. A record that fails to be added to the stream includes <code>ErrorCode</code> and <code>ErrorMessage</code> in the result.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Record.html"
+                                  title='struct rusoto_kinesis::Record'>Record</a></td>
+                           <td class='docblock-short'>
+                                <p>The unit of data of the Kinesis data stream, which is composed of a sequence number, a partition key, and a data blob.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromStreamInput.html"
+                                  title='struct rusoto_kinesis::RemoveTagsFromStreamInput'>RemoveTagsFromStreamInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>RemoveTagsFromStream</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SequenceNumberRange.html"
+                                  title='struct rusoto_kinesis::SequenceNumberRange'>SequenceNumberRange</a></td>
+                           <td class='docblock-short'>
+                                <p>The range of possible sequence numbers for the shard.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Shard.html"
+                                  title='struct rusoto_kinesis::Shard'>Shard</a></td>
+                           <td class='docblock-short'>
+                                <p>A uniquely identified group of data records in a Kinesis data stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SplitShardInput.html"
+                                  title='struct rusoto_kinesis::SplitShardInput'>SplitShardInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input for <code>SplitShard</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartStreamEncryptionInput.html"
+                                  title='struct rusoto_kinesis::StartStreamEncryptionInput'>StartStreamEncryptionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopStreamEncryptionInput.html"
+                                  title='struct rusoto_kinesis::StopStreamEncryptionInput'>StopStreamEncryptionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamDescription.html"
+                                  title='struct rusoto_kinesis::StreamDescription'>StreamDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <a>DescribeStream</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamDescriptionSummary.html"
+                                  title='struct rusoto_kinesis::StreamDescriptionSummary'>StreamDescriptionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output for <a>DescribeStreamSummary</a> </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_kinesis::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Metadata assigned to the stream, consisting of a key-value pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateShardCountInput.html"
+                                  title='struct rusoto_kinesis::UpdateShardCountInput'>UpdateShardCountInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateShardCountOutput.html"
+                                  title='struct rusoto_kinesis::UpdateShardCountOutput'>UpdateShardCountOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToStreamError.html"
+                                  title='enum rusoto_kinesis::AddTagsToStreamError'>AddTagsToStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateStreamError.html"
+                                  title='enum rusoto_kinesis::CreateStreamError'>CreateStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DecreaseStreamRetentionPeriodError.html"
+                                  title='enum rusoto_kinesis::DecreaseStreamRetentionPeriodError'>DecreaseStreamRetentionPeriodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DecreaseStreamRetentionPeriod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteStreamError.html"
+                                  title='enum rusoto_kinesis::DeleteStreamError'>DeleteStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLimitsError.html"
+                                  title='enum rusoto_kinesis::DescribeLimitsError'>DescribeLimitsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLimits</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStreamError.html"
+                                  title='enum rusoto_kinesis::DescribeStreamError'>DescribeStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStreamSummaryError.html"
+                                  title='enum rusoto_kinesis::DescribeStreamSummaryError'>DescribeStreamSummaryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStreamSummary</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableEnhancedMonitoringError.html"
+                                  title='enum rusoto_kinesis::DisableEnhancedMonitoringError'>DisableEnhancedMonitoringError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableEnhancedMonitoring</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableEnhancedMonitoringError.html"
+                                  title='enum rusoto_kinesis::EnableEnhancedMonitoringError'>EnableEnhancedMonitoringError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableEnhancedMonitoring</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRecordsError.html"
+                                  title='enum rusoto_kinesis::GetRecordsError'>GetRecordsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRecords</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetShardIteratorError.html"
+                                  title='enum rusoto_kinesis::GetShardIteratorError'>GetShardIteratorError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetShardIterator</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.IncreaseStreamRetentionPeriodError.html"
+                                  title='enum rusoto_kinesis::IncreaseStreamRetentionPeriodError'>IncreaseStreamRetentionPeriodError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by IncreaseStreamRetentionPeriod</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListShardsError.html"
+                                  title='enum rusoto_kinesis::ListShardsError'>ListShardsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListShards</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListStreamsError.html"
+                                  title='enum rusoto_kinesis::ListStreamsError'>ListStreamsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListStreams</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForStreamError.html"
+                                  title='enum rusoto_kinesis::ListTagsForStreamError'>ListTagsForStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.MergeShardsError.html"
+                                  title='enum rusoto_kinesis::MergeShardsError'>MergeShardsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by MergeShards</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRecordError.html"
+                                  title='enum rusoto_kinesis::PutRecordError'>PutRecordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRecord</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRecordsError.html"
+                                  title='enum rusoto_kinesis::PutRecordsError'>PutRecordsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRecords</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromStreamError.html"
+                                  title='enum rusoto_kinesis::RemoveTagsFromStreamError'>RemoveTagsFromStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SplitShardError.html"
+                                  title='enum rusoto_kinesis::SplitShardError'>SplitShardError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SplitShard</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartStreamEncryptionError.html"
+                                  title='enum rusoto_kinesis::StartStreamEncryptionError'>StartStreamEncryptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartStreamEncryption</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopStreamEncryptionError.html"
+                                  title='enum rusoto_kinesis::StopStreamEncryptionError'>StopStreamEncryptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopStreamEncryption</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateShardCountError.html"
+                                  title='enum rusoto_kinesis::UpdateShardCountError'>UpdateShardCountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateShardCount</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Kinesis.html"
+                                  title='trait rusoto_kinesis::Kinesis'>Kinesis</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Kinesis API. Kinesis clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_kinesis";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_glacier` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_glacier"><title>rusoto_glacier - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_glacier/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_glacier</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_glacier', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_glacier</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_glacier/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><p>Amazon Glacier is a storage solution for &quot;cold data.&quot;</p> <p>Amazon Glacier is an extremely low-cost storage service that provides secure, durable, and easy-to-use storage for data backup and archival. With Amazon Glacier, customers can store their data cost effectively for months, years, or decades. Amazon Glacier also enables customers to offload the administrative burdens of operating and scaling storage to AWS, so they don&#39;t have to worry about capacity planning, hardware provisioning, data replication, hardware failure and recovery, or time-consuming hardware migrations.</p> <p>Amazon Glacier is a great storage choice when low storage cost is paramount, your data is rarely retrieved, and retrieval latency of several hours is acceptable. If your application requires fast or frequent access to your data, consider using Amazon S3. For more information, see <a href="http://aws.amazon.com/s3/">Amazon Simple Storage Service (Amazon S3)</a>.</p> <p>You can store any kind of data in any format. There is no maximum limit on the total amount of data you can store in Amazon Glacier.</p> <p>If you are a first-time user of Amazon Glacier, we recommend that you begin by reading the following sections in the <i>Amazon Glacier Developer Guide</i>:</p> <ul> <li> <p> <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html">What is Amazon Glacier</a> - This section of the Developer Guide describes the underlying data model, the operations it supports, and the AWS SDKs that you can use to interact with the service.</p> </li> <li> <p> <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html">Getting Started with Amazon Glacier</a> - The Getting Started section walks you through the process of creating a vault, uploading archives, creating jobs to download archives, retrieving the job output, and deleting archives.</p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.GlacierClient.html">GlacierClient</a> and <a href="trait.Glacier.html">Glacier</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AbortMultipartUploadInput.html"
+                                  title='struct rusoto_glacier::AbortMultipartUploadInput'>AbortMultipartUploadInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to abort a multipart upload identified by the upload ID.</p> <p>For information about the underlying REST API, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-abort-upload.html">Abort Multipart Upload</a>. For conceptual information, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html">Working with Archives in Amazon Glacier</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AbortVaultLockInput.html"
+                                  title='struct rusoto_glacier::AbortVaultLockInput'>AbortVaultLockInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input values for <code>AbortVaultLock</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToVaultInput.html"
+                                  title='struct rusoto_glacier::AddTagsToVaultInput'>AddTagsToVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input values for <code>AddTagsToVault</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArchiveCreationOutput.html"
+                                  title='struct rusoto_glacier::ArchiveCreationOutput'>ArchiveCreationOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p> <p>For information about the underlying REST API, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-post.html">Upload Archive</a>. For conceptual information, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html">Working with Archives in Amazon Glacier</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CSVInput.html"
+                                  title='struct rusoto_glacier::CSVInput'>CSVInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the comma-separated value (CSV) file to select from.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CSVOutput.html"
+                                  title='struct rusoto_glacier::CSVOutput'>CSVOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the comma-separated value (CSV) file that the job results are stored in.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompleteMultipartUploadInput.html"
+                                  title='struct rusoto_glacier::CompleteMultipartUploadInput'>CompleteMultipartUploadInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to complete a multipart upload operation. This informs Amazon Glacier that all the archive parts have been uploaded and Amazon Glacier can now assemble the archive from the uploaded parts. After assembling and saving the archive to the vault, Amazon Glacier returns the URI path of the newly created archive resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompleteVaultLockInput.html"
+                                  title='struct rusoto_glacier::CompleteVaultLockInput'>CompleteVaultLockInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input values for <code>CompleteVaultLock</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateVaultInput.html"
+                                  title='struct rusoto_glacier::CreateVaultInput'>CreateVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to create a vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateVaultOutput.html"
+                                  title='struct rusoto_glacier::CreateVaultOutput'>CreateVaultOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataRetrievalPolicy.html"
+                                  title='struct rusoto_glacier::DataRetrievalPolicy'>DataRetrievalPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Data retrieval policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataRetrievalRule.html"
+                                  title='struct rusoto_glacier::DataRetrievalRule'>DataRetrievalRule</a></td>
+                           <td class='docblock-short'>
+                                <p>Data retrieval policy rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteArchiveInput.html"
+                                  title='struct rusoto_glacier::DeleteArchiveInput'>DeleteArchiveInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for deleting an archive from an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVaultAccessPolicyInput.html"
+                                  title='struct rusoto_glacier::DeleteVaultAccessPolicyInput'>DeleteVaultAccessPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                <p>DeleteVaultAccessPolicy input.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVaultInput.html"
+                                  title='struct rusoto_glacier::DeleteVaultInput'>DeleteVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for deleting a vault from Amazon Glacier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVaultNotificationsInput.html"
+                                  title='struct rusoto_glacier::DeleteVaultNotificationsInput'>DeleteVaultNotificationsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for deleting a vault notification configuration from an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobInput.html"
+                                  title='struct rusoto_glacier::DescribeJobInput'>DescribeJobInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving a job description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeVaultInput.html"
+                                  title='struct rusoto_glacier::DescribeVaultInput'>DescribeVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving metadata for a specific vault in Amazon Glacier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeVaultOutput.html"
+                                  title='struct rusoto_glacier::DescribeVaultOutput'>DescribeVaultOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Encryption.html"
+                                  title='struct rusoto_glacier::Encryption'>Encryption</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the encryption used to store the job results in Amazon S3. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDataRetrievalPolicyInput.html"
+                                  title='struct rusoto_glacier::GetDataRetrievalPolicyInput'>GetDataRetrievalPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Input for GetDataRetrievalPolicy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDataRetrievalPolicyOutput.html"
+                                  title='struct rusoto_glacier::GetDataRetrievalPolicyOutput'>GetDataRetrievalPolicyOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to the <code>GetDataRetrievalPolicy</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobOutputInput.html"
+                                  title='struct rusoto_glacier::GetJobOutputInput'>GetJobOutputInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for downloading output of an Amazon Glacier job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobOutputOutput.html"
+                                  title='struct rusoto_glacier::GetJobOutputOutput'>GetJobOutputOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultAccessPolicyInput.html"
+                                  title='struct rusoto_glacier::GetVaultAccessPolicyInput'>GetVaultAccessPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Input for GetVaultAccessPolicy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultAccessPolicyOutput.html"
+                                  title='struct rusoto_glacier::GetVaultAccessPolicyOutput'>GetVaultAccessPolicyOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Output for GetVaultAccessPolicy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultLockInput.html"
+                                  title='struct rusoto_glacier::GetVaultLockInput'>GetVaultLockInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input values for <code>GetVaultLock</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultLockOutput.html"
+                                  title='struct rusoto_glacier::GetVaultLockOutput'>GetVaultLockOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultNotificationsInput.html"
+                                  title='struct rusoto_glacier::GetVaultNotificationsInput'>GetVaultNotificationsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving the notification configuration set on an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetVaultNotificationsOutput.html"
+                                  title='struct rusoto_glacier::GetVaultNotificationsOutput'>GetVaultNotificationsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GlacierClient.html"
+                                  title='struct rusoto_glacier::GlacierClient'>GlacierClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Glacier API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GlacierJobDescription.html"
+                                  title='struct rusoto_glacier::GlacierJobDescription'>GlacierJobDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the description of an Amazon Glacier job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Grant.html"
+                                  title='struct rusoto_glacier::Grant'>Grant</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a grant.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Grantee.html"
+                                  title='struct rusoto_glacier::Grantee'>Grantee</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the grantee.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateJobInput.html"
+                                  title='struct rusoto_glacier::InitiateJobInput'>InitiateJobInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for initiating an Amazon Glacier job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateJobOutput.html"
+                                  title='struct rusoto_glacier::InitiateJobOutput'>InitiateJobOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateMultipartUploadInput.html"
+                                  title='struct rusoto_glacier::InitiateMultipartUploadInput'>InitiateMultipartUploadInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for initiating a multipart upload to an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateMultipartUploadOutput.html"
+                                  title='struct rusoto_glacier::InitiateMultipartUploadOutput'>InitiateMultipartUploadOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateVaultLockInput.html"
+                                  title='struct rusoto_glacier::InitiateVaultLockInput'>InitiateVaultLockInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input values for <code>InitiateVaultLock</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateVaultLockOutput.html"
+                                  title='struct rusoto_glacier::InitiateVaultLockOutput'>InitiateVaultLockOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InputSerialization.html"
+                                  title='struct rusoto_glacier::InputSerialization'>InputSerialization</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes how the archive is serialized.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryRetrievalJobDescription.html"
+                                  title='struct rusoto_glacier::InventoryRetrievalJobDescription'>InventoryRetrievalJobDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the options for a range inventory retrieval job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryRetrievalJobInput.html"
+                                  title='struct rusoto_glacier::InventoryRetrievalJobInput'>InventoryRetrievalJobInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for specifying a range inventory retrieval job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobParameters.html"
+                                  title='struct rusoto_glacier::JobParameters'>JobParameters</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for defining a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsInput.html"
+                                  title='struct rusoto_glacier::ListJobsInput'>ListJobsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving a job list for an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsOutput.html"
+                                  title='struct rusoto_glacier::ListJobsOutput'>ListJobsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMultipartUploadsInput.html"
+                                  title='struct rusoto_glacier::ListMultipartUploadsInput'>ListMultipartUploadsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving list of in-progress multipart uploads for an Amazon Glacier vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMultipartUploadsOutput.html"
+                                  title='struct rusoto_glacier::ListMultipartUploadsOutput'>ListMultipartUploadsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPartsInput.html"
+                                  title='struct rusoto_glacier::ListPartsInput'>ListPartsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options for retrieving a list of parts of an archive that have been uploaded in a specific multipart upload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPartsOutput.html"
+                                  title='struct rusoto_glacier::ListPartsOutput'>ListPartsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProvisionedCapacityInput.html"
+                                  title='struct rusoto_glacier::ListProvisionedCapacityInput'>ListProvisionedCapacityInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProvisionedCapacityOutput.html"
+                                  title='struct rusoto_glacier::ListProvisionedCapacityOutput'>ListProvisionedCapacityOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForVaultInput.html"
+                                  title='struct rusoto_glacier::ListTagsForVaultInput'>ListTagsForVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input value for <code>ListTagsForVaultInput</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForVaultOutput.html"
+                                  title='struct rusoto_glacier::ListTagsForVaultOutput'>ListTagsForVaultOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListVaultsInput.html"
+                                  title='struct rusoto_glacier::ListVaultsInput'>ListVaultsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to retrieve the vault list owned by the calling user's account. The list provides metadata information for each vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListVaultsOutput.html"
+                                  title='struct rusoto_glacier::ListVaultsOutput'>ListVaultsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputLocation.html"
+                                  title='struct rusoto_glacier::OutputLocation'>OutputLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the location where the select job results are stored.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputSerialization.html"
+                                  title='struct rusoto_glacier::OutputSerialization'>OutputSerialization</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes how the select output is serialized.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PartListElement.html"
+                                  title='struct rusoto_glacier::PartListElement'>PartListElement</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of the part sizes of the multipart upload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProvisionedCapacityDescription.html"
+                                  title='struct rusoto_glacier::ProvisionedCapacityDescription'>ProvisionedCapacityDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The definition for a provisioned capacity unit.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseProvisionedCapacityInput.html"
+                                  title='struct rusoto_glacier::PurchaseProvisionedCapacityInput'>PurchaseProvisionedCapacityInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseProvisionedCapacityOutput.html"
+                                  title='struct rusoto_glacier::PurchaseProvisionedCapacityOutput'>PurchaseProvisionedCapacityOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromVaultInput.html"
+                                  title='struct rusoto_glacier::RemoveTagsFromVaultInput'>RemoveTagsFromVaultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input value for <code>RemoveTagsFromVaultInput</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Location.html"
+                                  title='struct rusoto_glacier::S3Location'>S3Location</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the location in Amazon S3 where the select job results are stored.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SelectParameters.html"
+                                  title='struct rusoto_glacier::SelectParameters'>SelectParameters</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the parameters used for a select.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDataRetrievalPolicyInput.html"
+                                  title='struct rusoto_glacier::SetDataRetrievalPolicyInput'>SetDataRetrievalPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                <p>SetDataRetrievalPolicy input.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetVaultAccessPolicyInput.html"
+                                  title='struct rusoto_glacier::SetVaultAccessPolicyInput'>SetVaultAccessPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                <p>SetVaultAccessPolicy input.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetVaultNotificationsInput.html"
+                                  title='struct rusoto_glacier::SetVaultNotificationsInput'>SetVaultNotificationsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to configure notifications that will be sent when specific events happen to a vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadArchiveInput.html"
+                                  title='struct rusoto_glacier::UploadArchiveInput'>UploadArchiveInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to add an archive to a vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadListElement.html"
+                                  title='struct rusoto_glacier::UploadListElement'>UploadListElement</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of in-progress multipart uploads for a vault.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadMultipartPartInput.html"
+                                  title='struct rusoto_glacier::UploadMultipartPartInput'>UploadMultipartPartInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides options to upload a part of an archive in a multipart upload operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadMultipartPartOutput.html"
+                                  title='struct rusoto_glacier::UploadMultipartPartOutput'>UploadMultipartPartOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Glacier response to your request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VaultAccessPolicy.html"
+                                  title='struct rusoto_glacier::VaultAccessPolicy'>VaultAccessPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the vault access policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VaultLockPolicy.html"
+                                  title='struct rusoto_glacier::VaultLockPolicy'>VaultLockPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the vault lock policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VaultNotificationConfig.html"
+                                  title='struct rusoto_glacier::VaultNotificationConfig'>VaultNotificationConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a vault's notification configuration.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AbortMultipartUploadError.html"
+                                  title='enum rusoto_glacier::AbortMultipartUploadError'>AbortMultipartUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AbortMultipartUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AbortVaultLockError.html"
+                                  title='enum rusoto_glacier::AbortVaultLockError'>AbortVaultLockError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AbortVaultLock</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToVaultError.html"
+                                  title='enum rusoto_glacier::AddTagsToVaultError'>AddTagsToVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CompleteMultipartUploadError.html"
+                                  title='enum rusoto_glacier::CompleteMultipartUploadError'>CompleteMultipartUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CompleteMultipartUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CompleteVaultLockError.html"
+                                  title='enum rusoto_glacier::CompleteVaultLockError'>CompleteVaultLockError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CompleteVaultLock</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateVaultError.html"
+                                  title='enum rusoto_glacier::CreateVaultError'>CreateVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteArchiveError.html"
+                                  title='enum rusoto_glacier::DeleteArchiveError'>DeleteArchiveError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteArchive</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVaultAccessPolicyError.html"
+                                  title='enum rusoto_glacier::DeleteVaultAccessPolicyError'>DeleteVaultAccessPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVaultAccessPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVaultError.html"
+                                  title='enum rusoto_glacier::DeleteVaultError'>DeleteVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVaultNotificationsError.html"
+                                  title='enum rusoto_glacier::DeleteVaultNotificationsError'>DeleteVaultNotificationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVaultNotifications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobError.html"
+                                  title='enum rusoto_glacier::DescribeJobError'>DescribeJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeVaultError.html"
+                                  title='enum rusoto_glacier::DescribeVaultError'>DescribeVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDataRetrievalPolicyError.html"
+                                  title='enum rusoto_glacier::GetDataRetrievalPolicyError'>GetDataRetrievalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDataRetrievalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobOutputError.html"
+                                  title='enum rusoto_glacier::GetJobOutputError'>GetJobOutputError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobOutput</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetVaultAccessPolicyError.html"
+                                  title='enum rusoto_glacier::GetVaultAccessPolicyError'>GetVaultAccessPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetVaultAccessPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetVaultLockError.html"
+                                  title='enum rusoto_glacier::GetVaultLockError'>GetVaultLockError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetVaultLock</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetVaultNotificationsError.html"
+                                  title='enum rusoto_glacier::GetVaultNotificationsError'>GetVaultNotificationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetVaultNotifications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InitiateJobError.html"
+                                  title='enum rusoto_glacier::InitiateJobError'>InitiateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InitiateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InitiateMultipartUploadError.html"
+                                  title='enum rusoto_glacier::InitiateMultipartUploadError'>InitiateMultipartUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InitiateMultipartUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InitiateVaultLockError.html"
+                                  title='enum rusoto_glacier::InitiateVaultLockError'>InitiateVaultLockError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InitiateVaultLock</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_glacier::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListMultipartUploadsError.html"
+                                  title='enum rusoto_glacier::ListMultipartUploadsError'>ListMultipartUploadsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListMultipartUploads</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPartsError.html"
+                                  title='enum rusoto_glacier::ListPartsError'>ListPartsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListParts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListProvisionedCapacityError.html"
+                                  title='enum rusoto_glacier::ListProvisionedCapacityError'>ListProvisionedCapacityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListProvisionedCapacity</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForVaultError.html"
+                                  title='enum rusoto_glacier::ListTagsForVaultError'>ListTagsForVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListVaultsError.html"
+                                  title='enum rusoto_glacier::ListVaultsError'>ListVaultsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListVaults</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PurchaseProvisionedCapacityError.html"
+                                  title='enum rusoto_glacier::PurchaseProvisionedCapacityError'>PurchaseProvisionedCapacityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PurchaseProvisionedCapacity</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromVaultError.html"
+                                  title='enum rusoto_glacier::RemoveTagsFromVaultError'>RemoveTagsFromVaultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromVault</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetDataRetrievalPolicyError.html"
+                                  title='enum rusoto_glacier::SetDataRetrievalPolicyError'>SetDataRetrievalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetDataRetrievalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetVaultAccessPolicyError.html"
+                                  title='enum rusoto_glacier::SetVaultAccessPolicyError'>SetVaultAccessPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetVaultAccessPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetVaultNotificationsError.html"
+                                  title='enum rusoto_glacier::SetVaultNotificationsError'>SetVaultNotificationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetVaultNotifications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UploadArchiveError.html"
+                                  title='enum rusoto_glacier::UploadArchiveError'>UploadArchiveError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UploadArchive</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UploadMultipartPartError.html"
+                                  title='enum rusoto_glacier::UploadMultipartPartError'>UploadMultipartPartError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UploadMultipartPart</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Glacier.html"
+                                  title='trait rusoto_glacier::Glacier'>Glacier</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Glacier API. Amazon Glacier clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_glacier";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

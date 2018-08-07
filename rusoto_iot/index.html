@@ -1,0 +1,3099 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_iot` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_iot"><title>rusoto_iot - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_iot/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_iot</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_iot', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_iot</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_iot/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS IoT</fullname> <p>AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate with, configure rules for data processing and integration with other services, organize resources associated with each thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate things.</p> <p>For more information about how AWS IoT works, see the <a href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer Guide</a>.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.IotClient.html">IotClient</a> and <a href="trait.Iot.html">Iot</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcceptCertificateTransferRequest.html"
+                                  title='struct rusoto_iot::AcceptCertificateTransferRequest'>AcceptCertificateTransferRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the AcceptCertificateTransfer operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Action.html"
+                                  title='struct rusoto_iot::Action'>Action</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the actions associated with a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddThingToThingGroupRequest.html"
+                                  title='struct rusoto_iot::AddThingToThingGroupRequest'>AddThingToThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddThingToThingGroupResponse.html"
+                                  title='struct rusoto_iot::AddThingToThingGroupResponse'>AddThingToThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Allowed.html"
+                                  title='struct rusoto_iot::Allowed'>Allowed</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information that allowed the authorization.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateTargetsWithJobRequest.html"
+                                  title='struct rusoto_iot::AssociateTargetsWithJobRequest'>AssociateTargetsWithJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateTargetsWithJobResponse.html"
+                                  title='struct rusoto_iot::AssociateTargetsWithJobResponse'>AssociateTargetsWithJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachPolicyRequest.html"
+                                  title='struct rusoto_iot::AttachPolicyRequest'>AttachPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachPrincipalPolicyRequest.html"
+                                  title='struct rusoto_iot::AttachPrincipalPolicyRequest'>AttachPrincipalPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the AttachPrincipalPolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachThingPrincipalRequest.html"
+                                  title='struct rusoto_iot::AttachThingPrincipalRequest'>AttachThingPrincipalRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the AttachThingPrincipal operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachThingPrincipalResponse.html"
+                                  title='struct rusoto_iot::AttachThingPrincipalResponse'>AttachThingPrincipalResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the AttachThingPrincipal operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttributePayload.html"
+                                  title='struct rusoto_iot::AttributePayload'>AttributePayload</a></td>
+                           <td class='docblock-short'>
+                                <p>The attribute payload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthInfo.html"
+                                  title='struct rusoto_iot::AuthInfo'>AuthInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>A collection of authorization information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthResult.html"
+                                  title='struct rusoto_iot::AuthResult'>AuthResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The authorizer result.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthorizerDescription.html"
+                                  title='struct rusoto_iot::AuthorizerDescription'>AuthorizerDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The authorizer description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthorizerSummary.html"
+                                  title='struct rusoto_iot::AuthorizerSummary'>AuthorizerSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The authorizer summary.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CACertificate.html"
+                                  title='struct rusoto_iot::CACertificate'>CACertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>A CA certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CACertificateDescription.html"
+                                  title='struct rusoto_iot::CACertificateDescription'>CACertificateDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a CA certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelCertificateTransferRequest.html"
+                                  title='struct rusoto_iot::CancelCertificateTransferRequest'>CancelCertificateTransferRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CancelCertificateTransfer operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobRequest.html"
+                                  title='struct rusoto_iot::CancelJobRequest'>CancelJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobResponse.html"
+                                  title='struct rusoto_iot::CancelJobResponse'>CancelJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Certificate.html"
+                                  title='struct rusoto_iot::Certificate'>Certificate</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CertificateDescription.html"
+                                  title='struct rusoto_iot::CertificateDescription'>CertificateDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClearDefaultAuthorizerRequest.html"
+                                  title='struct rusoto_iot::ClearDefaultAuthorizerRequest'>ClearDefaultAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClearDefaultAuthorizerResponse.html"
+                                  title='struct rusoto_iot::ClearDefaultAuthorizerResponse'>ClearDefaultAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudwatchAlarmAction.html"
+                                  title='struct rusoto_iot::CloudwatchAlarmAction'>CloudwatchAlarmAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action that updates a CloudWatch alarm.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudwatchMetricAction.html"
+                                  title='struct rusoto_iot::CloudwatchMetricAction'>CloudwatchMetricAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action that captures a CloudWatch metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodeSigning.html"
+                                  title='struct rusoto_iot::CodeSigning'>CodeSigning</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the method to use when code signing a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodeSigningCertificateChain.html"
+                                  title='struct rusoto_iot::CodeSigningCertificateChain'>CodeSigningCertificateChain</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the certificate chain being used when code signing a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodeSigningSignature.html"
+                                  title='struct rusoto_iot::CodeSigningSignature'>CodeSigningSignature</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the signature for a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Configuration.html"
+                                  title='struct rusoto_iot::Configuration'>Configuration</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAuthorizerRequest.html"
+                                  title='struct rusoto_iot::CreateAuthorizerRequest'>CreateAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAuthorizerResponse.html"
+                                  title='struct rusoto_iot::CreateAuthorizerResponse'>CreateAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCertificateFromCsrRequest.html"
+                                  title='struct rusoto_iot::CreateCertificateFromCsrRequest'>CreateCertificateFromCsrRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreateCertificateFromCsr operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCertificateFromCsrResponse.html"
+                                  title='struct rusoto_iot::CreateCertificateFromCsrResponse'>CreateCertificateFromCsrResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the CreateCertificateFromCsr operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobRequest.html"
+                                  title='struct rusoto_iot::CreateJobRequest'>CreateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobResponse.html"
+                                  title='struct rusoto_iot::CreateJobResponse'>CreateJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateKeysAndCertificateRequest.html"
+                                  title='struct rusoto_iot::CreateKeysAndCertificateRequest'>CreateKeysAndCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreateKeysAndCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateKeysAndCertificateResponse.html"
+                                  title='struct rusoto_iot::CreateKeysAndCertificateResponse'>CreateKeysAndCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the CreateKeysAndCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOTAUpdateRequest.html"
+                                  title='struct rusoto_iot::CreateOTAUpdateRequest'>CreateOTAUpdateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOTAUpdateResponse.html"
+                                  title='struct rusoto_iot::CreateOTAUpdateResponse'>CreateOTAUpdateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyRequest.html"
+                                  title='struct rusoto_iot::CreatePolicyRequest'>CreatePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreatePolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyResponse.html"
+                                  title='struct rusoto_iot::CreatePolicyResponse'>CreatePolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the CreatePolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyVersionRequest.html"
+                                  title='struct rusoto_iot::CreatePolicyVersionRequest'>CreatePolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreatePolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyVersionResponse.html"
+                                  title='struct rusoto_iot::CreatePolicyVersionResponse'>CreatePolicyVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the CreatePolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRoleAliasRequest.html"
+                                  title='struct rusoto_iot::CreateRoleAliasRequest'>CreateRoleAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRoleAliasResponse.html"
+                                  title='struct rusoto_iot::CreateRoleAliasResponse'>CreateRoleAliasResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStreamRequest.html"
+                                  title='struct rusoto_iot::CreateStreamRequest'>CreateStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStreamResponse.html"
+                                  title='struct rusoto_iot::CreateStreamResponse'>CreateStreamResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingGroupRequest.html"
+                                  title='struct rusoto_iot::CreateThingGroupRequest'>CreateThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingGroupResponse.html"
+                                  title='struct rusoto_iot::CreateThingGroupResponse'>CreateThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingRequest.html"
+                                  title='struct rusoto_iot::CreateThingRequest'>CreateThingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreateThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingResponse.html"
+                                  title='struct rusoto_iot::CreateThingResponse'>CreateThingResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the CreateThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingTypeRequest.html"
+                                  title='struct rusoto_iot::CreateThingTypeRequest'>CreateThingTypeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreateThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateThingTypeResponse.html"
+                                  title='struct rusoto_iot::CreateThingTypeResponse'>CreateThingTypeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the CreateThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTopicRuleRequest.html"
+                                  title='struct rusoto_iot::CreateTopicRuleRequest'>CreateTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the CreateTopicRule operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CustomCodeSigning.html"
+                                  title='struct rusoto_iot::CustomCodeSigning'>CustomCodeSigning</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a custom method used to code sign a file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAuthorizerRequest.html"
+                                  title='struct rusoto_iot::DeleteAuthorizerRequest'>DeleteAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAuthorizerResponse.html"
+                                  title='struct rusoto_iot::DeleteAuthorizerResponse'>DeleteAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCACertificateRequest.html"
+                                  title='struct rusoto_iot::DeleteCACertificateRequest'>DeleteCACertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Input for the DeleteCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCACertificateResponse.html"
+                                  title='struct rusoto_iot::DeleteCACertificateResponse'>DeleteCACertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the DeleteCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCertificateRequest.html"
+                                  title='struct rusoto_iot::DeleteCertificateRequest'>DeleteCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeleteCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteOTAUpdateRequest.html"
+                                  title='struct rusoto_iot::DeleteOTAUpdateRequest'>DeleteOTAUpdateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteOTAUpdateResponse.html"
+                                  title='struct rusoto_iot::DeleteOTAUpdateResponse'>DeleteOTAUpdateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePolicyRequest.html"
+                                  title='struct rusoto_iot::DeletePolicyRequest'>DeletePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeletePolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePolicyVersionRequest.html"
+                                  title='struct rusoto_iot::DeletePolicyVersionRequest'>DeletePolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeletePolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegistrationCodeRequest.html"
+                                  title='struct rusoto_iot::DeleteRegistrationCodeRequest'>DeleteRegistrationCodeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeleteRegistrationCode operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRegistrationCodeResponse.html"
+                                  title='struct rusoto_iot::DeleteRegistrationCodeResponse'>DeleteRegistrationCodeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the DeleteRegistrationCode operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRoleAliasRequest.html"
+                                  title='struct rusoto_iot::DeleteRoleAliasRequest'>DeleteRoleAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRoleAliasResponse.html"
+                                  title='struct rusoto_iot::DeleteRoleAliasResponse'>DeleteRoleAliasResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteStreamRequest.html"
+                                  title='struct rusoto_iot::DeleteStreamRequest'>DeleteStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteStreamResponse.html"
+                                  title='struct rusoto_iot::DeleteStreamResponse'>DeleteStreamResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingGroupRequest.html"
+                                  title='struct rusoto_iot::DeleteThingGroupRequest'>DeleteThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingGroupResponse.html"
+                                  title='struct rusoto_iot::DeleteThingGroupResponse'>DeleteThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingRequest.html"
+                                  title='struct rusoto_iot::DeleteThingRequest'>DeleteThingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeleteThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingResponse.html"
+                                  title='struct rusoto_iot::DeleteThingResponse'>DeleteThingResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the DeleteThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingTypeRequest.html"
+                                  title='struct rusoto_iot::DeleteThingTypeRequest'>DeleteThingTypeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeleteThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteThingTypeResponse.html"
+                                  title='struct rusoto_iot::DeleteThingTypeResponse'>DeleteThingTypeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the DeleteThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTopicRuleRequest.html"
+                                  title='struct rusoto_iot::DeleteTopicRuleRequest'>DeleteTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeleteTopicRule operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteV2LoggingLevelRequest.html"
+                                  title='struct rusoto_iot::DeleteV2LoggingLevelRequest'>DeleteV2LoggingLevelRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Denied.html"
+                                  title='struct rusoto_iot::Denied'>Denied</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information that denied the authorization.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeprecateThingTypeRequest.html"
+                                  title='struct rusoto_iot::DeprecateThingTypeRequest'>DeprecateThingTypeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DeprecateThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeprecateThingTypeResponse.html"
+                                  title='struct rusoto_iot::DeprecateThingTypeResponse'>DeprecateThingTypeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the DeprecateThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAuthorizerRequest.html"
+                                  title='struct rusoto_iot::DescribeAuthorizerRequest'>DescribeAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAuthorizerResponse.html"
+                                  title='struct rusoto_iot::DescribeAuthorizerResponse'>DescribeAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCACertificateRequest.html"
+                                  title='struct rusoto_iot::DescribeCACertificateRequest'>DescribeCACertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DescribeCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCACertificateResponse.html"
+                                  title='struct rusoto_iot::DescribeCACertificateResponse'>DescribeCACertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the DescribeCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificateRequest.html"
+                                  title='struct rusoto_iot::DescribeCertificateRequest'>DescribeCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DescribeCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificateResponse.html"
+                                  title='struct rusoto_iot::DescribeCertificateResponse'>DescribeCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the DescribeCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDefaultAuthorizerRequest.html"
+                                  title='struct rusoto_iot::DescribeDefaultAuthorizerRequest'>DescribeDefaultAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDefaultAuthorizerResponse.html"
+                                  title='struct rusoto_iot::DescribeDefaultAuthorizerResponse'>DescribeDefaultAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointRequest.html"
+                                  title='struct rusoto_iot::DescribeEndpointRequest'>DescribeEndpointRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DescribeEndpoint operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointResponse.html"
+                                  title='struct rusoto_iot::DescribeEndpointResponse'>DescribeEndpointResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the DescribeEndpoint operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventConfigurationsRequest.html"
+                                  title='struct rusoto_iot::DescribeEventConfigurationsRequest'>DescribeEventConfigurationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventConfigurationsResponse.html"
+                                  title='struct rusoto_iot::DescribeEventConfigurationsResponse'>DescribeEventConfigurationsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeIndexRequest.html"
+                                  title='struct rusoto_iot::DescribeIndexRequest'>DescribeIndexRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeIndexResponse.html"
+                                  title='struct rusoto_iot::DescribeIndexResponse'>DescribeIndexResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobExecutionRequest.html"
+                                  title='struct rusoto_iot::DescribeJobExecutionRequest'>DescribeJobExecutionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobExecutionResponse.html"
+                                  title='struct rusoto_iot::DescribeJobExecutionResponse'>DescribeJobExecutionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobRequest.html"
+                                  title='struct rusoto_iot::DescribeJobRequest'>DescribeJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobResponse.html"
+                                  title='struct rusoto_iot::DescribeJobResponse'>DescribeJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRoleAliasRequest.html"
+                                  title='struct rusoto_iot::DescribeRoleAliasRequest'>DescribeRoleAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRoleAliasResponse.html"
+                                  title='struct rusoto_iot::DescribeRoleAliasResponse'>DescribeRoleAliasResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamRequest.html"
+                                  title='struct rusoto_iot::DescribeStreamRequest'>DescribeStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStreamResponse.html"
+                                  title='struct rusoto_iot::DescribeStreamResponse'>DescribeStreamResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingGroupRequest.html"
+                                  title='struct rusoto_iot::DescribeThingGroupRequest'>DescribeThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingGroupResponse.html"
+                                  title='struct rusoto_iot::DescribeThingGroupResponse'>DescribeThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingRegistrationTaskRequest.html"
+                                  title='struct rusoto_iot::DescribeThingRegistrationTaskRequest'>DescribeThingRegistrationTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingRegistrationTaskResponse.html"
+                                  title='struct rusoto_iot::DescribeThingRegistrationTaskResponse'>DescribeThingRegistrationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingRequest.html"
+                                  title='struct rusoto_iot::DescribeThingRequest'>DescribeThingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DescribeThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingResponse.html"
+                                  title='struct rusoto_iot::DescribeThingResponse'>DescribeThingResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the DescribeThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingTypeRequest.html"
+                                  title='struct rusoto_iot::DescribeThingTypeRequest'>DescribeThingTypeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DescribeThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeThingTypeResponse.html"
+                                  title='struct rusoto_iot::DescribeThingTypeResponse'>DescribeThingTypeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the DescribeThingType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachPolicyRequest.html"
+                                  title='struct rusoto_iot::DetachPolicyRequest'>DetachPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachPrincipalPolicyRequest.html"
+                                  title='struct rusoto_iot::DetachPrincipalPolicyRequest'>DetachPrincipalPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DetachPrincipalPolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachThingPrincipalRequest.html"
+                                  title='struct rusoto_iot::DetachThingPrincipalRequest'>DetachThingPrincipalRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DetachThingPrincipal operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachThingPrincipalResponse.html"
+                                  title='struct rusoto_iot::DetachThingPrincipalResponse'>DetachThingPrincipalResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the DetachThingPrincipal operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableTopicRuleRequest.html"
+                                  title='struct rusoto_iot::DisableTopicRuleRequest'>DisableTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DisableTopicRuleRequest operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DynamoDBAction.html"
+                                  title='struct rusoto_iot::DynamoDBAction'>DynamoDBAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to write to a DynamoDB table.</p> <p>The <code>tableName</code>, <code>hashKeyField</code>, and <code>rangeKeyField</code> values must match the values used when you created the table.</p> <p>The <code>hashKeyValue</code> and <code>rangeKeyvalue</code> fields use a substitution template syntax. These templates provide data at runtime. The syntax is as follows: ${<i>sql-expression</i>}.</p> <p>You can specify any valid expression in a WHERE or SELECT clause, including JSON properties, comparisons, calculations, and functions. For example, the following field uses the third level of the topic:</p> <p> <code>"hashKeyValue": "${topic(3)}"</code> </p> <p>The following field uses the timestamp:</p> <p> <code>"rangeKeyValue": "${timestamp()}"</code> </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DynamoDBv2Action.html"
+                                  title='struct rusoto_iot::DynamoDBv2Action'>DynamoDBv2Action</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to write to a DynamoDB table.</p> <p>This DynamoDB action writes each attribute in the message payload into it's own column in the DynamoDB table.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EffectivePolicy.html"
+                                  title='struct rusoto_iot::EffectivePolicy'>EffectivePolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>The policy that has the effect on the authorization results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchAction.html"
+                                  title='struct rusoto_iot::ElasticsearchAction'>ElasticsearchAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action that writes data to an Amazon Elasticsearch Service domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableTopicRuleRequest.html"
+                                  title='struct rusoto_iot::EnableTopicRuleRequest'>EnableTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the EnableTopicRuleRequest operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ErrorInfo.html"
+                                  title='struct rusoto_iot::ErrorInfo'>ErrorInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Error information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExplicitDeny.html"
+                                  title='struct rusoto_iot::ExplicitDeny'>ExplicitDeny</a></td>
+                           <td class='docblock-short'>
+                                <p>Information that explicitly denies authorization.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FirehoseAction.html"
+                                  title='struct rusoto_iot::FirehoseAction'>FirehoseAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action that writes data to an Amazon Kinesis Firehose stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetEffectivePoliciesRequest.html"
+                                  title='struct rusoto_iot::GetEffectivePoliciesRequest'>GetEffectivePoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetEffectivePoliciesResponse.html"
+                                  title='struct rusoto_iot::GetEffectivePoliciesResponse'>GetEffectivePoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIndexingConfigurationRequest.html"
+                                  title='struct rusoto_iot::GetIndexingConfigurationRequest'>GetIndexingConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIndexingConfigurationResponse.html"
+                                  title='struct rusoto_iot::GetIndexingConfigurationResponse'>GetIndexingConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobDocumentRequest.html"
+                                  title='struct rusoto_iot::GetJobDocumentRequest'>GetJobDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobDocumentResponse.html"
+                                  title='struct rusoto_iot::GetJobDocumentResponse'>GetJobDocumentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggingOptionsRequest.html"
+                                  title='struct rusoto_iot::GetLoggingOptionsRequest'>GetLoggingOptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the GetLoggingOptions operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggingOptionsResponse.html"
+                                  title='struct rusoto_iot::GetLoggingOptionsResponse'>GetLoggingOptionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the GetLoggingOptions operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOTAUpdateRequest.html"
+                                  title='struct rusoto_iot::GetOTAUpdateRequest'>GetOTAUpdateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOTAUpdateResponse.html"
+                                  title='struct rusoto_iot::GetOTAUpdateResponse'>GetOTAUpdateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyRequest.html"
+                                  title='struct rusoto_iot::GetPolicyRequest'>GetPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the GetPolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyResponse.html"
+                                  title='struct rusoto_iot::GetPolicyResponse'>GetPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the GetPolicy operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyVersionRequest.html"
+                                  title='struct rusoto_iot::GetPolicyVersionRequest'>GetPolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the GetPolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyVersionResponse.html"
+                                  title='struct rusoto_iot::GetPolicyVersionResponse'>GetPolicyVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the GetPolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegistrationCodeRequest.html"
+                                  title='struct rusoto_iot::GetRegistrationCodeRequest'>GetRegistrationCodeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the GetRegistrationCode operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegistrationCodeResponse.html"
+                                  title='struct rusoto_iot::GetRegistrationCodeResponse'>GetRegistrationCodeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the GetRegistrationCode operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetTopicRuleRequest.html"
+                                  title='struct rusoto_iot::GetTopicRuleRequest'>GetTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the GetTopicRule operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetTopicRuleResponse.html"
+                                  title='struct rusoto_iot::GetTopicRuleResponse'>GetTopicRuleResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the GetTopicRule operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetV2LoggingOptionsRequest.html"
+                                  title='struct rusoto_iot::GetV2LoggingOptionsRequest'>GetV2LoggingOptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetV2LoggingOptionsResponse.html"
+                                  title='struct rusoto_iot::GetV2LoggingOptionsResponse'>GetV2LoggingOptionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupNameAndArn.html"
+                                  title='struct rusoto_iot::GroupNameAndArn'>GroupNameAndArn</a></td>
+                           <td class='docblock-short'>
+                                <p>The name and ARN of a group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImplicitDeny.html"
+                                  title='struct rusoto_iot::ImplicitDeny'>ImplicitDeny</a></td>
+                           <td class='docblock-short'>
+                                <p>Information that implicitly denies authorization. When policy doesn't explicitly deny or allow an action on a resource it is considered an implicit deny.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IotClient.html"
+                                  title='struct rusoto_iot::IotClient'>IotClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS IoT API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Job.html"
+                                  title='struct rusoto_iot::Job'>Job</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Job</code> object contains details about a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecution.html"
+                                  title='struct rusoto_iot::JobExecution'>JobExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>The job execution object represents the execution of a job on a particular device.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecutionStatusDetails.html"
+                                  title='struct rusoto_iot::JobExecutionStatusDetails'>JobExecutionStatusDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Details of the job execution status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecutionSummary.html"
+                                  title='struct rusoto_iot::JobExecutionSummary'>JobExecutionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The job execution summary.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecutionSummaryForJob.html"
+                                  title='struct rusoto_iot::JobExecutionSummaryForJob'>JobExecutionSummaryForJob</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a summary of information about job executions for a specific job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecutionSummaryForThing.html"
+                                  title='struct rusoto_iot::JobExecutionSummaryForThing'>JobExecutionSummaryForThing</a></td>
+                           <td class='docblock-short'>
+                                <p>The job execution summary for a thing.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobExecutionsRolloutConfig.html"
+                                  title='struct rusoto_iot::JobExecutionsRolloutConfig'>JobExecutionsRolloutConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Allows you to create a staged rollout of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobProcessDetails.html"
+                                  title='struct rusoto_iot::JobProcessDetails'>JobProcessDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>The job process details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobSummary.html"
+                                  title='struct rusoto_iot::JobSummary'>JobSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The job summary.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyPair.html"
+                                  title='struct rusoto_iot::KeyPair'>KeyPair</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a key pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KinesisAction.html"
+                                  title='struct rusoto_iot::KinesisAction'>KinesisAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to write data to an Amazon Kinesis stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LambdaAction.html"
+                                  title='struct rusoto_iot::LambdaAction'>LambdaAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to invoke a Lambda function.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedPoliciesRequest.html"
+                                  title='struct rusoto_iot::ListAttachedPoliciesRequest'>ListAttachedPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedPoliciesResponse.html"
+                                  title='struct rusoto_iot::ListAttachedPoliciesResponse'>ListAttachedPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAuthorizersRequest.html"
+                                  title='struct rusoto_iot::ListAuthorizersRequest'>ListAuthorizersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAuthorizersResponse.html"
+                                  title='struct rusoto_iot::ListAuthorizersResponse'>ListAuthorizersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCACertificatesRequest.html"
+                                  title='struct rusoto_iot::ListCACertificatesRequest'>ListCACertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Input for the ListCACertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCACertificatesResponse.html"
+                                  title='struct rusoto_iot::ListCACertificatesResponse'>ListCACertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListCACertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesByCARequest.html"
+                                  title='struct rusoto_iot::ListCertificatesByCARequest'>ListCertificatesByCARequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the ListCertificatesByCA operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesByCAResponse.html"
+                                  title='struct rusoto_iot::ListCertificatesByCAResponse'>ListCertificatesByCAResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the ListCertificatesByCA operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesRequest.html"
+                                  title='struct rusoto_iot::ListCertificatesRequest'>ListCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListCertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesResponse.html"
+                                  title='struct rusoto_iot::ListCertificatesResponse'>ListCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output of the ListCertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIndicesRequest.html"
+                                  title='struct rusoto_iot::ListIndicesRequest'>ListIndicesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIndicesResponse.html"
+                                  title='struct rusoto_iot::ListIndicesResponse'>ListIndicesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobExecutionsForJobRequest.html"
+                                  title='struct rusoto_iot::ListJobExecutionsForJobRequest'>ListJobExecutionsForJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobExecutionsForJobResponse.html"
+                                  title='struct rusoto_iot::ListJobExecutionsForJobResponse'>ListJobExecutionsForJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobExecutionsForThingRequest.html"
+                                  title='struct rusoto_iot::ListJobExecutionsForThingRequest'>ListJobExecutionsForThingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobExecutionsForThingResponse.html"
+                                  title='struct rusoto_iot::ListJobExecutionsForThingResponse'>ListJobExecutionsForThingResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsRequest.html"
+                                  title='struct rusoto_iot::ListJobsRequest'>ListJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsResponse.html"
+                                  title='struct rusoto_iot::ListJobsResponse'>ListJobsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOTAUpdatesRequest.html"
+                                  title='struct rusoto_iot::ListOTAUpdatesRequest'>ListOTAUpdatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOTAUpdatesResponse.html"
+                                  title='struct rusoto_iot::ListOTAUpdatesResponse'>ListOTAUpdatesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOutgoingCertificatesRequest.html"
+                                  title='struct rusoto_iot::ListOutgoingCertificatesRequest'>ListOutgoingCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the ListOutgoingCertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOutgoingCertificatesResponse.html"
+                                  title='struct rusoto_iot::ListOutgoingCertificatesResponse'>ListOutgoingCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListOutgoingCertificates operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPoliciesRequest.html"
+                                  title='struct rusoto_iot::ListPoliciesRequest'>ListPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListPolicies operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPoliciesResponse.html"
+                                  title='struct rusoto_iot::ListPoliciesResponse'>ListPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListPolicies operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyPrincipalsRequest.html"
+                                  title='struct rusoto_iot::ListPolicyPrincipalsRequest'>ListPolicyPrincipalsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListPolicyPrincipals operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyPrincipalsResponse.html"
+                                  title='struct rusoto_iot::ListPolicyPrincipalsResponse'>ListPolicyPrincipalsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListPolicyPrincipals operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyVersionsRequest.html"
+                                  title='struct rusoto_iot::ListPolicyVersionsRequest'>ListPolicyVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListPolicyVersions operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyVersionsResponse.html"
+                                  title='struct rusoto_iot::ListPolicyVersionsResponse'>ListPolicyVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListPolicyVersions operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPrincipalPoliciesRequest.html"
+                                  title='struct rusoto_iot::ListPrincipalPoliciesRequest'>ListPrincipalPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListPrincipalPolicies operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPrincipalPoliciesResponse.html"
+                                  title='struct rusoto_iot::ListPrincipalPoliciesResponse'>ListPrincipalPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListPrincipalPolicies operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPrincipalThingsRequest.html"
+                                  title='struct rusoto_iot::ListPrincipalThingsRequest'>ListPrincipalThingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListPrincipalThings operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPrincipalThingsResponse.html"
+                                  title='struct rusoto_iot::ListPrincipalThingsResponse'>ListPrincipalThingsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListPrincipalThings operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRoleAliasesRequest.html"
+                                  title='struct rusoto_iot::ListRoleAliasesRequest'>ListRoleAliasesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRoleAliasesResponse.html"
+                                  title='struct rusoto_iot::ListRoleAliasesResponse'>ListRoleAliasesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStreamsRequest.html"
+                                  title='struct rusoto_iot::ListStreamsRequest'>ListStreamsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStreamsResponse.html"
+                                  title='struct rusoto_iot::ListStreamsResponse'>ListStreamsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTargetsForPolicyRequest.html"
+                                  title='struct rusoto_iot::ListTargetsForPolicyRequest'>ListTargetsForPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTargetsForPolicyResponse.html"
+                                  title='struct rusoto_iot::ListTargetsForPolicyResponse'>ListTargetsForPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingGroupsForThingRequest.html"
+                                  title='struct rusoto_iot::ListThingGroupsForThingRequest'>ListThingGroupsForThingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingGroupsForThingResponse.html"
+                                  title='struct rusoto_iot::ListThingGroupsForThingResponse'>ListThingGroupsForThingResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingGroupsRequest.html"
+                                  title='struct rusoto_iot::ListThingGroupsRequest'>ListThingGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingGroupsResponse.html"
+                                  title='struct rusoto_iot::ListThingGroupsResponse'>ListThingGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingPrincipalsRequest.html"
+                                  title='struct rusoto_iot::ListThingPrincipalsRequest'>ListThingPrincipalsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListThingPrincipal operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingPrincipalsResponse.html"
+                                  title='struct rusoto_iot::ListThingPrincipalsResponse'>ListThingPrincipalsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListThingPrincipals operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingRegistrationTaskReportsRequest.html"
+                                  title='struct rusoto_iot::ListThingRegistrationTaskReportsRequest'>ListThingRegistrationTaskReportsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingRegistrationTaskReportsResponse.html"
+                                  title='struct rusoto_iot::ListThingRegistrationTaskReportsResponse'>ListThingRegistrationTaskReportsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingRegistrationTasksRequest.html"
+                                  title='struct rusoto_iot::ListThingRegistrationTasksRequest'>ListThingRegistrationTasksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingRegistrationTasksResponse.html"
+                                  title='struct rusoto_iot::ListThingRegistrationTasksResponse'>ListThingRegistrationTasksResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingTypesRequest.html"
+                                  title='struct rusoto_iot::ListThingTypesRequest'>ListThingTypesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListThingTypes operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingTypesResponse.html"
+                                  title='struct rusoto_iot::ListThingTypesResponse'>ListThingTypesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output for the ListThingTypes operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingsInThingGroupRequest.html"
+                                  title='struct rusoto_iot::ListThingsInThingGroupRequest'>ListThingsInThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingsInThingGroupResponse.html"
+                                  title='struct rusoto_iot::ListThingsInThingGroupResponse'>ListThingsInThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingsRequest.html"
+                                  title='struct rusoto_iot::ListThingsRequest'>ListThingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListThings operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListThingsResponse.html"
+                                  title='struct rusoto_iot::ListThingsResponse'>ListThingsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListThings operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTopicRulesRequest.html"
+                                  title='struct rusoto_iot::ListTopicRulesRequest'>ListTopicRulesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ListTopicRules operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTopicRulesResponse.html"
+                                  title='struct rusoto_iot::ListTopicRulesResponse'>ListTopicRulesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the ListTopicRules operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListV2LoggingLevelsRequest.html"
+                                  title='struct rusoto_iot::ListV2LoggingLevelsRequest'>ListV2LoggingLevelsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListV2LoggingLevelsResponse.html"
+                                  title='struct rusoto_iot::ListV2LoggingLevelsResponse'>ListV2LoggingLevelsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LogTarget.html"
+                                  title='struct rusoto_iot::LogTarget'>LogTarget</a></td>
+                           <td class='docblock-short'>
+                                <p>A log target.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LogTargetConfiguration.html"
+                                  title='struct rusoto_iot::LogTargetConfiguration'>LogTargetConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The target configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoggingOptionsPayload.html"
+                                  title='struct rusoto_iot::LoggingOptionsPayload'>LoggingOptionsPayload</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the logging options payload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTAUpdateFile.html"
+                                  title='struct rusoto_iot::OTAUpdateFile'>OTAUpdateFile</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a file to be associated with an OTA update.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTAUpdateInfo.html"
+                                  title='struct rusoto_iot::OTAUpdateInfo'>OTAUpdateInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an OTA update.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTAUpdateSummary.html"
+                                  title='struct rusoto_iot::OTAUpdateSummary'>OTAUpdateSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>An OTA update summary.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutgoingCertificate.html"
+                                  title='struct rusoto_iot::OutgoingCertificate'>OutgoingCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>A certificate that has been transferred but not yet accepted.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Policy.html"
+                                  title='struct rusoto_iot::Policy'>Policy</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an AWS IoT policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyVersion.html"
+                                  title='struct rusoto_iot::PolicyVersion'>PolicyVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a policy version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PresignedUrlConfig.html"
+                                  title='struct rusoto_iot::PresignedUrlConfig'>PresignedUrlConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration for pre-signed S3 URLs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutItemInput.html"
+                                  title='struct rusoto_iot::PutItemInput'>PutItemInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the DynamoActionVS action that specifies the DynamoDB table to which the message data will be written.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterCACertificateRequest.html"
+                                  title='struct rusoto_iot::RegisterCACertificateRequest'>RegisterCACertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the RegisterCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterCACertificateResponse.html"
+                                  title='struct rusoto_iot::RegisterCACertificateResponse'>RegisterCACertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the RegisterCACertificateResponse operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterCertificateRequest.html"
+                                  title='struct rusoto_iot::RegisterCertificateRequest'>RegisterCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the RegisterCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterCertificateResponse.html"
+                                  title='struct rusoto_iot::RegisterCertificateResponse'>RegisterCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the RegisterCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterThingRequest.html"
+                                  title='struct rusoto_iot::RegisterThingRequest'>RegisterThingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterThingResponse.html"
+                                  title='struct rusoto_iot::RegisterThingResponse'>RegisterThingResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegistrationConfig.html"
+                                  title='struct rusoto_iot::RegistrationConfig'>RegistrationConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>The registration configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RejectCertificateTransferRequest.html"
+                                  title='struct rusoto_iot::RejectCertificateTransferRequest'>RejectCertificateTransferRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the RejectCertificateTransfer operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveThingFromThingGroupRequest.html"
+                                  title='struct rusoto_iot::RemoveThingFromThingGroupRequest'>RemoveThingFromThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveThingFromThingGroupResponse.html"
+                                  title='struct rusoto_iot::RemoveThingFromThingGroupResponse'>RemoveThingFromThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplaceTopicRuleRequest.html"
+                                  title='struct rusoto_iot::ReplaceTopicRuleRequest'>ReplaceTopicRuleRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the ReplaceTopicRule operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RepublishAction.html"
+                                  title='struct rusoto_iot::RepublishAction'>RepublishAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to republish to another topic.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RoleAliasDescription.html"
+                                  title='struct rusoto_iot::RoleAliasDescription'>RoleAliasDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Role alias description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Action.html"
+                                  title='struct rusoto_iot::S3Action'>S3Action</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to write data to an Amazon S3 bucket.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Location.html"
+                                  title='struct rusoto_iot::S3Location'>S3Location</a></td>
+                           <td class='docblock-short'>
+                                <p>The location in S3 the contains the files to stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SalesforceAction.html"
+                                  title='struct rusoto_iot::SalesforceAction'>SalesforceAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to write a message to a Salesforce IoT Cloud Input Stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchIndexRequest.html"
+                                  title='struct rusoto_iot::SearchIndexRequest'>SearchIndexRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchIndexResponse.html"
+                                  title='struct rusoto_iot::SearchIndexResponse'>SearchIndexResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDefaultAuthorizerRequest.html"
+                                  title='struct rusoto_iot::SetDefaultAuthorizerRequest'>SetDefaultAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDefaultAuthorizerResponse.html"
+                                  title='struct rusoto_iot::SetDefaultAuthorizerResponse'>SetDefaultAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDefaultPolicyVersionRequest.html"
+                                  title='struct rusoto_iot::SetDefaultPolicyVersionRequest'>SetDefaultPolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the SetDefaultPolicyVersion operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetLoggingOptionsRequest.html"
+                                  title='struct rusoto_iot::SetLoggingOptionsRequest'>SetLoggingOptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the SetLoggingOptions operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetV2LoggingLevelRequest.html"
+                                  title='struct rusoto_iot::SetV2LoggingLevelRequest'>SetV2LoggingLevelRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetV2LoggingOptionsRequest.html"
+                                  title='struct rusoto_iot::SetV2LoggingOptionsRequest'>SetV2LoggingOptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SnsAction.html"
+                                  title='struct rusoto_iot::SnsAction'>SnsAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to publish to an Amazon SNS topic.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SqsAction.html"
+                                  title='struct rusoto_iot::SqsAction'>SqsAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an action to publish data to an Amazon SQS queue.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartThingRegistrationTaskRequest.html"
+                                  title='struct rusoto_iot::StartThingRegistrationTaskRequest'>StartThingRegistrationTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartThingRegistrationTaskResponse.html"
+                                  title='struct rusoto_iot::StartThingRegistrationTaskResponse'>StartThingRegistrationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopThingRegistrationTaskRequest.html"
+                                  title='struct rusoto_iot::StopThingRegistrationTaskRequest'>StopThingRegistrationTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopThingRegistrationTaskResponse.html"
+                                  title='struct rusoto_iot::StopThingRegistrationTaskResponse'>StopThingRegistrationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Stream.html"
+                                  title='struct rusoto_iot::Stream'>Stream</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a group of files that can be streamed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamFile.html"
+                                  title='struct rusoto_iot::StreamFile'>StreamFile</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a file to stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamInfo.html"
+                                  title='struct rusoto_iot::StreamInfo'>StreamInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StreamSummary.html"
+                                  title='struct rusoto_iot::StreamSummary'>StreamSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of a stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestAuthorizationRequest.html"
+                                  title='struct rusoto_iot::TestAuthorizationRequest'>TestAuthorizationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestAuthorizationResponse.html"
+                                  title='struct rusoto_iot::TestAuthorizationResponse'>TestAuthorizationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeAuthorizerRequest.html"
+                                  title='struct rusoto_iot::TestInvokeAuthorizerRequest'>TestInvokeAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestInvokeAuthorizerResponse.html"
+                                  title='struct rusoto_iot::TestInvokeAuthorizerResponse'>TestInvokeAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingAttribute.html"
+                                  title='struct rusoto_iot::ThingAttribute'>ThingAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>The properties of the thing, including thing name, thing type name, and a list of thing attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingDocument.html"
+                                  title='struct rusoto_iot::ThingDocument'>ThingDocument</a></td>
+                           <td class='docblock-short'>
+                                <p>The thing search index document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingGroupMetadata.html"
+                                  title='struct rusoto_iot::ThingGroupMetadata'>ThingGroupMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Thing group metadata.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingGroupProperties.html"
+                                  title='struct rusoto_iot::ThingGroupProperties'>ThingGroupProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>Thing group properties.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingIndexingConfiguration.html"
+                                  title='struct rusoto_iot::ThingIndexingConfiguration'>ThingIndexingConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Thing indexing configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingTypeDefinition.html"
+                                  title='struct rusoto_iot::ThingTypeDefinition'>ThingTypeDefinition</a></td>
+                           <td class='docblock-short'>
+                                <p>The definition of the thing type, including thing type name and description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingTypeMetadata.html"
+                                  title='struct rusoto_iot::ThingTypeMetadata'>ThingTypeMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>The ThingTypeMetadata contains additional information about the thing type including: creation date and time, a value indicating whether the thing type is deprecated, and a date and time when time was deprecated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThingTypeProperties.html"
+                                  title='struct rusoto_iot::ThingTypeProperties'>ThingTypeProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>The ThingTypeProperties contains information about the thing type including: a thing type description, and a list of searchable thing attribute names.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TopicRule.html"
+                                  title='struct rusoto_iot::TopicRule'>TopicRule</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TopicRuleListItem.html"
+                                  title='struct rusoto_iot::TopicRuleListItem'>TopicRuleListItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TopicRulePayload.html"
+                                  title='struct rusoto_iot::TopicRulePayload'>TopicRulePayload</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TransferCertificateRequest.html"
+                                  title='struct rusoto_iot::TransferCertificateRequest'>TransferCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the TransferCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TransferCertificateResponse.html"
+                                  title='struct rusoto_iot::TransferCertificateResponse'>TransferCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the TransferCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TransferData.html"
+                                  title='struct rusoto_iot::TransferData'>TransferData</a></td>
+                           <td class='docblock-short'>
+                                <p>Data used to transfer a certificate to an AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAuthorizerRequest.html"
+                                  title='struct rusoto_iot::UpdateAuthorizerRequest'>UpdateAuthorizerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAuthorizerResponse.html"
+                                  title='struct rusoto_iot::UpdateAuthorizerResponse'>UpdateAuthorizerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateCACertificateRequest.html"
+                                  title='struct rusoto_iot::UpdateCACertificateRequest'>UpdateCACertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the UpdateCACertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateCertificateRequest.html"
+                                  title='struct rusoto_iot::UpdateCertificateRequest'>UpdateCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the UpdateCertificate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateEventConfigurationsRequest.html"
+                                  title='struct rusoto_iot::UpdateEventConfigurationsRequest'>UpdateEventConfigurationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateEventConfigurationsResponse.html"
+                                  title='struct rusoto_iot::UpdateEventConfigurationsResponse'>UpdateEventConfigurationsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIndexingConfigurationRequest.html"
+                                  title='struct rusoto_iot::UpdateIndexingConfigurationRequest'>UpdateIndexingConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIndexingConfigurationResponse.html"
+                                  title='struct rusoto_iot::UpdateIndexingConfigurationResponse'>UpdateIndexingConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleAliasRequest.html"
+                                  title='struct rusoto_iot::UpdateRoleAliasRequest'>UpdateRoleAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleAliasResponse.html"
+                                  title='struct rusoto_iot::UpdateRoleAliasResponse'>UpdateRoleAliasResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateStreamRequest.html"
+                                  title='struct rusoto_iot::UpdateStreamRequest'>UpdateStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateStreamResponse.html"
+                                  title='struct rusoto_iot::UpdateStreamResponse'>UpdateStreamResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingGroupRequest.html"
+                                  title='struct rusoto_iot::UpdateThingGroupRequest'>UpdateThingGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingGroupResponse.html"
+                                  title='struct rusoto_iot::UpdateThingGroupResponse'>UpdateThingGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingGroupsForThingRequest.html"
+                                  title='struct rusoto_iot::UpdateThingGroupsForThingRequest'>UpdateThingGroupsForThingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingGroupsForThingResponse.html"
+                                  title='struct rusoto_iot::UpdateThingGroupsForThingResponse'>UpdateThingGroupsForThingResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingRequest.html"
+                                  title='struct rusoto_iot::UpdateThingRequest'>UpdateThingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The input for the UpdateThing operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateThingResponse.html"
+                                  title='struct rusoto_iot::UpdateThingResponse'>UpdateThingResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The output from the UpdateThing operation.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AcceptCertificateTransferError.html"
+                                  title='enum rusoto_iot::AcceptCertificateTransferError'>AcceptCertificateTransferError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AcceptCertificateTransfer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddThingToThingGroupError.html"
+                                  title='enum rusoto_iot::AddThingToThingGroupError'>AddThingToThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddThingToThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateTargetsWithJobError.html"
+                                  title='enum rusoto_iot::AssociateTargetsWithJobError'>AssociateTargetsWithJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateTargetsWithJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachPolicyError.html"
+                                  title='enum rusoto_iot::AttachPolicyError'>AttachPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachPrincipalPolicyError.html"
+                                  title='enum rusoto_iot::AttachPrincipalPolicyError'>AttachPrincipalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachPrincipalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachThingPrincipalError.html"
+                                  title='enum rusoto_iot::AttachThingPrincipalError'>AttachThingPrincipalError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachThingPrincipal</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelCertificateTransferError.html"
+                                  title='enum rusoto_iot::CancelCertificateTransferError'>CancelCertificateTransferError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelCertificateTransfer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelJobError.html"
+                                  title='enum rusoto_iot::CancelJobError'>CancelJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ClearDefaultAuthorizerError.html"
+                                  title='enum rusoto_iot::ClearDefaultAuthorizerError'>ClearDefaultAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ClearDefaultAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAuthorizerError.html"
+                                  title='enum rusoto_iot::CreateAuthorizerError'>CreateAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCertificateFromCsrError.html"
+                                  title='enum rusoto_iot::CreateCertificateFromCsrError'>CreateCertificateFromCsrError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCertificateFromCsr</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateJobError.html"
+                                  title='enum rusoto_iot::CreateJobError'>CreateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateKeysAndCertificateError.html"
+                                  title='enum rusoto_iot::CreateKeysAndCertificateError'>CreateKeysAndCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateKeysAndCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateOTAUpdateError.html"
+                                  title='enum rusoto_iot::CreateOTAUpdateError'>CreateOTAUpdateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateOTAUpdate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePolicyError.html"
+                                  title='enum rusoto_iot::CreatePolicyError'>CreatePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePolicyVersionError.html"
+                                  title='enum rusoto_iot::CreatePolicyVersionError'>CreatePolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRoleAliasError.html"
+                                  title='enum rusoto_iot::CreateRoleAliasError'>CreateRoleAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRoleAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateStreamError.html"
+                                  title='enum rusoto_iot::CreateStreamError'>CreateStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateThingError.html"
+                                  title='enum rusoto_iot::CreateThingError'>CreateThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateThingGroupError.html"
+                                  title='enum rusoto_iot::CreateThingGroupError'>CreateThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateThingTypeError.html"
+                                  title='enum rusoto_iot::CreateThingTypeError'>CreateThingTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateThingType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateTopicRuleError.html"
+                                  title='enum rusoto_iot::CreateTopicRuleError'>CreateTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAuthorizerError.html"
+                                  title='enum rusoto_iot::DeleteAuthorizerError'>DeleteAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCACertificateError.html"
+                                  title='enum rusoto_iot::DeleteCACertificateError'>DeleteCACertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCACertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCertificateError.html"
+                                  title='enum rusoto_iot::DeleteCertificateError'>DeleteCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteOTAUpdateError.html"
+                                  title='enum rusoto_iot::DeleteOTAUpdateError'>DeleteOTAUpdateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteOTAUpdate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePolicyError.html"
+                                  title='enum rusoto_iot::DeletePolicyError'>DeletePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePolicyVersionError.html"
+                                  title='enum rusoto_iot::DeletePolicyVersionError'>DeletePolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRegistrationCodeError.html"
+                                  title='enum rusoto_iot::DeleteRegistrationCodeError'>DeleteRegistrationCodeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRegistrationCode</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRoleAliasError.html"
+                                  title='enum rusoto_iot::DeleteRoleAliasError'>DeleteRoleAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRoleAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteStreamError.html"
+                                  title='enum rusoto_iot::DeleteStreamError'>DeleteStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteThingError.html"
+                                  title='enum rusoto_iot::DeleteThingError'>DeleteThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteThingGroupError.html"
+                                  title='enum rusoto_iot::DeleteThingGroupError'>DeleteThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteThingTypeError.html"
+                                  title='enum rusoto_iot::DeleteThingTypeError'>DeleteThingTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteThingType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTopicRuleError.html"
+                                  title='enum rusoto_iot::DeleteTopicRuleError'>DeleteTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteV2LoggingLevelError.html"
+                                  title='enum rusoto_iot::DeleteV2LoggingLevelError'>DeleteV2LoggingLevelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteV2LoggingLevel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeprecateThingTypeError.html"
+                                  title='enum rusoto_iot::DeprecateThingTypeError'>DeprecateThingTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeprecateThingType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAuthorizerError.html"
+                                  title='enum rusoto_iot::DescribeAuthorizerError'>DescribeAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCACertificateError.html"
+                                  title='enum rusoto_iot::DescribeCACertificateError'>DescribeCACertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCACertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCertificateError.html"
+                                  title='enum rusoto_iot::DescribeCertificateError'>DescribeCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDefaultAuthorizerError.html"
+                                  title='enum rusoto_iot::DescribeDefaultAuthorizerError'>DescribeDefaultAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDefaultAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEndpointError.html"
+                                  title='enum rusoto_iot::DescribeEndpointError'>DescribeEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventConfigurationsError.html"
+                                  title='enum rusoto_iot::DescribeEventConfigurationsError'>DescribeEventConfigurationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventConfigurations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeIndexError.html"
+                                  title='enum rusoto_iot::DescribeIndexError'>DescribeIndexError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeIndex</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobError.html"
+                                  title='enum rusoto_iot::DescribeJobError'>DescribeJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobExecutionError.html"
+                                  title='enum rusoto_iot::DescribeJobExecutionError'>DescribeJobExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJobExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRoleAliasError.html"
+                                  title='enum rusoto_iot::DescribeRoleAliasError'>DescribeRoleAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRoleAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStreamError.html"
+                                  title='enum rusoto_iot::DescribeStreamError'>DescribeStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeThingError.html"
+                                  title='enum rusoto_iot::DescribeThingError'>DescribeThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeThingGroupError.html"
+                                  title='enum rusoto_iot::DescribeThingGroupError'>DescribeThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeThingRegistrationTaskError.html"
+                                  title='enum rusoto_iot::DescribeThingRegistrationTaskError'>DescribeThingRegistrationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeThingRegistrationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeThingTypeError.html"
+                                  title='enum rusoto_iot::DescribeThingTypeError'>DescribeThingTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeThingType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachPolicyError.html"
+                                  title='enum rusoto_iot::DetachPolicyError'>DetachPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachPrincipalPolicyError.html"
+                                  title='enum rusoto_iot::DetachPrincipalPolicyError'>DetachPrincipalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachPrincipalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachThingPrincipalError.html"
+                                  title='enum rusoto_iot::DetachThingPrincipalError'>DetachThingPrincipalError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachThingPrincipal</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableTopicRuleError.html"
+                                  title='enum rusoto_iot::DisableTopicRuleError'>DisableTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableTopicRuleError.html"
+                                  title='enum rusoto_iot::EnableTopicRuleError'>EnableTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetEffectivePoliciesError.html"
+                                  title='enum rusoto_iot::GetEffectivePoliciesError'>GetEffectivePoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetEffectivePolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetIndexingConfigurationError.html"
+                                  title='enum rusoto_iot::GetIndexingConfigurationError'>GetIndexingConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetIndexingConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobDocumentError.html"
+                                  title='enum rusoto_iot::GetJobDocumentError'>GetJobDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoggingOptionsError.html"
+                                  title='enum rusoto_iot::GetLoggingOptionsError'>GetLoggingOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoggingOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOTAUpdateError.html"
+                                  title='enum rusoto_iot::GetOTAUpdateError'>GetOTAUpdateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOTAUpdate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPolicyError.html"
+                                  title='enum rusoto_iot::GetPolicyError'>GetPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPolicyVersionError.html"
+                                  title='enum rusoto_iot::GetPolicyVersionError'>GetPolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRegistrationCodeError.html"
+                                  title='enum rusoto_iot::GetRegistrationCodeError'>GetRegistrationCodeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRegistrationCode</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetTopicRuleError.html"
+                                  title='enum rusoto_iot::GetTopicRuleError'>GetTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetV2LoggingOptionsError.html"
+                                  title='enum rusoto_iot::GetV2LoggingOptionsError'>GetV2LoggingOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetV2LoggingOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAttachedPoliciesError.html"
+                                  title='enum rusoto_iot::ListAttachedPoliciesError'>ListAttachedPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAttachedPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAuthorizersError.html"
+                                  title='enum rusoto_iot::ListAuthorizersError'>ListAuthorizersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAuthorizers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCACertificatesError.html"
+                                  title='enum rusoto_iot::ListCACertificatesError'>ListCACertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCACertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCertificatesByCAError.html"
+                                  title='enum rusoto_iot::ListCertificatesByCAError'>ListCertificatesByCAError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCertificatesByCA</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCertificatesError.html"
+                                  title='enum rusoto_iot::ListCertificatesError'>ListCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListIndicesError.html"
+                                  title='enum rusoto_iot::ListIndicesError'>ListIndicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListIndices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobExecutionsForJobError.html"
+                                  title='enum rusoto_iot::ListJobExecutionsForJobError'>ListJobExecutionsForJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobExecutionsForJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobExecutionsForThingError.html"
+                                  title='enum rusoto_iot::ListJobExecutionsForThingError'>ListJobExecutionsForThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobExecutionsForThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_iot::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOTAUpdatesError.html"
+                                  title='enum rusoto_iot::ListOTAUpdatesError'>ListOTAUpdatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOTAUpdates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOutgoingCertificatesError.html"
+                                  title='enum rusoto_iot::ListOutgoingCertificatesError'>ListOutgoingCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOutgoingCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPoliciesError.html"
+                                  title='enum rusoto_iot::ListPoliciesError'>ListPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPolicyPrincipalsError.html"
+                                  title='enum rusoto_iot::ListPolicyPrincipalsError'>ListPolicyPrincipalsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPolicyPrincipals</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPolicyVersionsError.html"
+                                  title='enum rusoto_iot::ListPolicyVersionsError'>ListPolicyVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPolicyVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPrincipalPoliciesError.html"
+                                  title='enum rusoto_iot::ListPrincipalPoliciesError'>ListPrincipalPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPrincipalPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPrincipalThingsError.html"
+                                  title='enum rusoto_iot::ListPrincipalThingsError'>ListPrincipalThingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPrincipalThings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRoleAliasesError.html"
+                                  title='enum rusoto_iot::ListRoleAliasesError'>ListRoleAliasesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRoleAliases</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListStreamsError.html"
+                                  title='enum rusoto_iot::ListStreamsError'>ListStreamsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListStreams</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTargetsForPolicyError.html"
+                                  title='enum rusoto_iot::ListTargetsForPolicyError'>ListTargetsForPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTargetsForPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingGroupsError.html"
+                                  title='enum rusoto_iot::ListThingGroupsError'>ListThingGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingGroupsForThingError.html"
+                                  title='enum rusoto_iot::ListThingGroupsForThingError'>ListThingGroupsForThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingGroupsForThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingPrincipalsError.html"
+                                  title='enum rusoto_iot::ListThingPrincipalsError'>ListThingPrincipalsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingPrincipals</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingRegistrationTaskReportsError.html"
+                                  title='enum rusoto_iot::ListThingRegistrationTaskReportsError'>ListThingRegistrationTaskReportsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingRegistrationTaskReports</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingRegistrationTasksError.html"
+                                  title='enum rusoto_iot::ListThingRegistrationTasksError'>ListThingRegistrationTasksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingRegistrationTasks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingTypesError.html"
+                                  title='enum rusoto_iot::ListThingTypesError'>ListThingTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingsError.html"
+                                  title='enum rusoto_iot::ListThingsError'>ListThingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListThingsInThingGroupError.html"
+                                  title='enum rusoto_iot::ListThingsInThingGroupError'>ListThingsInThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListThingsInThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTopicRulesError.html"
+                                  title='enum rusoto_iot::ListTopicRulesError'>ListTopicRulesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTopicRules</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListV2LoggingLevelsError.html"
+                                  title='enum rusoto_iot::ListV2LoggingLevelsError'>ListV2LoggingLevelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListV2LoggingLevels</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterCACertificateError.html"
+                                  title='enum rusoto_iot::RegisterCACertificateError'>RegisterCACertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterCACertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterCertificateError.html"
+                                  title='enum rusoto_iot::RegisterCertificateError'>RegisterCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterThingError.html"
+                                  title='enum rusoto_iot::RegisterThingError'>RegisterThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RejectCertificateTransferError.html"
+                                  title='enum rusoto_iot::RejectCertificateTransferError'>RejectCertificateTransferError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RejectCertificateTransfer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveThingFromThingGroupError.html"
+                                  title='enum rusoto_iot::RemoveThingFromThingGroupError'>RemoveThingFromThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveThingFromThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ReplaceTopicRuleError.html"
+                                  title='enum rusoto_iot::ReplaceTopicRuleError'>ReplaceTopicRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ReplaceTopicRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SearchIndexError.html"
+                                  title='enum rusoto_iot::SearchIndexError'>SearchIndexError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SearchIndex</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetDefaultAuthorizerError.html"
+                                  title='enum rusoto_iot::SetDefaultAuthorizerError'>SetDefaultAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetDefaultAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetDefaultPolicyVersionError.html"
+                                  title='enum rusoto_iot::SetDefaultPolicyVersionError'>SetDefaultPolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetDefaultPolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetLoggingOptionsError.html"
+                                  title='enum rusoto_iot::SetLoggingOptionsError'>SetLoggingOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetLoggingOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetV2LoggingLevelError.html"
+                                  title='enum rusoto_iot::SetV2LoggingLevelError'>SetV2LoggingLevelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetV2LoggingLevel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetV2LoggingOptionsError.html"
+                                  title='enum rusoto_iot::SetV2LoggingOptionsError'>SetV2LoggingOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetV2LoggingOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartThingRegistrationTaskError.html"
+                                  title='enum rusoto_iot::StartThingRegistrationTaskError'>StartThingRegistrationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartThingRegistrationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopThingRegistrationTaskError.html"
+                                  title='enum rusoto_iot::StopThingRegistrationTaskError'>StopThingRegistrationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopThingRegistrationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestAuthorizationError.html"
+                                  title='enum rusoto_iot::TestAuthorizationError'>TestAuthorizationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestAuthorization</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestInvokeAuthorizerError.html"
+                                  title='enum rusoto_iot::TestInvokeAuthorizerError'>TestInvokeAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestInvokeAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TransferCertificateError.html"
+                                  title='enum rusoto_iot::TransferCertificateError'>TransferCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TransferCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAuthorizerError.html"
+                                  title='enum rusoto_iot::UpdateAuthorizerError'>UpdateAuthorizerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAuthorizer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateCACertificateError.html"
+                                  title='enum rusoto_iot::UpdateCACertificateError'>UpdateCACertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCACertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateCertificateError.html"
+                                  title='enum rusoto_iot::UpdateCertificateError'>UpdateCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateEventConfigurationsError.html"
+                                  title='enum rusoto_iot::UpdateEventConfigurationsError'>UpdateEventConfigurationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateEventConfigurations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateIndexingConfigurationError.html"
+                                  title='enum rusoto_iot::UpdateIndexingConfigurationError'>UpdateIndexingConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateIndexingConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRoleAliasError.html"
+                                  title='enum rusoto_iot::UpdateRoleAliasError'>UpdateRoleAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRoleAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateStreamError.html"
+                                  title='enum rusoto_iot::UpdateStreamError'>UpdateStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateThingError.html"
+                                  title='enum rusoto_iot::UpdateThingError'>UpdateThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateThing</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateThingGroupError.html"
+                                  title='enum rusoto_iot::UpdateThingGroupError'>UpdateThingGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateThingGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateThingGroupsForThingError.html"
+                                  title='enum rusoto_iot::UpdateThingGroupsForThingError'>UpdateThingGroupsForThingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateThingGroupsForThing</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Iot.html"
+                                  title='trait rusoto_iot::Iot'>Iot</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS IoT API. AWS IoT clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_iot";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

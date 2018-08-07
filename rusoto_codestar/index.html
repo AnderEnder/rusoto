@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_codestar` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_codestar"><title>rusoto_codestar - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_codestar/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_codestar</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_codestar', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_codestar</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_codestar/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS CodeStar</fullname> <p>This is the API reference for AWS CodeStar. This reference provides descriptions of the operations and data types for the AWS CodeStar API along with usage examples.</p> <p>You can use the AWS CodeStar API to work with:</p> <p>Projects and their resources, by calling the following:</p> <ul> <li> <p> <code>DeleteProject</code>, which deletes a project.</p> </li> <li> <p> <code>DescribeProject</code>, which lists the attributes of a project.</p> </li> <li> <p> <code>ListProjects</code>, which lists all projects associated with your AWS account.</p> </li> <li> <p> <code>ListResources</code>, which lists the resources associated with a project.</p> </li> <li> <p> <code>ListTagsForProject</code>, which lists the tags associated with a project.</p> </li> <li> <p> <code>TagProject</code>, which adds tags to a project.</p> </li> <li> <p> <code>UntagProject</code>, which removes tags from a project.</p> </li> <li> <p> <code>UpdateProject</code>, which updates the attributes of a project.</p> </li> </ul> <p>Teams and team members, by calling the following:</p> <ul> <li> <p> <code>AssociateTeamMember</code>, which adds an IAM user to the team for a project.</p> </li> <li> <p> <code>DisassociateTeamMember</code>, which removes an IAM user from the team for a project.</p> </li> <li> <p> <code>ListTeamMembers</code>, which lists all the IAM users in the team for a project, including their roles and attributes.</p> </li> <li> <p> <code>UpdateTeamMember</code>, which updates a team member&#39;s attributes in a project.</p> </li> </ul> <p>Users, by calling the following:</p> <ul> <li> <p> <code>CreateUserProfile</code>, which creates a user profile that contains data associated with the user across all projects.</p> </li> <li> <p> <code>DeleteUserProfile</code>, which deletes all user profile information across all projects.</p> </li> <li> <p> <code>DescribeUserProfile</code>, which describes the profile of a user.</p> </li> <li> <p> <code>ListUserProfiles</code>, which lists all user profiles.</p> </li> <li> <p> <code>UpdateUserProfile</code>, which updates the profile for a user.</p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.CodeStarClient.html">CodeStarClient</a> and <a href="trait.CodeStar.html">CodeStar</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateTeamMemberRequest.html"
+                                  title='struct rusoto_codestar::AssociateTeamMemberRequest'>AssociateTeamMemberRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateTeamMemberResult.html"
+                                  title='struct rusoto_codestar::AssociateTeamMemberResult'>AssociateTeamMemberResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodeStarClient.html"
+                                  title='struct rusoto_codestar::CodeStarClient'>CodeStarClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the CodeStar API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProjectRequest.html"
+                                  title='struct rusoto_codestar::CreateProjectRequest'>CreateProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProjectResult.html"
+                                  title='struct rusoto_codestar::CreateProjectResult'>CreateProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserProfileRequest.html"
+                                  title='struct rusoto_codestar::CreateUserProfileRequest'>CreateUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserProfileResult.html"
+                                  title='struct rusoto_codestar::CreateUserProfileResult'>CreateUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProjectRequest.html"
+                                  title='struct rusoto_codestar::DeleteProjectRequest'>DeleteProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProjectResult.html"
+                                  title='struct rusoto_codestar::DeleteProjectResult'>DeleteProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserProfileRequest.html"
+                                  title='struct rusoto_codestar::DeleteUserProfileRequest'>DeleteUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserProfileResult.html"
+                                  title='struct rusoto_codestar::DeleteUserProfileResult'>DeleteUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeProjectRequest.html"
+                                  title='struct rusoto_codestar::DescribeProjectRequest'>DescribeProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeProjectResult.html"
+                                  title='struct rusoto_codestar::DescribeProjectResult'>DescribeProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserProfileRequest.html"
+                                  title='struct rusoto_codestar::DescribeUserProfileRequest'>DescribeUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserProfileResult.html"
+                                  title='struct rusoto_codestar::DescribeUserProfileResult'>DescribeUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateTeamMemberRequest.html"
+                                  title='struct rusoto_codestar::DisassociateTeamMemberRequest'>DisassociateTeamMemberRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateTeamMemberResult.html"
+                                  title='struct rusoto_codestar::DisassociateTeamMemberResult'>DisassociateTeamMemberResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProjectsRequest.html"
+                                  title='struct rusoto_codestar::ListProjectsRequest'>ListProjectsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProjectsResult.html"
+                                  title='struct rusoto_codestar::ListProjectsResult'>ListProjectsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourcesRequest.html"
+                                  title='struct rusoto_codestar::ListResourcesRequest'>ListResourcesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourcesResult.html"
+                                  title='struct rusoto_codestar::ListResourcesResult'>ListResourcesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForProjectRequest.html"
+                                  title='struct rusoto_codestar::ListTagsForProjectRequest'>ListTagsForProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForProjectResult.html"
+                                  title='struct rusoto_codestar::ListTagsForProjectResult'>ListTagsForProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTeamMembersRequest.html"
+                                  title='struct rusoto_codestar::ListTeamMembersRequest'>ListTeamMembersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTeamMembersResult.html"
+                                  title='struct rusoto_codestar::ListTeamMembersResult'>ListTeamMembersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserProfilesRequest.html"
+                                  title='struct rusoto_codestar::ListUserProfilesRequest'>ListUserProfilesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserProfilesResult.html"
+                                  title='struct rusoto_codestar::ListUserProfilesResult'>ListUserProfilesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProjectSummary.html"
+                                  title='struct rusoto_codestar::ProjectSummary'>ProjectSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the metadata for a project.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Resource.html"
+                                  title='struct rusoto_codestar::Resource'>Resource</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a resource for a project.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagProjectRequest.html"
+                                  title='struct rusoto_codestar::TagProjectRequest'>TagProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagProjectResult.html"
+                                  title='struct rusoto_codestar::TagProjectResult'>TagProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TeamMember.html"
+                                  title='struct rusoto_codestar::TeamMember'>TeamMember</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a team member in a project.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagProjectRequest.html"
+                                  title='struct rusoto_codestar::UntagProjectRequest'>UntagProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagProjectResult.html"
+                                  title='struct rusoto_codestar::UntagProjectResult'>UntagProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateProjectRequest.html"
+                                  title='struct rusoto_codestar::UpdateProjectRequest'>UpdateProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateProjectResult.html"
+                                  title='struct rusoto_codestar::UpdateProjectResult'>UpdateProjectResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateTeamMemberRequest.html"
+                                  title='struct rusoto_codestar::UpdateTeamMemberRequest'>UpdateTeamMemberRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateTeamMemberResult.html"
+                                  title='struct rusoto_codestar::UpdateTeamMemberResult'>UpdateTeamMemberResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserProfileRequest.html"
+                                  title='struct rusoto_codestar::UpdateUserProfileRequest'>UpdateUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserProfileResult.html"
+                                  title='struct rusoto_codestar::UpdateUserProfileResult'>UpdateUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserProfileSummary.html"
+                                  title='struct rusoto_codestar::UserProfileSummary'>UserProfileSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a user's profile in AWS CodeStar.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateTeamMemberError.html"
+                                  title='enum rusoto_codestar::AssociateTeamMemberError'>AssociateTeamMemberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateTeamMember</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateProjectError.html"
+                                  title='enum rusoto_codestar::CreateProjectError'>CreateProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserProfileError.html"
+                                  title='enum rusoto_codestar::CreateUserProfileError'>CreateUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteProjectError.html"
+                                  title='enum rusoto_codestar::DeleteProjectError'>DeleteProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserProfileError.html"
+                                  title='enum rusoto_codestar::DeleteUserProfileError'>DeleteUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeProjectError.html"
+                                  title='enum rusoto_codestar::DescribeProjectError'>DescribeProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserProfileError.html"
+                                  title='enum rusoto_codestar::DescribeUserProfileError'>DescribeUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateTeamMemberError.html"
+                                  title='enum rusoto_codestar::DisassociateTeamMemberError'>DisassociateTeamMemberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateTeamMember</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListProjectsError.html"
+                                  title='enum rusoto_codestar::ListProjectsError'>ListProjectsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListProjects</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourcesError.html"
+                                  title='enum rusoto_codestar::ListResourcesError'>ListResourcesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResources</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForProjectError.html"
+                                  title='enum rusoto_codestar::ListTagsForProjectError'>ListTagsForProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTeamMembersError.html"
+                                  title='enum rusoto_codestar::ListTeamMembersError'>ListTeamMembersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTeamMembers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUserProfilesError.html"
+                                  title='enum rusoto_codestar::ListUserProfilesError'>ListUserProfilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUserProfiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagProjectError.html"
+                                  title='enum rusoto_codestar::TagProjectError'>TagProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagProjectError.html"
+                                  title='enum rusoto_codestar::UntagProjectError'>UntagProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateProjectError.html"
+                                  title='enum rusoto_codestar::UpdateProjectError'>UpdateProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateTeamMemberError.html"
+                                  title='enum rusoto_codestar::UpdateTeamMemberError'>UpdateTeamMemberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateTeamMember</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserProfileError.html"
+                                  title='enum rusoto_codestar::UpdateUserProfileError'>UpdateUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUserProfile</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.CodeStar.html"
+                                  title='trait rusoto_codestar::CodeStar'>CodeStar</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the CodeStar API. CodeStar clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_codestar";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

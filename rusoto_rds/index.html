@@ -1,0 +1,2374 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_rds` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_rds"><title>rusoto_rds - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_rds/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_rds</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_rds', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_rds</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_rds/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Amazon Relational Database Service</fullname> <p> </p> <p>Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks, freeing up developers to focus on what makes their applications and businesses unique.</p> <p>Amazon RDS gives you access to the capabilities of a MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle, or Amazon Aurora database server. These capabilities mean that the code, applications, and tools you already use today with your existing databases work with Amazon RDS without modification. Amazon RDS automatically backs up your database and maintains the database software that powers your DB instance. Amazon RDS is flexible: you can scale your DB instance&#39;s compute resources and storage capacity to meet your application&#39;s demand. As with all Amazon Web Services, there are no up-front investments, and you pay only for the resources you use.</p> <p>This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques such as polling or callback functions to determine when a command has been applied. In this reference, the parameter descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance window. The reference structure is as follows, and we list following some related topics from the user guide.</p> <p> <b>Amazon RDS API Reference</b> </p> <ul> <li> <p>For the alphabetical list of API actions, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API Actions</a>.</p> </li> <li> <p>For the alphabetical list of data types, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data Types</a>.</p> </li> <li> <p>For a list of common query parameters, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common Parameters</a>.</p> </li> <li> <p>For descriptions of the error codes, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common Errors</a>.</p> </li> </ul> <p> <b>Amazon RDS User Guide</b> </p> <ul> <li> <p>For a summary of the Amazon RDS interfaces, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS Interfaces</a>.</p> </li> <li> <p>For more information about how to use the Query API, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query API</a>.</p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.RdsClient.html">RdsClient</a> and <a href="trait.Rds.html">Rds</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountAttributesMessage.html"
+                                  title='struct rusoto_rds::AccountAttributesMessage'>AccountAttributesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Data returned by the <b>DescribeAccountAttributes</b> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountQuota.html"
+                                  title='struct rusoto_rds::AccountQuota'>AccountQuota</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a quota for an AWS account, for example, the number of DB instances allowed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddRoleToDBClusterMessage.html"
+                                  title='struct rusoto_rds::AddRoleToDBClusterMessage'>AddRoleToDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddSourceIdentifierToSubscriptionMessage.html"
+                                  title='struct rusoto_rds::AddSourceIdentifierToSubscriptionMessage'>AddSourceIdentifierToSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddSourceIdentifierToSubscriptionResult.html"
+                                  title='struct rusoto_rds::AddSourceIdentifierToSubscriptionResult'>AddSourceIdentifierToSubscriptionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceMessage.html"
+                                  title='struct rusoto_rds::AddTagsToResourceMessage'>AddTagsToResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplyPendingMaintenanceActionMessage.html"
+                                  title='struct rusoto_rds::ApplyPendingMaintenanceActionMessage'>ApplyPendingMaintenanceActionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplyPendingMaintenanceActionResult.html"
+                                  title='struct rusoto_rds::ApplyPendingMaintenanceActionResult'>ApplyPendingMaintenanceActionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthorizeDBSecurityGroupIngressMessage.html"
+                                  title='struct rusoto_rds::AuthorizeDBSecurityGroupIngressMessage'>AuthorizeDBSecurityGroupIngressMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthorizeDBSecurityGroupIngressResult.html"
+                                  title='struct rusoto_rds::AuthorizeDBSecurityGroupIngressResult'>AuthorizeDBSecurityGroupIngressResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AvailabilityZone.html"
+                                  title='struct rusoto_rds::AvailabilityZone'>AvailabilityZone</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains Availability Zone information.</p> <p> This data type is used as an element in the following data type:</p> <ul> <li> <p> <a>OrderableDBInstanceOption</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Certificate.html"
+                                  title='struct rusoto_rds::Certificate'>Certificate</a></td>
+                           <td class='docblock-short'>
+                                <p>A CA certificate for an AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CertificateMessage.html"
+                                  title='struct rusoto_rds::CertificateMessage'>CertificateMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Data returned by the <b>DescribeCertificates</b> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CharacterSet.html"
+                                  title='struct rusoto_rds::CharacterSet'>CharacterSet</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the action <a>DescribeDBEngineVersions</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudwatchLogsExportConfiguration.html"
+                                  title='struct rusoto_rds::CloudwatchLogsExportConfiguration'>CloudwatchLogsExportConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The configuration setting for the log types to be enabled for export to CloudWatch Logs for a specific DB instance or DB cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBClusterParameterGroupMessage.html"
+                                  title='struct rusoto_rds::CopyDBClusterParameterGroupMessage'>CopyDBClusterParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBClusterParameterGroupResult.html"
+                                  title='struct rusoto_rds::CopyDBClusterParameterGroupResult'>CopyDBClusterParameterGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBClusterSnapshotMessage.html"
+                                  title='struct rusoto_rds::CopyDBClusterSnapshotMessage'>CopyDBClusterSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBClusterSnapshotResult.html"
+                                  title='struct rusoto_rds::CopyDBClusterSnapshotResult'>CopyDBClusterSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBParameterGroupMessage.html"
+                                  title='struct rusoto_rds::CopyDBParameterGroupMessage'>CopyDBParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBParameterGroupResult.html"
+                                  title='struct rusoto_rds::CopyDBParameterGroupResult'>CopyDBParameterGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBSnapshotMessage.html"
+                                  title='struct rusoto_rds::CopyDBSnapshotMessage'>CopyDBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyDBSnapshotResult.html"
+                                  title='struct rusoto_rds::CopyDBSnapshotResult'>CopyDBSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyOptionGroupMessage.html"
+                                  title='struct rusoto_rds::CopyOptionGroupMessage'>CopyOptionGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyOptionGroupResult.html"
+                                  title='struct rusoto_rds::CopyOptionGroupResult'>CopyOptionGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterMessage.html"
+                                  title='struct rusoto_rds::CreateDBClusterMessage'>CreateDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterParameterGroupMessage.html"
+                                  title='struct rusoto_rds::CreateDBClusterParameterGroupMessage'>CreateDBClusterParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterParameterGroupResult.html"
+                                  title='struct rusoto_rds::CreateDBClusterParameterGroupResult'>CreateDBClusterParameterGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterResult.html"
+                                  title='struct rusoto_rds::CreateDBClusterResult'>CreateDBClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterSnapshotMessage.html"
+                                  title='struct rusoto_rds::CreateDBClusterSnapshotMessage'>CreateDBClusterSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBClusterSnapshotResult.html"
+                                  title='struct rusoto_rds::CreateDBClusterSnapshotResult'>CreateDBClusterSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBInstanceMessage.html"
+                                  title='struct rusoto_rds::CreateDBInstanceMessage'>CreateDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBInstanceReadReplicaMessage.html"
+                                  title='struct rusoto_rds::CreateDBInstanceReadReplicaMessage'>CreateDBInstanceReadReplicaMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBInstanceReadReplicaResult.html"
+                                  title='struct rusoto_rds::CreateDBInstanceReadReplicaResult'>CreateDBInstanceReadReplicaResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBInstanceResult.html"
+                                  title='struct rusoto_rds::CreateDBInstanceResult'>CreateDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBParameterGroupMessage.html"
+                                  title='struct rusoto_rds::CreateDBParameterGroupMessage'>CreateDBParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBParameterGroupResult.html"
+                                  title='struct rusoto_rds::CreateDBParameterGroupResult'>CreateDBParameterGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSecurityGroupMessage.html"
+                                  title='struct rusoto_rds::CreateDBSecurityGroupMessage'>CreateDBSecurityGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSecurityGroupResult.html"
+                                  title='struct rusoto_rds::CreateDBSecurityGroupResult'>CreateDBSecurityGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSnapshotMessage.html"
+                                  title='struct rusoto_rds::CreateDBSnapshotMessage'>CreateDBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSnapshotResult.html"
+                                  title='struct rusoto_rds::CreateDBSnapshotResult'>CreateDBSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSubnetGroupMessage.html"
+                                  title='struct rusoto_rds::CreateDBSubnetGroupMessage'>CreateDBSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDBSubnetGroupResult.html"
+                                  title='struct rusoto_rds::CreateDBSubnetGroupResult'>CreateDBSubnetGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEventSubscriptionMessage.html"
+                                  title='struct rusoto_rds::CreateEventSubscriptionMessage'>CreateEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEventSubscriptionResult.html"
+                                  title='struct rusoto_rds::CreateEventSubscriptionResult'>CreateEventSubscriptionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOptionGroupMessage.html"
+                                  title='struct rusoto_rds::CreateOptionGroupMessage'>CreateOptionGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOptionGroupResult.html"
+                                  title='struct rusoto_rds::CreateOptionGroupResult'>CreateOptionGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBCluster.html"
+                                  title='struct rusoto_rds::DBCluster'>DBCluster</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB cluster. </p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterMember.html"
+                                  title='struct rusoto_rds::DBClusterMember'>DBClusterMember</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an instance that is part of a DB cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterMessage.html"
+                                  title='struct rusoto_rds::DBClusterMessage'>DBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the result of a successful invocation of the <a>DescribeDBClusters</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterOptionGroupStatus.html"
+                                  title='struct rusoto_rds::DBClusterOptionGroupStatus'>DBClusterOptionGroupStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains status information for a DB cluster option group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterParameterGroup.html"
+                                  title='struct rusoto_rds::DBClusterParameterGroup'>DBClusterParameterGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB cluster parameter group. </p> <p>This data type is used as a response element in the <a>DescribeDBClusterParameterGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterParameterGroupDetails.html"
+                                  title='struct rusoto_rds::DBClusterParameterGroupDetails'>DBClusterParameterGroupDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides details about a DB cluster parameter group including the parameters in the DB cluster parameter group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterParameterGroupNameMessage.html"
+                                  title='struct rusoto_rds::DBClusterParameterGroupNameMessage'>DBClusterParameterGroupNameMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterParameterGroupsMessage.html"
+                                  title='struct rusoto_rds::DBClusterParameterGroupsMessage'>DBClusterParameterGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterRole.html"
+                                  title='struct rusoto_rds::DBClusterRole'>DBClusterRole</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an AWS Identity and Access Management (IAM) role that is associated with a DB cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterSnapshot.html"
+                                  title='struct rusoto_rds::DBClusterSnapshot'>DBClusterSnapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details for an Amazon RDS DB cluster snapshot </p> <p>This data type is used as a response element in the <a>DescribeDBClusterSnapshots</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterSnapshotAttribute.html"
+                                  title='struct rusoto_rds::DBClusterSnapshotAttribute'>DBClusterSnapshotAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the name and values of a manual DB cluster snapshot attribute.</p> <p>Manual DB cluster snapshot attributes are used to authorize other AWS accounts to restore a manual DB cluster snapshot. For more information, see the <a>ModifyDBClusterSnapshotAttribute</a> API action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterSnapshotAttributesResult.html"
+                                  title='struct rusoto_rds::DBClusterSnapshotAttributesResult'>DBClusterSnapshotAttributesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of a successful call to the <a>DescribeDBClusterSnapshotAttributes</a> API action.</p> <p>Manual DB cluster snapshot attributes are used to authorize other AWS accounts to copy or restore a manual DB cluster snapshot. For more information, see the <a>ModifyDBClusterSnapshotAttribute</a> API action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBClusterSnapshotMessage.html"
+                                  title='struct rusoto_rds::DBClusterSnapshotMessage'>DBClusterSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Provides a list of DB cluster snapshots for the user as the result of a call to the <a>DescribeDBClusterSnapshots</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBEngineVersion.html"
+                                  title='struct rusoto_rds::DBEngineVersion'>DBEngineVersion</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the action <a>DescribeDBEngineVersions</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBEngineVersionMessage.html"
+                                  title='struct rusoto_rds::DBEngineVersionMessage'>DBEngineVersionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBEngineVersions</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBInstance.html"
+                                  title='struct rusoto_rds::DBInstance'>DBInstance</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB instance. </p> <p>This data type is used as a response element in the <a>DescribeDBInstances</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBInstanceMessage.html"
+                                  title='struct rusoto_rds::DBInstanceMessage'>DBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBInstances</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBInstanceStatusInfo.html"
+                                  title='struct rusoto_rds::DBInstanceStatusInfo'>DBInstanceStatusInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides a list of status information for a DB instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBParameterGroup.html"
+                                  title='struct rusoto_rds::DBParameterGroup'>DBParameterGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB parameter group. </p> <p>This data type is used as a response element in the <a>DescribeDBParameterGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBParameterGroupDetails.html"
+                                  title='struct rusoto_rds::DBParameterGroupDetails'>DBParameterGroupDetails</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBParameters</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBParameterGroupNameMessage.html"
+                                  title='struct rusoto_rds::DBParameterGroupNameMessage'>DBParameterGroupNameMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>ModifyDBParameterGroup</a> or <a>ResetDBParameterGroup</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBParameterGroupStatus.html"
+                                  title='struct rusoto_rds::DBParameterGroupStatus'>DBParameterGroupStatus</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The status of the DB parameter group.</p> <p>This data type is used as a response element in the following actions:</p> <ul> <li> <p> <a>CreateDBInstance</a> </p> </li> <li> <p> <a>CreateDBInstanceReadReplica</a> </p> </li> <li> <p> <a>DeleteDBInstance</a> </p> </li> <li> <p> <a>ModifyDBInstance</a> </p> </li> <li> <p> <a>RebootDBInstance</a> </p> </li> <li> <p> <a>RestoreDBInstanceFromDBSnapshot</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBParameterGroupsMessage.html"
+                                  title='struct rusoto_rds::DBParameterGroupsMessage'>DBParameterGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBParameterGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSecurityGroup.html"
+                                  title='struct rusoto_rds::DBSecurityGroup'>DBSecurityGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details for an Amazon RDS DB security group. </p> <p>This data type is used as a response element in the <a>DescribeDBSecurityGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSecurityGroupMembership.html"
+                                  title='struct rusoto_rds::DBSecurityGroupMembership'>DBSecurityGroupMembership</a></td>
+                           <td class='docblock-short'>
+                                <p><p>This data type is used as a response element in the following actions:</p> <ul> <li> <p> <a>ModifyDBInstance</a> </p> </li> <li> <p> <a>RebootDBInstance</a> </p> </li> <li> <p> <a>RestoreDBInstanceFromDBSnapshot</a> </p> </li> <li> <p> <a>RestoreDBInstanceToPointInTime</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSecurityGroupMessage.html"
+                                  title='struct rusoto_rds::DBSecurityGroupMessage'>DBSecurityGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBSecurityGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSnapshot.html"
+                                  title='struct rusoto_rds::DBSnapshot'>DBSnapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB snapshot. </p> <p>This data type is used as a response element in the <a>DescribeDBSnapshots</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSnapshotAttribute.html"
+                                  title='struct rusoto_rds::DBSnapshotAttribute'>DBSnapshotAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the name and values of a manual DB snapshot attribute</p> <p>Manual DB snapshot attributes are used to authorize other AWS accounts to restore a manual DB snapshot. For more information, see the <a>ModifyDBSnapshotAttribute</a> API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSnapshotAttributesResult.html"
+                                  title='struct rusoto_rds::DBSnapshotAttributesResult'>DBSnapshotAttributesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of a successful call to the <a>DescribeDBSnapshotAttributes</a> API action.</p> <p>Manual DB snapshot attributes are used to authorize other AWS accounts to copy or restore a manual DB snapshot. For more information, see the <a>ModifyDBSnapshotAttribute</a> API action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSnapshotMessage.html"
+                                  title='struct rusoto_rds::DBSnapshotMessage'>DBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBSnapshots</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSubnetGroup.html"
+                                  title='struct rusoto_rds::DBSubnetGroup'>DBSubnetGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of an Amazon RDS DB subnet group. </p> <p>This data type is used as a response element in the <a>DescribeDBSubnetGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DBSubnetGroupMessage.html"
+                                  title='struct rusoto_rds::DBSubnetGroupMessage'>DBSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeDBSubnetGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBClusterMessage.html"
+                                  title='struct rusoto_rds::DeleteDBClusterMessage'>DeleteDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBClusterParameterGroupMessage.html"
+                                  title='struct rusoto_rds::DeleteDBClusterParameterGroupMessage'>DeleteDBClusterParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBClusterResult.html"
+                                  title='struct rusoto_rds::DeleteDBClusterResult'>DeleteDBClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBClusterSnapshotMessage.html"
+                                  title='struct rusoto_rds::DeleteDBClusterSnapshotMessage'>DeleteDBClusterSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBClusterSnapshotResult.html"
+                                  title='struct rusoto_rds::DeleteDBClusterSnapshotResult'>DeleteDBClusterSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBInstanceMessage.html"
+                                  title='struct rusoto_rds::DeleteDBInstanceMessage'>DeleteDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBInstanceResult.html"
+                                  title='struct rusoto_rds::DeleteDBInstanceResult'>DeleteDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBParameterGroupMessage.html"
+                                  title='struct rusoto_rds::DeleteDBParameterGroupMessage'>DeleteDBParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBSecurityGroupMessage.html"
+                                  title='struct rusoto_rds::DeleteDBSecurityGroupMessage'>DeleteDBSecurityGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBSnapshotMessage.html"
+                                  title='struct rusoto_rds::DeleteDBSnapshotMessage'>DeleteDBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBSnapshotResult.html"
+                                  title='struct rusoto_rds::DeleteDBSnapshotResult'>DeleteDBSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDBSubnetGroupMessage.html"
+                                  title='struct rusoto_rds::DeleteDBSubnetGroupMessage'>DeleteDBSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEventSubscriptionMessage.html"
+                                  title='struct rusoto_rds::DeleteEventSubscriptionMessage'>DeleteEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEventSubscriptionResult.html"
+                                  title='struct rusoto_rds::DeleteEventSubscriptionResult'>DeleteEventSubscriptionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteOptionGroupMessage.html"
+                                  title='struct rusoto_rds::DeleteOptionGroupMessage'>DeleteOptionGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountAttributesMessage.html"
+                                  title='struct rusoto_rds::DescribeAccountAttributesMessage'>DescribeAccountAttributesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificatesMessage.html"
+                                  title='struct rusoto_rds::DescribeCertificatesMessage'>DescribeCertificatesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClusterParameterGroupsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBClusterParameterGroupsMessage'>DescribeDBClusterParameterGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClusterParametersMessage.html"
+                                  title='struct rusoto_rds::DescribeDBClusterParametersMessage'>DescribeDBClusterParametersMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClusterSnapshotAttributesMessage.html"
+                                  title='struct rusoto_rds::DescribeDBClusterSnapshotAttributesMessage'>DescribeDBClusterSnapshotAttributesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClusterSnapshotAttributesResult.html"
+                                  title='struct rusoto_rds::DescribeDBClusterSnapshotAttributesResult'>DescribeDBClusterSnapshotAttributesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClusterSnapshotsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBClusterSnapshotsMessage'>DescribeDBClusterSnapshotsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBClustersMessage.html"
+                                  title='struct rusoto_rds::DescribeDBClustersMessage'>DescribeDBClustersMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBEngineVersionsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBEngineVersionsMessage'>DescribeDBEngineVersionsMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBInstancesMessage.html"
+                                  title='struct rusoto_rds::DescribeDBInstancesMessage'>DescribeDBInstancesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBLogFilesDetails.html"
+                                  title='struct rusoto_rds::DescribeDBLogFilesDetails'>DescribeDBLogFilesDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>This data type is used as a response element to <a>DescribeDBLogFiles</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBLogFilesMessage.html"
+                                  title='struct rusoto_rds::DescribeDBLogFilesMessage'>DescribeDBLogFilesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBLogFilesResponse.html"
+                                  title='struct rusoto_rds::DescribeDBLogFilesResponse'>DescribeDBLogFilesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p> The response from a call to <a>DescribeDBLogFiles</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBParameterGroupsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBParameterGroupsMessage'>DescribeDBParameterGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBParametersMessage.html"
+                                  title='struct rusoto_rds::DescribeDBParametersMessage'>DescribeDBParametersMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBSecurityGroupsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBSecurityGroupsMessage'>DescribeDBSecurityGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBSnapshotAttributesMessage.html"
+                                  title='struct rusoto_rds::DescribeDBSnapshotAttributesMessage'>DescribeDBSnapshotAttributesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBSnapshotAttributesResult.html"
+                                  title='struct rusoto_rds::DescribeDBSnapshotAttributesResult'>DescribeDBSnapshotAttributesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBSnapshotsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBSnapshotsMessage'>DescribeDBSnapshotsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDBSubnetGroupsMessage.html"
+                                  title='struct rusoto_rds::DescribeDBSubnetGroupsMessage'>DescribeDBSubnetGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEngineDefaultClusterParametersMessage.html"
+                                  title='struct rusoto_rds::DescribeEngineDefaultClusterParametersMessage'>DescribeEngineDefaultClusterParametersMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEngineDefaultClusterParametersResult.html"
+                                  title='struct rusoto_rds::DescribeEngineDefaultClusterParametersResult'>DescribeEngineDefaultClusterParametersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEngineDefaultParametersMessage.html"
+                                  title='struct rusoto_rds::DescribeEngineDefaultParametersMessage'>DescribeEngineDefaultParametersMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEngineDefaultParametersResult.html"
+                                  title='struct rusoto_rds::DescribeEngineDefaultParametersResult'>DescribeEngineDefaultParametersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventCategoriesMessage.html"
+                                  title='struct rusoto_rds::DescribeEventCategoriesMessage'>DescribeEventCategoriesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventSubscriptionsMessage.html"
+                                  title='struct rusoto_rds::DescribeEventSubscriptionsMessage'>DescribeEventSubscriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventsMessage.html"
+                                  title='struct rusoto_rds::DescribeEventsMessage'>DescribeEventsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOptionGroupOptionsMessage.html"
+                                  title='struct rusoto_rds::DescribeOptionGroupOptionsMessage'>DescribeOptionGroupOptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOptionGroupsMessage.html"
+                                  title='struct rusoto_rds::DescribeOptionGroupsMessage'>DescribeOptionGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOrderableDBInstanceOptionsMessage.html"
+                                  title='struct rusoto_rds::DescribeOrderableDBInstanceOptionsMessage'>DescribeOrderableDBInstanceOptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePendingMaintenanceActionsMessage.html"
+                                  title='struct rusoto_rds::DescribePendingMaintenanceActionsMessage'>DescribePendingMaintenanceActionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReservedDBInstancesMessage.html"
+                                  title='struct rusoto_rds::DescribeReservedDBInstancesMessage'>DescribeReservedDBInstancesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReservedDBInstancesOfferingsMessage.html"
+                                  title='struct rusoto_rds::DescribeReservedDBInstancesOfferingsMessage'>DescribeReservedDBInstancesOfferingsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSourceRegionsMessage.html"
+                                  title='struct rusoto_rds::DescribeSourceRegionsMessage'>DescribeSourceRegionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeValidDBInstanceModificationsMessage.html"
+                                  title='struct rusoto_rds::DescribeValidDBInstanceModificationsMessage'>DescribeValidDBInstanceModificationsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeValidDBInstanceModificationsResult.html"
+                                  title='struct rusoto_rds::DescribeValidDBInstanceModificationsResult'>DescribeValidDBInstanceModificationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainMembership.html"
+                                  title='struct rusoto_rds::DomainMembership'>DomainMembership</a></td>
+                           <td class='docblock-short'>
+                                <p>An Active Directory Domain membership record associated with the DB instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DoubleRange.html"
+                                  title='struct rusoto_rds::DoubleRange'>DoubleRange</a></td>
+                           <td class='docblock-short'>
+                                <p>A range of double values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DownloadDBLogFilePortionDetails.html"
+                                  title='struct rusoto_rds::DownloadDBLogFilePortionDetails'>DownloadDBLogFilePortionDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>This data type is used as a response element to <a>DownloadDBLogFilePortion</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DownloadDBLogFilePortionMessage.html"
+                                  title='struct rusoto_rds::DownloadDBLogFilePortionMessage'>DownloadDBLogFilePortionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EC2SecurityGroup.html"
+                                  title='struct rusoto_rds::EC2SecurityGroup'>EC2SecurityGroup</a></td>
+                           <td class='docblock-short'>
+                                <p><p>This data type is used as a response element in the following actions:</p> <ul> <li> <p> <a>AuthorizeDBSecurityGroupIngress</a> </p> </li> <li> <p> <a>DescribeDBSecurityGroups</a> </p> </li> <li> <p> <a>RevokeDBSecurityGroupIngress</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Endpoint.html"
+                                  title='struct rusoto_rds::Endpoint'>Endpoint</a></td>
+                           <td class='docblock-short'>
+                                <p><p>This data type is used as a response element in the following actions:</p> <ul> <li> <p> <a>CreateDBInstance</a> </p> </li> <li> <p> <a>DescribeDBInstances</a> </p> </li> <li> <p> <a>DeleteDBInstance</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EngineDefaults.html"
+                                  title='struct rusoto_rds::EngineDefaults'>EngineDefaults</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeEngineDefaultParameters</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Event.html"
+                                  title='struct rusoto_rds::Event'>Event</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeEvents</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventCategoriesMap.html"
+                                  title='struct rusoto_rds::EventCategoriesMap'>EventCategoriesMap</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of a successful invocation of the <a>DescribeEventCategories</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventCategoriesMessage.html"
+                                  title='struct rusoto_rds::EventCategoriesMessage'>EventCategoriesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Data returned from the <b>DescribeEventCategories</b> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventSubscription.html"
+                                  title='struct rusoto_rds::EventSubscription'>EventSubscription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of a successful invocation of the <a>DescribeEventSubscriptions</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventSubscriptionsMessage.html"
+                                  title='struct rusoto_rds::EventSubscriptionsMessage'>EventSubscriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Data returned by the <b>DescribeEventSubscriptions</b> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventsMessage.html"
+                                  title='struct rusoto_rds::EventsMessage'>EventsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeEvents</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailoverDBClusterMessage.html"
+                                  title='struct rusoto_rds::FailoverDBClusterMessage'>FailoverDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailoverDBClusterResult.html"
+                                  title='struct rusoto_rds::FailoverDBClusterResult'>FailoverDBClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Filter.html"
+                                  title='struct rusoto_rds::Filter'>Filter</a></td>
+                           <td class='docblock-short'>
+                                <p>This type is not currently supported.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IPRange.html"
+                                  title='struct rusoto_rds::IPRange'>IPRange</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeDBSecurityGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceMessage.html"
+                                  title='struct rusoto_rds::ListTagsForResourceMessage'>ListTagsForResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBClusterMessage.html"
+                                  title='struct rusoto_rds::ModifyDBClusterMessage'>ModifyDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBClusterParameterGroupMessage.html"
+                                  title='struct rusoto_rds::ModifyDBClusterParameterGroupMessage'>ModifyDBClusterParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBClusterResult.html"
+                                  title='struct rusoto_rds::ModifyDBClusterResult'>ModifyDBClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBClusterSnapshotAttributeMessage.html"
+                                  title='struct rusoto_rds::ModifyDBClusterSnapshotAttributeMessage'>ModifyDBClusterSnapshotAttributeMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBClusterSnapshotAttributeResult.html"
+                                  title='struct rusoto_rds::ModifyDBClusterSnapshotAttributeResult'>ModifyDBClusterSnapshotAttributeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBInstanceMessage.html"
+                                  title='struct rusoto_rds::ModifyDBInstanceMessage'>ModifyDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBInstanceResult.html"
+                                  title='struct rusoto_rds::ModifyDBInstanceResult'>ModifyDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBParameterGroupMessage.html"
+                                  title='struct rusoto_rds::ModifyDBParameterGroupMessage'>ModifyDBParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSnapshotAttributeMessage.html"
+                                  title='struct rusoto_rds::ModifyDBSnapshotAttributeMessage'>ModifyDBSnapshotAttributeMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSnapshotAttributeResult.html"
+                                  title='struct rusoto_rds::ModifyDBSnapshotAttributeResult'>ModifyDBSnapshotAttributeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSnapshotMessage.html"
+                                  title='struct rusoto_rds::ModifyDBSnapshotMessage'>ModifyDBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSnapshotResult.html"
+                                  title='struct rusoto_rds::ModifyDBSnapshotResult'>ModifyDBSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSubnetGroupMessage.html"
+                                  title='struct rusoto_rds::ModifyDBSubnetGroupMessage'>ModifyDBSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDBSubnetGroupResult.html"
+                                  title='struct rusoto_rds::ModifyDBSubnetGroupResult'>ModifyDBSubnetGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEventSubscriptionMessage.html"
+                                  title='struct rusoto_rds::ModifyEventSubscriptionMessage'>ModifyEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEventSubscriptionResult.html"
+                                  title='struct rusoto_rds::ModifyEventSubscriptionResult'>ModifyEventSubscriptionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyOptionGroupMessage.html"
+                                  title='struct rusoto_rds::ModifyOptionGroupMessage'>ModifyOptionGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyOptionGroupResult.html"
+                                  title='struct rusoto_rds::ModifyOptionGroupResult'>ModifyOptionGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionConfiguration.html"
+                                  title='struct rusoto_rds::OptionConfiguration'>OptionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of all available options</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroup.html"
+                                  title='struct rusoto_rds::OptionGroup'>OptionGroup</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroupMembership.html"
+                                  title='struct rusoto_rds::OptionGroupMembership'>OptionGroupMembership</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information on the option groups the DB instance is a member of.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroupOption.html"
+                                  title='struct rusoto_rds::OptionGroupOption'>OptionGroupOption</a></td>
+                           <td class='docblock-short'>
+                                <p>Available option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroupOptionSetting.html"
+                                  title='struct rusoto_rds::OptionGroupOptionSetting'>OptionGroupOptionSetting</a></td>
+                           <td class='docblock-short'>
+                                <p>Option group option settings are used to display settings available for each option with their default values and other information. These values are used with the DescribeOptionGroupOptions action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroupOptionsMessage.html"
+                                  title='struct rusoto_rds::OptionGroupOptionsMessage'>OptionGroupOptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionGroups.html"
+                                  title='struct rusoto_rds::OptionGroups'>OptionGroups</a></td>
+                           <td class='docblock-short'>
+                                <p>List of option groups.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionSetting.html"
+                                  title='struct rusoto_rds::OptionSetting'>OptionSetting</a></td>
+                           <td class='docblock-short'>
+                                <p>Option settings are the actual settings being applied or configured for that option. It is used when you modify an option group or describe option groups. For example, the NATIVE_NETWORK_ENCRYPTION option has a setting called SQLNET.ENCRYPTION_SERVER that can have several different values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionVersion.html"
+                                  title='struct rusoto_rds::OptionVersion'>OptionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>The version for an option. Option group option versions are returned by the <a>DescribeOptionGroupOptions</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OrderableDBInstanceOption.html"
+                                  title='struct rusoto_rds::OrderableDBInstanceOption'>OrderableDBInstanceOption</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a list of available options for a DB instance.</p> <p> This data type is used as a response element in the <a>DescribeOrderableDBInstanceOptions</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OrderableDBInstanceOptionsMessage.html"
+                                  title='struct rusoto_rds::OrderableDBInstanceOptionsMessage'>OrderableDBInstanceOptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeOrderableDBInstanceOptions</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Parameter.html"
+                                  title='struct rusoto_rds::Parameter'>Parameter</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a request parameter in the <a>ModifyDBParameterGroup</a> and <a>ResetDBParameterGroup</a> actions. </p> <p>This data type is used as a response element in the <a>DescribeEngineDefaultParameters</a> and <a>DescribeDBParameters</a> actions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PendingCloudwatchLogsExports.html"
+                                  title='struct rusoto_rds::PendingCloudwatchLogsExports'>PendingCloudwatchLogsExports</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of the log types whose configuration is still pending. In other words, these log types are in the process of being activated or deactivated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PendingMaintenanceAction.html"
+                                  title='struct rusoto_rds::PendingMaintenanceAction'>PendingMaintenanceAction</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information about a pending maintenance action for a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PendingMaintenanceActionsMessage.html"
+                                  title='struct rusoto_rds::PendingMaintenanceActionsMessage'>PendingMaintenanceActionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Data returned from the <b>DescribePendingMaintenanceActions</b> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PendingModifiedValues.html"
+                                  title='struct rusoto_rds::PendingModifiedValues'>PendingModifiedValues</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>ModifyDBInstance</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PromoteReadReplicaDBClusterMessage.html"
+                                  title='struct rusoto_rds::PromoteReadReplicaDBClusterMessage'>PromoteReadReplicaDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PromoteReadReplicaDBClusterResult.html"
+                                  title='struct rusoto_rds::PromoteReadReplicaDBClusterResult'>PromoteReadReplicaDBClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PromoteReadReplicaMessage.html"
+                                  title='struct rusoto_rds::PromoteReadReplicaMessage'>PromoteReadReplicaMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PromoteReadReplicaResult.html"
+                                  title='struct rusoto_rds::PromoteReadReplicaResult'>PromoteReadReplicaResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseReservedDBInstancesOfferingMessage.html"
+                                  title='struct rusoto_rds::PurchaseReservedDBInstancesOfferingMessage'>PurchaseReservedDBInstancesOfferingMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseReservedDBInstancesOfferingResult.html"
+                                  title='struct rusoto_rds::PurchaseReservedDBInstancesOfferingResult'>PurchaseReservedDBInstancesOfferingResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDSOption.html"
+                                  title='struct rusoto_rds::RDSOption'>RDSOption</a></td>
+                           <td class='docblock-short'>
+                                <p>Option details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Range.html"
+                                  title='struct rusoto_rds::Range'>Range</a></td>
+                           <td class='docblock-short'>
+                                <p>A range of integer values.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RdsClient.html"
+                                  title='struct rusoto_rds::RdsClient'>RdsClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon RDS API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootDBInstanceMessage.html"
+                                  title='struct rusoto_rds::RebootDBInstanceMessage'>RebootDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootDBInstanceResult.html"
+                                  title='struct rusoto_rds::RebootDBInstanceResult'>RebootDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecurringCharge.html"
+                                  title='struct rusoto_rds::RecurringCharge'>RecurringCharge</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeReservedDBInstances</a> and <a>DescribeReservedDBInstancesOfferings</a> actions. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveRoleFromDBClusterMessage.html"
+                                  title='struct rusoto_rds::RemoveRoleFromDBClusterMessage'>RemoveRoleFromDBClusterMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveSourceIdentifierFromSubscriptionMessage.html"
+                                  title='struct rusoto_rds::RemoveSourceIdentifierFromSubscriptionMessage'>RemoveSourceIdentifierFromSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveSourceIdentifierFromSubscriptionResult.html"
+                                  title='struct rusoto_rds::RemoveSourceIdentifierFromSubscriptionResult'>RemoveSourceIdentifierFromSubscriptionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceMessage.html"
+                                  title='struct rusoto_rds::RemoveTagsFromResourceMessage'>RemoveTagsFromResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReservedDBInstance.html"
+                                  title='struct rusoto_rds::ReservedDBInstance'>ReservedDBInstance</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeReservedDBInstances</a> and <a>PurchaseReservedDBInstancesOffering</a> actions. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReservedDBInstanceMessage.html"
+                                  title='struct rusoto_rds::ReservedDBInstanceMessage'>ReservedDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeReservedDBInstances</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReservedDBInstancesOffering.html"
+                                  title='struct rusoto_rds::ReservedDBInstancesOffering'>ReservedDBInstancesOffering</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeReservedDBInstancesOfferings</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReservedDBInstancesOfferingMessage.html"
+                                  title='struct rusoto_rds::ReservedDBInstancesOfferingMessage'>ReservedDBInstancesOfferingMessage</a></td>
+                           <td class='docblock-short'>
+                                <p> Contains the result of a successful invocation of the <a>DescribeReservedDBInstancesOfferings</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetDBClusterParameterGroupMessage.html"
+                                  title='struct rusoto_rds::ResetDBClusterParameterGroupMessage'>ResetDBClusterParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetDBParameterGroupMessage.html"
+                                  title='struct rusoto_rds::ResetDBParameterGroupMessage'>ResetDBParameterGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourcePendingMaintenanceActions.html"
+                                  title='struct rusoto_rds::ResourcePendingMaintenanceActions'>ResourcePendingMaintenanceActions</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the pending maintenance actions for a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterFromS3Message.html"
+                                  title='struct rusoto_rds::RestoreDBClusterFromS3Message'>RestoreDBClusterFromS3Message</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterFromS3Result.html"
+                                  title='struct rusoto_rds::RestoreDBClusterFromS3Result'>RestoreDBClusterFromS3Result</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterFromSnapshotMessage.html"
+                                  title='struct rusoto_rds::RestoreDBClusterFromSnapshotMessage'>RestoreDBClusterFromSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterFromSnapshotResult.html"
+                                  title='struct rusoto_rds::RestoreDBClusterFromSnapshotResult'>RestoreDBClusterFromSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterToPointInTimeMessage.html"
+                                  title='struct rusoto_rds::RestoreDBClusterToPointInTimeMessage'>RestoreDBClusterToPointInTimeMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBClusterToPointInTimeResult.html"
+                                  title='struct rusoto_rds::RestoreDBClusterToPointInTimeResult'>RestoreDBClusterToPointInTimeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceFromDBSnapshotMessage.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceFromDBSnapshotMessage'>RestoreDBInstanceFromDBSnapshotMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceFromDBSnapshotResult.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceFromDBSnapshotResult'>RestoreDBInstanceFromDBSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceFromS3Message.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceFromS3Message'>RestoreDBInstanceFromS3Message</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceFromS3Result.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceFromS3Result'>RestoreDBInstanceFromS3Result</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceToPointInTimeMessage.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceToPointInTimeMessage'>RestoreDBInstanceToPointInTimeMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreDBInstanceToPointInTimeResult.html"
+                                  title='struct rusoto_rds::RestoreDBInstanceToPointInTimeResult'>RestoreDBInstanceToPointInTimeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RevokeDBSecurityGroupIngressMessage.html"
+                                  title='struct rusoto_rds::RevokeDBSecurityGroupIngressMessage'>RevokeDBSecurityGroupIngressMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RevokeDBSecurityGroupIngressResult.html"
+                                  title='struct rusoto_rds::RevokeDBSecurityGroupIngressResult'>RevokeDBSecurityGroupIngressResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SourceRegion.html"
+                                  title='struct rusoto_rds::SourceRegion'>SourceRegion</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains an AWS Region name as the result of a successful call to the <a>DescribeSourceRegions</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SourceRegionMessage.html"
+                                  title='struct rusoto_rds::SourceRegionMessage'>SourceRegionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the result of a successful invocation of the <a>DescribeSourceRegions</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartDBInstanceMessage.html"
+                                  title='struct rusoto_rds::StartDBInstanceMessage'>StartDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartDBInstanceResult.html"
+                                  title='struct rusoto_rds::StartDBInstanceResult'>StartDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopDBInstanceMessage.html"
+                                  title='struct rusoto_rds::StopDBInstanceMessage'>StopDBInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopDBInstanceResult.html"
+                                  title='struct rusoto_rds::StopDBInstanceResult'>StopDBInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subnet.html"
+                                  title='struct rusoto_rds::Subnet'>Subnet</a></td>
+                           <td class='docblock-short'>
+                                <p> This data type is used as a response element in the <a>DescribeDBSubnetGroups</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_rds::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Metadata assigned to an Amazon RDS resource consisting of a key-value pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagListMessage.html"
+                                  title='struct rusoto_rds::TagListMessage'>TagListMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Timezone.html"
+                                  title='struct rusoto_rds::Timezone'>Timezone</a></td>
+                           <td class='docblock-short'>
+                                <p>A time zone associated with a <a>DBInstance</a> or a <a>DBSnapshot</a>. This data type is an element in the response to the <a>DescribeDBInstances</a>, the <a>DescribeDBSnapshots</a>, and the <a>DescribeDBEngineVersions</a> actions. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpgradeTarget.html"
+                                  title='struct rusoto_rds::UpgradeTarget'>UpgradeTarget</a></td>
+                           <td class='docblock-short'>
+                                <p>The version of the database engine that a DB instance can be upgraded to.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidDBInstanceModificationsMessage.html"
+                                  title='struct rusoto_rds::ValidDBInstanceModificationsMessage'>ValidDBInstanceModificationsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about valid modifications that you can make to your DB instance. Contains the result of a successful call to the <a>DescribeValidDBInstanceModifications</a> action. You can use this information when you call <a>ModifyDBInstance</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidStorageOptions.html"
+                                  title='struct rusoto_rds::ValidStorageOptions'>ValidStorageOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about valid modifications that you can make to your DB instance. Contains the result of a successful call to the <a>DescribeValidDBInstanceModifications</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VpcSecurityGroupMembership.html"
+                                  title='struct rusoto_rds::VpcSecurityGroupMembership'>VpcSecurityGroupMembership</a></td>
+                           <td class='docblock-short'>
+                                <p>This data type is used as a response element for queries on VPC security group membership.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddRoleToDBClusterError.html"
+                                  title='enum rusoto_rds::AddRoleToDBClusterError'>AddRoleToDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddRoleToDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddSourceIdentifierToSubscriptionError.html"
+                                  title='enum rusoto_rds::AddSourceIdentifierToSubscriptionError'>AddSourceIdentifierToSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddSourceIdentifierToSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToResourceError.html"
+                                  title='enum rusoto_rds::AddTagsToResourceError'>AddTagsToResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ApplyPendingMaintenanceActionError.html"
+                                  title='enum rusoto_rds::ApplyPendingMaintenanceActionError'>ApplyPendingMaintenanceActionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ApplyPendingMaintenanceAction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AuthorizeDBSecurityGroupIngressError.html"
+                                  title='enum rusoto_rds::AuthorizeDBSecurityGroupIngressError'>AuthorizeDBSecurityGroupIngressError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AuthorizeDBSecurityGroupIngress</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CopyDBClusterParameterGroupError.html"
+                                  title='enum rusoto_rds::CopyDBClusterParameterGroupError'>CopyDBClusterParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CopyDBClusterParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CopyDBClusterSnapshotError.html"
+                                  title='enum rusoto_rds::CopyDBClusterSnapshotError'>CopyDBClusterSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CopyDBClusterSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CopyDBParameterGroupError.html"
+                                  title='enum rusoto_rds::CopyDBParameterGroupError'>CopyDBParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CopyDBParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CopyDBSnapshotError.html"
+                                  title='enum rusoto_rds::CopyDBSnapshotError'>CopyDBSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CopyDBSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CopyOptionGroupError.html"
+                                  title='enum rusoto_rds::CopyOptionGroupError'>CopyOptionGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CopyOptionGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBClusterError.html"
+                                  title='enum rusoto_rds::CreateDBClusterError'>CreateDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBClusterParameterGroupError.html"
+                                  title='enum rusoto_rds::CreateDBClusterParameterGroupError'>CreateDBClusterParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBClusterParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBClusterSnapshotError.html"
+                                  title='enum rusoto_rds::CreateDBClusterSnapshotError'>CreateDBClusterSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBClusterSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBInstanceError.html"
+                                  title='enum rusoto_rds::CreateDBInstanceError'>CreateDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBInstanceReadReplicaError.html"
+                                  title='enum rusoto_rds::CreateDBInstanceReadReplicaError'>CreateDBInstanceReadReplicaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBInstanceReadReplica</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBParameterGroupError.html"
+                                  title='enum rusoto_rds::CreateDBParameterGroupError'>CreateDBParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBSecurityGroupError.html"
+                                  title='enum rusoto_rds::CreateDBSecurityGroupError'>CreateDBSecurityGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBSecurityGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBSnapshotError.html"
+                                  title='enum rusoto_rds::CreateDBSnapshotError'>CreateDBSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDBSubnetGroupError.html"
+                                  title='enum rusoto_rds::CreateDBSubnetGroupError'>CreateDBSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDBSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateEventSubscriptionError.html"
+                                  title='enum rusoto_rds::CreateEventSubscriptionError'>CreateEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateOptionGroupError.html"
+                                  title='enum rusoto_rds::CreateOptionGroupError'>CreateOptionGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateOptionGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBClusterError.html"
+                                  title='enum rusoto_rds::DeleteDBClusterError'>DeleteDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBClusterParameterGroupError.html"
+                                  title='enum rusoto_rds::DeleteDBClusterParameterGroupError'>DeleteDBClusterParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBClusterParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBClusterSnapshotError.html"
+                                  title='enum rusoto_rds::DeleteDBClusterSnapshotError'>DeleteDBClusterSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBClusterSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBInstanceError.html"
+                                  title='enum rusoto_rds::DeleteDBInstanceError'>DeleteDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBParameterGroupError.html"
+                                  title='enum rusoto_rds::DeleteDBParameterGroupError'>DeleteDBParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBSecurityGroupError.html"
+                                  title='enum rusoto_rds::DeleteDBSecurityGroupError'>DeleteDBSecurityGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBSecurityGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBSnapshotError.html"
+                                  title='enum rusoto_rds::DeleteDBSnapshotError'>DeleteDBSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDBSubnetGroupError.html"
+                                  title='enum rusoto_rds::DeleteDBSubnetGroupError'>DeleteDBSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDBSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteEventSubscriptionError.html"
+                                  title='enum rusoto_rds::DeleteEventSubscriptionError'>DeleteEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteOptionGroupError.html"
+                                  title='enum rusoto_rds::DeleteOptionGroupError'>DeleteOptionGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteOptionGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAccountAttributesError.html"
+                                  title='enum rusoto_rds::DescribeAccountAttributesError'>DescribeAccountAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAccountAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCertificatesError.html"
+                                  title='enum rusoto_rds::DescribeCertificatesError'>DescribeCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBClusterParameterGroupsError.html"
+                                  title='enum rusoto_rds::DescribeDBClusterParameterGroupsError'>DescribeDBClusterParameterGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBClusterParameterGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBClusterParametersError.html"
+                                  title='enum rusoto_rds::DescribeDBClusterParametersError'>DescribeDBClusterParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBClusterParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBClusterSnapshotAttributesError.html"
+                                  title='enum rusoto_rds::DescribeDBClusterSnapshotAttributesError'>DescribeDBClusterSnapshotAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBClusterSnapshotAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBClusterSnapshotsError.html"
+                                  title='enum rusoto_rds::DescribeDBClusterSnapshotsError'>DescribeDBClusterSnapshotsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBClusterSnapshots</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBClustersError.html"
+                                  title='enum rusoto_rds::DescribeDBClustersError'>DescribeDBClustersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBClusters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBEngineVersionsError.html"
+                                  title='enum rusoto_rds::DescribeDBEngineVersionsError'>DescribeDBEngineVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBEngineVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBInstancesError.html"
+                                  title='enum rusoto_rds::DescribeDBInstancesError'>DescribeDBInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBLogFilesError.html"
+                                  title='enum rusoto_rds::DescribeDBLogFilesError'>DescribeDBLogFilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBLogFiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBParameterGroupsError.html"
+                                  title='enum rusoto_rds::DescribeDBParameterGroupsError'>DescribeDBParameterGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBParameterGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBParametersError.html"
+                                  title='enum rusoto_rds::DescribeDBParametersError'>DescribeDBParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBSecurityGroupsError.html"
+                                  title='enum rusoto_rds::DescribeDBSecurityGroupsError'>DescribeDBSecurityGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBSecurityGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBSnapshotAttributesError.html"
+                                  title='enum rusoto_rds::DescribeDBSnapshotAttributesError'>DescribeDBSnapshotAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBSnapshotAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBSnapshotsError.html"
+                                  title='enum rusoto_rds::DescribeDBSnapshotsError'>DescribeDBSnapshotsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBSnapshots</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDBSubnetGroupsError.html"
+                                  title='enum rusoto_rds::DescribeDBSubnetGroupsError'>DescribeDBSubnetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDBSubnetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEngineDefaultClusterParametersError.html"
+                                  title='enum rusoto_rds::DescribeEngineDefaultClusterParametersError'>DescribeEngineDefaultClusterParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEngineDefaultClusterParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEngineDefaultParametersError.html"
+                                  title='enum rusoto_rds::DescribeEngineDefaultParametersError'>DescribeEngineDefaultParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEngineDefaultParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventCategoriesError.html"
+                                  title='enum rusoto_rds::DescribeEventCategoriesError'>DescribeEventCategoriesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventCategories</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventSubscriptionsError.html"
+                                  title='enum rusoto_rds::DescribeEventSubscriptionsError'>DescribeEventSubscriptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventSubscriptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventsError.html"
+                                  title='enum rusoto_rds::DescribeEventsError'>DescribeEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeOptionGroupOptionsError.html"
+                                  title='enum rusoto_rds::DescribeOptionGroupOptionsError'>DescribeOptionGroupOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeOptionGroupOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeOptionGroupsError.html"
+                                  title='enum rusoto_rds::DescribeOptionGroupsError'>DescribeOptionGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeOptionGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeOrderableDBInstanceOptionsError.html"
+                                  title='enum rusoto_rds::DescribeOrderableDBInstanceOptionsError'>DescribeOrderableDBInstanceOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeOrderableDBInstanceOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePendingMaintenanceActionsError.html"
+                                  title='enum rusoto_rds::DescribePendingMaintenanceActionsError'>DescribePendingMaintenanceActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePendingMaintenanceActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReservedDBInstancesError.html"
+                                  title='enum rusoto_rds::DescribeReservedDBInstancesError'>DescribeReservedDBInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReservedDBInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReservedDBInstancesOfferingsError.html"
+                                  title='enum rusoto_rds::DescribeReservedDBInstancesOfferingsError'>DescribeReservedDBInstancesOfferingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReservedDBInstancesOfferings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSourceRegionsError.html"
+                                  title='enum rusoto_rds::DescribeSourceRegionsError'>DescribeSourceRegionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSourceRegions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeValidDBInstanceModificationsError.html"
+                                  title='enum rusoto_rds::DescribeValidDBInstanceModificationsError'>DescribeValidDBInstanceModificationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeValidDBInstanceModifications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DownloadDBLogFilePortionError.html"
+                                  title='enum rusoto_rds::DownloadDBLogFilePortionError'>DownloadDBLogFilePortionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DownloadDBLogFilePortion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FailoverDBClusterError.html"
+                                  title='enum rusoto_rds::FailoverDBClusterError'>FailoverDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by FailoverDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_rds::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBClusterError.html"
+                                  title='enum rusoto_rds::ModifyDBClusterError'>ModifyDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBClusterParameterGroupError.html"
+                                  title='enum rusoto_rds::ModifyDBClusterParameterGroupError'>ModifyDBClusterParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBClusterParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBClusterSnapshotAttributeError.html"
+                                  title='enum rusoto_rds::ModifyDBClusterSnapshotAttributeError'>ModifyDBClusterSnapshotAttributeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBClusterSnapshotAttribute</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBInstanceError.html"
+                                  title='enum rusoto_rds::ModifyDBInstanceError'>ModifyDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBParameterGroupError.html"
+                                  title='enum rusoto_rds::ModifyDBParameterGroupError'>ModifyDBParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBSnapshotAttributeError.html"
+                                  title='enum rusoto_rds::ModifyDBSnapshotAttributeError'>ModifyDBSnapshotAttributeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBSnapshotAttribute</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBSnapshotError.html"
+                                  title='enum rusoto_rds::ModifyDBSnapshotError'>ModifyDBSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDBSubnetGroupError.html"
+                                  title='enum rusoto_rds::ModifyDBSubnetGroupError'>ModifyDBSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDBSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyEventSubscriptionError.html"
+                                  title='enum rusoto_rds::ModifyEventSubscriptionError'>ModifyEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyOptionGroupError.html"
+                                  title='enum rusoto_rds::ModifyOptionGroupError'>ModifyOptionGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyOptionGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PromoteReadReplicaDBClusterError.html"
+                                  title='enum rusoto_rds::PromoteReadReplicaDBClusterError'>PromoteReadReplicaDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PromoteReadReplicaDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PromoteReadReplicaError.html"
+                                  title='enum rusoto_rds::PromoteReadReplicaError'>PromoteReadReplicaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PromoteReadReplica</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PurchaseReservedDBInstancesOfferingError.html"
+                                  title='enum rusoto_rds::PurchaseReservedDBInstancesOfferingError'>PurchaseReservedDBInstancesOfferingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PurchaseReservedDBInstancesOffering</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebootDBInstanceError.html"
+                                  title='enum rusoto_rds::RebootDBInstanceError'>RebootDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebootDBInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveRoleFromDBClusterError.html"
+                                  title='enum rusoto_rds::RemoveRoleFromDBClusterError'>RemoveRoleFromDBClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveRoleFromDBCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveSourceIdentifierFromSubscriptionError.html"
+                                  title='enum rusoto_rds::RemoveSourceIdentifierFromSubscriptionError'>RemoveSourceIdentifierFromSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveSourceIdentifierFromSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromResourceError.html"
+                                  title='enum rusoto_rds::RemoveTagsFromResourceError'>RemoveTagsFromResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResetDBClusterParameterGroupError.html"
+                                  title='enum rusoto_rds::ResetDBClusterParameterGroupError'>ResetDBClusterParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResetDBClusterParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResetDBParameterGroupError.html"
+                                  title='enum rusoto_rds::ResetDBParameterGroupError'>ResetDBParameterGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResetDBParameterGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBClusterFromS3Error.html"
+                                  title='enum rusoto_rds::RestoreDBClusterFromS3Error'>RestoreDBClusterFromS3Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBClusterFromS3</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBClusterFromSnapshotError.html"
+                                  title='enum rusoto_rds::RestoreDBClusterFromSnapshotError'>RestoreDBClusterFromSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBClusterFromSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBClusterToPointInTimeError.html"
+                                  title='enum rusoto_rds::RestoreDBClusterToPointInTimeError'>RestoreDBClusterToPointInTimeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBClusterToPointInTime</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBInstanceFromDBSnapshotError.html"
+                                  title='enum rusoto_rds::RestoreDBInstanceFromDBSnapshotError'>RestoreDBInstanceFromDBSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBInstanceFromDBSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBInstanceFromS3Error.html"
+                                  title='enum rusoto_rds::RestoreDBInstanceFromS3Error'>RestoreDBInstanceFromS3Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBInstanceFromS3</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreDBInstanceToPointInTimeError.html"
+                                  title='enum rusoto_rds::RestoreDBInstanceToPointInTimeError'>RestoreDBInstanceToPointInTimeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreDBInstanceToPointInTime</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RevokeDBSecurityGroupIngressError.html"
+                                  title='enum rusoto_rds::RevokeDBSecurityGroupIngressError'>RevokeDBSecurityGroupIngressError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RevokeDBSecurityGroupIngress</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartDBInstanceError.html"
+                                  title='enum rusoto_rds::StartDBInstanceError'>StartDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartDBInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopDBInstanceError.html"
+                                  title='enum rusoto_rds::StopDBInstanceError'>StopDBInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopDBInstance</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Rds.html"
+                                  title='trait rusoto_rds::Rds'>Rds</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon RDS API. Amazon RDS clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_rds";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

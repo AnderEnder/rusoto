@@ -1,0 +1,1671 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_opsworks` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_opsworks"><title>rusoto_opsworks - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_opsworks/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_opsworks</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_opsworks', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_opsworks</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_opsworks/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS OpsWorks</fullname> <p>Welcome to the <i>AWS OpsWorks Stacks API Reference</i>. This guide provides descriptions, syntax, and usage examples for AWS OpsWorks Stacks actions and data types, including common parameters and error codes. </p> <p>AWS OpsWorks Stacks is an application management service that provides an integrated experience for overseeing the complete application lifecycle. For information about this product, go to the <a href="http://aws.amazon.com/opsworks/">AWS OpsWorks</a> details page. </p> <p> <b>SDKs and CLI</b> </p> <p>The most common way to use the AWS OpsWorks Stacks API is by using the AWS Command Line Interface (CLI) or by using one of the AWS SDKs to implement applications in your preferred language. For more information, see:</p> <ul> <li> <p> <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a> </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html">AWS SDK for Java</a> </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm">AWS SDK for .NET</a> </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.OpsWorks.OpsWorksClient.html">AWS SDK for PHP 2</a> </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/sdkforruby/api/">AWS SDK for Ruby</a> </p> </li> <li> <p> <a href="http://aws.amazon.com/documentation/sdkforjavascript/">AWS SDK for Node.js</a> </p> </li> <li> <p> <a href="http://docs.pythonboto.org/en/latest/ref/opsworks.html">AWS SDK for Python(Boto)</a> </p> </li> </ul> <p> <b>Endpoints</b> </p> <p>AWS OpsWorks Stacks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints. Stacks can only be accessed or managed within the endpoint in which they are created.</p> <ul> <li> <p>opsworks.us-east-1.amazonaws.com</p> </li> <li> <p>opsworks.us-east-2.amazonaws.com</p> </li> <li> <p>opsworks.us-west-1.amazonaws.com</p> </li> <li> <p>opsworks.us-west-2.amazonaws.com</p> </li> <li> <p>opsworks.ca-central-1.amazonaws.com (API only; not available in the AWS console)</p> </li> <li> <p>opsworks.eu-west-1.amazonaws.com</p> </li> <li> <p>opsworks.eu-west-2.amazonaws.com</p> </li> <li> <p>opsworks.eu-west-3.amazonaws.com</p> </li> <li> <p>opsworks.eu-central-1.amazonaws.com</p> </li> <li> <p>opsworks.ap-northeast-1.amazonaws.com</p> </li> <li> <p>opsworks.ap-northeast-2.amazonaws.com</p> </li> <li> <p>opsworks.ap-south-1.amazonaws.com</p> </li> <li> <p>opsworks.ap-southeast-1.amazonaws.com</p> </li> <li> <p>opsworks.ap-southeast-2.amazonaws.com</p> </li> <li> <p>opsworks.sa-east-1.amazonaws.com</p> </li> </ul> <p> <b>Chef Versions</b> </p> <p>When you call <a>CreateStack</a>, <a>CloneStack</a>, or <a>UpdateStack</a> we recommend you use the <code>ConfigurationManager</code> parameter to specify the Chef version. The recommended and default value for Linux stacks is currently 12. Windows stacks use Chef 12.2. For more information, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef Versions</a>.</p> <note> <p>You can specify Chef 12, 11.10, or 11.4 for your Linux stack. We recommend migrating your existing Linux stacks to Chef 12 as soon as possible.</p> </note></p>
+<p>If you're using the service, you're probably looking for <a href="struct.OpsWorksClient.html">OpsWorksClient</a> and <a href="trait.OpsWorks.html">OpsWorks</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AgentVersion.html"
+                                  title='struct rusoto_opsworks::AgentVersion'>AgentVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an agent version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.App.html"
+                                  title='struct rusoto_opsworks::App'>App</a></td>
+                           <td class='docblock-short'>
+                                <p>A description of the app.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssignInstanceRequest.html"
+                                  title='struct rusoto_opsworks::AssignInstanceRequest'>AssignInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssignVolumeRequest.html"
+                                  title='struct rusoto_opsworks::AssignVolumeRequest'>AssignVolumeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateElasticIpRequest.html"
+                                  title='struct rusoto_opsworks::AssociateElasticIpRequest'>AssociateElasticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachElasticLoadBalancerRequest.html"
+                                  title='struct rusoto_opsworks::AttachElasticLoadBalancerRequest'>AttachElasticLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingThresholds.html"
+                                  title='struct rusoto_opsworks::AutoScalingThresholds'>AutoScalingThresholds</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a load-based auto scaling upscaling or downscaling threshold configuration, which specifies when AWS OpsWorks Stacks starts or stops load-based instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BlockDeviceMapping.html"
+                                  title='struct rusoto_opsworks::BlockDeviceMapping'>BlockDeviceMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a block device mapping. This data type maps directly to the Amazon EC2 <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html">BlockDeviceMapping</a> data type. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChefConfiguration.html"
+                                  title='struct rusoto_opsworks::ChefConfiguration'>ChefConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the Chef configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloneStackRequest.html"
+                                  title='struct rusoto_opsworks::CloneStackRequest'>CloneStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloneStackResult.html"
+                                  title='struct rusoto_opsworks::CloneStackResult'>CloneStackResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CloneStack</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchLogsConfiguration.html"
+                                  title='struct rusoto_opsworks::CloudWatchLogsConfiguration'>CloudWatchLogsConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the Amazon CloudWatch logs configuration for a layer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchLogsLogStream.html"
+                                  title='struct rusoto_opsworks::CloudWatchLogsLogStream'>CloudWatchLogsLogStream</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the Amazon CloudWatch logs configuration for a layer. For detailed information about members of this data type, see the <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html">CloudWatch Logs Agent Reference</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Command.html"
+                                  title='struct rusoto_opsworks::Command'>Command</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a command.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAppRequest.html"
+                                  title='struct rusoto_opsworks::CreateAppRequest'>CreateAppRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAppResult.html"
+                                  title='struct rusoto_opsworks::CreateAppResult'>CreateAppResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateApp</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeploymentRequest.html"
+                                  title='struct rusoto_opsworks::CreateDeploymentRequest'>CreateDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeploymentResult.html"
+                                  title='struct rusoto_opsworks::CreateDeploymentResult'>CreateDeploymentResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateDeployment</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceRequest.html"
+                                  title='struct rusoto_opsworks::CreateInstanceRequest'>CreateInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceResult.html"
+                                  title='struct rusoto_opsworks::CreateInstanceResult'>CreateInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateInstance</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLayerRequest.html"
+                                  title='struct rusoto_opsworks::CreateLayerRequest'>CreateLayerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLayerResult.html"
+                                  title='struct rusoto_opsworks::CreateLayerResult'>CreateLayerResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateLayer</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStackRequest.html"
+                                  title='struct rusoto_opsworks::CreateStackRequest'>CreateStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStackResult.html"
+                                  title='struct rusoto_opsworks::CreateStackResult'>CreateStackResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateStack</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserProfileRequest.html"
+                                  title='struct rusoto_opsworks::CreateUserProfileRequest'>CreateUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserProfileResult.html"
+                                  title='struct rusoto_opsworks::CreateUserProfileResult'>CreateUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>CreateUserProfile</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataSource.html"
+                                  title='struct rusoto_opsworks::DataSource'>DataSource</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an app's data source.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAppRequest.html"
+                                  title='struct rusoto_opsworks::DeleteAppRequest'>DeleteAppRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceRequest.html"
+                                  title='struct rusoto_opsworks::DeleteInstanceRequest'>DeleteInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLayerRequest.html"
+                                  title='struct rusoto_opsworks::DeleteLayerRequest'>DeleteLayerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteStackRequest.html"
+                                  title='struct rusoto_opsworks::DeleteStackRequest'>DeleteStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserProfileRequest.html"
+                                  title='struct rusoto_opsworks::DeleteUserProfileRequest'>DeleteUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deployment.html"
+                                  title='struct rusoto_opsworks::Deployment'>Deployment</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a deployment of a stack or app.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeploymentCommand.html"
+                                  title='struct rusoto_opsworks::DeploymentCommand'>DeploymentCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>Used to specify a stack or deployment command.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterEcsClusterRequest.html"
+                                  title='struct rusoto_opsworks::DeregisterEcsClusterRequest'>DeregisterEcsClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterElasticIpRequest.html"
+                                  title='struct rusoto_opsworks::DeregisterElasticIpRequest'>DeregisterElasticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterInstanceRequest.html"
+                                  title='struct rusoto_opsworks::DeregisterInstanceRequest'>DeregisterInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterRdsDbInstanceRequest.html"
+                                  title='struct rusoto_opsworks::DeregisterRdsDbInstanceRequest'>DeregisterRdsDbInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterVolumeRequest.html"
+                                  title='struct rusoto_opsworks::DeregisterVolumeRequest'>DeregisterVolumeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAgentVersionsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeAgentVersionsRequest'>DescribeAgentVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAgentVersionsResult.html"
+                                  title='struct rusoto_opsworks::DescribeAgentVersionsResult'>DescribeAgentVersionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeAgentVersions</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAppsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeAppsRequest'>DescribeAppsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAppsResult.html"
+                                  title='struct rusoto_opsworks::DescribeAppsResult'>DescribeAppsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeApps</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCommandsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeCommandsRequest'>DescribeCommandsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCommandsResult.html"
+                                  title='struct rusoto_opsworks::DescribeCommandsResult'>DescribeCommandsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeCommands</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDeploymentsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeDeploymentsRequest'>DescribeDeploymentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDeploymentsResult.html"
+                                  title='struct rusoto_opsworks::DescribeDeploymentsResult'>DescribeDeploymentsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeDeployments</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEcsClustersRequest.html"
+                                  title='struct rusoto_opsworks::DescribeEcsClustersRequest'>DescribeEcsClustersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEcsClustersResult.html"
+                                  title='struct rusoto_opsworks::DescribeEcsClustersResult'>DescribeEcsClustersResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeEcsClusters</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeElasticIpsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeElasticIpsRequest'>DescribeElasticIpsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeElasticIpsResult.html"
+                                  title='struct rusoto_opsworks::DescribeElasticIpsResult'>DescribeElasticIpsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeElasticIps</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeElasticLoadBalancersRequest.html"
+                                  title='struct rusoto_opsworks::DescribeElasticLoadBalancersRequest'>DescribeElasticLoadBalancersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeElasticLoadBalancersResult.html"
+                                  title='struct rusoto_opsworks::DescribeElasticLoadBalancersResult'>DescribeElasticLoadBalancersResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeElasticLoadBalancers</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancesRequest.html"
+                                  title='struct rusoto_opsworks::DescribeInstancesRequest'>DescribeInstancesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancesResult.html"
+                                  title='struct rusoto_opsworks::DescribeInstancesResult'>DescribeInstancesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeInstances</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLayersRequest.html"
+                                  title='struct rusoto_opsworks::DescribeLayersRequest'>DescribeLayersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLayersResult.html"
+                                  title='struct rusoto_opsworks::DescribeLayersResult'>DescribeLayersResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeLayers</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBasedAutoScalingRequest.html"
+                                  title='struct rusoto_opsworks::DescribeLoadBasedAutoScalingRequest'>DescribeLoadBasedAutoScalingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBasedAutoScalingResult.html"
+                                  title='struct rusoto_opsworks::DescribeLoadBasedAutoScalingResult'>DescribeLoadBasedAutoScalingResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeLoadBasedAutoScaling</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMyUserProfileResult.html"
+                                  title='struct rusoto_opsworks::DescribeMyUserProfileResult'>DescribeMyUserProfileResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeMyUserProfile</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOperatingSystemsResponse.html"
+                                  title='struct rusoto_opsworks::DescribeOperatingSystemsResponse'>DescribeOperatingSystemsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to a <code>DescribeOperatingSystems</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePermissionsRequest.html"
+                                  title='struct rusoto_opsworks::DescribePermissionsRequest'>DescribePermissionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePermissionsResult.html"
+                                  title='struct rusoto_opsworks::DescribePermissionsResult'>DescribePermissionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribePermissions</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRaidArraysRequest.html"
+                                  title='struct rusoto_opsworks::DescribeRaidArraysRequest'>DescribeRaidArraysRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRaidArraysResult.html"
+                                  title='struct rusoto_opsworks::DescribeRaidArraysResult'>DescribeRaidArraysResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeRaidArrays</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRdsDbInstancesRequest.html"
+                                  title='struct rusoto_opsworks::DescribeRdsDbInstancesRequest'>DescribeRdsDbInstancesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRdsDbInstancesResult.html"
+                                  title='struct rusoto_opsworks::DescribeRdsDbInstancesResult'>DescribeRdsDbInstancesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeRdsDbInstances</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeServiceErrorsRequest.html"
+                                  title='struct rusoto_opsworks::DescribeServiceErrorsRequest'>DescribeServiceErrorsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeServiceErrorsResult.html"
+                                  title='struct rusoto_opsworks::DescribeServiceErrorsResult'>DescribeServiceErrorsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeServiceErrors</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStackProvisioningParametersRequest.html"
+                                  title='struct rusoto_opsworks::DescribeStackProvisioningParametersRequest'>DescribeStackProvisioningParametersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStackProvisioningParametersResult.html"
+                                  title='struct rusoto_opsworks::DescribeStackProvisioningParametersResult'>DescribeStackProvisioningParametersResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeStackProvisioningParameters</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStackSummaryRequest.html"
+                                  title='struct rusoto_opsworks::DescribeStackSummaryRequest'>DescribeStackSummaryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStackSummaryResult.html"
+                                  title='struct rusoto_opsworks::DescribeStackSummaryResult'>DescribeStackSummaryResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeStackSummary</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStacksRequest.html"
+                                  title='struct rusoto_opsworks::DescribeStacksRequest'>DescribeStacksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStacksResult.html"
+                                  title='struct rusoto_opsworks::DescribeStacksResult'>DescribeStacksResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeStacks</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTimeBasedAutoScalingRequest.html"
+                                  title='struct rusoto_opsworks::DescribeTimeBasedAutoScalingRequest'>DescribeTimeBasedAutoScalingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTimeBasedAutoScalingResult.html"
+                                  title='struct rusoto_opsworks::DescribeTimeBasedAutoScalingResult'>DescribeTimeBasedAutoScalingResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeTimeBasedAutoScaling</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserProfilesRequest.html"
+                                  title='struct rusoto_opsworks::DescribeUserProfilesRequest'>DescribeUserProfilesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserProfilesResult.html"
+                                  title='struct rusoto_opsworks::DescribeUserProfilesResult'>DescribeUserProfilesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeUserProfiles</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeVolumesRequest.html"
+                                  title='struct rusoto_opsworks::DescribeVolumesRequest'>DescribeVolumesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeVolumesResult.html"
+                                  title='struct rusoto_opsworks::DescribeVolumesResult'>DescribeVolumesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>DescribeVolumes</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachElasticLoadBalancerRequest.html"
+                                  title='struct rusoto_opsworks::DetachElasticLoadBalancerRequest'>DetachElasticLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateElasticIpRequest.html"
+                                  title='struct rusoto_opsworks::DisassociateElasticIpRequest'>DisassociateElasticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EbsBlockDevice.html"
+                                  title='struct rusoto_opsworks::EbsBlockDevice'>EbsBlockDevice</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Amazon EBS volume. This data type maps directly to the Amazon EC2 <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html">EbsBlockDevice</a> data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EcsCluster.html"
+                                  title='struct rusoto_opsworks::EcsCluster'>EcsCluster</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a registered Amazon ECS cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticIp.html"
+                                  title='struct rusoto_opsworks::ElasticIp'>ElasticIp</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Elastic IP address.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticLoadBalancer.html"
+                                  title='struct rusoto_opsworks::ElasticLoadBalancer'>ElasticLoadBalancer</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Elastic Load Balancing instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentVariable.html"
+                                  title='struct rusoto_opsworks::EnvironmentVariable'>EnvironmentVariable</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an app's environment variable.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetHostnameSuggestionRequest.html"
+                                  title='struct rusoto_opsworks::GetHostnameSuggestionRequest'>GetHostnameSuggestionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetHostnameSuggestionResult.html"
+                                  title='struct rusoto_opsworks::GetHostnameSuggestionResult'>GetHostnameSuggestionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>GetHostnameSuggestion</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GrantAccessRequest.html"
+                                  title='struct rusoto_opsworks::GrantAccessRequest'>GrantAccessRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GrantAccessResult.html"
+                                  title='struct rusoto_opsworks::GrantAccessResult'>GrantAccessResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>GrantAccess</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Instance.html"
+                                  title='struct rusoto_opsworks::Instance'>Instance</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceIdentity.html"
+                                  title='struct rusoto_opsworks::InstanceIdentity'>InstanceIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a description of an Amazon EC2 instance from the Amazon EC2 metadata service. For more information, see <a href="http://docs.aws.amazon.com/sdkfornet/latest/apidocs/Index.html">Instance Metadata and User Data</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstancesCount.html"
+                                  title='struct rusoto_opsworks::InstancesCount'>InstancesCount</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes how many instances a stack has for each status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Layer.html"
+                                  title='struct rusoto_opsworks::Layer'>Layer</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a layer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LifecycleEventConfiguration.html"
+                                  title='struct rusoto_opsworks::LifecycleEventConfiguration'>LifecycleEventConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the lifecycle event configuration</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsRequest.html"
+                                  title='struct rusoto_opsworks::ListTagsRequest'>ListTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsResult.html"
+                                  title='struct rusoto_opsworks::ListTagsResult'>ListTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>ListTags</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBasedAutoScalingConfiguration.html"
+                                  title='struct rusoto_opsworks::LoadBasedAutoScalingConfiguration'>LoadBasedAutoScalingConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a layer's load-based auto scaling configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OperatingSystem.html"
+                                  title='struct rusoto_opsworks::OperatingSystem'>OperatingSystem</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes supported operating systems in AWS OpsWorks Stacks.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OperatingSystemConfigurationManager.html"
+                                  title='struct rusoto_opsworks::OperatingSystemConfigurationManager'>OperatingSystemConfigurationManager</a></td>
+                           <td class='docblock-short'>
+                                <p>A block that contains information about the configuration manager (Chef) and the versions of the configuration manager that are supported for an operating system.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OpsWorksClient.html"
+                                  title='struct rusoto_opsworks::OpsWorksClient'>OpsWorksClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS OpsWorks API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Permission.html"
+                                  title='struct rusoto_opsworks::Permission'>Permission</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes stack or user permissions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RaidArray.html"
+                                  title='struct rusoto_opsworks::RaidArray'>RaidArray</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an instance's RAID array.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RdsDbInstance.html"
+                                  title='struct rusoto_opsworks::RdsDbInstance'>RdsDbInstance</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Amazon RDS instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootInstanceRequest.html"
+                                  title='struct rusoto_opsworks::RebootInstanceRequest'>RebootInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Recipes.html"
+                                  title='struct rusoto_opsworks::Recipes'>Recipes</a></td>
+                           <td class='docblock-short'>
+                                <p>AWS OpsWorks Stacks supports five lifecycle events: <b>setup</b>, <b>configuration</b>, <b>deploy</b>, <b>undeploy</b>, and <b>shutdown</b>. For each layer, AWS OpsWorks Stacks runs a set of standard recipes for each event. In addition, you can provide custom recipes for any or all layers and events. AWS OpsWorks Stacks runs custom event recipes after the standard recipes. <code>LayerCustomRecipes</code> specifies the custom recipes for a particular layer to be run in response to each of the five events. </p> <p>To specify a recipe, use the cookbook's directory name in the repository followed by two colons and the recipe name, which is the recipe's file name without the .rb extension. For example: phpapp2::dbsetup specifies the dbsetup.rb recipe in the repository's phpapp2 folder.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterEcsClusterRequest.html"
+                                  title='struct rusoto_opsworks::RegisterEcsClusterRequest'>RegisterEcsClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterEcsClusterResult.html"
+                                  title='struct rusoto_opsworks::RegisterEcsClusterResult'>RegisterEcsClusterResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>RegisterEcsCluster</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterElasticIpRequest.html"
+                                  title='struct rusoto_opsworks::RegisterElasticIpRequest'>RegisterElasticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterElasticIpResult.html"
+                                  title='struct rusoto_opsworks::RegisterElasticIpResult'>RegisterElasticIpResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>RegisterElasticIp</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterInstanceRequest.html"
+                                  title='struct rusoto_opsworks::RegisterInstanceRequest'>RegisterInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterInstanceResult.html"
+                                  title='struct rusoto_opsworks::RegisterInstanceResult'>RegisterInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>RegisterInstanceResult</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterRdsDbInstanceRequest.html"
+                                  title='struct rusoto_opsworks::RegisterRdsDbInstanceRequest'>RegisterRdsDbInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterVolumeRequest.html"
+                                  title='struct rusoto_opsworks::RegisterVolumeRequest'>RegisterVolumeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterVolumeResult.html"
+                                  title='struct rusoto_opsworks::RegisterVolumeResult'>RegisterVolumeResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a <code>RegisterVolume</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReportedOs.html"
+                                  title='struct rusoto_opsworks::ReportedOs'>ReportedOs</a></td>
+                           <td class='docblock-short'>
+                                <p>A registered instance's reported operating system.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SelfUserProfile.html"
+                                  title='struct rusoto_opsworks::SelfUserProfile'>SelfUserProfile</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a user's SSH information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServiceError.html"
+                                  title='struct rusoto_opsworks::ServiceError'>ServiceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an AWS OpsWorks Stacks service error.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetLoadBasedAutoScalingRequest.html"
+                                  title='struct rusoto_opsworks::SetLoadBasedAutoScalingRequest'>SetLoadBasedAutoScalingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetPermissionRequest.html"
+                                  title='struct rusoto_opsworks::SetPermissionRequest'>SetPermissionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetTimeBasedAutoScalingRequest.html"
+                                  title='struct rusoto_opsworks::SetTimeBasedAutoScalingRequest'>SetTimeBasedAutoScalingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ShutdownEventConfiguration.html"
+                                  title='struct rusoto_opsworks::ShutdownEventConfiguration'>ShutdownEventConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The Shutdown event configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Source.html"
+                                  title='struct rusoto_opsworks::Source'>Source</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the information required to retrieve an app or cookbook from a repository. For more information, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html">Creating Apps</a> or <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html">Custom Recipes and Cookbooks</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SslConfiguration.html"
+                                  title='struct rusoto_opsworks::SslConfiguration'>SslConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an app's SSL configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Stack.html"
+                                  title='struct rusoto_opsworks::Stack'>Stack</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a stack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StackConfigurationManager.html"
+                                  title='struct rusoto_opsworks::StackConfigurationManager'>StackConfigurationManager</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration manager.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StackSummary.html"
+                                  title='struct rusoto_opsworks::StackSummary'>StackSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summarizes the number of layers, instances, and apps in a stack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartInstanceRequest.html"
+                                  title='struct rusoto_opsworks::StartInstanceRequest'>StartInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartStackRequest.html"
+                                  title='struct rusoto_opsworks::StartStackRequest'>StartStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopInstanceRequest.html"
+                                  title='struct rusoto_opsworks::StopInstanceRequest'>StopInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopStackRequest.html"
+                                  title='struct rusoto_opsworks::StopStackRequest'>StopStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceRequest.html"
+                                  title='struct rusoto_opsworks::TagResourceRequest'>TagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TemporaryCredential.html"
+                                  title='struct rusoto_opsworks::TemporaryCredential'>TemporaryCredential</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the data needed by RDP clients such as the Microsoft Remote Desktop Connection to log in to the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimeBasedAutoScalingConfiguration.html"
+                                  title='struct rusoto_opsworks::TimeBasedAutoScalingConfiguration'>TimeBasedAutoScalingConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an instance's time-based auto scaling configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UnassignInstanceRequest.html"
+                                  title='struct rusoto_opsworks::UnassignInstanceRequest'>UnassignInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UnassignVolumeRequest.html"
+                                  title='struct rusoto_opsworks::UnassignVolumeRequest'>UnassignVolumeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceRequest.html"
+                                  title='struct rusoto_opsworks::UntagResourceRequest'>UntagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAppRequest.html"
+                                  title='struct rusoto_opsworks::UpdateAppRequest'>UpdateAppRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateElasticIpRequest.html"
+                                  title='struct rusoto_opsworks::UpdateElasticIpRequest'>UpdateElasticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateInstanceRequest.html"
+                                  title='struct rusoto_opsworks::UpdateInstanceRequest'>UpdateInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLayerRequest.html"
+                                  title='struct rusoto_opsworks::UpdateLayerRequest'>UpdateLayerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMyUserProfileRequest.html"
+                                  title='struct rusoto_opsworks::UpdateMyUserProfileRequest'>UpdateMyUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRdsDbInstanceRequest.html"
+                                  title='struct rusoto_opsworks::UpdateRdsDbInstanceRequest'>UpdateRdsDbInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateStackRequest.html"
+                                  title='struct rusoto_opsworks::UpdateStackRequest'>UpdateStackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserProfileRequest.html"
+                                  title='struct rusoto_opsworks::UpdateUserProfileRequest'>UpdateUserProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateVolumeRequest.html"
+                                  title='struct rusoto_opsworks::UpdateVolumeRequest'>UpdateVolumeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserProfile.html"
+                                  title='struct rusoto_opsworks::UserProfile'>UserProfile</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a user's SSH information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Volume.html"
+                                  title='struct rusoto_opsworks::Volume'>Volume</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an instance's Amazon EBS volume.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VolumeConfiguration.html"
+                                  title='struct rusoto_opsworks::VolumeConfiguration'>VolumeConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Amazon EBS volume configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WeeklyAutoScalingSchedule.html"
+                                  title='struct rusoto_opsworks::WeeklyAutoScalingSchedule'>WeeklyAutoScalingSchedule</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a time-based instance's auto scaling schedule. The schedule consists of a set of key-value pairs.</p> <ul> <li> <p>The key is the time period (a UTC hour) and must be an integer from 0 - 23.</p> </li> <li> <p>The value indicates whether the instance should be online or offline for the specified period, and must be set to "on" or "off"</p> </li> </ul> <p>The default setting for all time periods is off, so you use the following parameters primarily to specify the online periods. You don't have to explicitly specify offline periods unless you want to change an online period to an offline period.</p> <p>The following example specifies that the instance should be online for four hours, from UTC 1200 - 1600. It will be off for the remainder of the day.</p> <p> <code> { "12":"on", "13":"on", "14":"on", "15":"on" } </code> </p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssignInstanceError.html"
+                                  title='enum rusoto_opsworks::AssignInstanceError'>AssignInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssignInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssignVolumeError.html"
+                                  title='enum rusoto_opsworks::AssignVolumeError'>AssignVolumeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssignVolume</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateElasticIpError.html"
+                                  title='enum rusoto_opsworks::AssociateElasticIpError'>AssociateElasticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateElasticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachElasticLoadBalancerError.html"
+                                  title='enum rusoto_opsworks::AttachElasticLoadBalancerError'>AttachElasticLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachElasticLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CloneStackError.html"
+                                  title='enum rusoto_opsworks::CloneStackError'>CloneStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CloneStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAppError.html"
+                                  title='enum rusoto_opsworks::CreateAppError'>CreateAppError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeploymentError.html"
+                                  title='enum rusoto_opsworks::CreateDeploymentError'>CreateDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstanceError.html"
+                                  title='enum rusoto_opsworks::CreateInstanceError'>CreateInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLayerError.html"
+                                  title='enum rusoto_opsworks::CreateLayerError'>CreateLayerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLayer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateStackError.html"
+                                  title='enum rusoto_opsworks::CreateStackError'>CreateStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserProfileError.html"
+                                  title='enum rusoto_opsworks::CreateUserProfileError'>CreateUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAppError.html"
+                                  title='enum rusoto_opsworks::DeleteAppError'>DeleteAppError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteApp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInstanceError.html"
+                                  title='enum rusoto_opsworks::DeleteInstanceError'>DeleteInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLayerError.html"
+                                  title='enum rusoto_opsworks::DeleteLayerError'>DeleteLayerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLayer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteStackError.html"
+                                  title='enum rusoto_opsworks::DeleteStackError'>DeleteStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserProfileError.html"
+                                  title='enum rusoto_opsworks::DeleteUserProfileError'>DeleteUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterEcsClusterError.html"
+                                  title='enum rusoto_opsworks::DeregisterEcsClusterError'>DeregisterEcsClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterEcsCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterElasticIpError.html"
+                                  title='enum rusoto_opsworks::DeregisterElasticIpError'>DeregisterElasticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterElasticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterInstanceError.html"
+                                  title='enum rusoto_opsworks::DeregisterInstanceError'>DeregisterInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterRdsDbInstanceError.html"
+                                  title='enum rusoto_opsworks::DeregisterRdsDbInstanceError'>DeregisterRdsDbInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterRdsDbInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterVolumeError.html"
+                                  title='enum rusoto_opsworks::DeregisterVolumeError'>DeregisterVolumeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterVolume</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAgentVersionsError.html"
+                                  title='enum rusoto_opsworks::DescribeAgentVersionsError'>DescribeAgentVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAgentVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAppsError.html"
+                                  title='enum rusoto_opsworks::DescribeAppsError'>DescribeAppsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeApps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCommandsError.html"
+                                  title='enum rusoto_opsworks::DescribeCommandsError'>DescribeCommandsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCommands</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDeploymentsError.html"
+                                  title='enum rusoto_opsworks::DescribeDeploymentsError'>DescribeDeploymentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDeployments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEcsClustersError.html"
+                                  title='enum rusoto_opsworks::DescribeEcsClustersError'>DescribeEcsClustersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEcsClusters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeElasticIpsError.html"
+                                  title='enum rusoto_opsworks::DescribeElasticIpsError'>DescribeElasticIpsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeElasticIps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeElasticLoadBalancersError.html"
+                                  title='enum rusoto_opsworks::DescribeElasticLoadBalancersError'>DescribeElasticLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeElasticLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstancesError.html"
+                                  title='enum rusoto_opsworks::DescribeInstancesError'>DescribeInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLayersError.html"
+                                  title='enum rusoto_opsworks::DescribeLayersError'>DescribeLayersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLayers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoadBasedAutoScalingError.html"
+                                  title='enum rusoto_opsworks::DescribeLoadBasedAutoScalingError'>DescribeLoadBasedAutoScalingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoadBasedAutoScaling</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMyUserProfileError.html"
+                                  title='enum rusoto_opsworks::DescribeMyUserProfileError'>DescribeMyUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMyUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeOperatingSystemsError.html"
+                                  title='enum rusoto_opsworks::DescribeOperatingSystemsError'>DescribeOperatingSystemsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeOperatingSystems</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePermissionsError.html"
+                                  title='enum rusoto_opsworks::DescribePermissionsError'>DescribePermissionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePermissions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRaidArraysError.html"
+                                  title='enum rusoto_opsworks::DescribeRaidArraysError'>DescribeRaidArraysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRaidArrays</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRdsDbInstancesError.html"
+                                  title='enum rusoto_opsworks::DescribeRdsDbInstancesError'>DescribeRdsDbInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRdsDbInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeServiceErrorsError.html"
+                                  title='enum rusoto_opsworks::DescribeServiceErrorsError'>DescribeServiceErrorsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeServiceErrors</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStackProvisioningParametersError.html"
+                                  title='enum rusoto_opsworks::DescribeStackProvisioningParametersError'>DescribeStackProvisioningParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStackProvisioningParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStackSummaryError.html"
+                                  title='enum rusoto_opsworks::DescribeStackSummaryError'>DescribeStackSummaryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStackSummary</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStacksError.html"
+                                  title='enum rusoto_opsworks::DescribeStacksError'>DescribeStacksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStacks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTimeBasedAutoScalingError.html"
+                                  title='enum rusoto_opsworks::DescribeTimeBasedAutoScalingError'>DescribeTimeBasedAutoScalingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTimeBasedAutoScaling</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserProfilesError.html"
+                                  title='enum rusoto_opsworks::DescribeUserProfilesError'>DescribeUserProfilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserProfiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeVolumesError.html"
+                                  title='enum rusoto_opsworks::DescribeVolumesError'>DescribeVolumesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeVolumes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachElasticLoadBalancerError.html"
+                                  title='enum rusoto_opsworks::DetachElasticLoadBalancerError'>DetachElasticLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachElasticLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateElasticIpError.html"
+                                  title='enum rusoto_opsworks::DisassociateElasticIpError'>DisassociateElasticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateElasticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetHostnameSuggestionError.html"
+                                  title='enum rusoto_opsworks::GetHostnameSuggestionError'>GetHostnameSuggestionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetHostnameSuggestion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GrantAccessError.html"
+                                  title='enum rusoto_opsworks::GrantAccessError'>GrantAccessError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GrantAccess</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsError.html"
+                                  title='enum rusoto_opsworks::ListTagsError'>ListTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebootInstanceError.html"
+                                  title='enum rusoto_opsworks::RebootInstanceError'>RebootInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebootInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterEcsClusterError.html"
+                                  title='enum rusoto_opsworks::RegisterEcsClusterError'>RegisterEcsClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterEcsCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterElasticIpError.html"
+                                  title='enum rusoto_opsworks::RegisterElasticIpError'>RegisterElasticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterElasticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterInstanceError.html"
+                                  title='enum rusoto_opsworks::RegisterInstanceError'>RegisterInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterRdsDbInstanceError.html"
+                                  title='enum rusoto_opsworks::RegisterRdsDbInstanceError'>RegisterRdsDbInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterRdsDbInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterVolumeError.html"
+                                  title='enum rusoto_opsworks::RegisterVolumeError'>RegisterVolumeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterVolume</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetLoadBasedAutoScalingError.html"
+                                  title='enum rusoto_opsworks::SetLoadBasedAutoScalingError'>SetLoadBasedAutoScalingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetLoadBasedAutoScaling</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetPermissionError.html"
+                                  title='enum rusoto_opsworks::SetPermissionError'>SetPermissionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetPermission</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetTimeBasedAutoScalingError.html"
+                                  title='enum rusoto_opsworks::SetTimeBasedAutoScalingError'>SetTimeBasedAutoScalingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetTimeBasedAutoScaling</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartInstanceError.html"
+                                  title='enum rusoto_opsworks::StartInstanceError'>StartInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartStackError.html"
+                                  title='enum rusoto_opsworks::StartStackError'>StartStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopInstanceError.html"
+                                  title='enum rusoto_opsworks::StopInstanceError'>StopInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopStackError.html"
+                                  title='enum rusoto_opsworks::StopStackError'>StopStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagResourceError.html"
+                                  title='enum rusoto_opsworks::TagResourceError'>TagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UnassignInstanceError.html"
+                                  title='enum rusoto_opsworks::UnassignInstanceError'>UnassignInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UnassignInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UnassignVolumeError.html"
+                                  title='enum rusoto_opsworks::UnassignVolumeError'>UnassignVolumeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UnassignVolume</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagResourceError.html"
+                                  title='enum rusoto_opsworks::UntagResourceError'>UntagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAppError.html"
+                                  title='enum rusoto_opsworks::UpdateAppError'>UpdateAppError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateElasticIpError.html"
+                                  title='enum rusoto_opsworks::UpdateElasticIpError'>UpdateElasticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateElasticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateInstanceError.html"
+                                  title='enum rusoto_opsworks::UpdateInstanceError'>UpdateInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateLayerError.html"
+                                  title='enum rusoto_opsworks::UpdateLayerError'>UpdateLayerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateLayer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMyUserProfileError.html"
+                                  title='enum rusoto_opsworks::UpdateMyUserProfileError'>UpdateMyUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMyUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRdsDbInstanceError.html"
+                                  title='enum rusoto_opsworks::UpdateRdsDbInstanceError'>UpdateRdsDbInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRdsDbInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateStackError.html"
+                                  title='enum rusoto_opsworks::UpdateStackError'>UpdateStackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateStack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserProfileError.html"
+                                  title='enum rusoto_opsworks::UpdateUserProfileError'>UpdateUserProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUserProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateVolumeError.html"
+                                  title='enum rusoto_opsworks::UpdateVolumeError'>UpdateVolumeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateVolume</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.OpsWorks.html"
+                                  title='trait rusoto_opsworks::OpsWorks'>OpsWorks</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS OpsWorks API. AWS OpsWorks clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_opsworks";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

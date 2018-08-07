@@ -1,0 +1,1207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_elasticbeanstalk` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_elasticbeanstalk"><title>rusoto_elasticbeanstalk - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_elasticbeanstalk/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_elasticbeanstalk</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_elasticbeanstalk', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_elasticbeanstalk</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_elasticbeanstalk/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Elastic Beanstalk</fullname> <p>AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running on the Amazon Web Services cloud.</p> <p>For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>. To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> <p> <b>Endpoints</b> </p> <p>For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the <i>Amazon Web Services Glossary</i>.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.ElasticBeanstalkClient.html">ElasticBeanstalkClient</a> and <a href="trait.ElasticBeanstalk.html">ElasticBeanstalk</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AbortEnvironmentUpdateMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::AbortEnvironmentUpdateMessage'>AbortEnvironmentUpdateMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationDescription'>ApplicationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of an application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationDescriptionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationDescriptionMessage'>ApplicationDescriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a single description of an application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationDescriptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationDescriptionsMessage'>ApplicationDescriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a list of application descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationMetrics.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationMetrics'>ApplicationMetrics</a></td>
+                           <td class='docblock-short'>
+                                <p>Application request metrics for an AWS Elastic Beanstalk environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationResourceLifecycleConfig.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationResourceLifecycleConfig'>ApplicationResourceLifecycleConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>The resource lifecycle configuration for an application. Defines lifecycle settings for resources that belong to the application, and the service role that Elastic Beanstalk assumes in order to apply lifecycle settings. The version lifecycle configuration defines lifecycle settings for application versions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationResourceLifecycleDescriptionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationResourceLifecycleDescriptionMessage'>ApplicationResourceLifecycleDescriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationVersionDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationVersionDescription'>ApplicationVersionDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of an application version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationVersionDescriptionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationVersionDescriptionMessage'>ApplicationVersionDescriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message wrapping a single description of an application version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationVersionDescriptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationVersionDescriptionsMessage'>ApplicationVersionDescriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message wrapping a list of application version descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationVersionLifecycleConfig.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplicationVersionLifecycleConfig'>ApplicationVersionLifecycleConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>The application version lifecycle settings for an application. Defines the rules that Elastic Beanstalk applies to an application's versions in order to avoid hitting the per-region limit for application versions.</p> <p>When Elastic Beanstalk deletes an application version from its database, you can no longer deploy that version to an environment. The source bundle remains in S3 unless you configure the rule to delete it.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplyEnvironmentManagedActionRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplyEnvironmentManagedActionRequest'>ApplyEnvironmentManagedActionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to execute a scheduled managed action immediately.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplyEnvironmentManagedActionResult.html"
+                                  title='struct rusoto_elasticbeanstalk::ApplyEnvironmentManagedActionResult'>ApplyEnvironmentManagedActionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result message containing information about the managed action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingGroup.html"
+                                  title='struct rusoto_elasticbeanstalk::AutoScalingGroup'>AutoScalingGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Auto Scaling launch configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BuildConfiguration.html"
+                                  title='struct rusoto_elasticbeanstalk::BuildConfiguration'>BuildConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for an AWS CodeBuild build.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Builder.html"
+                                  title='struct rusoto_elasticbeanstalk::Builder'>Builder</a></td>
+                           <td class='docblock-short'>
+                                <p>The builder used to build the custom platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CPUUtilization.html"
+                                  title='struct rusoto_elasticbeanstalk::CPUUtilization'>CPUUtilization</a></td>
+                           <td class='docblock-short'>
+                                <p>CPU utilization metrics for an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CheckDNSAvailabilityMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CheckDNSAvailabilityMessage'>CheckDNSAvailabilityMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Results message indicating whether a CNAME is available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CheckDNSAvailabilityResultMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CheckDNSAvailabilityResultMessage'>CheckDNSAvailabilityResultMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates if the specified CNAME is available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComposeEnvironmentsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ComposeEnvironmentsMessage'>ComposeEnvironmentsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to create or update a group of environments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationOptionDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationOptionDescription'>ConfigurationOptionDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the possible values for a configuration option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationOptionSetting.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationOptionSetting'>ConfigurationOptionSetting</a></td>
+                           <td class='docblock-short'>
+                                <p> A specification identifying an individual configuration option along with its current value. For a list of possible option values, go to <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html">Option Values</a> in the <i>AWS Elastic Beanstalk Developer Guide</i>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationOptionsDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationOptionsDescription'>ConfigurationOptionsDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the settings for a specified configuration set.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationSettingsDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationSettingsDescription'>ConfigurationSettingsDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the settings for a configuration set.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationSettingsDescriptions.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationSettingsDescriptions'>ConfigurationSettingsDescriptions</a></td>
+                           <td class='docblock-short'>
+                                <p>The results from a request to change the configuration settings of an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfigurationSettingsValidationMessages.html"
+                                  title='struct rusoto_elasticbeanstalk::ConfigurationSettingsValidationMessages'>ConfigurationSettingsValidationMessages</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides a list of validation messages.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CreateApplicationMessage'>CreateApplicationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to create an application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationVersionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CreateApplicationVersionMessage'>CreateApplicationVersionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateConfigurationTemplateMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CreateConfigurationTemplateMessage'>CreateConfigurationTemplateMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to create a configuration template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEnvironmentMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CreateEnvironmentMessage'>CreateEnvironmentMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePlatformVersionRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::CreatePlatformVersionRequest'>CreatePlatformVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to create a new platform version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePlatformVersionResult.html"
+                                  title='struct rusoto_elasticbeanstalk::CreatePlatformVersionResult'>CreatePlatformVersionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateStorageLocationResultMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::CreateStorageLocationResultMessage'>CreateStorageLocationResultMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Results of a <a>CreateStorageLocationResult</a> call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CustomAmi.html"
+                                  title='struct rusoto_elasticbeanstalk::CustomAmi'>CustomAmi</a></td>
+                           <td class='docblock-short'>
+                                <p>A custom AMI available to platforms.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteApplicationMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DeleteApplicationMessage'>DeleteApplicationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete an application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteApplicationVersionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DeleteApplicationVersionMessage'>DeleteApplicationVersionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete an application version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteConfigurationTemplateMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DeleteConfigurationTemplateMessage'>DeleteConfigurationTemplateMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete a configuration template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEnvironmentConfigurationMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DeleteEnvironmentConfigurationMessage'>DeleteEnvironmentConfigurationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to delete a draft environment configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePlatformVersionRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DeletePlatformVersionRequest'>DeletePlatformVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePlatformVersionResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DeletePlatformVersionResult'>DeletePlatformVersionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deployment.html"
+                                  title='struct rusoto_elasticbeanstalk::Deployment'>Deployment</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an application version deployment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountAttributesResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeAccountAttributesResult'>DescribeAccountAttributesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeApplicationVersionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeApplicationVersionsMessage'>DescribeApplicationVersionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe application versions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeApplicationsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeApplicationsMessage'>DescribeApplicationsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe one or more applications.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConfigurationOptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeConfigurationOptionsMessage'>DescribeConfigurationOptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a list of application version descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConfigurationSettingsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeConfigurationSettingsMessage'>DescribeConfigurationSettingsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing all of the configuration settings for a specified solution stack or configuration template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentHealthRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentHealthRequest'>DescribeEnvironmentHealthRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>See the example below to learn how to create a request body.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentHealthResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentHealthResult'>DescribeEnvironmentHealthResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Health details for an AWS Elastic Beanstalk environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentManagedActionHistoryRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionHistoryRequest'>DescribeEnvironmentManagedActionHistoryRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list completed and failed managed actions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentManagedActionHistoryResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionHistoryResult'>DescribeEnvironmentManagedActionHistoryResult</a></td>
+                           <td class='docblock-short'>
+                                <p>A result message containing a list of completed and failed managed actions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentManagedActionsRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionsRequest'>DescribeEnvironmentManagedActionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to list an environment's upcoming and in-progress managed actions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentManagedActionsResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionsResult'>DescribeEnvironmentManagedActionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result message containing a list of managed actions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentResourcesMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentResourcesMessage'>DescribeEnvironmentResourcesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe the resources in an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEnvironmentsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEnvironmentsMessage'>DescribeEnvironmentsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to describe one or more environments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeEventsMessage'>DescribeEventsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to retrieve a list of events for an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancesHealthRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeInstancesHealthRequest'>DescribeInstancesHealthRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Parameters for a call to <code>DescribeInstancesHealth</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancesHealthResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribeInstancesHealthResult'>DescribeInstancesHealthResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed health information about the Amazon EC2 instances in an AWS Elastic Beanstalk environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePlatformVersionRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribePlatformVersionRequest'>DescribePlatformVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePlatformVersionResult.html"
+                                  title='struct rusoto_elasticbeanstalk::DescribePlatformVersionResult'>DescribePlatformVersionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticBeanstalkClient.html"
+                                  title='struct rusoto_elasticbeanstalk::ElasticBeanstalkClient'>ElasticBeanstalkClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Elastic Beanstalk API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentDescription'>EnvironmentDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentDescriptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentDescriptionsMessage'>EnvironmentDescriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a list of environment descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentInfoDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentInfoDescription'>EnvironmentInfoDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The information retrieved from the Amazon EC2 instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentLink.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentLink'>EnvironmentLink</a></td>
+                           <td class='docblock-short'>
+                                <p>A link to another environment, defined in the environment's manifest. Links provide connection information in system properties that can be used to connect to another environment in the same group. See <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-cfg-manifest.html">Environment Manifest (env.yaml)</a> for details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentResourceDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentResourceDescription'>EnvironmentResourceDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the AWS resources in use by this environment. This data is live.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentResourceDescriptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentResourceDescriptionsMessage'>EnvironmentResourceDescriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a list of environment resource descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentResourcesDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentResourcesDescription'>EnvironmentResourcesDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the AWS resources in use by this environment. This data is not live data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnvironmentTier.html"
+                                  title='struct rusoto_elasticbeanstalk::EnvironmentTier'>EnvironmentTier</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of an environment tier</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::EventDescription'>EventDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an event.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventDescriptionsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::EventDescriptionsMessage'>EventDescriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message wrapping a list of event descriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Instance.html"
+                                  title='struct rusoto_elasticbeanstalk::Instance'>Instance</a></td>
+                           <td class='docblock-short'>
+                                <p>The description of an Amazon EC2 instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceHealthSummary.html"
+                                  title='struct rusoto_elasticbeanstalk::InstanceHealthSummary'>InstanceHealthSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents summary information about the health of an instance. For more information, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced-status.html">Health Colors and Statuses</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Latency.html"
+                                  title='struct rusoto_elasticbeanstalk::Latency'>Latency</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the average latency for the slowest X percent of requests over the last 10 seconds.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LaunchConfiguration.html"
+                                  title='struct rusoto_elasticbeanstalk::LaunchConfiguration'>LaunchConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Auto Scaling launch configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAvailableSolutionStacksResultMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ListAvailableSolutionStacksResultMessage'>ListAvailableSolutionStacksResultMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of available AWS Elastic Beanstalk solution stacks.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPlatformVersionsRequest.html"
+                                  title='struct rusoto_elasticbeanstalk::ListPlatformVersionsRequest'>ListPlatformVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPlatformVersionsResult.html"
+                                  title='struct rusoto_elasticbeanstalk::ListPlatformVersionsResult'>ListPlatformVersionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ListTagsForResourceMessage'>ListTagsForResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Listener.html"
+                                  title='struct rusoto_elasticbeanstalk::Listener'>Listener</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of a Listener for the LoadBalancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancer.html"
+                                  title='struct rusoto_elasticbeanstalk::LoadBalancer'>LoadBalancer</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a LoadBalancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::LoadBalancerDescription'>LoadBalancerDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the details of a LoadBalancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ManagedAction.html"
+                                  title='struct rusoto_elasticbeanstalk::ManagedAction'>ManagedAction</a></td>
+                           <td class='docblock-short'>
+                                <p>The record of an upcoming or in-progress managed action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ManagedActionHistoryItem.html"
+                                  title='struct rusoto_elasticbeanstalk::ManagedActionHistoryItem'>ManagedActionHistoryItem</a></td>
+                           <td class='docblock-short'>
+                                <p>The record of a completed or failed managed action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaxAgeRule.html"
+                                  title='struct rusoto_elasticbeanstalk::MaxAgeRule'>MaxAgeRule</a></td>
+                           <td class='docblock-short'>
+                                <p>A lifecycle rule that deletes application versions after the specified number of days.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaxCountRule.html"
+                                  title='struct rusoto_elasticbeanstalk::MaxCountRule'>MaxCountRule</a></td>
+                           <td class='docblock-short'>
+                                <p>A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionRestrictionRegex.html"
+                                  title='struct rusoto_elasticbeanstalk::OptionRestrictionRegex'>OptionRestrictionRegex</a></td>
+                           <td class='docblock-short'>
+                                <p>A regular expression representing a restriction on a string configuration option value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OptionSpecification.html"
+                                  title='struct rusoto_elasticbeanstalk::OptionSpecification'>OptionSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>A specification identifying an individual configuration option.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlatformDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::PlatformDescription'>PlatformDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed information about a platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlatformFilter.html"
+                                  title='struct rusoto_elasticbeanstalk::PlatformFilter'>PlatformFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Specify criteria to restrict the results when listing custom platforms.</p> <p>The filter is evaluated as the expression:</p> <p> <code>Type</code> <code>Operator</code> <code>Values[i]</code> </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlatformFramework.html"
+                                  title='struct rusoto_elasticbeanstalk::PlatformFramework'>PlatformFramework</a></td>
+                           <td class='docblock-short'>
+                                <p>A framework supported by the custom platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlatformProgrammingLanguage.html"
+                                  title='struct rusoto_elasticbeanstalk::PlatformProgrammingLanguage'>PlatformProgrammingLanguage</a></td>
+                           <td class='docblock-short'>
+                                <p>A programming language supported by the platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlatformSummary.html"
+                                  title='struct rusoto_elasticbeanstalk::PlatformSummary'>PlatformSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed information about a platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Queue.html"
+                                  title='struct rusoto_elasticbeanstalk::Queue'>Queue</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a queue.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebuildEnvironmentMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::RebuildEnvironmentMessage'>RebuildEnvironmentMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RequestEnvironmentInfoMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::RequestEnvironmentInfoMessage'>RequestEnvironmentInfoMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to retrieve logs from an environment and store them in your Elastic Beanstalk storage bucket.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceQuota.html"
+                                  title='struct rusoto_elasticbeanstalk::ResourceQuota'>ResourceQuota</a></td>
+                           <td class='docblock-short'>
+                                <p>The AWS Elastic Beanstalk quota information for a single resource type in an AWS account. It reflects the resource's limits for this account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceQuotas.html"
+                                  title='struct rusoto_elasticbeanstalk::ResourceQuotas'>ResourceQuotas</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of per-resource AWS Elastic Beanstalk quotas associated with an AWS account. They reflect Elastic Beanstalk resource limits for this account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceTagsDescriptionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ResourceTagsDescriptionMessage'>ResourceTagsDescriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestartAppServerMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::RestartAppServerMessage'>RestartAppServerMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RetrieveEnvironmentInfoMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::RetrieveEnvironmentInfoMessage'>RetrieveEnvironmentInfoMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to download logs retrieved with <a>RequestEnvironmentInfo</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RetrieveEnvironmentInfoResultMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::RetrieveEnvironmentInfoResultMessage'>RetrieveEnvironmentInfoResultMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Result message containing a description of the requested environment info.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Location.html"
+                                  title='struct rusoto_elasticbeanstalk::S3Location'>S3Location</a></td>
+                           <td class='docblock-short'>
+                                <p>The bucket and key of an item stored in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SingleInstanceHealth.html"
+                                  title='struct rusoto_elasticbeanstalk::SingleInstanceHealth'>SingleInstanceHealth</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SolutionStackDescription.html"
+                                  title='struct rusoto_elasticbeanstalk::SolutionStackDescription'>SolutionStackDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the solution stack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SourceBuildInformation.html"
+                                  title='struct rusoto_elasticbeanstalk::SourceBuildInformation'>SourceBuildInformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Location of the source code for an application version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SourceConfiguration.html"
+                                  title='struct rusoto_elasticbeanstalk::SourceConfiguration'>SourceConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>A specification for an environment configuration</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StatusCodes.html"
+                                  title='struct rusoto_elasticbeanstalk::StatusCodes'>StatusCodes</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the percentage of requests over the last 10 seconds that resulted in each type of status code response. For more information, see <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Status Code Definitions</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SwapEnvironmentCNAMEsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::SwapEnvironmentCNAMEsMessage'>SwapEnvironmentCNAMEsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Swaps the CNAMEs of two environments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SystemStatus.html"
+                                  title='struct rusoto_elasticbeanstalk::SystemStatus'>SystemStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>CPU utilization and load average metrics for an Amazon EC2 instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_elasticbeanstalk::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a tag applied to a resource in an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateEnvironmentMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::TerminateEnvironmentMessage'>TerminateEnvironmentMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to terminate an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Trigger.html"
+                                  title='struct rusoto_elasticbeanstalk::Trigger'>Trigger</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a trigger.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateApplicationMessage'>UpdateApplicationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationResourceLifecycleMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateApplicationResourceLifecycleMessage'>UpdateApplicationResourceLifecycleMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationVersionMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateApplicationVersionMessage'>UpdateApplicationVersionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateConfigurationTemplateMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateConfigurationTemplateMessage'>UpdateConfigurationTemplateMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>The result message containing the options for the specified solution stack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateEnvironmentMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateEnvironmentMessage'>UpdateEnvironmentMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to update an environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateTagsForResourceMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::UpdateTagsForResourceMessage'>UpdateTagsForResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidateConfigurationSettingsMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ValidateConfigurationSettingsMessage'>ValidateConfigurationSettingsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of validation messages for a specified configuration template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ValidationMessage.html"
+                                  title='struct rusoto_elasticbeanstalk::ValidationMessage'>ValidationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>An error or warning for a desired configuration option value.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AbortEnvironmentUpdateError.html"
+                                  title='enum rusoto_elasticbeanstalk::AbortEnvironmentUpdateError'>AbortEnvironmentUpdateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AbortEnvironmentUpdate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ApplyEnvironmentManagedActionError.html"
+                                  title='enum rusoto_elasticbeanstalk::ApplyEnvironmentManagedActionError'>ApplyEnvironmentManagedActionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ApplyEnvironmentManagedAction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CheckDNSAvailabilityError.html"
+                                  title='enum rusoto_elasticbeanstalk::CheckDNSAvailabilityError'>CheckDNSAvailabilityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CheckDNSAvailability</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ComposeEnvironmentsError.html"
+                                  title='enum rusoto_elasticbeanstalk::ComposeEnvironmentsError'>ComposeEnvironmentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ComposeEnvironments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateApplicationError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreateApplicationError'>CreateApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateApplicationVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreateApplicationVersionError'>CreateApplicationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApplicationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateConfigurationTemplateError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreateConfigurationTemplateError'>CreateConfigurationTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateConfigurationTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateEnvironmentError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreateEnvironmentError'>CreateEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePlatformVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreatePlatformVersionError'>CreatePlatformVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePlatformVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateStorageLocationError.html"
+                                  title='enum rusoto_elasticbeanstalk::CreateStorageLocationError'>CreateStorageLocationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateStorageLocation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteApplicationError.html"
+                                  title='enum rusoto_elasticbeanstalk::DeleteApplicationError'>DeleteApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteApplicationVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::DeleteApplicationVersionError'>DeleteApplicationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteApplicationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteConfigurationTemplateError.html"
+                                  title='enum rusoto_elasticbeanstalk::DeleteConfigurationTemplateError'>DeleteConfigurationTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteConfigurationTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteEnvironmentConfigurationError.html"
+                                  title='enum rusoto_elasticbeanstalk::DeleteEnvironmentConfigurationError'>DeleteEnvironmentConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteEnvironmentConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePlatformVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::DeletePlatformVersionError'>DeletePlatformVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePlatformVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAccountAttributesError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeAccountAttributesError'>DescribeAccountAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAccountAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeApplicationVersionsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeApplicationVersionsError'>DescribeApplicationVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeApplicationVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeApplicationsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeApplicationsError'>DescribeApplicationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeApplications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConfigurationOptionsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeConfigurationOptionsError'>DescribeConfigurationOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConfigurationOptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConfigurationSettingsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeConfigurationSettingsError'>DescribeConfigurationSettingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConfigurationSettings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEnvironmentHealthError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEnvironmentHealthError'>DescribeEnvironmentHealthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEnvironmentHealth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEnvironmentManagedActionHistoryError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionHistoryError'>DescribeEnvironmentManagedActionHistoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEnvironmentManagedActionHistory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEnvironmentManagedActionsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEnvironmentManagedActionsError'>DescribeEnvironmentManagedActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEnvironmentManagedActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEnvironmentResourcesError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEnvironmentResourcesError'>DescribeEnvironmentResourcesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEnvironmentResources</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEnvironmentsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEnvironmentsError'>DescribeEnvironmentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEnvironments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventsError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeEventsError'>DescribeEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstancesHealthError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribeInstancesHealthError'>DescribeInstancesHealthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstancesHealth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePlatformVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::DescribePlatformVersionError'>DescribePlatformVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePlatformVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAvailableSolutionStacksError.html"
+                                  title='enum rusoto_elasticbeanstalk::ListAvailableSolutionStacksError'>ListAvailableSolutionStacksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAvailableSolutionStacks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPlatformVersionsError.html"
+                                  title='enum rusoto_elasticbeanstalk::ListPlatformVersionsError'>ListPlatformVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPlatformVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_elasticbeanstalk::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebuildEnvironmentError.html"
+                                  title='enum rusoto_elasticbeanstalk::RebuildEnvironmentError'>RebuildEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebuildEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RequestEnvironmentInfoError.html"
+                                  title='enum rusoto_elasticbeanstalk::RequestEnvironmentInfoError'>RequestEnvironmentInfoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RequestEnvironmentInfo</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestartAppServerError.html"
+                                  title='enum rusoto_elasticbeanstalk::RestartAppServerError'>RestartAppServerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestartAppServer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RetrieveEnvironmentInfoError.html"
+                                  title='enum rusoto_elasticbeanstalk::RetrieveEnvironmentInfoError'>RetrieveEnvironmentInfoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RetrieveEnvironmentInfo</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SwapEnvironmentCNAMEsError.html"
+                                  title='enum rusoto_elasticbeanstalk::SwapEnvironmentCNAMEsError'>SwapEnvironmentCNAMEsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SwapEnvironmentCNAMEs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TerminateEnvironmentError.html"
+                                  title='enum rusoto_elasticbeanstalk::TerminateEnvironmentError'>TerminateEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TerminateEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateApplicationError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateApplicationError'>UpdateApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateApplicationResourceLifecycleError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateApplicationResourceLifecycleError'>UpdateApplicationResourceLifecycleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApplicationResourceLifecycle</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateApplicationVersionError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateApplicationVersionError'>UpdateApplicationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApplicationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateConfigurationTemplateError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateConfigurationTemplateError'>UpdateConfigurationTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateConfigurationTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateEnvironmentError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateEnvironmentError'>UpdateEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateTagsForResourceError.html"
+                                  title='enum rusoto_elasticbeanstalk::UpdateTagsForResourceError'>UpdateTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ValidateConfigurationSettingsError.html"
+                                  title='enum rusoto_elasticbeanstalk::ValidateConfigurationSettingsError'>ValidateConfigurationSettingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ValidateConfigurationSettings</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.ElasticBeanstalk.html"
+                                  title='trait rusoto_elasticbeanstalk::ElasticBeanstalk'>ElasticBeanstalk</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Elastic Beanstalk API. Elastic Beanstalk clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_elasticbeanstalk";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

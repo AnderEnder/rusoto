@@ -1,0 +1,1092 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_emr` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_emr"><title>rusoto_emr - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_emr/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_emr</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_emr', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_emr</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_emr/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine learning, scientific simulation, and data warehousing.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.EmrClient.html">EmrClient</a> and <a href="trait.Emr.html">Emr</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddInstanceFleetInput.html"
+                                  title='struct rusoto_emr::AddInstanceFleetInput'>AddInstanceFleetInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddInstanceFleetOutput.html"
+                                  title='struct rusoto_emr::AddInstanceFleetOutput'>AddInstanceFleetOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddInstanceGroupsInput.html"
+                                  title='struct rusoto_emr::AddInstanceGroupsInput'>AddInstanceGroupsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Input to an AddInstanceGroups call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddInstanceGroupsOutput.html"
+                                  title='struct rusoto_emr::AddInstanceGroupsOutput'>AddInstanceGroupsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Output from an AddInstanceGroups call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddJobFlowStepsInput.html"
+                                  title='struct rusoto_emr::AddJobFlowStepsInput'>AddJobFlowStepsInput</a></td>
+                           <td class='docblock-short'>
+                                <p> The input argument to the <a>AddJobFlowSteps</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddJobFlowStepsOutput.html"
+                                  title='struct rusoto_emr::AddJobFlowStepsOutput'>AddJobFlowStepsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> The output for the <a>AddJobFlowSteps</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsInput.html"
+                                  title='struct rusoto_emr::AddTagsInput'>AddTagsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input identifies a cluster and a list of tags to attach.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsOutput.html"
+                                  title='struct rusoto_emr::AddTagsOutput'>AddTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output indicates the result of adding tags to a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Application.html"
+                                  title='struct rusoto_emr::Application'>Application</a></td>
+                           <td class='docblock-short'>
+                                <p><p>An application is any Amazon or third-party software that you can add to the cluster. This structure contains a list of strings that indicates the software to use with the cluster and accepts a user argument list. Amazon EMR accepts and forwards the argument list to the corresponding installation script as bootstrap action argument. For more information, see <a href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-mapr.html">Using the MapR Distribution for Hadoop</a>. Currently supported values are:</p> <ul> <li> <p>&quot;mapr-m3&quot; - launch the cluster using MapR M3 Edition.</p> </li> <li> <p>&quot;mapr-m5&quot; - launch the cluster using MapR M5 Edition.</p> </li> <li> <p>&quot;mapr&quot; with the user arguments specifying &quot;--edition,m3&quot; or &quot;--edition,m5&quot; - launch the cluster using MapR M3 or M5 Edition, respectively.</p> </li> </ul> <note> <p>In Amazon EMR releases 4.x and later, the only accepted parameter is the application name. To pass arguments to applications, you supply a configuration for each application.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingPolicy.html"
+                                  title='struct rusoto_emr::AutoScalingPolicy'>AutoScalingPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>An automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster. An automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric. See <a>PutAutoScalingPolicy</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingPolicyDescription.html"
+                                  title='struct rusoto_emr::AutoScalingPolicyDescription'>AutoScalingPolicyDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>An automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric. See <a>PutAutoScalingPolicy</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingPolicyStateChangeReason.html"
+                                  title='struct rusoto_emr::AutoScalingPolicyStateChangeReason'>AutoScalingPolicyStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p>The reason for an <a>AutoScalingPolicyStatus</a> change.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutoScalingPolicyStatus.html"
+                                  title='struct rusoto_emr::AutoScalingPolicyStatus'>AutoScalingPolicyStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The status of an automatic scaling policy. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BootstrapActionConfig.html"
+                                  title='struct rusoto_emr::BootstrapActionConfig'>BootstrapActionConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration of a bootstrap action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BootstrapActionDetail.html"
+                                  title='struct rusoto_emr::BootstrapActionDetail'>BootstrapActionDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Reports the configuration of a bootstrap action in a cluster (job flow).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelStepsInfo.html"
+                                  title='struct rusoto_emr::CancelStepsInfo'>CancelStepsInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Specification of the status of a CancelSteps request. Available only in Amazon EMR version 4.8.0 and later, excluding version 5.0.0.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelStepsInput.html"
+                                  title='struct rusoto_emr::CancelStepsInput'>CancelStepsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input argument to the <a>CancelSteps</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelStepsOutput.html"
+                                  title='struct rusoto_emr::CancelStepsOutput'>CancelStepsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> The output for the <a>CancelSteps</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchAlarmDefinition.html"
+                                  title='struct rusoto_emr::CloudWatchAlarmDefinition'>CloudWatchAlarmDefinition</a></td>
+                           <td class='docblock-short'>
+                                <p>The definition of a CloudWatch metric alarm, which determines when an automatic scaling activity is triggered. When the defined alarm conditions are satisfied, scaling activity begins.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Cluster.html"
+                                  title='struct rusoto_emr::Cluster'>Cluster</a></td>
+                           <td class='docblock-short'>
+                                <p>The detailed description of the cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterStateChangeReason.html"
+                                  title='struct rusoto_emr::ClusterStateChangeReason'>ClusterStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p>The reason that the cluster changed to its current state.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterStatus.html"
+                                  title='struct rusoto_emr::ClusterStatus'>ClusterStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The detailed status of the cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterSummary.html"
+                                  title='struct rusoto_emr::ClusterSummary'>ClusterSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The summary description of the cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterTimeline.html"
+                                  title='struct rusoto_emr::ClusterTimeline'>ClusterTimeline</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the timeline of the cluster's lifecycle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Command.html"
+                                  title='struct rusoto_emr::Command'>Command</a></td>
+                           <td class='docblock-short'>
+                                <p>An entity describing an executable that runs on a cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Configuration.html"
+                                  title='struct rusoto_emr::Configuration'>Configuration</a></td>
+                           <td class='docblock-short'>
+                                <p><note> <p>Amazon EMR releases 4.x or later.</p> </note> <p>An optional configuration specification to be used when provisioning cluster instances, which can include configurations for applications and software bundled with Amazon EMR. A configuration consists of a classification, properties, and optional nested configurations. A classification refers to an application-specific configuration file. Properties are the settings you want to change in that file. For more information, see <a href="http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html">Configuring Applications</a>.</p></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSecurityConfigurationInput.html"
+                                  title='struct rusoto_emr::CreateSecurityConfigurationInput'>CreateSecurityConfigurationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSecurityConfigurationOutput.html"
+                                  title='struct rusoto_emr::CreateSecurityConfigurationOutput'>CreateSecurityConfigurationOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSecurityConfigurationInput.html"
+                                  title='struct rusoto_emr::DeleteSecurityConfigurationInput'>DeleteSecurityConfigurationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSecurityConfigurationOutput.html"
+                                  title='struct rusoto_emr::DeleteSecurityConfigurationOutput'>DeleteSecurityConfigurationOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeClusterInput.html"
+                                  title='struct rusoto_emr::DescribeClusterInput'>DescribeClusterInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which cluster to describe.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeClusterOutput.html"
+                                  title='struct rusoto_emr::DescribeClusterOutput'>DescribeClusterOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output contains the description of the cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobFlowsInput.html"
+                                  title='struct rusoto_emr::DescribeJobFlowsInput'>DescribeJobFlowsInput</a></td>
+                           <td class='docblock-short'>
+                                <p> The input for the <a>DescribeJobFlows</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobFlowsOutput.html"
+                                  title='struct rusoto_emr::DescribeJobFlowsOutput'>DescribeJobFlowsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> The output for the <a>DescribeJobFlows</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSecurityConfigurationInput.html"
+                                  title='struct rusoto_emr::DescribeSecurityConfigurationInput'>DescribeSecurityConfigurationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSecurityConfigurationOutput.html"
+                                  title='struct rusoto_emr::DescribeSecurityConfigurationOutput'>DescribeSecurityConfigurationOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStepInput.html"
+                                  title='struct rusoto_emr::DescribeStepInput'>DescribeStepInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which step to describe.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeStepOutput.html"
+                                  title='struct rusoto_emr::DescribeStepOutput'>DescribeStepOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output contains the description of the cluster step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EbsBlockDevice.html"
+                                  title='struct rusoto_emr::EbsBlockDevice'>EbsBlockDevice</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration of requested EBS block device associated with the instance group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EbsBlockDeviceConfig.html"
+                                  title='struct rusoto_emr::EbsBlockDeviceConfig'>EbsBlockDeviceConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration of requested EBS block device associated with the instance group with count of volumes that will be associated to every instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EbsConfiguration.html"
+                                  title='struct rusoto_emr::EbsConfiguration'>EbsConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon EBS configuration of a cluster instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EbsVolume.html"
+                                  title='struct rusoto_emr::EbsVolume'>EbsVolume</a></td>
+                           <td class='docblock-short'>
+                                <p>EBS block device that's attached to an EC2 instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Ec2InstanceAttributes.html"
+                                  title='struct rusoto_emr::Ec2InstanceAttributes'>Ec2InstanceAttributes</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information about the EC2 instances in a cluster grouped by category. For example, key name, subnet ID, IAM instance profile, and so on.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmrClient.html"
+                                  title='struct rusoto_emr::EmrClient'>EmrClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon EMR API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailureDetails.html"
+                                  title='struct rusoto_emr::FailureDetails'>FailureDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of the step failure. The service attempts to detect the root cause for many common failures.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HadoopJarStepConfig.html"
+                                  title='struct rusoto_emr::HadoopJarStepConfig'>HadoopJarStepConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A job flow step consisting of a JAR file whose main function will be executed. The main function submits a job for Hadoop to execute and waits for the job to finish or fail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HadoopStepConfig.html"
+                                  title='struct rusoto_emr::HadoopStepConfig'>HadoopStepConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A cluster step consisting of a JAR file whose main function will be executed. The main function submits a job for Hadoop to execute and waits for the job to finish or fail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Instance.html"
+                                  title='struct rusoto_emr::Instance'>Instance</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an EC2 instance provisioned as part of cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleet.html"
+                                  title='struct rusoto_emr::InstanceFleet'>InstanceFleet</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Describes an instance fleet, which is a group of EC2 instances that host a particular node type (master, core, or task) in an Amazon EMR cluster. Instance fleets can consist of a mix of instance types and On-Demand and Spot instances, which are provisioned to meet a defined target capacity. </p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetConfig.html"
+                                  title='struct rusoto_emr::InstanceFleetConfig'>InstanceFleetConfig</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The configuration that defines an instance fleet.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetModifyConfig.html"
+                                  title='struct rusoto_emr::InstanceFleetModifyConfig'>InstanceFleetModifyConfig</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Configuration parameters for an instance fleet modification request.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetProvisioningSpecifications.html"
+                                  title='struct rusoto_emr::InstanceFleetProvisioningSpecifications'>InstanceFleetProvisioningSpecifications</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetStateChangeReason.html"
+                                  title='struct rusoto_emr::InstanceFleetStateChangeReason'>InstanceFleetStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Provides status change reason details for the instance fleet.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetStatus.html"
+                                  title='struct rusoto_emr::InstanceFleetStatus'>InstanceFleetStatus</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The status of the instance fleet.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceFleetTimeline.html"
+                                  title='struct rusoto_emr::InstanceFleetTimeline'>InstanceFleetTimeline</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Provides historical timestamps for the instance fleet, including the time of creation, the time it became ready to run jobs, and the time of termination.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroup.html"
+                                  title='struct rusoto_emr::InstanceGroup'>InstanceGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>This entity represents an instance group, which is a group of instances that have common purpose. For example, CORE instance group is used for HDFS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupConfig.html"
+                                  title='struct rusoto_emr::InstanceGroupConfig'>InstanceGroupConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration defining a new instance group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupDetail.html"
+                                  title='struct rusoto_emr::InstanceGroupDetail'>InstanceGroupDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed information about an instance group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupModifyConfig.html"
+                                  title='struct rusoto_emr::InstanceGroupModifyConfig'>InstanceGroupModifyConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Modify an instance group size.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupStateChangeReason.html"
+                                  title='struct rusoto_emr::InstanceGroupStateChangeReason'>InstanceGroupStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p>The status change reason details for the instance group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupStatus.html"
+                                  title='struct rusoto_emr::InstanceGroupStatus'>InstanceGroupStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of the instance group status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceGroupTimeline.html"
+                                  title='struct rusoto_emr::InstanceGroupTimeline'>InstanceGroupTimeline</a></td>
+                           <td class='docblock-short'>
+                                <p>The timeline of the instance group lifecycle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceResizePolicy.html"
+                                  title='struct rusoto_emr::InstanceResizePolicy'>InstanceResizePolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Custom policy for requesting termination protection or termination of specific instances when shrinking an instance group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceStateChangeReason.html"
+                                  title='struct rusoto_emr::InstanceStateChangeReason'>InstanceStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of the status change reason for the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceStatus.html"
+                                  title='struct rusoto_emr::InstanceStatus'>InstanceStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The instance status details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceTimeline.html"
+                                  title='struct rusoto_emr::InstanceTimeline'>InstanceTimeline</a></td>
+                           <td class='docblock-short'>
+                                <p>The timeline of the instance lifecycle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceTypeConfig.html"
+                                  title='struct rusoto_emr::InstanceTypeConfig'>InstanceTypeConfig</a></td>
+                           <td class='docblock-short'>
+                                <p><p>An instance type configuration for each instance type in an instance fleet, which determines the EC2 instances Amazon EMR attempts to provision to fulfill On-Demand and Spot target capacities. There can be a maximum of 5 instance type configurations in a fleet.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceTypeSpecification.html"
+                                  title='struct rusoto_emr::InstanceTypeSpecification'>InstanceTypeSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The configuration specification for each instance type in an instance fleet.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobFlowDetail.html"
+                                  title='struct rusoto_emr::JobFlowDetail'>JobFlowDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>A description of a cluster (job flow).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobFlowExecutionStatusDetail.html"
+                                  title='struct rusoto_emr::JobFlowExecutionStatusDetail'>JobFlowExecutionStatusDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the status of the cluster (job flow).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobFlowInstancesConfig.html"
+                                  title='struct rusoto_emr::JobFlowInstancesConfig'>JobFlowInstancesConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>A description of the Amazon EC2 instance on which the cluster (job flow) runs. A valid JobFlowInstancesConfig must contain either InstanceGroups or InstanceFleets, which is the recommended configuration. They cannot be used together. You may also have MasterInstanceType, SlaveInstanceType, and InstanceCount (all three must be present), but we don't recommend this configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobFlowInstancesDetail.html"
+                                  title='struct rusoto_emr::JobFlowInstancesDetail'>JobFlowInstancesDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Specify the type of Amazon EC2 instances that the cluster (job flow) runs on.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KerberosAttributes.html"
+                                  title='struct rusoto_emr::KerberosAttributes'>KerberosAttributes</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration. For more information see <a href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html">Use Kerberos Authentication</a> in the <i>EMR Management Guide</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyValue.html"
+                                  title='struct rusoto_emr::KeyValue'>KeyValue</a></td>
+                           <td class='docblock-short'>
+                                <p>A key value pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListBootstrapActionsInput.html"
+                                  title='struct rusoto_emr::ListBootstrapActionsInput'>ListBootstrapActionsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which bootstrap actions to retrieve.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListBootstrapActionsOutput.html"
+                                  title='struct rusoto_emr::ListBootstrapActionsOutput'>ListBootstrapActionsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output contains the bootstrap actions detail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClustersInput.html"
+                                  title='struct rusoto_emr::ListClustersInput'>ListClustersInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines how the ListClusters action filters the list of clusters that it returns.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClustersOutput.html"
+                                  title='struct rusoto_emr::ListClustersOutput'>ListClustersOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This contains a ClusterSummaryList with the cluster details; for example, the cluster IDs, names, and status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceFleetsInput.html"
+                                  title='struct rusoto_emr::ListInstanceFleetsInput'>ListInstanceFleetsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceFleetsOutput.html"
+                                  title='struct rusoto_emr::ListInstanceFleetsOutput'>ListInstanceFleetsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceGroupsInput.html"
+                                  title='struct rusoto_emr::ListInstanceGroupsInput'>ListInstanceGroupsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which instance groups to retrieve.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceGroupsOutput.html"
+                                  title='struct rusoto_emr::ListInstanceGroupsOutput'>ListInstanceGroupsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which instance groups to retrieve.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstancesInput.html"
+                                  title='struct rusoto_emr::ListInstancesInput'>ListInstancesInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which instances to list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstancesOutput.html"
+                                  title='struct rusoto_emr::ListInstancesOutput'>ListInstancesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output contains the list of instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSecurityConfigurationsInput.html"
+                                  title='struct rusoto_emr::ListSecurityConfigurationsInput'>ListSecurityConfigurationsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSecurityConfigurationsOutput.html"
+                                  title='struct rusoto_emr::ListSecurityConfigurationsOutput'>ListSecurityConfigurationsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStepsInput.html"
+                                  title='struct rusoto_emr::ListStepsInput'>ListStepsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input determines which steps to list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListStepsOutput.html"
+                                  title='struct rusoto_emr::ListStepsOutput'>ListStepsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output contains the list of steps returned in reverse order. This means that the last step is the first element in the list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDimension.html"
+                                  title='struct rusoto_emr::MetricDimension'>MetricDimension</a></td>
+                           <td class='docblock-short'>
+                                <p>A CloudWatch dimension, which is specified using a <code>Key</code> (known as a <code>Name</code> in CloudWatch), <code>Value</code> pair. By default, Amazon EMR uses one dimension whose <code>Key</code> is <code>JobFlowID</code> and <code>Value</code> is a variable representing the cluster ID, which is <code>${emr.clusterId}</code>. This enables the rule to bootstrap when the cluster ID becomes available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyInstanceFleetInput.html"
+                                  title='struct rusoto_emr::ModifyInstanceFleetInput'>ModifyInstanceFleetInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyInstanceGroupsInput.html"
+                                  title='struct rusoto_emr::ModifyInstanceGroupsInput'>ModifyInstanceGroupsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Change the size of some instance groups.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PlacementType.html"
+                                  title='struct rusoto_emr::PlacementType'>PlacementType</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon EC2 Availability Zone configuration of the cluster (job flow).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutAutoScalingPolicyInput.html"
+                                  title='struct rusoto_emr::PutAutoScalingPolicyInput'>PutAutoScalingPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutAutoScalingPolicyOutput.html"
+                                  title='struct rusoto_emr::PutAutoScalingPolicyOutput'>PutAutoScalingPolicyOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveAutoScalingPolicyInput.html"
+                                  title='struct rusoto_emr::RemoveAutoScalingPolicyInput'>RemoveAutoScalingPolicyInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveAutoScalingPolicyOutput.html"
+                                  title='struct rusoto_emr::RemoveAutoScalingPolicyOutput'>RemoveAutoScalingPolicyOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsInput.html"
+                                  title='struct rusoto_emr::RemoveTagsInput'>RemoveTagsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>This input identifies a cluster and a list of tags to remove.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsOutput.html"
+                                  title='struct rusoto_emr::RemoveTagsOutput'>RemoveTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>This output indicates the result of removing tags from a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RunJobFlowInput.html"
+                                  title='struct rusoto_emr::RunJobFlowInput'>RunJobFlowInput</a></td>
+                           <td class='docblock-short'>
+                                <p> Input to the <a>RunJobFlow</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RunJobFlowOutput.html"
+                                  title='struct rusoto_emr::RunJobFlowOutput'>RunJobFlowOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> The result of the <a>RunJobFlow</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingAction.html"
+                                  title='struct rusoto_emr::ScalingAction'>ScalingAction</a></td>
+                           <td class='docblock-short'>
+                                <p>The type of adjustment the automatic scaling activity makes when triggered, and the periodicity of the adjustment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingConstraints.html"
+                                  title='struct rusoto_emr::ScalingConstraints'>ScalingConstraints</a></td>
+                           <td class='docblock-short'>
+                                <p>The upper and lower EC2 instance limits for an automatic scaling policy. Automatic scaling activities triggered by automatic scaling rules will not cause an instance group to grow above or below these limits.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingRule.html"
+                                  title='struct rusoto_emr::ScalingRule'>ScalingRule</a></td>
+                           <td class='docblock-short'>
+                                <p>A scale-in or scale-out rule that defines scaling activity, including the CloudWatch metric alarm that triggers activity, how EC2 instances are added or removed, and the periodicity of adjustments. The automatic scaling policy for an instance group can comprise one or more automatic scaling rules.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScalingTrigger.html"
+                                  title='struct rusoto_emr::ScalingTrigger'>ScalingTrigger</a></td>
+                           <td class='docblock-short'>
+                                <p>The conditions that trigger an automatic scaling activity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScriptBootstrapActionConfig.html"
+                                  title='struct rusoto_emr::ScriptBootstrapActionConfig'>ScriptBootstrapActionConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration of the script to run during a bootstrap action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SecurityConfigurationSummary.html"
+                                  title='struct rusoto_emr::SecurityConfigurationSummary'>SecurityConfigurationSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The creation date and time, and name, of a security configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetTerminationProtectionInput.html"
+                                  title='struct rusoto_emr::SetTerminationProtectionInput'>SetTerminationProtectionInput</a></td>
+                           <td class='docblock-short'>
+                                <p> The input argument to the <a>TerminationProtection</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetVisibleToAllUsersInput.html"
+                                  title='struct rusoto_emr::SetVisibleToAllUsersInput'>SetVisibleToAllUsersInput</a></td>
+                           <td class='docblock-short'>
+                                <p>The input to the SetVisibleToAllUsers action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ShrinkPolicy.html"
+                                  title='struct rusoto_emr::ShrinkPolicy'>ShrinkPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Policy for customizing shrink operations. Allows configuration of decommissioning timeout and targeted instance shrinking.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SimpleScalingPolicyConfiguration.html"
+                                  title='struct rusoto_emr::SimpleScalingPolicyConfiguration'>SimpleScalingPolicyConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>An automatic scaling configuration, which describes how the policy adds or removes instances, the cooldown period, and the number of EC2 instances that will be added each time the CloudWatch metric alarm condition is satisfied.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SpotProvisioningSpecification.html"
+                                  title='struct rusoto_emr::SpotProvisioningSpecification'>SpotProvisioningSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The launch specification for Spot instances in the instance fleet, which determines the defined duration and provisioning timeout behavior.</p> <note> <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Step.html"
+                                  title='struct rusoto_emr::Step'>Step</a></td>
+                           <td class='docblock-short'>
+                                <p>This represents a step in a cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepConfig.html"
+                                  title='struct rusoto_emr::StepConfig'>StepConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Specification of a cluster (job flow) step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepDetail.html"
+                                  title='struct rusoto_emr::StepDetail'>StepDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Combines the execution state and configuration of a step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepExecutionStatusDetail.html"
+                                  title='struct rusoto_emr::StepExecutionStatusDetail'>StepExecutionStatusDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>The execution state of a step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepStateChangeReason.html"
+                                  title='struct rusoto_emr::StepStateChangeReason'>StepStateChangeReason</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of the step state change reason.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepStatus.html"
+                                  title='struct rusoto_emr::StepStatus'>StepStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The execution status details of the cluster step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepSummary.html"
+                                  title='struct rusoto_emr::StepSummary'>StepSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The summary of the cluster step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepTimeline.html"
+                                  title='struct rusoto_emr::StepTimeline'>StepTimeline</a></td>
+                           <td class='docblock-short'>
+                                <p>The timeline of the cluster step lifecycle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SupportedProductConfig.html"
+                                  title='struct rusoto_emr::SupportedProductConfig'>SupportedProductConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>The list of supported product configurations which allow user-supplied arguments. EMR accepts these arguments and forwards them to the corresponding installation script as bootstrap action arguments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_emr::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>A key/value pair containing user-defined metadata that you can associate with an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping clusters to track your Amazon EMR resource allocation costs. For more information, see <a href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateJobFlowsInput.html"
+                                  title='struct rusoto_emr::TerminateJobFlowsInput'>TerminateJobFlowsInput</a></td>
+                           <td class='docblock-short'>
+                                <p> Input to the <a>TerminateJobFlows</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VolumeSpecification.html"
+                                  title='struct rusoto_emr::VolumeSpecification'>VolumeSpecification</a></td>
+                           <td class='docblock-short'>
+                                <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddInstanceFleetError.html"
+                                  title='enum rusoto_emr::AddInstanceFleetError'>AddInstanceFleetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddInstanceFleet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddInstanceGroupsError.html"
+                                  title='enum rusoto_emr::AddInstanceGroupsError'>AddInstanceGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddInstanceGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddJobFlowStepsError.html"
+                                  title='enum rusoto_emr::AddJobFlowStepsError'>AddJobFlowStepsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddJobFlowSteps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsError.html"
+                                  title='enum rusoto_emr::AddTagsError'>AddTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelStepsError.html"
+                                  title='enum rusoto_emr::CancelStepsError'>CancelStepsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelSteps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSecurityConfigurationError.html"
+                                  title='enum rusoto_emr::CreateSecurityConfigurationError'>CreateSecurityConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSecurityConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSecurityConfigurationError.html"
+                                  title='enum rusoto_emr::DeleteSecurityConfigurationError'>DeleteSecurityConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSecurityConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeClusterError.html"
+                                  title='enum rusoto_emr::DescribeClusterError'>DescribeClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobFlowsError.html"
+                                  title='enum rusoto_emr::DescribeJobFlowsError'>DescribeJobFlowsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJobFlows</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSecurityConfigurationError.html"
+                                  title='enum rusoto_emr::DescribeSecurityConfigurationError'>DescribeSecurityConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSecurityConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeStepError.html"
+                                  title='enum rusoto_emr::DescribeStepError'>DescribeStepError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeStep</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListBootstrapActionsError.html"
+                                  title='enum rusoto_emr::ListBootstrapActionsError'>ListBootstrapActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListBootstrapActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListClustersError.html"
+                                  title='enum rusoto_emr::ListClustersError'>ListClustersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListClusters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstanceFleetsError.html"
+                                  title='enum rusoto_emr::ListInstanceFleetsError'>ListInstanceFleetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstanceFleets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstanceGroupsError.html"
+                                  title='enum rusoto_emr::ListInstanceGroupsError'>ListInstanceGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstanceGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstancesError.html"
+                                  title='enum rusoto_emr::ListInstancesError'>ListInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSecurityConfigurationsError.html"
+                                  title='enum rusoto_emr::ListSecurityConfigurationsError'>ListSecurityConfigurationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSecurityConfigurations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListStepsError.html"
+                                  title='enum rusoto_emr::ListStepsError'>ListStepsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSteps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyInstanceFleetError.html"
+                                  title='enum rusoto_emr::ModifyInstanceFleetError'>ModifyInstanceFleetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyInstanceFleet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyInstanceGroupsError.html"
+                                  title='enum rusoto_emr::ModifyInstanceGroupsError'>ModifyInstanceGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyInstanceGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutAutoScalingPolicyError.html"
+                                  title='enum rusoto_emr::PutAutoScalingPolicyError'>PutAutoScalingPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutAutoScalingPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveAutoScalingPolicyError.html"
+                                  title='enum rusoto_emr::RemoveAutoScalingPolicyError'>RemoveAutoScalingPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveAutoScalingPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsError.html"
+                                  title='enum rusoto_emr::RemoveTagsError'>RemoveTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RunJobFlowError.html"
+                                  title='enum rusoto_emr::RunJobFlowError'>RunJobFlowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RunJobFlow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetTerminationProtectionError.html"
+                                  title='enum rusoto_emr::SetTerminationProtectionError'>SetTerminationProtectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetTerminationProtection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetVisibleToAllUsersError.html"
+                                  title='enum rusoto_emr::SetVisibleToAllUsersError'>SetVisibleToAllUsersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetVisibleToAllUsers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TerminateJobFlowsError.html"
+                                  title='enum rusoto_emr::TerminateJobFlowsError'>TerminateJobFlowsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TerminateJobFlows</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Emr.html"
+                                  title='trait rusoto_emr::Emr'>Emr</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon EMR API. Amazon EMR clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_emr";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_acm` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_acm"><title>rusoto_acm - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_acm/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_acm</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_acm', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_acm</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_acm/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Certificate Manager</fullname> <p>Welcome to the AWS Certificate Manager (ACM) API documentation.</p> <p>You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS Certificate Manager User Guide</i> </a>.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.AcmClient.html">AcmClient</a> and <a href="trait.Acm.html">Acm</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcmClient.html"
+                                  title='struct rusoto_acm::AcmClient'>AcmClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the ACM API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToCertificateRequest.html"
+                                  title='struct rusoto_acm::AddTagsToCertificateRequest'>AddTagsToCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CertificateDetail.html"
+                                  title='struct rusoto_acm::CertificateDetail'>CertificateDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains metadata about an ACM certificate. This structure is returned in the response to a <a>DescribeCertificate</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CertificateOptions.html"
+                                  title='struct rusoto_acm::CertificateOptions'>CertificateOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Structure that contains options for your certificate. Currently, you can use this only to specify whether to opt in to or out of certificate transparency logging. Some browsers require that public certificates issued for your domain be recorded in a log. Certificates that are not logged typically generate a browser error. Transparency makes it possible for you to detect SSL/TLS certificates that have been mistakenly or maliciously issued for your domain. For general information, see <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-concepts.html#concept-transparency">Certificate Transparency Logging</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CertificateSummary.html"
+                                  title='struct rusoto_acm::CertificateSummary'>CertificateSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>This structure is returned in the response object of <a>ListCertificates</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCertificateRequest.html"
+                                  title='struct rusoto_acm::DeleteCertificateRequest'>DeleteCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificateRequest.html"
+                                  title='struct rusoto_acm::DescribeCertificateRequest'>DescribeCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificateResponse.html"
+                                  title='struct rusoto_acm::DescribeCertificateResponse'>DescribeCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainValidation.html"
+                                  title='struct rusoto_acm::DomainValidation'>DomainValidation</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the validation of each domain name in the certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainValidationOption.html"
+                                  title='struct rusoto_acm::DomainValidationOption'>DomainValidationOption</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the domain names that you want ACM to use to send you emails that enable you to validate domain ownership.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportCertificateRequest.html"
+                                  title='struct rusoto_acm::ExportCertificateRequest'>ExportCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportCertificateResponse.html"
+                                  title='struct rusoto_acm::ExportCertificateResponse'>ExportCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExtendedKeyUsage.html"
+                                  title='struct rusoto_acm::ExtendedKeyUsage'>ExtendedKeyUsage</a></td>
+                           <td class='docblock-short'>
+                                <p>The Extended Key Usage X.509 v3 extension defines one or more purposes for which the public key can be used. This is in addition to or in place of the basic purposes specified by the Key Usage extension. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Filters.html"
+                                  title='struct rusoto_acm::Filters'>Filters</a></td>
+                           <td class='docblock-short'>
+                                <p>This structure can be used in the <a>ListCertificates</a> action to filter the output of the certificate list. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCertificateRequest.html"
+                                  title='struct rusoto_acm::GetCertificateRequest'>GetCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCertificateResponse.html"
+                                  title='struct rusoto_acm::GetCertificateResponse'>GetCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportCertificateRequest.html"
+                                  title='struct rusoto_acm::ImportCertificateRequest'>ImportCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportCertificateResponse.html"
+                                  title='struct rusoto_acm::ImportCertificateResponse'>ImportCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyUsage.html"
+                                  title='struct rusoto_acm::KeyUsage'>KeyUsage</a></td>
+                           <td class='docblock-short'>
+                                <p>The Key Usage X.509 v3 extension defines the purpose of the public key contained in the certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesRequest.html"
+                                  title='struct rusoto_acm::ListCertificatesRequest'>ListCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCertificatesResponse.html"
+                                  title='struct rusoto_acm::ListCertificatesResponse'>ListCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForCertificateRequest.html"
+                                  title='struct rusoto_acm::ListTagsForCertificateRequest'>ListTagsForCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForCertificateResponse.html"
+                                  title='struct rusoto_acm::ListTagsForCertificateResponse'>ListTagsForCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromCertificateRequest.html"
+                                  title='struct rusoto_acm::RemoveTagsFromCertificateRequest'>RemoveTagsFromCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RenewalSummary.html"
+                                  title='struct rusoto_acm::RenewalSummary'>RenewalSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the status of ACM's <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-renewal.html">managed renewal</a> for the certificate. This structure exists only when the certificate type is <code>AMAZON_ISSUED</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RequestCertificateRequest.html"
+                                  title='struct rusoto_acm::RequestCertificateRequest'>RequestCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RequestCertificateResponse.html"
+                                  title='struct rusoto_acm::RequestCertificateResponse'>RequestCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResendValidationEmailRequest.html"
+                                  title='struct rusoto_acm::ResendValidationEmailRequest'>ResendValidationEmailRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceRecord.html"
+                                  title='struct rusoto_acm::ResourceRecord'>ResourceRecord</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a DNS record value that you can use to can use to validate ownership or control of a domain. This is used by the <a>DescribeCertificate</a> action. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_acm::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>A key-value pair that identifies or specifies metadata about an ACM resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateCertificateOptionsRequest.html"
+                                  title='struct rusoto_acm::UpdateCertificateOptionsRequest'>UpdateCertificateOptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToCertificateError.html"
+                                  title='enum rusoto_acm::AddTagsToCertificateError'>AddTagsToCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCertificateError.html"
+                                  title='enum rusoto_acm::DeleteCertificateError'>DeleteCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCertificateError.html"
+                                  title='enum rusoto_acm::DescribeCertificateError'>DescribeCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ExportCertificateError.html"
+                                  title='enum rusoto_acm::ExportCertificateError'>ExportCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ExportCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCertificateError.html"
+                                  title='enum rusoto_acm::GetCertificateError'>GetCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportCertificateError.html"
+                                  title='enum rusoto_acm::ImportCertificateError'>ImportCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCertificatesError.html"
+                                  title='enum rusoto_acm::ListCertificatesError'>ListCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForCertificateError.html"
+                                  title='enum rusoto_acm::ListTagsForCertificateError'>ListTagsForCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromCertificateError.html"
+                                  title='enum rusoto_acm::RemoveTagsFromCertificateError'>RemoveTagsFromCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RequestCertificateError.html"
+                                  title='enum rusoto_acm::RequestCertificateError'>RequestCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RequestCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResendValidationEmailError.html"
+                                  title='enum rusoto_acm::ResendValidationEmailError'>ResendValidationEmailError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResendValidationEmail</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateCertificateOptionsError.html"
+                                  title='enum rusoto_acm::UpdateCertificateOptionsError'>UpdateCertificateOptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCertificateOptions</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Acm.html"
+                                  title='trait rusoto_acm::Acm'>Acm</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the ACM API. ACM clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_acm";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

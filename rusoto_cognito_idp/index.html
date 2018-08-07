@@ -1,0 +1,2434 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_cognito_idp` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_cognito_idp"><title>rusoto_cognito_idp - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_cognito_idp/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_cognito_idp</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_cognito_idp', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_cognito_idp</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_cognito_idp/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can authenticate a user to obtain tokens related to user identity and access policies.</p> <p>This API reference provides information about user pools in Amazon Cognito User Pools.</p> <p>For more information, see the Amazon Cognito Documentation.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.CognitoIdentityProviderClient.html">CognitoIdentityProviderClient</a> and <a href="trait.CognitoIdentityProvider.html">CognitoIdentityProvider</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountTakeoverActionType.html"
+                                  title='struct rusoto_cognito_idp::AccountTakeoverActionType'>AccountTakeoverActionType</a></td>
+                           <td class='docblock-short'>
+                                <p>Account takeover action type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountTakeoverActionsType.html"
+                                  title='struct rusoto_cognito_idp::AccountTakeoverActionsType'>AccountTakeoverActionsType</a></td>
+                           <td class='docblock-short'>
+                                <p>Account takeover actions type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountTakeoverRiskConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::AccountTakeoverRiskConfigurationType'>AccountTakeoverRiskConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration for mitigation actions and notification for different levels of risk detected for a potential account takeover.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddCustomAttributesRequest.html"
+                                  title='struct rusoto_cognito_idp::AddCustomAttributesRequest'>AddCustomAttributesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to add custom attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddCustomAttributesResponse.html"
+                                  title='struct rusoto_cognito_idp::AddCustomAttributesResponse'>AddCustomAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to add custom attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminAddUserToGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminAddUserToGroupRequest'>AdminAddUserToGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminConfirmSignUpRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminConfirmSignUpRequest'>AdminConfirmSignUpRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to confirm user registration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminConfirmSignUpResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminConfirmSignUpResponse'>AdminConfirmSignUpResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to confirm registration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminCreateUserConfigType.html"
+                                  title='struct rusoto_cognito_idp::AdminCreateUserConfigType'>AdminCreateUserConfigType</a></td>
+                           <td class='docblock-short'>
+                                <p>The configuration for creating a new user profile.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminCreateUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminCreateUserRequest'>AdminCreateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to create a user in the specified user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminCreateUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminCreateUserResponse'>AdminCreateUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to create the user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDeleteUserAttributesRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminDeleteUserAttributesRequest'>AdminDeleteUserAttributesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete user attributes as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDeleteUserAttributesResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminDeleteUserAttributesResponse'>AdminDeleteUserAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response received from the server for a request to delete user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDeleteUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminDeleteUserRequest'>AdminDeleteUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete a user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDisableProviderForUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminDisableProviderForUserRequest'>AdminDisableProviderForUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDisableProviderForUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminDisableProviderForUserResponse'>AdminDisableProviderForUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDisableUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminDisableUserRequest'>AdminDisableUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to disable any user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminDisableUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminDisableUserResponse'>AdminDisableUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response received from the server to disable the user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminEnableUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminEnableUserRequest'>AdminEnableUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request that enables the user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminEnableUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminEnableUserResponse'>AdminEnableUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to enable a user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminForgetDeviceRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminForgetDeviceRequest'>AdminForgetDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Sends the forgot device request, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminGetDeviceRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminGetDeviceRequest'>AdminGetDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get the device, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminGetDeviceResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminGetDeviceResponse'>AdminGetDeviceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the device response, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminGetUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminGetUserRequest'>AdminGetUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get the specified user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminGetUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminGetUserResponse'>AdminGetUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server from the request to get the specified user as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminInitiateAuthRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminInitiateAuthRequest'>AdminInitiateAuthRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the authorization request, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminInitiateAuthResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminInitiateAuthResponse'>AdminInitiateAuthResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the authentication response, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminLinkProviderForUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminLinkProviderForUserRequest'>AdminLinkProviderForUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminLinkProviderForUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminLinkProviderForUserResponse'>AdminLinkProviderForUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListDevicesRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminListDevicesRequest'>AdminListDevicesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list devices, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListDevicesResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminListDevicesResponse'>AdminListDevicesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Lists the device's response, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListGroupsForUserRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminListGroupsForUserRequest'>AdminListGroupsForUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListGroupsForUserResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminListGroupsForUserResponse'>AdminListGroupsForUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListUserAuthEventsRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminListUserAuthEventsRequest'>AdminListUserAuthEventsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminListUserAuthEventsResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminListUserAuthEventsResponse'>AdminListUserAuthEventsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminRemoveUserFromGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminRemoveUserFromGroupRequest'>AdminRemoveUserFromGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminResetUserPasswordRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminResetUserPasswordRequest'>AdminResetUserPasswordRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to reset a user's password as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminResetUserPasswordResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminResetUserPasswordResponse'>AdminResetUserPasswordResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to reset a user password as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminRespondToAuthChallengeRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminRespondToAuthChallengeRequest'>AdminRespondToAuthChallengeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to respond to the authentication challenge, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminRespondToAuthChallengeResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminRespondToAuthChallengeResponse'>AdminRespondToAuthChallengeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Responds to the authentication challenge, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminSetUserMFAPreferenceRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminSetUserMFAPreferenceRequest'>AdminSetUserMFAPreferenceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminSetUserMFAPreferenceResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminSetUserMFAPreferenceResponse'>AdminSetUserMFAPreferenceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminSetUserSettingsRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminSetUserSettingsRequest'>AdminSetUserSettingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to set user settings as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminSetUserSettingsResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminSetUserSettingsResponse'>AdminSetUserSettingsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to set user settings as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateAuthEventFeedbackRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateAuthEventFeedbackRequest'>AdminUpdateAuthEventFeedbackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateAuthEventFeedbackResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateAuthEventFeedbackResponse'>AdminUpdateAuthEventFeedbackResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateDeviceStatusRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateDeviceStatusRequest'>AdminUpdateDeviceStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to update the device status, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateDeviceStatusResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateDeviceStatusResponse'>AdminUpdateDeviceStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The status response from the request to update the device, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateUserAttributesRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateUserAttributesRequest'>AdminUpdateUserAttributesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to update the user's attributes as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUpdateUserAttributesResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminUpdateUserAttributesResponse'>AdminUpdateUserAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to update user attributes as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUserGlobalSignOutRequest.html"
+                                  title='struct rusoto_cognito_idp::AdminUserGlobalSignOutRequest'>AdminUserGlobalSignOutRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to sign out of all devices, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AdminUserGlobalSignOutResponse.html"
+                                  title='struct rusoto_cognito_idp::AdminUserGlobalSignOutResponse'>AdminUserGlobalSignOutResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The global sign-out response, as an administrator.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AnalyticsConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::AnalyticsConfigurationType'>AnalyticsConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon Pinpoint analytics configuration for collecting metrics for a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AnalyticsMetadataType.html"
+                                  title='struct rusoto_cognito_idp::AnalyticsMetadataType'>AnalyticsMetadataType</a></td>
+                           <td class='docblock-short'>
+                                <p>An Amazon Pinpoint analytics endpoint.</p> <p>An endpoint uniquely identifies a mobile device, email address, or phone number that can receive messages from Amazon Pinpoint analytics.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateSoftwareTokenRequest.html"
+                                  title='struct rusoto_cognito_idp::AssociateSoftwareTokenRequest'>AssociateSoftwareTokenRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateSoftwareTokenResponse.html"
+                                  title='struct rusoto_cognito_idp::AssociateSoftwareTokenResponse'>AssociateSoftwareTokenResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttributeType.html"
+                                  title='struct rusoto_cognito_idp::AttributeType'>AttributeType</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies whether the attribute is standard or custom.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthEventType.html"
+                                  title='struct rusoto_cognito_idp::AuthEventType'>AuthEventType</a></td>
+                           <td class='docblock-short'>
+                                <p>The authentication event type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AuthenticationResultType.html"
+                                  title='struct rusoto_cognito_idp::AuthenticationResultType'>AuthenticationResultType</a></td>
+                           <td class='docblock-short'>
+                                <p>The authentication result.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChallengeResponseType.html"
+                                  title='struct rusoto_cognito_idp::ChallengeResponseType'>ChallengeResponseType</a></td>
+                           <td class='docblock-short'>
+                                <p>The challenge response type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChangePasswordRequest.html"
+                                  title='struct rusoto_cognito_idp::ChangePasswordRequest'>ChangePasswordRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to change a user password.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChangePasswordResponse.html"
+                                  title='struct rusoto_cognito_idp::ChangePasswordResponse'>ChangePasswordResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server to the change password request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodeDeliveryDetailsType.html"
+                                  title='struct rusoto_cognito_idp::CodeDeliveryDetailsType'>CodeDeliveryDetailsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The code delivery details being returned from the server.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CognitoIdentityProviderClient.html"
+                                  title='struct rusoto_cognito_idp::CognitoIdentityProviderClient'>CognitoIdentityProviderClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Cognito Identity Provider API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompromisedCredentialsActionsType.html"
+                                  title='struct rusoto_cognito_idp::CompromisedCredentialsActionsType'>CompromisedCredentialsActionsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The compromised credentials actions type</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompromisedCredentialsRiskConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::CompromisedCredentialsRiskConfigurationType'>CompromisedCredentialsRiskConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The compromised credentials risk configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmDeviceRequest.html"
+                                  title='struct rusoto_cognito_idp::ConfirmDeviceRequest'>ConfirmDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Confirms the device request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmDeviceResponse.html"
+                                  title='struct rusoto_cognito_idp::ConfirmDeviceResponse'>ConfirmDeviceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Confirms the device response.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmForgotPasswordRequest.html"
+                                  title='struct rusoto_cognito_idp::ConfirmForgotPasswordRequest'>ConfirmForgotPasswordRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request representing the confirmation for a password reset.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmForgotPasswordResponse.html"
+                                  title='struct rusoto_cognito_idp::ConfirmForgotPasswordResponse'>ConfirmForgotPasswordResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server that results from a user's request to retrieve a forgotten password.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmSignUpRequest.html"
+                                  title='struct rusoto_cognito_idp::ConfirmSignUpRequest'>ConfirmSignUpRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to confirm registration of a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmSignUpResponse.html"
+                                  title='struct rusoto_cognito_idp::ConfirmSignUpResponse'>ConfirmSignUpResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the registration confirmation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContextDataType.html"
+                                  title='struct rusoto_cognito_idp::ContextDataType'>ContextDataType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contextual user data type used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateGroupRequest'>CreateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateGroupResponse'>CreateGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateIdentityProviderRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateIdentityProviderRequest'>CreateIdentityProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateIdentityProviderResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateIdentityProviderResponse'>CreateIdentityProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceServerRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateResourceServerRequest'>CreateResourceServerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceServerResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateResourceServerResponse'>CreateResourceServerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserImportJobRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateUserImportJobRequest'>CreateUserImportJobRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to create the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserImportJobResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateUserImportJobResponse'>CreateUserImportJobResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to create the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolClientRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolClientRequest'>CreateUserPoolClientRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to create a user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolClientResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolClientResponse'>CreateUserPoolClientResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to create a user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolDomainRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolDomainRequest'>CreateUserPoolDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolDomainResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolDomainResponse'>CreateUserPoolDomainResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolRequest.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolRequest'>CreateUserPoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to create a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserPoolResponse.html"
+                                  title='struct rusoto_cognito_idp::CreateUserPoolResponse'>CreateUserPoolResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to create a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteGroupRequest'>DeleteGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteIdentityProviderRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteIdentityProviderRequest'>DeleteIdentityProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceServerRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteResourceServerRequest'>DeleteResourceServerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserAttributesRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserAttributesRequest'>DeleteUserAttributesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserAttributesResponse.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserAttributesResponse'>DeleteUserAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to delete user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserPoolClientRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserPoolClientRequest'>DeleteUserPoolClientRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete a user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserPoolDomainRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserPoolDomainRequest'>DeleteUserPoolDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserPoolDomainResponse.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserPoolDomainResponse'>DeleteUserPoolDomainResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserPoolRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserPoolRequest'>DeleteUserPoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserRequest.html"
+                                  title='struct rusoto_cognito_idp::DeleteUserRequest'>DeleteUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeIdentityProviderRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeIdentityProviderRequest'>DescribeIdentityProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeIdentityProviderResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeIdentityProviderResponse'>DescribeIdentityProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourceServerRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeResourceServerRequest'>DescribeResourceServerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourceServerResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeResourceServerResponse'>DescribeResourceServerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRiskConfigurationRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeRiskConfigurationRequest'>DescribeRiskConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRiskConfigurationResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeRiskConfigurationResponse'>DescribeRiskConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserImportJobRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserImportJobRequest'>DescribeUserImportJobRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to describe the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserImportJobResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserImportJobResponse'>DescribeUserImportJobResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to describe the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolClientRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolClientRequest'>DescribeUserPoolClientRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to describe a user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolClientResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolClientResponse'>DescribeUserPoolClientResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server from a request to describe the user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolDomainRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolDomainRequest'>DescribeUserPoolDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolDomainResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolDomainResponse'>DescribeUserPoolDomainResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolRequest.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolRequest'>DescribeUserPoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to describe the user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUserPoolResponse.html"
+                                  title='struct rusoto_cognito_idp::DescribeUserPoolResponse'>DescribeUserPoolResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response to describe the user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::DeviceConfigurationType'>DeviceConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The configuration for the user pool's device tracking.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceSecretVerifierConfigType.html"
+                                  title='struct rusoto_cognito_idp::DeviceSecretVerifierConfigType'>DeviceSecretVerifierConfigType</a></td>
+                           <td class='docblock-short'>
+                                <p>The device verifier against which it will be authenticated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceType.html"
+                                  title='struct rusoto_cognito_idp::DeviceType'>DeviceType</a></td>
+                           <td class='docblock-short'>
+                                <p>The device type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainDescriptionType.html"
+                                  title='struct rusoto_cognito_idp::DomainDescriptionType'>DomainDescriptionType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for information about a domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmailConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::EmailConfigurationType'>EmailConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The email configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventContextDataType.html"
+                                  title='struct rusoto_cognito_idp::EventContextDataType'>EventContextDataType</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the user context data captured at the time of an event request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventFeedbackType.html"
+                                  title='struct rusoto_cognito_idp::EventFeedbackType'>EventFeedbackType</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the event feedback type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventRiskType.html"
+                                  title='struct rusoto_cognito_idp::EventRiskType'>EventRiskType</a></td>
+                           <td class='docblock-short'>
+                                <p>The event risk type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForgetDeviceRequest.html"
+                                  title='struct rusoto_cognito_idp::ForgetDeviceRequest'>ForgetDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to forget the device.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForgotPasswordRequest.html"
+                                  title='struct rusoto_cognito_idp::ForgotPasswordRequest'>ForgotPasswordRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to reset a user's password.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ForgotPasswordResponse.html"
+                                  title='struct rusoto_cognito_idp::ForgotPasswordResponse'>ForgotPasswordResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Respresents the response from the server regarding the request to reset a password.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCSVHeaderRequest.html"
+                                  title='struct rusoto_cognito_idp::GetCSVHeaderRequest'>GetCSVHeaderRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get the header information for the .csv file for the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCSVHeaderResponse.html"
+                                  title='struct rusoto_cognito_idp::GetCSVHeaderResponse'>GetCSVHeaderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to get the header information for the .csv file for the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceRequest.html"
+                                  title='struct rusoto_cognito_idp::GetDeviceRequest'>GetDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get the device.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceResponse.html"
+                                  title='struct rusoto_cognito_idp::GetDeviceResponse'>GetDeviceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Gets the device response.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::GetGroupRequest'>GetGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupResponse.html"
+                                  title='struct rusoto_cognito_idp::GetGroupResponse'>GetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIdentityProviderByIdentifierRequest.html"
+                                  title='struct rusoto_cognito_idp::GetIdentityProviderByIdentifierRequest'>GetIdentityProviderByIdentifierRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetIdentityProviderByIdentifierResponse.html"
+                                  title='struct rusoto_cognito_idp::GetIdentityProviderByIdentifierResponse'>GetIdentityProviderByIdentifierResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSigningCertificateRequest.html"
+                                  title='struct rusoto_cognito_idp::GetSigningCertificateRequest'>GetSigningCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request to get a signing certificate from Cognito.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSigningCertificateResponse.html"
+                                  title='struct rusoto_cognito_idp::GetSigningCertificateResponse'>GetSigningCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response from Cognito for a signing certificate request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUICustomizationRequest.html"
+                                  title='struct rusoto_cognito_idp::GetUICustomizationRequest'>GetUICustomizationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUICustomizationResponse.html"
+                                  title='struct rusoto_cognito_idp::GetUICustomizationResponse'>GetUICustomizationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserAttributeVerificationCodeRequest.html"
+                                  title='struct rusoto_cognito_idp::GetUserAttributeVerificationCodeRequest'>GetUserAttributeVerificationCodeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get user attribute verification.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserAttributeVerificationCodeResponse.html"
+                                  title='struct rusoto_cognito_idp::GetUserAttributeVerificationCodeResponse'>GetUserAttributeVerificationCodeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The verification code response returned by the server response to get the user attribute verification code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserPoolMfaConfigRequest.html"
+                                  title='struct rusoto_cognito_idp::GetUserPoolMfaConfigRequest'>GetUserPoolMfaConfigRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserPoolMfaConfigResponse.html"
+                                  title='struct rusoto_cognito_idp::GetUserPoolMfaConfigResponse'>GetUserPoolMfaConfigResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserRequest.html"
+                                  title='struct rusoto_cognito_idp::GetUserRequest'>GetUserRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get information about the user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserResponse.html"
+                                  title='struct rusoto_cognito_idp::GetUserResponse'>GetUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server from the request to get information about the user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GlobalSignOutRequest.html"
+                                  title='struct rusoto_cognito_idp::GlobalSignOutRequest'>GlobalSignOutRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to sign out all devices.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GlobalSignOutResponse.html"
+                                  title='struct rusoto_cognito_idp::GlobalSignOutResponse'>GlobalSignOutResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to the request to sign out all devices.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupType.html"
+                                  title='struct rusoto_cognito_idp::GroupType'>GroupType</a></td>
+                           <td class='docblock-short'>
+                                <p>The group type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HttpHeader.html"
+                                  title='struct rusoto_cognito_idp::HttpHeader'>HttpHeader</a></td>
+                           <td class='docblock-short'>
+                                <p>The HTTP header.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IdentityProviderType.html"
+                                  title='struct rusoto_cognito_idp::IdentityProviderType'>IdentityProviderType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for information about an identity provider.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateAuthRequest.html"
+                                  title='struct rusoto_cognito_idp::InitiateAuthRequest'>InitiateAuthRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the authentication request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateAuthResponse.html"
+                                  title='struct rusoto_cognito_idp::InitiateAuthResponse'>InitiateAuthResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the authentication response.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LambdaConfigType.html"
+                                  title='struct rusoto_cognito_idp::LambdaConfigType'>LambdaConfigType</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the configuration for AWS Lambda triggers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicesRequest.html"
+                                  title='struct rusoto_cognito_idp::ListDevicesRequest'>ListDevicesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list the devices.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicesResponse.html"
+                                  title='struct rusoto_cognito_idp::ListDevicesResponse'>ListDevicesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response to list devices.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsRequest.html"
+                                  title='struct rusoto_cognito_idp::ListGroupsRequest'>ListGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsResponse.html"
+                                  title='struct rusoto_cognito_idp::ListGroupsResponse'>ListGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIdentityProvidersRequest.html"
+                                  title='struct rusoto_cognito_idp::ListIdentityProvidersRequest'>ListIdentityProvidersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIdentityProvidersResponse.html"
+                                  title='struct rusoto_cognito_idp::ListIdentityProvidersResponse'>ListIdentityProvidersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceServersRequest.html"
+                                  title='struct rusoto_cognito_idp::ListResourceServersRequest'>ListResourceServersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceServersResponse.html"
+                                  title='struct rusoto_cognito_idp::ListResourceServersResponse'>ListResourceServersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserImportJobsRequest.html"
+                                  title='struct rusoto_cognito_idp::ListUserImportJobsRequest'>ListUserImportJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list the user import jobs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserImportJobsResponse.html"
+                                  title='struct rusoto_cognito_idp::ListUserImportJobsResponse'>ListUserImportJobsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to list the user import jobs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoolClientsRequest.html"
+                                  title='struct rusoto_cognito_idp::ListUserPoolClientsRequest'>ListUserPoolClientsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list the user pool clients.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoolClientsResponse.html"
+                                  title='struct rusoto_cognito_idp::ListUserPoolClientsResponse'>ListUserPoolClientsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server that lists user pool clients.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoolsRequest.html"
+                                  title='struct rusoto_cognito_idp::ListUserPoolsRequest'>ListUserPoolsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list user pools.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoolsResponse.html"
+                                  title='struct rusoto_cognito_idp::ListUserPoolsResponse'>ListUserPoolsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response to list user pools.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersInGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::ListUsersInGroupRequest'>ListUsersInGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersInGroupResponse.html"
+                                  title='struct rusoto_cognito_idp::ListUsersInGroupResponse'>ListUsersInGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersRequest.html"
+                                  title='struct rusoto_cognito_idp::ListUsersRequest'>ListUsersRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list users.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersResponse.html"
+                                  title='struct rusoto_cognito_idp::ListUsersResponse'>ListUsersResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the request to list users.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MFAOptionType.html"
+                                  title='struct rusoto_cognito_idp::MFAOptionType'>MFAOptionType</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the different settings for multi-factor authentication (MFA).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MessageTemplateType.html"
+                                  title='struct rusoto_cognito_idp::MessageTemplateType'>MessageTemplateType</a></td>
+                           <td class='docblock-short'>
+                                <p>The message template structure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewDeviceMetadataType.html"
+                                  title='struct rusoto_cognito_idp::NewDeviceMetadataType'>NewDeviceMetadataType</a></td>
+                           <td class='docblock-short'>
+                                <p>The new device metadata type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotifyConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::NotifyConfigurationType'>NotifyConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The notify configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotifyEmailType.html"
+                                  title='struct rusoto_cognito_idp::NotifyEmailType'>NotifyEmailType</a></td>
+                           <td class='docblock-short'>
+                                <p>The notify email type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NumberAttributeConstraintsType.html"
+                                  title='struct rusoto_cognito_idp::NumberAttributeConstraintsType'>NumberAttributeConstraintsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The minimum and maximum value of an attribute that is of the number data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PasswordPolicyType.html"
+                                  title='struct rusoto_cognito_idp::PasswordPolicyType'>PasswordPolicyType</a></td>
+                           <td class='docblock-short'>
+                                <p>The password policy type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProviderDescription.html"
+                                  title='struct rusoto_cognito_idp::ProviderDescription'>ProviderDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for identity provider details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProviderUserIdentifierType.html"
+                                  title='struct rusoto_cognito_idp::ProviderUserIdentifierType'>ProviderUserIdentifierType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for information about an identity provider for a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResendConfirmationCodeRequest.html"
+                                  title='struct rusoto_cognito_idp::ResendConfirmationCodeRequest'>ResendConfirmationCodeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to resend the confirmation code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResendConfirmationCodeResponse.html"
+                                  title='struct rusoto_cognito_idp::ResendConfirmationCodeResponse'>ResendConfirmationCodeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server when the Amazon Cognito Your User Pools service makes the request to resend a confirmation code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceServerScopeType.html"
+                                  title='struct rusoto_cognito_idp::ResourceServerScopeType'>ResourceServerScopeType</a></td>
+                           <td class='docblock-short'>
+                                <p>A resource server scope.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceServerType.html"
+                                  title='struct rusoto_cognito_idp::ResourceServerType'>ResourceServerType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for information about a resource server for a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RespondToAuthChallengeRequest.html"
+                                  title='struct rusoto_cognito_idp::RespondToAuthChallengeRequest'>RespondToAuthChallengeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request to respond to an authentication challenge.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RespondToAuthChallengeResponse.html"
+                                  title='struct rusoto_cognito_idp::RespondToAuthChallengeResponse'>RespondToAuthChallengeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to respond to the authentication challenge.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RiskConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::RiskConfigurationType'>RiskConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The risk configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RiskExceptionConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::RiskExceptionConfigurationType'>RiskExceptionConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The type of the configuration to override the risk decision.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SMSMfaSettingsType.html"
+                                  title='struct rusoto_cognito_idp::SMSMfaSettingsType'>SMSMfaSettingsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The SMS multi-factor authentication (MFA) settings type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SchemaAttributeType.html"
+                                  title='struct rusoto_cognito_idp::SchemaAttributeType'>SchemaAttributeType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the schema attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetRiskConfigurationRequest.html"
+                                  title='struct rusoto_cognito_idp::SetRiskConfigurationRequest'>SetRiskConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetRiskConfigurationResponse.html"
+                                  title='struct rusoto_cognito_idp::SetRiskConfigurationResponse'>SetRiskConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUICustomizationRequest.html"
+                                  title='struct rusoto_cognito_idp::SetUICustomizationRequest'>SetUICustomizationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUICustomizationResponse.html"
+                                  title='struct rusoto_cognito_idp::SetUICustomizationResponse'>SetUICustomizationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserMFAPreferenceRequest.html"
+                                  title='struct rusoto_cognito_idp::SetUserMFAPreferenceRequest'>SetUserMFAPreferenceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserMFAPreferenceResponse.html"
+                                  title='struct rusoto_cognito_idp::SetUserMFAPreferenceResponse'>SetUserMFAPreferenceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserPoolMfaConfigRequest.html"
+                                  title='struct rusoto_cognito_idp::SetUserPoolMfaConfigRequest'>SetUserPoolMfaConfigRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserPoolMfaConfigResponse.html"
+                                  title='struct rusoto_cognito_idp::SetUserPoolMfaConfigResponse'>SetUserPoolMfaConfigResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserSettingsRequest.html"
+                                  title='struct rusoto_cognito_idp::SetUserSettingsRequest'>SetUserSettingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to set user settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetUserSettingsResponse.html"
+                                  title='struct rusoto_cognito_idp::SetUserSettingsResponse'>SetUserSettingsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server for a set user settings request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SignUpRequest.html"
+                                  title='struct rusoto_cognito_idp::SignUpRequest'>SignUpRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to register a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SignUpResponse.html"
+                                  title='struct rusoto_cognito_idp::SignUpResponse'>SignUpResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server for a registration request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SmsConfigurationType.html"
+                                  title='struct rusoto_cognito_idp::SmsConfigurationType'>SmsConfigurationType</a></td>
+                           <td class='docblock-short'>
+                                <p>The SMS configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SmsMfaConfigType.html"
+                                  title='struct rusoto_cognito_idp::SmsMfaConfigType'>SmsMfaConfigType</a></td>
+                           <td class='docblock-short'>
+                                <p>The SMS text message multi-factor authentication (MFA) configuration type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SoftwareTokenMfaConfigType.html"
+                                  title='struct rusoto_cognito_idp::SoftwareTokenMfaConfigType'>SoftwareTokenMfaConfigType</a></td>
+                           <td class='docblock-short'>
+                                <p>The type used for enabling software token MFA at the user pool level.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SoftwareTokenMfaSettingsType.html"
+                                  title='struct rusoto_cognito_idp::SoftwareTokenMfaSettingsType'>SoftwareTokenMfaSettingsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The type used for enabling software token MFA at the user level.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartUserImportJobRequest.html"
+                                  title='struct rusoto_cognito_idp::StartUserImportJobRequest'>StartUserImportJobRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to start the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartUserImportJobResponse.html"
+                                  title='struct rusoto_cognito_idp::StartUserImportJobResponse'>StartUserImportJobResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to start the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopUserImportJobRequest.html"
+                                  title='struct rusoto_cognito_idp::StopUserImportJobRequest'>StopUserImportJobRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to stop the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopUserImportJobResponse.html"
+                                  title='struct rusoto_cognito_idp::StopUserImportJobResponse'>StopUserImportJobResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to stop the user import job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StringAttributeConstraintsType.html"
+                                  title='struct rusoto_cognito_idp::StringAttributeConstraintsType'>StringAttributeConstraintsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The constraints associated with a string attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UICustomizationType.html"
+                                  title='struct rusoto_cognito_idp::UICustomizationType'>UICustomizationType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for the UI customization information for a user pool's built-in app UI.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAuthEventFeedbackRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateAuthEventFeedbackRequest'>UpdateAuthEventFeedbackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAuthEventFeedbackResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateAuthEventFeedbackResponse'>UpdateAuthEventFeedbackResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceStatusRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateDeviceStatusRequest'>UpdateDeviceStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to update the device status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceStatusResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateDeviceStatusResponse'>UpdateDeviceStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response to the request to update the device status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateGroupRequest'>UpdateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateGroupResponse'>UpdateGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIdentityProviderRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateIdentityProviderRequest'>UpdateIdentityProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateIdentityProviderResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateIdentityProviderResponse'>UpdateIdentityProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateResourceServerRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateResourceServerRequest'>UpdateResourceServerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateResourceServerResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateResourceServerResponse'>UpdateResourceServerResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserAttributesRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserAttributesRequest'>UpdateUserAttributesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to update user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserAttributesResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserAttributesResponse'>UpdateUserAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server for the request to update user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserPoolClientRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserPoolClientRequest'>UpdateUserPoolClientRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to update the user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserPoolClientResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserPoolClientResponse'>UpdateUserPoolClientResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server to the request to update the user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserPoolRequest.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserPoolRequest'>UpdateUserPoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to update the user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserPoolResponse.html"
+                                  title='struct rusoto_cognito_idp::UpdateUserPoolResponse'>UpdateUserPoolResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server when you make a request to update the user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserContextDataType.html"
+                                  title='struct rusoto_cognito_idp::UserContextDataType'>UserContextDataType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contextual data such as the user's device fingerprint, IP address, or location used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserImportJobType.html"
+                                  title='struct rusoto_cognito_idp::UserImportJobType'>UserImportJobType</a></td>
+                           <td class='docblock-short'>
+                                <p>The user import job type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolAddOnsType.html"
+                                  title='struct rusoto_cognito_idp::UserPoolAddOnsType'>UserPoolAddOnsType</a></td>
+                           <td class='docblock-short'>
+                                <p>The user pool add-ons type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolClientDescription.html"
+                                  title='struct rusoto_cognito_idp::UserPoolClientDescription'>UserPoolClientDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The description of the user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolClientType.html"
+                                  title='struct rusoto_cognito_idp::UserPoolClientType'>UserPoolClientType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a user pool client.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolDescriptionType.html"
+                                  title='struct rusoto_cognito_idp::UserPoolDescriptionType'>UserPoolDescriptionType</a></td>
+                           <td class='docblock-short'>
+                                <p>A user pool description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolPolicyType.html"
+                                  title='struct rusoto_cognito_idp::UserPoolPolicyType'>UserPoolPolicyType</a></td>
+                           <td class='docblock-short'>
+                                <p>The policy associated with a user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserPoolType.html"
+                                  title='struct rusoto_cognito_idp::UserPoolType'>UserPoolType</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for information about the user pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserType.html"
+                                  title='struct rusoto_cognito_idp::UserType'>UserType</a></td>
+                           <td class='docblock-short'>
+                                <p>The user type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerificationMessageTemplateType.html"
+                                  title='struct rusoto_cognito_idp::VerificationMessageTemplateType'>VerificationMessageTemplateType</a></td>
+                           <td class='docblock-short'>
+                                <p>The template for verification messages.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifySoftwareTokenRequest.html"
+                                  title='struct rusoto_cognito_idp::VerifySoftwareTokenRequest'>VerifySoftwareTokenRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifySoftwareTokenResponse.html"
+                                  title='struct rusoto_cognito_idp::VerifySoftwareTokenResponse'>VerifySoftwareTokenResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifyUserAttributeRequest.html"
+                                  title='struct rusoto_cognito_idp::VerifyUserAttributeRequest'>VerifyUserAttributeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to verify user attributes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifyUserAttributeResponse.html"
+                                  title='struct rusoto_cognito_idp::VerifyUserAttributeResponse'>VerifyUserAttributeResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A container representing the response from the server from the request to verify user attributes.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddCustomAttributesError.html"
+                                  title='enum rusoto_cognito_idp::AddCustomAttributesError'>AddCustomAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddCustomAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminAddUserToGroupError.html"
+                                  title='enum rusoto_cognito_idp::AdminAddUserToGroupError'>AdminAddUserToGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminAddUserToGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminConfirmSignUpError.html"
+                                  title='enum rusoto_cognito_idp::AdminConfirmSignUpError'>AdminConfirmSignUpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminConfirmSignUp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminCreateUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminCreateUserError'>AdminCreateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminCreateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminDeleteUserAttributesError.html"
+                                  title='enum rusoto_cognito_idp::AdminDeleteUserAttributesError'>AdminDeleteUserAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminDeleteUserAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminDeleteUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminDeleteUserError'>AdminDeleteUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminDeleteUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminDisableProviderForUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminDisableProviderForUserError'>AdminDisableProviderForUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminDisableProviderForUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminDisableUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminDisableUserError'>AdminDisableUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminDisableUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminEnableUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminEnableUserError'>AdminEnableUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminEnableUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminForgetDeviceError.html"
+                                  title='enum rusoto_cognito_idp::AdminForgetDeviceError'>AdminForgetDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminForgetDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminGetDeviceError.html"
+                                  title='enum rusoto_cognito_idp::AdminGetDeviceError'>AdminGetDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminGetDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminGetUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminGetUserError'>AdminGetUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminGetUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminInitiateAuthError.html"
+                                  title='enum rusoto_cognito_idp::AdminInitiateAuthError'>AdminInitiateAuthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminInitiateAuth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminLinkProviderForUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminLinkProviderForUserError'>AdminLinkProviderForUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminLinkProviderForUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminListDevicesError.html"
+                                  title='enum rusoto_cognito_idp::AdminListDevicesError'>AdminListDevicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminListDevices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminListGroupsForUserError.html"
+                                  title='enum rusoto_cognito_idp::AdminListGroupsForUserError'>AdminListGroupsForUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminListGroupsForUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminListUserAuthEventsError.html"
+                                  title='enum rusoto_cognito_idp::AdminListUserAuthEventsError'>AdminListUserAuthEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminListUserAuthEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminRemoveUserFromGroupError.html"
+                                  title='enum rusoto_cognito_idp::AdminRemoveUserFromGroupError'>AdminRemoveUserFromGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminRemoveUserFromGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminResetUserPasswordError.html"
+                                  title='enum rusoto_cognito_idp::AdminResetUserPasswordError'>AdminResetUserPasswordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminResetUserPassword</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminRespondToAuthChallengeError.html"
+                                  title='enum rusoto_cognito_idp::AdminRespondToAuthChallengeError'>AdminRespondToAuthChallengeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminRespondToAuthChallenge</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminSetUserMFAPreferenceError.html"
+                                  title='enum rusoto_cognito_idp::AdminSetUserMFAPreferenceError'>AdminSetUserMFAPreferenceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminSetUserMFAPreference</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminSetUserSettingsError.html"
+                                  title='enum rusoto_cognito_idp::AdminSetUserSettingsError'>AdminSetUserSettingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminSetUserSettings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminUpdateAuthEventFeedbackError.html"
+                                  title='enum rusoto_cognito_idp::AdminUpdateAuthEventFeedbackError'>AdminUpdateAuthEventFeedbackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminUpdateAuthEventFeedback</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminUpdateDeviceStatusError.html"
+                                  title='enum rusoto_cognito_idp::AdminUpdateDeviceStatusError'>AdminUpdateDeviceStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminUpdateDeviceStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminUpdateUserAttributesError.html"
+                                  title='enum rusoto_cognito_idp::AdminUpdateUserAttributesError'>AdminUpdateUserAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminUpdateUserAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AdminUserGlobalSignOutError.html"
+                                  title='enum rusoto_cognito_idp::AdminUserGlobalSignOutError'>AdminUserGlobalSignOutError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AdminUserGlobalSignOut</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateSoftwareTokenError.html"
+                                  title='enum rusoto_cognito_idp::AssociateSoftwareTokenError'>AssociateSoftwareTokenError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateSoftwareToken</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ChangePasswordError.html"
+                                  title='enum rusoto_cognito_idp::ChangePasswordError'>ChangePasswordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ChangePassword</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmDeviceError.html"
+                                  title='enum rusoto_cognito_idp::ConfirmDeviceError'>ConfirmDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmForgotPasswordError.html"
+                                  title='enum rusoto_cognito_idp::ConfirmForgotPasswordError'>ConfirmForgotPasswordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmForgotPassword</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmSignUpError.html"
+                                  title='enum rusoto_cognito_idp::ConfirmSignUpError'>ConfirmSignUpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmSignUp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGroupError.html"
+                                  title='enum rusoto_cognito_idp::CreateGroupError'>CreateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateIdentityProviderError.html"
+                                  title='enum rusoto_cognito_idp::CreateIdentityProviderError'>CreateIdentityProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateIdentityProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateResourceServerError.html"
+                                  title='enum rusoto_cognito_idp::CreateResourceServerError'>CreateResourceServerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateResourceServer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserImportJobError.html"
+                                  title='enum rusoto_cognito_idp::CreateUserImportJobError'>CreateUserImportJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserImportJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserPoolClientError.html"
+                                  title='enum rusoto_cognito_idp::CreateUserPoolClientError'>CreateUserPoolClientError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserPoolClient</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserPoolDomainError.html"
+                                  title='enum rusoto_cognito_idp::CreateUserPoolDomainError'>CreateUserPoolDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserPoolDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserPoolError.html"
+                                  title='enum rusoto_cognito_idp::CreateUserPoolError'>CreateUserPoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUserPool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGroupError.html"
+                                  title='enum rusoto_cognito_idp::DeleteGroupError'>DeleteGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteIdentityProviderError.html"
+                                  title='enum rusoto_cognito_idp::DeleteIdentityProviderError'>DeleteIdentityProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteIdentityProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteResourceServerError.html"
+                                  title='enum rusoto_cognito_idp::DeleteResourceServerError'>DeleteResourceServerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteResourceServer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserAttributesError.html"
+                                  title='enum rusoto_cognito_idp::DeleteUserAttributesError'>DeleteUserAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserError.html"
+                                  title='enum rusoto_cognito_idp::DeleteUserError'>DeleteUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserPoolClientError.html"
+                                  title='enum rusoto_cognito_idp::DeleteUserPoolClientError'>DeleteUserPoolClientError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserPoolClient</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserPoolDomainError.html"
+                                  title='enum rusoto_cognito_idp::DeleteUserPoolDomainError'>DeleteUserPoolDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserPoolDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserPoolError.html"
+                                  title='enum rusoto_cognito_idp::DeleteUserPoolError'>DeleteUserPoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserPool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeIdentityProviderError.html"
+                                  title='enum rusoto_cognito_idp::DescribeIdentityProviderError'>DescribeIdentityProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeIdentityProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeResourceServerError.html"
+                                  title='enum rusoto_cognito_idp::DescribeResourceServerError'>DescribeResourceServerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeResourceServer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRiskConfigurationError.html"
+                                  title='enum rusoto_cognito_idp::DescribeRiskConfigurationError'>DescribeRiskConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRiskConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserImportJobError.html"
+                                  title='enum rusoto_cognito_idp::DescribeUserImportJobError'>DescribeUserImportJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserImportJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserPoolClientError.html"
+                                  title='enum rusoto_cognito_idp::DescribeUserPoolClientError'>DescribeUserPoolClientError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserPoolClient</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserPoolDomainError.html"
+                                  title='enum rusoto_cognito_idp::DescribeUserPoolDomainError'>DescribeUserPoolDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserPoolDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUserPoolError.html"
+                                  title='enum rusoto_cognito_idp::DescribeUserPoolError'>DescribeUserPoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUserPool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ForgetDeviceError.html"
+                                  title='enum rusoto_cognito_idp::ForgetDeviceError'>ForgetDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ForgetDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ForgotPasswordError.html"
+                                  title='enum rusoto_cognito_idp::ForgotPasswordError'>ForgotPasswordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ForgotPassword</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCSVHeaderError.html"
+                                  title='enum rusoto_cognito_idp::GetCSVHeaderError'>GetCSVHeaderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCSVHeader</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeviceError.html"
+                                  title='enum rusoto_cognito_idp::GetDeviceError'>GetDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupError.html"
+                                  title='enum rusoto_cognito_idp::GetGroupError'>GetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetIdentityProviderByIdentifierError.html"
+                                  title='enum rusoto_cognito_idp::GetIdentityProviderByIdentifierError'>GetIdentityProviderByIdentifierError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetIdentityProviderByIdentifier</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSigningCertificateError.html"
+                                  title='enum rusoto_cognito_idp::GetSigningCertificateError'>GetSigningCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSigningCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUICustomizationError.html"
+                                  title='enum rusoto_cognito_idp::GetUICustomizationError'>GetUICustomizationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUICustomization</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUserAttributeVerificationCodeError.html"
+                                  title='enum rusoto_cognito_idp::GetUserAttributeVerificationCodeError'>GetUserAttributeVerificationCodeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUserAttributeVerificationCode</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUserError.html"
+                                  title='enum rusoto_cognito_idp::GetUserError'>GetUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUserPoolMfaConfigError.html"
+                                  title='enum rusoto_cognito_idp::GetUserPoolMfaConfigError'>GetUserPoolMfaConfigError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUserPoolMfaConfig</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GlobalSignOutError.html"
+                                  title='enum rusoto_cognito_idp::GlobalSignOutError'>GlobalSignOutError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GlobalSignOut</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InitiateAuthError.html"
+                                  title='enum rusoto_cognito_idp::InitiateAuthError'>InitiateAuthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InitiateAuth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDevicesError.html"
+                                  title='enum rusoto_cognito_idp::ListDevicesError'>ListDevicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDevices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupsError.html"
+                                  title='enum rusoto_cognito_idp::ListGroupsError'>ListGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListIdentityProvidersError.html"
+                                  title='enum rusoto_cognito_idp::ListIdentityProvidersError'>ListIdentityProvidersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListIdentityProviders</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourceServersError.html"
+                                  title='enum rusoto_cognito_idp::ListResourceServersError'>ListResourceServersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourceServers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUserImportJobsError.html"
+                                  title='enum rusoto_cognito_idp::ListUserImportJobsError'>ListUserImportJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUserImportJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUserPoolClientsError.html"
+                                  title='enum rusoto_cognito_idp::ListUserPoolClientsError'>ListUserPoolClientsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUserPoolClients</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUserPoolsError.html"
+                                  title='enum rusoto_cognito_idp::ListUserPoolsError'>ListUserPoolsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUserPools</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUsersError.html"
+                                  title='enum rusoto_cognito_idp::ListUsersError'>ListUsersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUsers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUsersInGroupError.html"
+                                  title='enum rusoto_cognito_idp::ListUsersInGroupError'>ListUsersInGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUsersInGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResendConfirmationCodeError.html"
+                                  title='enum rusoto_cognito_idp::ResendConfirmationCodeError'>ResendConfirmationCodeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResendConfirmationCode</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RespondToAuthChallengeError.html"
+                                  title='enum rusoto_cognito_idp::RespondToAuthChallengeError'>RespondToAuthChallengeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RespondToAuthChallenge</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetRiskConfigurationError.html"
+                                  title='enum rusoto_cognito_idp::SetRiskConfigurationError'>SetRiskConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetRiskConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetUICustomizationError.html"
+                                  title='enum rusoto_cognito_idp::SetUICustomizationError'>SetUICustomizationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetUICustomization</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetUserMFAPreferenceError.html"
+                                  title='enum rusoto_cognito_idp::SetUserMFAPreferenceError'>SetUserMFAPreferenceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetUserMFAPreference</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetUserPoolMfaConfigError.html"
+                                  title='enum rusoto_cognito_idp::SetUserPoolMfaConfigError'>SetUserPoolMfaConfigError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetUserPoolMfaConfig</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetUserSettingsError.html"
+                                  title='enum rusoto_cognito_idp::SetUserSettingsError'>SetUserSettingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetUserSettings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SignUpError.html"
+                                  title='enum rusoto_cognito_idp::SignUpError'>SignUpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SignUp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartUserImportJobError.html"
+                                  title='enum rusoto_cognito_idp::StartUserImportJobError'>StartUserImportJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartUserImportJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopUserImportJobError.html"
+                                  title='enum rusoto_cognito_idp::StopUserImportJobError'>StopUserImportJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopUserImportJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAuthEventFeedbackError.html"
+                                  title='enum rusoto_cognito_idp::UpdateAuthEventFeedbackError'>UpdateAuthEventFeedbackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAuthEventFeedback</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDeviceStatusError.html"
+                                  title='enum rusoto_cognito_idp::UpdateDeviceStatusError'>UpdateDeviceStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDeviceStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGroupError.html"
+                                  title='enum rusoto_cognito_idp::UpdateGroupError'>UpdateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateIdentityProviderError.html"
+                                  title='enum rusoto_cognito_idp::UpdateIdentityProviderError'>UpdateIdentityProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateIdentityProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateResourceServerError.html"
+                                  title='enum rusoto_cognito_idp::UpdateResourceServerError'>UpdateResourceServerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateResourceServer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserAttributesError.html"
+                                  title='enum rusoto_cognito_idp::UpdateUserAttributesError'>UpdateUserAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUserAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserPoolClientError.html"
+                                  title='enum rusoto_cognito_idp::UpdateUserPoolClientError'>UpdateUserPoolClientError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUserPoolClient</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserPoolError.html"
+                                  title='enum rusoto_cognito_idp::UpdateUserPoolError'>UpdateUserPoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUserPool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.VerifySoftwareTokenError.html"
+                                  title='enum rusoto_cognito_idp::VerifySoftwareTokenError'>VerifySoftwareTokenError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by VerifySoftwareToken</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.VerifyUserAttributeError.html"
+                                  title='enum rusoto_cognito_idp::VerifyUserAttributeError'>VerifyUserAttributeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by VerifyUserAttribute</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.CognitoIdentityProvider.html"
+                                  title='trait rusoto_cognito_idp::CognitoIdentityProvider'>CognitoIdentityProvider</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Cognito Identity Provider API. Amazon Cognito Identity Provider clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_cognito_idp";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

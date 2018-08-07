@@ -1,0 +1,1808 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_lightsail` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_lightsail"><title>rusoto_lightsail - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_lightsail/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_lightsail</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_lightsail', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_lightsail</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_lightsail/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers. Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the Lightsail console or by using the API or command-line interface (CLI).</p> <p>For more information about Lightsail concepts and tasks, see the <a href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev Guide</a>.</p> <p>To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access keys. For details about how to set this up, see the <a href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail Dev Guide</a>.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.LightsailClient.html">LightsailClient</a> and <a href="trait.Lightsail.html">Lightsail</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocateStaticIpRequest.html"
+                                  title='struct rusoto_lightsail::AllocateStaticIpRequest'>AllocateStaticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocateStaticIpResult.html"
+                                  title='struct rusoto_lightsail::AllocateStaticIpResult'>AllocateStaticIpResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachDiskRequest.html"
+                                  title='struct rusoto_lightsail::AttachDiskRequest'>AttachDiskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachDiskResult.html"
+                                  title='struct rusoto_lightsail::AttachDiskResult'>AttachDiskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachInstancesToLoadBalancerRequest.html"
+                                  title='struct rusoto_lightsail::AttachInstancesToLoadBalancerRequest'>AttachInstancesToLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachInstancesToLoadBalancerResult.html"
+                                  title='struct rusoto_lightsail::AttachInstancesToLoadBalancerResult'>AttachInstancesToLoadBalancerResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancerTlsCertificateRequest.html"
+                                  title='struct rusoto_lightsail::AttachLoadBalancerTlsCertificateRequest'>AttachLoadBalancerTlsCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachLoadBalancerTlsCertificateResult.html"
+                                  title='struct rusoto_lightsail::AttachLoadBalancerTlsCertificateResult'>AttachLoadBalancerTlsCertificateResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachStaticIpRequest.html"
+                                  title='struct rusoto_lightsail::AttachStaticIpRequest'>AttachStaticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachStaticIpResult.html"
+                                  title='struct rusoto_lightsail::AttachStaticIpResult'>AttachStaticIpResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AvailabilityZone.html"
+                                  title='struct rusoto_lightsail::AvailabilityZone'>AvailabilityZone</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an Availability Zone.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Blueprint.html"
+                                  title='struct rusoto_lightsail::Blueprint'>Blueprint</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a blueprint (a virtual private server image).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Bundle.html"
+                                  title='struct rusoto_lightsail::Bundle'>Bundle</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a bundle, which is a set of specs describing your virtual private server (or <i>instance</i>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloseInstancePublicPortsRequest.html"
+                                  title='struct rusoto_lightsail::CloseInstancePublicPortsRequest'>CloseInstancePublicPortsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloseInstancePublicPortsResult.html"
+                                  title='struct rusoto_lightsail::CloseInstancePublicPortsResult'>CloseInstancePublicPortsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskFromSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::CreateDiskFromSnapshotRequest'>CreateDiskFromSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskFromSnapshotResult.html"
+                                  title='struct rusoto_lightsail::CreateDiskFromSnapshotResult'>CreateDiskFromSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskRequest.html"
+                                  title='struct rusoto_lightsail::CreateDiskRequest'>CreateDiskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskResult.html"
+                                  title='struct rusoto_lightsail::CreateDiskResult'>CreateDiskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::CreateDiskSnapshotRequest'>CreateDiskSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDiskSnapshotResult.html"
+                                  title='struct rusoto_lightsail::CreateDiskSnapshotResult'>CreateDiskSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDomainEntryRequest.html"
+                                  title='struct rusoto_lightsail::CreateDomainEntryRequest'>CreateDomainEntryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDomainEntryResult.html"
+                                  title='struct rusoto_lightsail::CreateDomainEntryResult'>CreateDomainEntryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDomainRequest.html"
+                                  title='struct rusoto_lightsail::CreateDomainRequest'>CreateDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDomainResult.html"
+                                  title='struct rusoto_lightsail::CreateDomainResult'>CreateDomainResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::CreateInstanceSnapshotRequest'>CreateInstanceSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceSnapshotResult.html"
+                                  title='struct rusoto_lightsail::CreateInstanceSnapshotResult'>CreateInstanceSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstancesFromSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::CreateInstancesFromSnapshotRequest'>CreateInstancesFromSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstancesFromSnapshotResult.html"
+                                  title='struct rusoto_lightsail::CreateInstancesFromSnapshotResult'>CreateInstancesFromSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstancesRequest.html"
+                                  title='struct rusoto_lightsail::CreateInstancesRequest'>CreateInstancesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstancesResult.html"
+                                  title='struct rusoto_lightsail::CreateInstancesResult'>CreateInstancesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateKeyPairRequest.html"
+                                  title='struct rusoto_lightsail::CreateKeyPairRequest'>CreateKeyPairRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateKeyPairResult.html"
+                                  title='struct rusoto_lightsail::CreateKeyPairResult'>CreateKeyPairResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerRequest.html"
+                                  title='struct rusoto_lightsail::CreateLoadBalancerRequest'>CreateLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerResult.html"
+                                  title='struct rusoto_lightsail::CreateLoadBalancerResult'>CreateLoadBalancerResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerTlsCertificateRequest.html"
+                                  title='struct rusoto_lightsail::CreateLoadBalancerTlsCertificateRequest'>CreateLoadBalancerTlsCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerTlsCertificateResult.html"
+                                  title='struct rusoto_lightsail::CreateLoadBalancerTlsCertificateResult'>CreateLoadBalancerTlsCertificateResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDiskRequest.html"
+                                  title='struct rusoto_lightsail::DeleteDiskRequest'>DeleteDiskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDiskResult.html"
+                                  title='struct rusoto_lightsail::DeleteDiskResult'>DeleteDiskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDiskSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::DeleteDiskSnapshotRequest'>DeleteDiskSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDiskSnapshotResult.html"
+                                  title='struct rusoto_lightsail::DeleteDiskSnapshotResult'>DeleteDiskSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDomainEntryRequest.html"
+                                  title='struct rusoto_lightsail::DeleteDomainEntryRequest'>DeleteDomainEntryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDomainEntryResult.html"
+                                  title='struct rusoto_lightsail::DeleteDomainEntryResult'>DeleteDomainEntryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDomainRequest.html"
+                                  title='struct rusoto_lightsail::DeleteDomainRequest'>DeleteDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDomainResult.html"
+                                  title='struct rusoto_lightsail::DeleteDomainResult'>DeleteDomainResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceRequest.html"
+                                  title='struct rusoto_lightsail::DeleteInstanceRequest'>DeleteInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceResult.html"
+                                  title='struct rusoto_lightsail::DeleteInstanceResult'>DeleteInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::DeleteInstanceSnapshotRequest'>DeleteInstanceSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceSnapshotResult.html"
+                                  title='struct rusoto_lightsail::DeleteInstanceSnapshotResult'>DeleteInstanceSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteKeyPairRequest.html"
+                                  title='struct rusoto_lightsail::DeleteKeyPairRequest'>DeleteKeyPairRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteKeyPairResult.html"
+                                  title='struct rusoto_lightsail::DeleteKeyPairResult'>DeleteKeyPairResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerRequest.html"
+                                  title='struct rusoto_lightsail::DeleteLoadBalancerRequest'>DeleteLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerResult.html"
+                                  title='struct rusoto_lightsail::DeleteLoadBalancerResult'>DeleteLoadBalancerResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerTlsCertificateRequest.html"
+                                  title='struct rusoto_lightsail::DeleteLoadBalancerTlsCertificateRequest'>DeleteLoadBalancerTlsCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerTlsCertificateResult.html"
+                                  title='struct rusoto_lightsail::DeleteLoadBalancerTlsCertificateResult'>DeleteLoadBalancerTlsCertificateResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachDiskRequest.html"
+                                  title='struct rusoto_lightsail::DetachDiskRequest'>DetachDiskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachDiskResult.html"
+                                  title='struct rusoto_lightsail::DetachDiskResult'>DetachDiskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachInstancesFromLoadBalancerRequest.html"
+                                  title='struct rusoto_lightsail::DetachInstancesFromLoadBalancerRequest'>DetachInstancesFromLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachInstancesFromLoadBalancerResult.html"
+                                  title='struct rusoto_lightsail::DetachInstancesFromLoadBalancerResult'>DetachInstancesFromLoadBalancerResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachStaticIpRequest.html"
+                                  title='struct rusoto_lightsail::DetachStaticIpRequest'>DetachStaticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachStaticIpResult.html"
+                                  title='struct rusoto_lightsail::DetachStaticIpResult'>DetachStaticIpResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Disk.html"
+                                  title='struct rusoto_lightsail::Disk'>Disk</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a system disk or an block storage disk.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DiskMap.html"
+                                  title='struct rusoto_lightsail::DiskMap'>DiskMap</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a block storage disk mapping.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DiskSnapshot.html"
+                                  title='struct rusoto_lightsail::DiskSnapshot'>DiskSnapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a block storage disk snapshot.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Domain.html"
+                                  title='struct rusoto_lightsail::Domain'>Domain</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a domain where you are storing recordsets in Lightsail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainEntry.html"
+                                  title='struct rusoto_lightsail::DomainEntry'>DomainEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a domain recordset entry.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DownloadDefaultKeyPairRequest.html"
+                                  title='struct rusoto_lightsail::DownloadDefaultKeyPairRequest'>DownloadDefaultKeyPairRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DownloadDefaultKeyPairResult.html"
+                                  title='struct rusoto_lightsail::DownloadDefaultKeyPairResult'>DownloadDefaultKeyPairResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetActiveNamesRequest.html"
+                                  title='struct rusoto_lightsail::GetActiveNamesRequest'>GetActiveNamesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetActiveNamesResult.html"
+                                  title='struct rusoto_lightsail::GetActiveNamesResult'>GetActiveNamesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBlueprintsRequest.html"
+                                  title='struct rusoto_lightsail::GetBlueprintsRequest'>GetBlueprintsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBlueprintsResult.html"
+                                  title='struct rusoto_lightsail::GetBlueprintsResult'>GetBlueprintsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBundlesRequest.html"
+                                  title='struct rusoto_lightsail::GetBundlesRequest'>GetBundlesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBundlesResult.html"
+                                  title='struct rusoto_lightsail::GetBundlesResult'>GetBundlesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskRequest.html"
+                                  title='struct rusoto_lightsail::GetDiskRequest'>GetDiskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskResult.html"
+                                  title='struct rusoto_lightsail::GetDiskResult'>GetDiskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::GetDiskSnapshotRequest'>GetDiskSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskSnapshotResult.html"
+                                  title='struct rusoto_lightsail::GetDiskSnapshotResult'>GetDiskSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskSnapshotsRequest.html"
+                                  title='struct rusoto_lightsail::GetDiskSnapshotsRequest'>GetDiskSnapshotsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDiskSnapshotsResult.html"
+                                  title='struct rusoto_lightsail::GetDiskSnapshotsResult'>GetDiskSnapshotsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDisksRequest.html"
+                                  title='struct rusoto_lightsail::GetDisksRequest'>GetDisksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDisksResult.html"
+                                  title='struct rusoto_lightsail::GetDisksResult'>GetDisksResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainRequest.html"
+                                  title='struct rusoto_lightsail::GetDomainRequest'>GetDomainRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainResult.html"
+                                  title='struct rusoto_lightsail::GetDomainResult'>GetDomainResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainsRequest.html"
+                                  title='struct rusoto_lightsail::GetDomainsRequest'>GetDomainsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDomainsResult.html"
+                                  title='struct rusoto_lightsail::GetDomainsResult'>GetDomainsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceAccessDetailsRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceAccessDetailsRequest'>GetInstanceAccessDetailsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceAccessDetailsResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceAccessDetailsResult'>GetInstanceAccessDetailsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceMetricDataRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceMetricDataRequest'>GetInstanceMetricDataRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceMetricDataResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceMetricDataResult'>GetInstanceMetricDataResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstancePortStatesRequest.html"
+                                  title='struct rusoto_lightsail::GetInstancePortStatesRequest'>GetInstancePortStatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstancePortStatesResult.html"
+                                  title='struct rusoto_lightsail::GetInstancePortStatesResult'>GetInstancePortStatesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceRequest'>GetInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceResult'>GetInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceSnapshotRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceSnapshotRequest'>GetInstanceSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceSnapshotResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceSnapshotResult'>GetInstanceSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceSnapshotsRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceSnapshotsRequest'>GetInstanceSnapshotsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceSnapshotsResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceSnapshotsResult'>GetInstanceSnapshotsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceStateRequest.html"
+                                  title='struct rusoto_lightsail::GetInstanceStateRequest'>GetInstanceStateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceStateResult.html"
+                                  title='struct rusoto_lightsail::GetInstanceStateResult'>GetInstanceStateResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstancesRequest.html"
+                                  title='struct rusoto_lightsail::GetInstancesRequest'>GetInstancesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstancesResult.html"
+                                  title='struct rusoto_lightsail::GetInstancesResult'>GetInstancesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetKeyPairRequest.html"
+                                  title='struct rusoto_lightsail::GetKeyPairRequest'>GetKeyPairRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetKeyPairResult.html"
+                                  title='struct rusoto_lightsail::GetKeyPairResult'>GetKeyPairResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetKeyPairsRequest.html"
+                                  title='struct rusoto_lightsail::GetKeyPairsRequest'>GetKeyPairsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetKeyPairsResult.html"
+                                  title='struct rusoto_lightsail::GetKeyPairsResult'>GetKeyPairsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerMetricDataRequest.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerMetricDataRequest'>GetLoadBalancerMetricDataRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerMetricDataResult.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerMetricDataResult'>GetLoadBalancerMetricDataResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerRequest.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerRequest'>GetLoadBalancerRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerResult.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerResult'>GetLoadBalancerResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerTlsCertificatesRequest.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerTlsCertificatesRequest'>GetLoadBalancerTlsCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancerTlsCertificatesResult.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancerTlsCertificatesResult'>GetLoadBalancerTlsCertificatesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancersRequest.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancersRequest'>GetLoadBalancersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoadBalancersResult.html"
+                                  title='struct rusoto_lightsail::GetLoadBalancersResult'>GetLoadBalancersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationRequest.html"
+                                  title='struct rusoto_lightsail::GetOperationRequest'>GetOperationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationResult.html"
+                                  title='struct rusoto_lightsail::GetOperationResult'>GetOperationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationsForResourceRequest.html"
+                                  title='struct rusoto_lightsail::GetOperationsForResourceRequest'>GetOperationsForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationsForResourceResult.html"
+                                  title='struct rusoto_lightsail::GetOperationsForResourceResult'>GetOperationsForResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationsRequest.html"
+                                  title='struct rusoto_lightsail::GetOperationsRequest'>GetOperationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOperationsResult.html"
+                                  title='struct rusoto_lightsail::GetOperationsResult'>GetOperationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegionsRequest.html"
+                                  title='struct rusoto_lightsail::GetRegionsRequest'>GetRegionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRegionsResult.html"
+                                  title='struct rusoto_lightsail::GetRegionsResult'>GetRegionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStaticIpRequest.html"
+                                  title='struct rusoto_lightsail::GetStaticIpRequest'>GetStaticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStaticIpResult.html"
+                                  title='struct rusoto_lightsail::GetStaticIpResult'>GetStaticIpResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStaticIpsRequest.html"
+                                  title='struct rusoto_lightsail::GetStaticIpsRequest'>GetStaticIpsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetStaticIpsResult.html"
+                                  title='struct rusoto_lightsail::GetStaticIpsResult'>GetStaticIpsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportKeyPairRequest.html"
+                                  title='struct rusoto_lightsail::ImportKeyPairRequest'>ImportKeyPairRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportKeyPairResult.html"
+                                  title='struct rusoto_lightsail::ImportKeyPairResult'>ImportKeyPairResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Instance.html"
+                                  title='struct rusoto_lightsail::Instance'>Instance</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an instance (a virtual private server).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAccessDetails.html"
+                                  title='struct rusoto_lightsail::InstanceAccessDetails'>InstanceAccessDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>The parameters for gaining temporary access to one of your Amazon Lightsail instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceHardware.html"
+                                  title='struct rusoto_lightsail::InstanceHardware'>InstanceHardware</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the hardware for the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceHealthSummary.html"
+                                  title='struct rusoto_lightsail::InstanceHealthSummary'>InstanceHealthSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes information about the health of the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceNetworking.html"
+                                  title='struct rusoto_lightsail::InstanceNetworking'>InstanceNetworking</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes monthly data transfer rates and port information for an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstancePortInfo.html"
+                                  title='struct rusoto_lightsail::InstancePortInfo'>InstancePortInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes information about the instance ports.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstancePortState.html"
+                                  title='struct rusoto_lightsail::InstancePortState'>InstancePortState</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the port state.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceSnapshot.html"
+                                  title='struct rusoto_lightsail::InstanceSnapshot'>InstanceSnapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the snapshot of the virtual private server, or <i>instance</i>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceState.html"
+                                  title='struct rusoto_lightsail::InstanceState'>InstanceState</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the virtual private server (or <i>instance</i>) status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IsVpcPeeredRequest.html"
+                                  title='struct rusoto_lightsail::IsVpcPeeredRequest'>IsVpcPeeredRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IsVpcPeeredResult.html"
+                                  title='struct rusoto_lightsail::IsVpcPeeredResult'>IsVpcPeeredResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyPair.html"
+                                  title='struct rusoto_lightsail::KeyPair'>KeyPair</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the SSH key pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LightsailClient.html"
+                                  title='struct rusoto_lightsail::LightsailClient'>LightsailClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Lightsail API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancer.html"
+                                  title='struct rusoto_lightsail::LoadBalancer'>LoadBalancer</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the Lightsail load balancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTlsCertificate.html"
+                                  title='struct rusoto_lightsail::LoadBalancerTlsCertificate'>LoadBalancerTlsCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a load balancer SSL/TLS certificate.</p> <p>TLS is just an updated, more secure version of Secure Socket Layer (SSL).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTlsCertificateDomainValidationOption.html"
+                                  title='struct rusoto_lightsail::LoadBalancerTlsCertificateDomainValidationOption'>LoadBalancerTlsCertificateDomainValidationOption</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the domain names on an SSL/TLS certificate that you will use to validate domain ownership.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTlsCertificateDomainValidationRecord.html"
+                                  title='struct rusoto_lightsail::LoadBalancerTlsCertificateDomainValidationRecord'>LoadBalancerTlsCertificateDomainValidationRecord</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the validation record of each domain name in the SSL/TLS certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTlsCertificateRenewalSummary.html"
+                                  title='struct rusoto_lightsail::LoadBalancerTlsCertificateRenewalSummary'>LoadBalancerTlsCertificateRenewalSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the status of Lightsail's managed renewal for the certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerTlsCertificateSummary.html"
+                                  title='struct rusoto_lightsail::LoadBalancerTlsCertificateSummary'>LoadBalancerTlsCertificateSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides a summary of SSL/TLS certificate metadata.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDatapoint.html"
+                                  title='struct rusoto_lightsail::MetricDatapoint'>MetricDatapoint</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the metric data point.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MonthlyTransfer.html"
+                                  title='struct rusoto_lightsail::MonthlyTransfer'>MonthlyTransfer</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the monthly data transfer in and out of your virtual private server (or <i>instance</i>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OpenInstancePublicPortsRequest.html"
+                                  title='struct rusoto_lightsail::OpenInstancePublicPortsRequest'>OpenInstancePublicPortsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OpenInstancePublicPortsResult.html"
+                                  title='struct rusoto_lightsail::OpenInstancePublicPortsResult'>OpenInstancePublicPortsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Operation.html"
+                                  title='struct rusoto_lightsail::Operation'>Operation</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the API operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PasswordData.html"
+                                  title='struct rusoto_lightsail::PasswordData'>PasswordData</a></td>
+                           <td class='docblock-short'>
+                                <p>The password data for the Windows Server-based instance, including the ciphertext and the key pair name.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PeerVpcRequest.html"
+                                  title='struct rusoto_lightsail::PeerVpcRequest'>PeerVpcRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PeerVpcResult.html"
+                                  title='struct rusoto_lightsail::PeerVpcResult'>PeerVpcResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PortInfo.html"
+                                  title='struct rusoto_lightsail::PortInfo'>PortInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes information about the ports on your virtual private server (or <i>instance</i>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutInstancePublicPortsRequest.html"
+                                  title='struct rusoto_lightsail::PutInstancePublicPortsRequest'>PutInstancePublicPortsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutInstancePublicPortsResult.html"
+                                  title='struct rusoto_lightsail::PutInstancePublicPortsResult'>PutInstancePublicPortsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootInstanceRequest.html"
+                                  title='struct rusoto_lightsail::RebootInstanceRequest'>RebootInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootInstanceResult.html"
+                                  title='struct rusoto_lightsail::RebootInstanceResult'>RebootInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Region.html"
+                                  title='struct rusoto_lightsail::Region'>Region</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the AWS Region.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReleaseStaticIpRequest.html"
+                                  title='struct rusoto_lightsail::ReleaseStaticIpRequest'>ReleaseStaticIpRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReleaseStaticIpResult.html"
+                                  title='struct rusoto_lightsail::ReleaseStaticIpResult'>ReleaseStaticIpResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceLocation.html"
+                                  title='struct rusoto_lightsail::ResourceLocation'>ResourceLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the resource location.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartInstanceRequest.html"
+                                  title='struct rusoto_lightsail::StartInstanceRequest'>StartInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartInstanceResult.html"
+                                  title='struct rusoto_lightsail::StartInstanceResult'>StartInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StaticIp.html"
+                                  title='struct rusoto_lightsail::StaticIp'>StaticIp</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the static IP.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopInstanceRequest.html"
+                                  title='struct rusoto_lightsail::StopInstanceRequest'>StopInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopInstanceResult.html"
+                                  title='struct rusoto_lightsail::StopInstanceResult'>StopInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UnpeerVpcRequest.html"
+                                  title='struct rusoto_lightsail::UnpeerVpcRequest'>UnpeerVpcRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UnpeerVpcResult.html"
+                                  title='struct rusoto_lightsail::UnpeerVpcResult'>UnpeerVpcResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDomainEntryRequest.html"
+                                  title='struct rusoto_lightsail::UpdateDomainEntryRequest'>UpdateDomainEntryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDomainEntryResult.html"
+                                  title='struct rusoto_lightsail::UpdateDomainEntryResult'>UpdateDomainEntryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLoadBalancerAttributeRequest.html"
+                                  title='struct rusoto_lightsail::UpdateLoadBalancerAttributeRequest'>UpdateLoadBalancerAttributeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLoadBalancerAttributeResult.html"
+                                  title='struct rusoto_lightsail::UpdateLoadBalancerAttributeResult'>UpdateLoadBalancerAttributeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AllocateStaticIpError.html"
+                                  title='enum rusoto_lightsail::AllocateStaticIpError'>AllocateStaticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AllocateStaticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachDiskError.html"
+                                  title='enum rusoto_lightsail::AttachDiskError'>AttachDiskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachDisk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachInstancesToLoadBalancerError.html"
+                                  title='enum rusoto_lightsail::AttachInstancesToLoadBalancerError'>AttachInstancesToLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachInstancesToLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachLoadBalancerTlsCertificateError.html"
+                                  title='enum rusoto_lightsail::AttachLoadBalancerTlsCertificateError'>AttachLoadBalancerTlsCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachLoadBalancerTlsCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachStaticIpError.html"
+                                  title='enum rusoto_lightsail::AttachStaticIpError'>AttachStaticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachStaticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CloseInstancePublicPortsError.html"
+                                  title='enum rusoto_lightsail::CloseInstancePublicPortsError'>CloseInstancePublicPortsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CloseInstancePublicPorts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDiskError.html"
+                                  title='enum rusoto_lightsail::CreateDiskError'>CreateDiskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDisk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDiskFromSnapshotError.html"
+                                  title='enum rusoto_lightsail::CreateDiskFromSnapshotError'>CreateDiskFromSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDiskFromSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDiskSnapshotError.html"
+                                  title='enum rusoto_lightsail::CreateDiskSnapshotError'>CreateDiskSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDiskSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDomainEntryError.html"
+                                  title='enum rusoto_lightsail::CreateDomainEntryError'>CreateDomainEntryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDomainEntry</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDomainError.html"
+                                  title='enum rusoto_lightsail::CreateDomainError'>CreateDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstanceSnapshotError.html"
+                                  title='enum rusoto_lightsail::CreateInstanceSnapshotError'>CreateInstanceSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstanceSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstancesError.html"
+                                  title='enum rusoto_lightsail::CreateInstancesError'>CreateInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstancesFromSnapshotError.html"
+                                  title='enum rusoto_lightsail::CreateInstancesFromSnapshotError'>CreateInstancesFromSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstancesFromSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateKeyPairError.html"
+                                  title='enum rusoto_lightsail::CreateKeyPairError'>CreateKeyPairError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateKeyPair</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoadBalancerError.html"
+                                  title='enum rusoto_lightsail::CreateLoadBalancerError'>CreateLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoadBalancerTlsCertificateError.html"
+                                  title='enum rusoto_lightsail::CreateLoadBalancerTlsCertificateError'>CreateLoadBalancerTlsCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoadBalancerTlsCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDiskError.html"
+                                  title='enum rusoto_lightsail::DeleteDiskError'>DeleteDiskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDisk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDiskSnapshotError.html"
+                                  title='enum rusoto_lightsail::DeleteDiskSnapshotError'>DeleteDiskSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDiskSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDomainEntryError.html"
+                                  title='enum rusoto_lightsail::DeleteDomainEntryError'>DeleteDomainEntryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDomainEntry</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDomainError.html"
+                                  title='enum rusoto_lightsail::DeleteDomainError'>DeleteDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInstanceError.html"
+                                  title='enum rusoto_lightsail::DeleteInstanceError'>DeleteInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInstanceSnapshotError.html"
+                                  title='enum rusoto_lightsail::DeleteInstanceSnapshotError'>DeleteInstanceSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInstanceSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteKeyPairError.html"
+                                  title='enum rusoto_lightsail::DeleteKeyPairError'>DeleteKeyPairError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteKeyPair</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLoadBalancerError.html"
+                                  title='enum rusoto_lightsail::DeleteLoadBalancerError'>DeleteLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLoadBalancerTlsCertificateError.html"
+                                  title='enum rusoto_lightsail::DeleteLoadBalancerTlsCertificateError'>DeleteLoadBalancerTlsCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLoadBalancerTlsCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachDiskError.html"
+                                  title='enum rusoto_lightsail::DetachDiskError'>DetachDiskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachDisk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachInstancesFromLoadBalancerError.html"
+                                  title='enum rusoto_lightsail::DetachInstancesFromLoadBalancerError'>DetachInstancesFromLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachInstancesFromLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachStaticIpError.html"
+                                  title='enum rusoto_lightsail::DetachStaticIpError'>DetachStaticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachStaticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DownloadDefaultKeyPairError.html"
+                                  title='enum rusoto_lightsail::DownloadDefaultKeyPairError'>DownloadDefaultKeyPairError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DownloadDefaultKeyPair</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetActiveNamesError.html"
+                                  title='enum rusoto_lightsail::GetActiveNamesError'>GetActiveNamesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetActiveNames</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetBlueprintsError.html"
+                                  title='enum rusoto_lightsail::GetBlueprintsError'>GetBlueprintsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetBlueprints</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetBundlesError.html"
+                                  title='enum rusoto_lightsail::GetBundlesError'>GetBundlesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetBundles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDiskError.html"
+                                  title='enum rusoto_lightsail::GetDiskError'>GetDiskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDisk</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDiskSnapshotError.html"
+                                  title='enum rusoto_lightsail::GetDiskSnapshotError'>GetDiskSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDiskSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDiskSnapshotsError.html"
+                                  title='enum rusoto_lightsail::GetDiskSnapshotsError'>GetDiskSnapshotsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDiskSnapshots</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDisksError.html"
+                                  title='enum rusoto_lightsail::GetDisksError'>GetDisksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDisks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDomainError.html"
+                                  title='enum rusoto_lightsail::GetDomainError'>GetDomainError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDomain</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDomainsError.html"
+                                  title='enum rusoto_lightsail::GetDomainsError'>GetDomainsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDomains</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceAccessDetailsError.html"
+                                  title='enum rusoto_lightsail::GetInstanceAccessDetailsError'>GetInstanceAccessDetailsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceAccessDetails</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceError.html"
+                                  title='enum rusoto_lightsail::GetInstanceError'>GetInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceMetricDataError.html"
+                                  title='enum rusoto_lightsail::GetInstanceMetricDataError'>GetInstanceMetricDataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceMetricData</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstancePortStatesError.html"
+                                  title='enum rusoto_lightsail::GetInstancePortStatesError'>GetInstancePortStatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstancePortStates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceSnapshotError.html"
+                                  title='enum rusoto_lightsail::GetInstanceSnapshotError'>GetInstanceSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceSnapshotsError.html"
+                                  title='enum rusoto_lightsail::GetInstanceSnapshotsError'>GetInstanceSnapshotsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceSnapshots</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceStateError.html"
+                                  title='enum rusoto_lightsail::GetInstanceStateError'>GetInstanceStateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceState</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstancesError.html"
+                                  title='enum rusoto_lightsail::GetInstancesError'>GetInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetKeyPairError.html"
+                                  title='enum rusoto_lightsail::GetKeyPairError'>GetKeyPairError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetKeyPair</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetKeyPairsError.html"
+                                  title='enum rusoto_lightsail::GetKeyPairsError'>GetKeyPairsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetKeyPairs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoadBalancerError.html"
+                                  title='enum rusoto_lightsail::GetLoadBalancerError'>GetLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoadBalancerMetricDataError.html"
+                                  title='enum rusoto_lightsail::GetLoadBalancerMetricDataError'>GetLoadBalancerMetricDataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoadBalancerMetricData</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoadBalancerTlsCertificatesError.html"
+                                  title='enum rusoto_lightsail::GetLoadBalancerTlsCertificatesError'>GetLoadBalancerTlsCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoadBalancerTlsCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoadBalancersError.html"
+                                  title='enum rusoto_lightsail::GetLoadBalancersError'>GetLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOperationError.html"
+                                  title='enum rusoto_lightsail::GetOperationError'>GetOperationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOperation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOperationsError.html"
+                                  title='enum rusoto_lightsail::GetOperationsError'>GetOperationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOperations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOperationsForResourceError.html"
+                                  title='enum rusoto_lightsail::GetOperationsForResourceError'>GetOperationsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOperationsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRegionsError.html"
+                                  title='enum rusoto_lightsail::GetRegionsError'>GetRegionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRegions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetStaticIpError.html"
+                                  title='enum rusoto_lightsail::GetStaticIpError'>GetStaticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStaticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetStaticIpsError.html"
+                                  title='enum rusoto_lightsail::GetStaticIpsError'>GetStaticIpsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetStaticIps</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportKeyPairError.html"
+                                  title='enum rusoto_lightsail::ImportKeyPairError'>ImportKeyPairError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportKeyPair</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.IsVpcPeeredError.html"
+                                  title='enum rusoto_lightsail::IsVpcPeeredError'>IsVpcPeeredError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by IsVpcPeered</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.OpenInstancePublicPortsError.html"
+                                  title='enum rusoto_lightsail::OpenInstancePublicPortsError'>OpenInstancePublicPortsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by OpenInstancePublicPorts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PeerVpcError.html"
+                                  title='enum rusoto_lightsail::PeerVpcError'>PeerVpcError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PeerVpc</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutInstancePublicPortsError.html"
+                                  title='enum rusoto_lightsail::PutInstancePublicPortsError'>PutInstancePublicPortsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutInstancePublicPorts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebootInstanceError.html"
+                                  title='enum rusoto_lightsail::RebootInstanceError'>RebootInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebootInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ReleaseStaticIpError.html"
+                                  title='enum rusoto_lightsail::ReleaseStaticIpError'>ReleaseStaticIpError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ReleaseStaticIp</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartInstanceError.html"
+                                  title='enum rusoto_lightsail::StartInstanceError'>StartInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopInstanceError.html"
+                                  title='enum rusoto_lightsail::StopInstanceError'>StopInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UnpeerVpcError.html"
+                                  title='enum rusoto_lightsail::UnpeerVpcError'>UnpeerVpcError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UnpeerVpc</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDomainEntryError.html"
+                                  title='enum rusoto_lightsail::UpdateDomainEntryError'>UpdateDomainEntryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDomainEntry</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateLoadBalancerAttributeError.html"
+                                  title='enum rusoto_lightsail::UpdateLoadBalancerAttributeError'>UpdateLoadBalancerAttributeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateLoadBalancerAttribute</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Lightsail.html"
+                                  title='trait rusoto_lightsail::Lightsail'>Lightsail</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Lightsail API. Amazon Lightsail clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_lightsail";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

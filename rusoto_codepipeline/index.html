@@ -1,0 +1,861 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_codepipeline` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_codepipeline"><title>rusoto_codepipeline - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_codepipeline/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_codepipeline</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_codepipeline', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_codepipeline</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_codepipeline/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS CodePipeline</fullname> <p> <b>Overview</b> </p> <p>This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User Guide</a>.</p> <p>You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described below.</p> <p> <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions, gates, and stages. </p> <p>You can work with pipelines by calling:</p> <ul> <li> <p> <a>CreatePipeline</a>, which creates a uniquely-named pipeline.</p> </li> <li> <p> <a>DeletePipeline</a>, which deletes the specified pipeline.</p> </li> <li> <p> <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline Amazon Resource Name (ARN).</p> </li> <li> <p> <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.</p> </li> <li> <p> <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.</p> </li> <li> <p> <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.</p> </li> <li> <p> <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a pipeline.</p> </li> <li> <p> <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the pipeline.</p> </li> <li> <p> <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.</p> </li> </ul> <p>Pipelines include <i>stages</i>, which are logical groupings of gates and actions. Each stage contains one or more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, also refer to the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline Structure Reference</a>.</p> <p>Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. </p> <p>Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.</p> <p>You can work with transitions by calling:</p> <ul> <li> <p> <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.</p> </li> <li> <p> <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline. </p> </li> </ul> <p> <b>Using the API to integrate with AWS CodePipeline</b> </p> <p>For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work with the following items:</p> <p> <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source. </p> <p>You can work with jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job,</p> </li> <li> <p> <a>GetJobDetails</a>, which returns the details of a job,</p> </li> <li> <p> <a>PollForJobs</a>, which determines whether there are any jobs to act upon, </p> </li> <li> <p> <a>PutJobFailureResult</a>, which provides details of a job failure, and</p> </li> <li> <p> <a>PutJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul> <p> <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into AWS CodePipeline. Partner actions are created by members of the AWS Partner Network.</p> <p>You can work with third party jobs by calling:</p> <ul> <li> <p> <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job,</p> </li> <li> <p> <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action,</p> </li> <li> <p> <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon, </p> </li> <li> <p> <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure, and</p> </li> <li> <p> <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.</p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.CodePipelineClient.html">CodePipelineClient</a> and <a href="trait.CodePipeline.html">CodePipeline</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AWSSessionCredentials.html"
+                                  title='struct rusoto_codepipeline::AWSSessionCredentials'>AWSSessionCredentials</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an AWS session credentials object. These credentials are temporary credentials that are issued by AWS Secure Token Service (STS). They can be used to access input and output artifacts in the Amazon S3 bucket used to store artifact for the pipeline in AWS CodePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcknowledgeJobInput.html"
+                                  title='struct rusoto_codepipeline::AcknowledgeJobInput'>AcknowledgeJobInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of an AcknowledgeJob action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcknowledgeJobOutput.html"
+                                  title='struct rusoto_codepipeline::AcknowledgeJobOutput'>AcknowledgeJobOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an AcknowledgeJob action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcknowledgeThirdPartyJobInput.html"
+                                  title='struct rusoto_codepipeline::AcknowledgeThirdPartyJobInput'>AcknowledgeThirdPartyJobInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of an AcknowledgeThirdPartyJob action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AcknowledgeThirdPartyJobOutput.html"
+                                  title='struct rusoto_codepipeline::AcknowledgeThirdPartyJobOutput'>AcknowledgeThirdPartyJobOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an AcknowledgeThirdPartyJob action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionConfiguration.html"
+                                  title='struct rusoto_codepipeline::ActionConfiguration'>ActionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an action configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionConfigurationProperty.html"
+                                  title='struct rusoto_codepipeline::ActionConfigurationProperty'>ActionConfigurationProperty</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an action configuration property.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionContext.html"
+                                  title='struct rusoto_codepipeline::ActionContext'>ActionContext</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the context of an action within the stage of a pipeline to a job worker.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionDeclaration.html"
+                                  title='struct rusoto_codepipeline::ActionDeclaration'>ActionDeclaration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an action declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionExecution.html"
+                                  title='struct rusoto_codepipeline::ActionExecution'>ActionExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the run of an action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionRevision.html"
+                                  title='struct rusoto_codepipeline::ActionRevision'>ActionRevision</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the version (or revision) of an action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionState.html"
+                                  title='struct rusoto_codepipeline::ActionState'>ActionState</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the state of an action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionType.html"
+                                  title='struct rusoto_codepipeline::ActionType'>ActionType</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns information about the details of an action type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionTypeId.html"
+                                  title='struct rusoto_codepipeline::ActionTypeId'>ActionTypeId</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an action type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActionTypeSettings.html"
+                                  title='struct rusoto_codepipeline::ActionTypeSettings'>ActionTypeSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns information about the settings for an action type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApprovalResult.html"
+                                  title='struct rusoto_codepipeline::ApprovalResult'>ApprovalResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the result of an approval request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Artifact.html"
+                                  title='struct rusoto_codepipeline::Artifact'>Artifact</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an artifact that will be worked upon by actions in the pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArtifactDetails.html"
+                                  title='struct rusoto_codepipeline::ArtifactDetails'>ArtifactDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns information about the details of an artifact.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArtifactLocation.html"
+                                  title='struct rusoto_codepipeline::ArtifactLocation'>ArtifactLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the location of an artifact.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArtifactRevision.html"
+                                  title='struct rusoto_codepipeline::ArtifactRevision'>ArtifactRevision</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents revision details of an artifact. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArtifactStore.html"
+                                  title='struct rusoto_codepipeline::ArtifactStore'>ArtifactStore</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon S3 bucket where artifacts are stored for the pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BlockerDeclaration.html"
+                                  title='struct rusoto_codepipeline::BlockerDeclaration'>BlockerDeclaration</a></td>
+                           <td class='docblock-short'>
+                                <p>Reserved for future use.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CodePipelineClient.html"
+                                  title='struct rusoto_codepipeline::CodePipelineClient'>CodePipelineClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the CodePipeline API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCustomActionTypeInput.html"
+                                  title='struct rusoto_codepipeline::CreateCustomActionTypeInput'>CreateCustomActionTypeInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a CreateCustomActionType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCustomActionTypeOutput.html"
+                                  title='struct rusoto_codepipeline::CreateCustomActionTypeOutput'>CreateCustomActionTypeOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a CreateCustomActionType operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePipelineInput.html"
+                                  title='struct rusoto_codepipeline::CreatePipelineInput'>CreatePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a CreatePipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePipelineOutput.html"
+                                  title='struct rusoto_codepipeline::CreatePipelineOutput'>CreatePipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a CreatePipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CurrentRevision.html"
+                                  title='struct rusoto_codepipeline::CurrentRevision'>CurrentRevision</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about a current revision.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCustomActionTypeInput.html"
+                                  title='struct rusoto_codepipeline::DeleteCustomActionTypeInput'>DeleteCustomActionTypeInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a DeleteCustomActionType operation. The custom action will be marked as deleted.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePipelineInput.html"
+                                  title='struct rusoto_codepipeline::DeletePipelineInput'>DeletePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a DeletePipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableStageTransitionInput.html"
+                                  title='struct rusoto_codepipeline::DisableStageTransitionInput'>DisableStageTransitionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a DisableStageTransition action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableStageTransitionInput.html"
+                                  title='struct rusoto_codepipeline::EnableStageTransitionInput'>EnableStageTransitionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of an EnableStageTransition action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EncryptionKey.html"
+                                  title='struct rusoto_codepipeline::EncryptionKey'>EncryptionKey</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the key used to encrypt data in the artifact store, such as an AWS Key Management Service (AWS KMS) key.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ErrorDetails.html"
+                                  title='struct rusoto_codepipeline::ErrorDetails'>ErrorDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an error in AWS CodePipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExecutionDetails.html"
+                                  title='struct rusoto_codepipeline::ExecutionDetails'>ExecutionDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of the actions taken and results produced on an artifact as it passes through stages in the pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailureDetails.html"
+                                  title='struct rusoto_codepipeline::FailureDetails'>FailureDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about failure details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobDetailsInput.html"
+                                  title='struct rusoto_codepipeline::GetJobDetailsInput'>GetJobDetailsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a GetJobDetails action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobDetailsOutput.html"
+                                  title='struct rusoto_codepipeline::GetJobDetailsOutput'>GetJobDetailsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a GetJobDetails action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineExecutionInput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineExecutionInput'>GetPipelineExecutionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a GetPipelineExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineExecutionOutput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineExecutionOutput'>GetPipelineExecutionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a GetPipelineExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineInput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineInput'>GetPipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a GetPipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineOutput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineOutput'>GetPipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a GetPipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineStateInput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineStateInput'>GetPipelineStateInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a GetPipelineState action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPipelineStateOutput.html"
+                                  title='struct rusoto_codepipeline::GetPipelineStateOutput'>GetPipelineStateOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a GetPipelineState action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetThirdPartyJobDetailsInput.html"
+                                  title='struct rusoto_codepipeline::GetThirdPartyJobDetailsInput'>GetThirdPartyJobDetailsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a GetThirdPartyJobDetails action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetThirdPartyJobDetailsOutput.html"
+                                  title='struct rusoto_codepipeline::GetThirdPartyJobDetailsOutput'>GetThirdPartyJobDetailsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a GetThirdPartyJobDetails action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InputArtifact.html"
+                                  title='struct rusoto_codepipeline::InputArtifact'>InputArtifact</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an artifact to be worked on, such as a test or build artifact.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Job.html"
+                                  title='struct rusoto_codepipeline::Job'>Job</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobData.html"
+                                  title='struct rusoto_codepipeline::JobData'>JobData</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents additional information about a job required for a job worker to complete the job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobDetails.html"
+                                  title='struct rusoto_codepipeline::JobDetails'>JobDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the details of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListActionTypesInput.html"
+                                  title='struct rusoto_codepipeline::ListActionTypesInput'>ListActionTypesInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a ListActionTypes action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListActionTypesOutput.html"
+                                  title='struct rusoto_codepipeline::ListActionTypesOutput'>ListActionTypesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a ListActionTypes action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelineExecutionsInput.html"
+                                  title='struct rusoto_codepipeline::ListPipelineExecutionsInput'>ListPipelineExecutionsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a ListPipelineExecutions action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelineExecutionsOutput.html"
+                                  title='struct rusoto_codepipeline::ListPipelineExecutionsOutput'>ListPipelineExecutionsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a ListPipelineExecutions action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelinesInput.html"
+                                  title='struct rusoto_codepipeline::ListPipelinesInput'>ListPipelinesInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a ListPipelines action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPipelinesOutput.html"
+                                  title='struct rusoto_codepipeline::ListPipelinesOutput'>ListPipelinesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a ListPipelines action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputArtifact.html"
+                                  title='struct rusoto_codepipeline::OutputArtifact'>OutputArtifact</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the output of an action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineContext.html"
+                                  title='struct rusoto_codepipeline::PipelineContext'>PipelineContext</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about a pipeline to a job worker.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineDeclaration.html"
+                                  title='struct rusoto_codepipeline::PipelineDeclaration'>PipelineDeclaration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the structure of actions and stages to be performed in the pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineExecution.html"
+                                  title='struct rusoto_codepipeline::PipelineExecution'>PipelineExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an execution of a pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineExecutionSummary.html"
+                                  title='struct rusoto_codepipeline::PipelineExecutionSummary'>PipelineExecutionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summary information about a pipeline execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineMetadata.html"
+                                  title='struct rusoto_codepipeline::PipelineMetadata'>PipelineMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PipelineSummary.html"
+                                  title='struct rusoto_codepipeline::PipelineSummary'>PipelineSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns a summary of a pipeline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForJobsInput.html"
+                                  title='struct rusoto_codepipeline::PollForJobsInput'>PollForJobsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PollForJobs action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForJobsOutput.html"
+                                  title='struct rusoto_codepipeline::PollForJobsOutput'>PollForJobsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a PollForJobs action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForThirdPartyJobsInput.html"
+                                  title='struct rusoto_codepipeline::PollForThirdPartyJobsInput'>PollForThirdPartyJobsInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PollForThirdPartyJobs action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PollForThirdPartyJobsOutput.html"
+                                  title='struct rusoto_codepipeline::PollForThirdPartyJobsOutput'>PollForThirdPartyJobsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a PollForThirdPartyJobs action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutActionRevisionInput.html"
+                                  title='struct rusoto_codepipeline::PutActionRevisionInput'>PutActionRevisionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutActionRevision action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutActionRevisionOutput.html"
+                                  title='struct rusoto_codepipeline::PutActionRevisionOutput'>PutActionRevisionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a PutActionRevision action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutApprovalResultInput.html"
+                                  title='struct rusoto_codepipeline::PutApprovalResultInput'>PutApprovalResultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutApprovalResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutApprovalResultOutput.html"
+                                  title='struct rusoto_codepipeline::PutApprovalResultOutput'>PutApprovalResultOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a PutApprovalResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutJobFailureResultInput.html"
+                                  title='struct rusoto_codepipeline::PutJobFailureResultInput'>PutJobFailureResultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutJobFailureResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutJobSuccessResultInput.html"
+                                  title='struct rusoto_codepipeline::PutJobSuccessResultInput'>PutJobSuccessResultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutJobSuccessResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutThirdPartyJobFailureResultInput.html"
+                                  title='struct rusoto_codepipeline::PutThirdPartyJobFailureResultInput'>PutThirdPartyJobFailureResultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutThirdPartyJobFailureResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutThirdPartyJobSuccessResultInput.html"
+                                  title='struct rusoto_codepipeline::PutThirdPartyJobSuccessResultInput'>PutThirdPartyJobSuccessResultInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a PutThirdPartyJobSuccessResult action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RetryStageExecutionInput.html"
+                                  title='struct rusoto_codepipeline::RetryStageExecutionInput'>RetryStageExecutionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a RetryStageExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RetryStageExecutionOutput.html"
+                                  title='struct rusoto_codepipeline::RetryStageExecutionOutput'>RetryStageExecutionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a RetryStageExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3ArtifactLocation.html"
+                                  title='struct rusoto_codepipeline::S3ArtifactLocation'>S3ArtifactLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>The location of the Amazon S3 bucket that contains a revision.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StageContext.html"
+                                  title='struct rusoto_codepipeline::StageContext'>StageContext</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about a stage to a job worker.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StageDeclaration.html"
+                                  title='struct rusoto_codepipeline::StageDeclaration'>StageDeclaration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about a stage and its definition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StageExecution.html"
+                                  title='struct rusoto_codepipeline::StageExecution'>StageExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the run of a stage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StageState.html"
+                                  title='struct rusoto_codepipeline::StageState'>StageState</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the state of the stage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartPipelineExecutionInput.html"
+                                  title='struct rusoto_codepipeline::StartPipelineExecutionInput'>StartPipelineExecutionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of a StartPipelineExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartPipelineExecutionOutput.html"
+                                  title='struct rusoto_codepipeline::StartPipelineExecutionOutput'>StartPipelineExecutionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a StartPipelineExecution action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThirdPartyJob.html"
+                                  title='struct rusoto_codepipeline::ThirdPartyJob'>ThirdPartyJob</a></td>
+                           <td class='docblock-short'>
+                                <p>A response to a PollForThirdPartyJobs request returned by AWS CodePipeline when there is a job to be worked upon by a partner action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThirdPartyJobData.html"
+                                  title='struct rusoto_codepipeline::ThirdPartyJobData'>ThirdPartyJobData</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the job data for a partner action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ThirdPartyJobDetails.html"
+                                  title='struct rusoto_codepipeline::ThirdPartyJobDetails'>ThirdPartyJobDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of a job sent in response to a GetThirdPartyJobDetails request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TransitionState.html"
+                                  title='struct rusoto_codepipeline::TransitionState'>TransitionState</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the state of transitions between one stage and another stage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePipelineInput.html"
+                                  title='struct rusoto_codepipeline::UpdatePipelineInput'>UpdatePipelineInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the input of an UpdatePipeline action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePipelineOutput.html"
+                                  title='struct rusoto_codepipeline::UpdatePipelineOutput'>UpdatePipelineOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an UpdatePipeline action.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AcknowledgeJobError.html"
+                                  title='enum rusoto_codepipeline::AcknowledgeJobError'>AcknowledgeJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AcknowledgeJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AcknowledgeThirdPartyJobError.html"
+                                  title='enum rusoto_codepipeline::AcknowledgeThirdPartyJobError'>AcknowledgeThirdPartyJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AcknowledgeThirdPartyJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCustomActionTypeError.html"
+                                  title='enum rusoto_codepipeline::CreateCustomActionTypeError'>CreateCustomActionTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCustomActionType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePipelineError.html"
+                                  title='enum rusoto_codepipeline::CreatePipelineError'>CreatePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCustomActionTypeError.html"
+                                  title='enum rusoto_codepipeline::DeleteCustomActionTypeError'>DeleteCustomActionTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCustomActionType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePipelineError.html"
+                                  title='enum rusoto_codepipeline::DeletePipelineError'>DeletePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableStageTransitionError.html"
+                                  title='enum rusoto_codepipeline::DisableStageTransitionError'>DisableStageTransitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableStageTransition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableStageTransitionError.html"
+                                  title='enum rusoto_codepipeline::EnableStageTransitionError'>EnableStageTransitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableStageTransition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobDetailsError.html"
+                                  title='enum rusoto_codepipeline::GetJobDetailsError'>GetJobDetailsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobDetails</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPipelineError.html"
+                                  title='enum rusoto_codepipeline::GetPipelineError'>GetPipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPipeline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPipelineExecutionError.html"
+                                  title='enum rusoto_codepipeline::GetPipelineExecutionError'>GetPipelineExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPipelineExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPipelineStateError.html"
+                                  title='enum rusoto_codepipeline::GetPipelineStateError'>GetPipelineStateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPipelineState</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetThirdPartyJobDetailsError.html"
+                                  title='enum rusoto_codepipeline::GetThirdPartyJobDetailsError'>GetThirdPartyJobDetailsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetThirdPartyJobDetails</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListActionTypesError.html"
+                                  title='enum rusoto_codepipeline::ListActionTypesError'>ListActionTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListActionTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPipelineExecutionsError.html"
+                                  title='enum rusoto_codepipeline::ListPipelineExecutionsError'>ListPipelineExecutionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPipelineExecutions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPipelinesError.html"
+                                  title='enum rusoto_codepipeline::ListPipelinesError'>ListPipelinesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPipelines</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PollForJobsError.html"
+                                  title='enum rusoto_codepipeline::PollForJobsError'>PollForJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PollForJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PollForThirdPartyJobsError.html"
+                                  title='enum rusoto_codepipeline::PollForThirdPartyJobsError'>PollForThirdPartyJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PollForThirdPartyJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutActionRevisionError.html"
+                                  title='enum rusoto_codepipeline::PutActionRevisionError'>PutActionRevisionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutActionRevision</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutApprovalResultError.html"
+                                  title='enum rusoto_codepipeline::PutApprovalResultError'>PutApprovalResultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutApprovalResult</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutJobFailureResultError.html"
+                                  title='enum rusoto_codepipeline::PutJobFailureResultError'>PutJobFailureResultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutJobFailureResult</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutJobSuccessResultError.html"
+                                  title='enum rusoto_codepipeline::PutJobSuccessResultError'>PutJobSuccessResultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutJobSuccessResult</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutThirdPartyJobFailureResultError.html"
+                                  title='enum rusoto_codepipeline::PutThirdPartyJobFailureResultError'>PutThirdPartyJobFailureResultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutThirdPartyJobFailureResult</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutThirdPartyJobSuccessResultError.html"
+                                  title='enum rusoto_codepipeline::PutThirdPartyJobSuccessResultError'>PutThirdPartyJobSuccessResultError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutThirdPartyJobSuccessResult</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RetryStageExecutionError.html"
+                                  title='enum rusoto_codepipeline::RetryStageExecutionError'>RetryStageExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RetryStageExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartPipelineExecutionError.html"
+                                  title='enum rusoto_codepipeline::StartPipelineExecutionError'>StartPipelineExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartPipelineExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdatePipelineError.html"
+                                  title='enum rusoto_codepipeline::UpdatePipelineError'>UpdatePipelineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdatePipeline</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.CodePipeline.html"
+                                  title='trait rusoto_codepipeline::CodePipeline'>CodePipeline</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the CodePipeline API. CodePipeline clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_codepipeline";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

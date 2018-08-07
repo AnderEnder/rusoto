@@ -1,0 +1,757 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_machinelearning` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_machinelearning"><title>rusoto_machinelearning - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_machinelearning/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_machinelearning</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_machinelearning', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_machinelearning</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_machinelearning/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Definition of the public APIs exposed by Amazon Machine Learning</p>
+<p>If you're using the service, you're probably looking for <a href="struct.MachineLearningClient.html">MachineLearningClient</a> and <a href="trait.MachineLearning.html">MachineLearning</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsInput.html"
+                                  title='struct rusoto_machinelearning::AddTagsInput'>AddTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsOutput.html"
+                                  title='struct rusoto_machinelearning::AddTagsOutput'>AddTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Amazon ML returns the following elements. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BatchPrediction.html"
+                                  title='struct rusoto_machinelearning::BatchPrediction'>BatchPrediction</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>GetBatchPrediction</code> operation.</p> <p> The content consists of the detailed metadata, the status, and the data file information of a <code>Batch Prediction</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBatchPredictionInput.html"
+                                  title='struct rusoto_machinelearning::CreateBatchPredictionInput'>CreateBatchPredictionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBatchPredictionOutput.html"
+                                  title='struct rusoto_machinelearning::CreateBatchPredictionOutput'>CreateBatchPredictionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateBatchPrediction</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateBatchPrediction</code> operation is asynchronous. You can poll for status updates by using the <code>&gt;GetBatchPrediction</code> operation and checking the <code>Status</code> parameter of the result. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromRDSInput.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromRDSInput'>CreateDataSourceFromRDSInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromRDSOutput.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromRDSOutput'>CreateDataSourceFromRDSOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateDataSourceFromRDS</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRDS</code>&gt; operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. You can inspect the <code>Message</code> when <code>Status</code> shows up as <code>FAILED</code>. You can also check the progress of the copy operation by going to the <code>DataPipeline</code> console and looking up the pipeline using the <code>pipelineId </code> from the describe call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromRedshiftInput.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromRedshiftInput'>CreateDataSourceFromRedshiftInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromRedshiftOutput.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromRedshiftOutput'>CreateDataSourceFromRedshiftOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateDataSourceFromRedshift</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromRedshift</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromS3Input.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromS3Input'>CreateDataSourceFromS3Input</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDataSourceFromS3Output.html"
+                                  title='struct rusoto_machinelearning::CreateDataSourceFromS3Output'>CreateDataSourceFromS3Output</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateDataSourceFromS3</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateDataSourceFromS3</code> operation is asynchronous. You can poll for updates by using the <code>GetBatchPrediction</code> operation and checking the <code>Status</code> parameter. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEvaluationInput.html"
+                                  title='struct rusoto_machinelearning::CreateEvaluationInput'>CreateEvaluationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEvaluationOutput.html"
+                                  title='struct rusoto_machinelearning::CreateEvaluationOutput'>CreateEvaluationOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateEvaluation</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p><code>CreateEvaluation</code> operation is asynchronous. You can poll for status updates by using the <code>GetEvcaluation</code> operation and checking the <code>Status</code> parameter. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMLModelInput.html"
+                                  title='struct rusoto_machinelearning::CreateMLModelInput'>CreateMLModelInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMLModelOutput.html"
+                                  title='struct rusoto_machinelearning::CreateMLModelOutput'>CreateMLModelOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>CreateMLModel</code> operation, and is an acknowledgement that Amazon ML received the request.</p> <p>The <code>CreateMLModel</code> operation is asynchronous. You can poll for status updates by using the <code>GetMLModel</code> operation and checking the <code>Status</code> parameter. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRealtimeEndpointInput.html"
+                                  title='struct rusoto_machinelearning::CreateRealtimeEndpointInput'>CreateRealtimeEndpointInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRealtimeEndpointOutput.html"
+                                  title='struct rusoto_machinelearning::CreateRealtimeEndpointOutput'>CreateRealtimeEndpointOutput</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Represents the output of an <code>CreateRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>.</p> <note> <p>The endpoint information includes the URI of the <code>MLModel</code>; that is, the location to send online prediction requests for the specified <code>MLModel</code>.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataSource.html"
+                                  title='struct rusoto_machinelearning::DataSource'>DataSource</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of the <code>GetDataSource</code> operation. </p> <p> The content consists of the detailed metadata and data file information and the current status of the <code>DataSource</code>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBatchPredictionInput.html"
+                                  title='struct rusoto_machinelearning::DeleteBatchPredictionInput'>DeleteBatchPredictionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBatchPredictionOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteBatchPredictionOutput'>DeleteBatchPredictionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>DeleteBatchPrediction</code> operation.</p> <p>You can use the <code>GetBatchPrediction</code> operation and check the value of the <code>Status</code> parameter to see whether a <code>BatchPrediction</code> is marked as <code>DELETED</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDataSourceInput.html"
+                                  title='struct rusoto_machinelearning::DeleteDataSourceInput'>DeleteDataSourceInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDataSourceOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteDataSourceOutput'>DeleteDataSourceOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>DeleteDataSource</code> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEvaluationInput.html"
+                                  title='struct rusoto_machinelearning::DeleteEvaluationInput'>DeleteEvaluationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEvaluationOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteEvaluationOutput'>DeleteEvaluationOutput</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>DeleteEvaluation</code> operation. The output indicates that Amazon Machine Learning (Amazon ML) received the request.</p> <p>You can use the <code>GetEvaluation</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>Evaluation</code> is marked as <code>DELETED</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMLModelInput.html"
+                                  title='struct rusoto_machinelearning::DeleteMLModelInput'>DeleteMLModelInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMLModelOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteMLModelOutput'>DeleteMLModelOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>DeleteMLModel</code> operation.</p> <p>You can use the <code>GetMLModel</code> operation and check the value of the <code>Status</code> parameter to see whether an <code>MLModel</code> is marked as <code>DELETED</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRealtimeEndpointInput.html"
+                                  title='struct rusoto_machinelearning::DeleteRealtimeEndpointInput'>DeleteRealtimeEndpointInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRealtimeEndpointOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteRealtimeEndpointOutput'>DeleteRealtimeEndpointOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an <code>DeleteRealtimeEndpoint</code> operation.</p> <p>The result contains the <code>MLModelId</code> and the endpoint information for the <code>MLModel</code>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTagsInput.html"
+                                  title='struct rusoto_machinelearning::DeleteTagsInput'>DeleteTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTagsOutput.html"
+                                  title='struct rusoto_machinelearning::DeleteTagsOutput'>DeleteTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Amazon ML returns the following elements. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBatchPredictionsInput.html"
+                                  title='struct rusoto_machinelearning::DescribeBatchPredictionsInput'>DescribeBatchPredictionsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBatchPredictionsOutput.html"
+                                  title='struct rusoto_machinelearning::DescribeBatchPredictionsOutput'>DescribeBatchPredictionsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>DescribeBatchPredictions</code> operation. The content is essentially a list of <code>BatchPrediction</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDataSourcesInput.html"
+                                  title='struct rusoto_machinelearning::DescribeDataSourcesInput'>DescribeDataSourcesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDataSourcesOutput.html"
+                                  title='struct rusoto_machinelearning::DescribeDataSourcesOutput'>DescribeDataSourcesOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the query results from a <a>DescribeDataSources</a> operation. The content is essentially a list of <code>DataSource</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEvaluationsInput.html"
+                                  title='struct rusoto_machinelearning::DescribeEvaluationsInput'>DescribeEvaluationsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEvaluationsOutput.html"
+                                  title='struct rusoto_machinelearning::DescribeEvaluationsOutput'>DescribeEvaluationsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the query results from a <code>DescribeEvaluations</code> operation. The content is essentially a list of <code>Evaluation</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMLModelsInput.html"
+                                  title='struct rusoto_machinelearning::DescribeMLModelsInput'>DescribeMLModelsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMLModelsOutput.html"
+                                  title='struct rusoto_machinelearning::DescribeMLModelsOutput'>DescribeMLModelsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>DescribeMLModels</code> operation. The content is essentially a list of <code>MLModel</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsInput.html"
+                                  title='struct rusoto_machinelearning::DescribeTagsInput'>DescribeTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsOutput.html"
+                                  title='struct rusoto_machinelearning::DescribeTagsOutput'>DescribeTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Amazon ML returns the following elements. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Evaluation.html"
+                                  title='struct rusoto_machinelearning::Evaluation'>Evaluation</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of <code>GetEvaluation</code> operation. </p> <p>The content consists of the detailed metadata and data file information and the current status of the <code>Evaluation</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBatchPredictionInput.html"
+                                  title='struct rusoto_machinelearning::GetBatchPredictionInput'>GetBatchPredictionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetBatchPredictionOutput.html"
+                                  title='struct rusoto_machinelearning::GetBatchPredictionOutput'>GetBatchPredictionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>GetBatchPrediction</code> operation and describes a <code>BatchPrediction</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDataSourceInput.html"
+                                  title='struct rusoto_machinelearning::GetDataSourceInput'>GetDataSourceInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDataSourceOutput.html"
+                                  title='struct rusoto_machinelearning::GetDataSourceOutput'>GetDataSourceOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>GetDataSource</code> operation and describes a <code>DataSource</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetEvaluationInput.html"
+                                  title='struct rusoto_machinelearning::GetEvaluationInput'>GetEvaluationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetEvaluationOutput.html"
+                                  title='struct rusoto_machinelearning::GetEvaluationOutput'>GetEvaluationOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>GetEvaluation</code> operation and describes an <code>Evaluation</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMLModelInput.html"
+                                  title='struct rusoto_machinelearning::GetMLModelInput'>GetMLModelInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMLModelOutput.html"
+                                  title='struct rusoto_machinelearning::GetMLModelOutput'>GetMLModelOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a <code>GetMLModel</code> operation, and provides detailed information about a <code>MLModel</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MLModel.html"
+                                  title='struct rusoto_machinelearning::MLModel'>MLModel</a></td>
+                           <td class='docblock-short'>
+                                <p> Represents the output of a <code>GetMLModel</code> operation. </p> <p>The content consists of the detailed metadata and the current status of the <code>MLModel</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MachineLearningClient.html"
+                                  title='struct rusoto_machinelearning::MachineLearningClient'>MachineLearningClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Machine Learning API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PerformanceMetrics.html"
+                                  title='struct rusoto_machinelearning::PerformanceMetrics'>PerformanceMetrics</a></td>
+                           <td class='docblock-short'>
+                                <p>Measurements of how well the <code>MLModel</code> performed on known observations. One of the following metrics is returned, based on the type of the <code>MLModel</code>: </p> <ul> <li> <p>BinaryAUC: The binary <code>MLModel</code> uses the Area Under the Curve (AUC) technique to measure performance. </p> </li> <li> <p>RegressionRMSE: The regression <code>MLModel</code> uses the Root Mean Square Error (RMSE) technique to measure performance. RMSE measures the difference between predicted and actual values for a single variable.</p> </li> <li> <p>MulticlassAvgFScore: The multiclass <code>MLModel</code> uses the F1 score technique to measure performance. </p> </li> </ul> <p> For more information about performance metrics, please see the <a href="http://docs.aws.amazon.com/machine-learning/latest/dg">Amazon Machine Learning Developer Guide</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PredictInput.html"
+                                  title='struct rusoto_machinelearning::PredictInput'>PredictInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PredictOutput.html"
+                                  title='struct rusoto_machinelearning::PredictOutput'>PredictOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Prediction.html"
+                                  title='struct rusoto_machinelearning::Prediction'>Prediction</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The output from a <code>Predict</code> operation: </p> <ul> <li> <p> <code>Details</code> - Contains the following attributes: <code>DetailsAttributes.PREDICTIVE<em>MODEL</em>TYPE - REGRESSION | BINARY | MULTICLASS</code> <code>DetailsAttributes.ALGORITHM - SGD</code> </p> </li> <li> <p> <code>PredictedLabel</code> - Present for either a <code>BINARY</code> or <code>MULTICLASS</code> <code>MLModel</code> request. </p> </li> <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li> <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDSDataSpec.html"
+                                  title='struct rusoto_machinelearning::RDSDataSpec'>RDSDataSpec</a></td>
+                           <td class='docblock-short'>
+                                <p>The data specification of an Amazon Relational Database Service (Amazon RDS) <code>DataSource</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDSDatabase.html"
+                                  title='struct rusoto_machinelearning::RDSDatabase'>RDSDatabase</a></td>
+                           <td class='docblock-short'>
+                                <p>The database details of an Amazon RDS database.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDSDatabaseCredentials.html"
+                                  title='struct rusoto_machinelearning::RDSDatabaseCredentials'>RDSDatabaseCredentials</a></td>
+                           <td class='docblock-short'>
+                                <p>The database credentials to connect to a database on an RDS DB instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDSMetadata.html"
+                                  title='struct rusoto_machinelearning::RDSMetadata'>RDSMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>The datasource details that are specific to Amazon RDS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RealtimeEndpointInfo.html"
+                                  title='struct rusoto_machinelearning::RealtimeEndpointInfo'>RealtimeEndpointInfo</a></td>
+                           <td class='docblock-short'>
+                                <p> Describes the real-time endpoint information for an <code>MLModel</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDataSpec.html"
+                                  title='struct rusoto_machinelearning::RedshiftDataSpec'>RedshiftDataSpec</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the data specification of an Amazon Redshift <code>DataSource</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDatabase.html"
+                                  title='struct rusoto_machinelearning::RedshiftDatabase'>RedshiftDatabase</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the database details required to connect to an Amazon Redshift database.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDatabaseCredentials.html"
+                                  title='struct rusoto_machinelearning::RedshiftDatabaseCredentials'>RedshiftDatabaseCredentials</a></td>
+                           <td class='docblock-short'>
+                                <p> Describes the database credentials for connecting to a database on an Amazon Redshift cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftMetadata.html"
+                                  title='struct rusoto_machinelearning::RedshiftMetadata'>RedshiftMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the <code>DataSource</code> details specific to Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3DataSpec.html"
+                                  title='struct rusoto_machinelearning::S3DataSpec'>S3DataSpec</a></td>
+                           <td class='docblock-short'>
+                                <p> Describes the data specification of a <code>DataSource</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_machinelearning::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>A custom key-value pair associated with an ML object, such as an ML model.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateBatchPredictionInput.html"
+                                  title='struct rusoto_machinelearning::UpdateBatchPredictionInput'>UpdateBatchPredictionInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateBatchPredictionOutput.html"
+                                  title='struct rusoto_machinelearning::UpdateBatchPredictionOutput'>UpdateBatchPredictionOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an <code>UpdateBatchPrediction</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDataSourceInput.html"
+                                  title='struct rusoto_machinelearning::UpdateDataSourceInput'>UpdateDataSourceInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDataSourceOutput.html"
+                                  title='struct rusoto_machinelearning::UpdateDataSourceOutput'>UpdateDataSourceOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an <code>UpdateDataSource</code> operation.</p> <p>You can see the updated content by using the <code>GetBatchPrediction</code> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateEvaluationInput.html"
+                                  title='struct rusoto_machinelearning::UpdateEvaluationInput'>UpdateEvaluationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateEvaluationOutput.html"
+                                  title='struct rusoto_machinelearning::UpdateEvaluationOutput'>UpdateEvaluationOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an <code>UpdateEvaluation</code> operation.</p> <p>You can see the updated content by using the <code>GetEvaluation</code> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMLModelInput.html"
+                                  title='struct rusoto_machinelearning::UpdateMLModelInput'>UpdateMLModelInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMLModelOutput.html"
+                                  title='struct rusoto_machinelearning::UpdateMLModelOutput'>UpdateMLModelOutput</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of an <code>UpdateMLModel</code> operation.</p> <p>You can see the updated content by using the <code>GetMLModel</code> operation.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsError.html"
+                                  title='enum rusoto_machinelearning::AddTagsError'>AddTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateBatchPredictionError.html"
+                                  title='enum rusoto_machinelearning::CreateBatchPredictionError'>CreateBatchPredictionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateBatchPrediction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDataSourceFromRDSError.html"
+                                  title='enum rusoto_machinelearning::CreateDataSourceFromRDSError'>CreateDataSourceFromRDSError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDataSourceFromRDS</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDataSourceFromRedshiftError.html"
+                                  title='enum rusoto_machinelearning::CreateDataSourceFromRedshiftError'>CreateDataSourceFromRedshiftError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDataSourceFromRedshift</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDataSourceFromS3Error.html"
+                                  title='enum rusoto_machinelearning::CreateDataSourceFromS3Error'>CreateDataSourceFromS3Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDataSourceFromS3</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateEvaluationError.html"
+                                  title='enum rusoto_machinelearning::CreateEvaluationError'>CreateEvaluationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateEvaluation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateMLModelError.html"
+                                  title='enum rusoto_machinelearning::CreateMLModelError'>CreateMLModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateMLModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRealtimeEndpointError.html"
+                                  title='enum rusoto_machinelearning::CreateRealtimeEndpointError'>CreateRealtimeEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRealtimeEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteBatchPredictionError.html"
+                                  title='enum rusoto_machinelearning::DeleteBatchPredictionError'>DeleteBatchPredictionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteBatchPrediction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDataSourceError.html"
+                                  title='enum rusoto_machinelearning::DeleteDataSourceError'>DeleteDataSourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDataSource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteEvaluationError.html"
+                                  title='enum rusoto_machinelearning::DeleteEvaluationError'>DeleteEvaluationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteEvaluation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteMLModelError.html"
+                                  title='enum rusoto_machinelearning::DeleteMLModelError'>DeleteMLModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteMLModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRealtimeEndpointError.html"
+                                  title='enum rusoto_machinelearning::DeleteRealtimeEndpointError'>DeleteRealtimeEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRealtimeEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTagsError.html"
+                                  title='enum rusoto_machinelearning::DeleteTagsError'>DeleteTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeBatchPredictionsError.html"
+                                  title='enum rusoto_machinelearning::DescribeBatchPredictionsError'>DescribeBatchPredictionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeBatchPredictions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDataSourcesError.html"
+                                  title='enum rusoto_machinelearning::DescribeDataSourcesError'>DescribeDataSourcesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDataSources</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEvaluationsError.html"
+                                  title='enum rusoto_machinelearning::DescribeEvaluationsError'>DescribeEvaluationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEvaluations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMLModelsError.html"
+                                  title='enum rusoto_machinelearning::DescribeMLModelsError'>DescribeMLModelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMLModels</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTagsError.html"
+                                  title='enum rusoto_machinelearning::DescribeTagsError'>DescribeTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetBatchPredictionError.html"
+                                  title='enum rusoto_machinelearning::GetBatchPredictionError'>GetBatchPredictionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetBatchPrediction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDataSourceError.html"
+                                  title='enum rusoto_machinelearning::GetDataSourceError'>GetDataSourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDataSource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetEvaluationError.html"
+                                  title='enum rusoto_machinelearning::GetEvaluationError'>GetEvaluationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetEvaluation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMLModelError.html"
+                                  title='enum rusoto_machinelearning::GetMLModelError'>GetMLModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMLModel</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PredictError.html"
+                                  title='enum rusoto_machinelearning::PredictError'>PredictError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by Predict</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateBatchPredictionError.html"
+                                  title='enum rusoto_machinelearning::UpdateBatchPredictionError'>UpdateBatchPredictionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateBatchPrediction</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDataSourceError.html"
+                                  title='enum rusoto_machinelearning::UpdateDataSourceError'>UpdateDataSourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDataSource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateEvaluationError.html"
+                                  title='enum rusoto_machinelearning::UpdateEvaluationError'>UpdateEvaluationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateEvaluation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMLModelError.html"
+                                  title='enum rusoto_machinelearning::UpdateMLModelError'>UpdateMLModelError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMLModel</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.MachineLearning.html"
+                                  title='trait rusoto_machinelearning::MachineLearning'>MachineLearning</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Machine Learning API. Amazon Machine Learning clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_machinelearning";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

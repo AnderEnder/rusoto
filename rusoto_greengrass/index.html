@@ -1,0 +1,1888 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_greengrass` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_greengrass"><title>rusoto_greengrass - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_greengrass/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_greengrass</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_greengrass', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_greengrass</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_greengrass/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting data to the cloud by allowing you to author AWS Lambda functions that execute locally.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.GreenGrassClient.html">GreenGrassClient</a> and <a href="trait.GreenGrass.html">GreenGrass</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateRoleToGroupRequest.html"
+                                  title='struct rusoto_greengrass::AssociateRoleToGroupRequest'>AssociateRoleToGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateRoleToGroupResponse.html"
+                                  title='struct rusoto_greengrass::AssociateRoleToGroupResponse'>AssociateRoleToGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateServiceRoleToAccountRequest.html"
+                                  title='struct rusoto_greengrass::AssociateServiceRoleToAccountRequest'>AssociateServiceRoleToAccountRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateServiceRoleToAccountResponse.html"
+                                  title='struct rusoto_greengrass::AssociateServiceRoleToAccountResponse'>AssociateServiceRoleToAccountResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConnectivityInfo.html"
+                                  title='struct rusoto_greengrass::ConnectivityInfo'>ConnectivityInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a Greengrass core&#39;s connectivity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Core.html"
+                                  title='struct rusoto_greengrass::Core'>Core</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a core.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CoreDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::CoreDefinitionVersion'>CoreDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a core definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCoreDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateCoreDefinitionRequest'>CreateCoreDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Information needed to create a core definition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCoreDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateCoreDefinitionResponse'>CreateCoreDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCoreDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateCoreDefinitionVersionRequest'>CreateCoreDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCoreDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateCoreDefinitionVersionResponse'>CreateCoreDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeploymentRequest.html"
+                                  title='struct rusoto_greengrass::CreateDeploymentRequest'>CreateDeploymentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeploymentResponse.html"
+                                  title='struct rusoto_greengrass::CreateDeploymentResponse'>CreateDeploymentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeviceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateDeviceDefinitionRequest'>CreateDeviceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeviceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateDeviceDefinitionResponse'>CreateDeviceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeviceDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateDeviceDefinitionVersionRequest'>CreateDeviceDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeviceDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateDeviceDefinitionVersionResponse'>CreateDeviceDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFunctionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateFunctionDefinitionRequest'>CreateFunctionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFunctionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateFunctionDefinitionResponse'>CreateFunctionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFunctionDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateFunctionDefinitionVersionRequest'>CreateFunctionDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Information needed to create a function definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFunctionDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateFunctionDefinitionVersionResponse'>CreateFunctionDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupCertificateAuthorityRequest.html"
+                                  title='struct rusoto_greengrass::CreateGroupCertificateAuthorityRequest'>CreateGroupCertificateAuthorityRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupCertificateAuthorityResponse.html"
+                                  title='struct rusoto_greengrass::CreateGroupCertificateAuthorityResponse'>CreateGroupCertificateAuthorityResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupRequest.html"
+                                  title='struct rusoto_greengrass::CreateGroupRequest'>CreateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupResponse.html"
+                                  title='struct rusoto_greengrass::CreateGroupResponse'>CreateGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateGroupVersionRequest'>CreateGroupVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateGroupVersionResponse'>CreateGroupVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoggerDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateLoggerDefinitionRequest'>CreateLoggerDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoggerDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateLoggerDefinitionResponse'>CreateLoggerDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoggerDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateLoggerDefinitionVersionRequest'>CreateLoggerDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoggerDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateLoggerDefinitionVersionResponse'>CreateLoggerDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateResourceDefinitionRequest'>CreateResourceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateResourceDefinitionResponse'>CreateResourceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateResourceDefinitionVersionRequest'>CreateResourceDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateResourceDefinitionVersionResponse'>CreateResourceDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSoftwareUpdateJobRequest.html"
+                                  title='struct rusoto_greengrass::CreateSoftwareUpdateJobRequest'>CreateSoftwareUpdateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSoftwareUpdateJobResponse.html"
+                                  title='struct rusoto_greengrass::CreateSoftwareUpdateJobResponse'>CreateSoftwareUpdateJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::CreateSubscriptionDefinitionRequest'>CreateSubscriptionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::CreateSubscriptionDefinitionResponse'>CreateSubscriptionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::CreateSubscriptionDefinitionVersionRequest'>CreateSubscriptionDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::CreateSubscriptionDefinitionVersionResponse'>CreateSubscriptionDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DefinitionInformation.html"
+                                  title='struct rusoto_greengrass::DefinitionInformation'>DefinitionInformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a definition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCoreDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteCoreDefinitionRequest'>DeleteCoreDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCoreDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteCoreDefinitionResponse'>DeleteCoreDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDeviceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteDeviceDefinitionRequest'>DeleteDeviceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDeviceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteDeviceDefinitionResponse'>DeleteDeviceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFunctionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteFunctionDefinitionRequest'>DeleteFunctionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFunctionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteFunctionDefinitionResponse'>DeleteFunctionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGroupRequest.html"
+                                  title='struct rusoto_greengrass::DeleteGroupRequest'>DeleteGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGroupResponse.html"
+                                  title='struct rusoto_greengrass::DeleteGroupResponse'>DeleteGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoggerDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteLoggerDefinitionRequest'>DeleteLoggerDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoggerDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteLoggerDefinitionResponse'>DeleteLoggerDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteResourceDefinitionRequest'>DeleteResourceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteResourceDefinitionResponse'>DeleteResourceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriptionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::DeleteSubscriptionDefinitionRequest'>DeleteSubscriptionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriptionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::DeleteSubscriptionDefinitionResponse'>DeleteSubscriptionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deployment.html"
+                                  title='struct rusoto_greengrass::Deployment'>Deployment</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a deployment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Device.html"
+                                  title='struct rusoto_greengrass::Device'>Device</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a device.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::DeviceDefinitionVersion'>DeviceDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a device definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateRoleFromGroupRequest.html"
+                                  title='struct rusoto_greengrass::DisassociateRoleFromGroupRequest'>DisassociateRoleFromGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateRoleFromGroupResponse.html"
+                                  title='struct rusoto_greengrass::DisassociateRoleFromGroupResponse'>DisassociateRoleFromGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateServiceRoleFromAccountRequest.html"
+                                  title='struct rusoto_greengrass::DisassociateServiceRoleFromAccountRequest'>DisassociateServiceRoleFromAccountRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateServiceRoleFromAccountResponse.html"
+                                  title='struct rusoto_greengrass::DisassociateServiceRoleFromAccountResponse'>DisassociateServiceRoleFromAccountResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Empty.html"
+                                  title='struct rusoto_greengrass::Empty'>Empty</a></td>
+                           <td class='docblock-short'>
+                                <p>Empty</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ErrorDetail.html"
+                                  title='struct rusoto_greengrass::ErrorDetail'>ErrorDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Details about the error.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Function.html"
+                                  title='struct rusoto_greengrass::Function'>Function</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a Lambda function.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FunctionConfiguration.html"
+                                  title='struct rusoto_greengrass::FunctionConfiguration'>FunctionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The configuration of the Lambda function.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FunctionConfigurationEnvironment.html"
+                                  title='struct rusoto_greengrass::FunctionConfigurationEnvironment'>FunctionConfigurationEnvironment</a></td>
+                           <td class='docblock-short'>
+                                <p>The environment configuration of the function.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FunctionDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::FunctionDefinitionVersion'>FunctionDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a function definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GeneralError.html"
+                                  title='struct rusoto_greengrass::GeneralError'>GeneralError</a></td>
+                           <td class='docblock-short'>
+                                <p>General error information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAssociatedRoleRequest.html"
+                                  title='struct rusoto_greengrass::GetAssociatedRoleRequest'>GetAssociatedRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAssociatedRoleResponse.html"
+                                  title='struct rusoto_greengrass::GetAssociatedRoleResponse'>GetAssociatedRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetConnectivityInfoRequest.html"
+                                  title='struct rusoto_greengrass::GetConnectivityInfoRequest'>GetConnectivityInfoRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetConnectivityInfoResponse.html"
+                                  title='struct rusoto_greengrass::GetConnectivityInfoResponse'>GetConnectivityInfoResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCoreDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetCoreDefinitionRequest'>GetCoreDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCoreDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetCoreDefinitionResponse'>GetCoreDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCoreDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetCoreDefinitionVersionRequest'>GetCoreDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCoreDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetCoreDefinitionVersionResponse'>GetCoreDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeploymentStatusRequest.html"
+                                  title='struct rusoto_greengrass::GetDeploymentStatusRequest'>GetDeploymentStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeploymentStatusResponse.html"
+                                  title='struct rusoto_greengrass::GetDeploymentStatusResponse'>GetDeploymentStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetDeviceDefinitionRequest'>GetDeviceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetDeviceDefinitionResponse'>GetDeviceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetDeviceDefinitionVersionRequest'>GetDeviceDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetDeviceDefinitionVersionResponse'>GetDeviceDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFunctionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetFunctionDefinitionRequest'>GetFunctionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFunctionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetFunctionDefinitionResponse'>GetFunctionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFunctionDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetFunctionDefinitionVersionRequest'>GetFunctionDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFunctionDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetFunctionDefinitionVersionResponse'>GetFunctionDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupCertificateAuthorityRequest.html"
+                                  title='struct rusoto_greengrass::GetGroupCertificateAuthorityRequest'>GetGroupCertificateAuthorityRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupCertificateAuthorityResponse.html"
+                                  title='struct rusoto_greengrass::GetGroupCertificateAuthorityResponse'>GetGroupCertificateAuthorityResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupCertificateConfigurationRequest.html"
+                                  title='struct rusoto_greengrass::GetGroupCertificateConfigurationRequest'>GetGroupCertificateConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupCertificateConfigurationResponse.html"
+                                  title='struct rusoto_greengrass::GetGroupCertificateConfigurationResponse'>GetGroupCertificateConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupRequest.html"
+                                  title='struct rusoto_greengrass::GetGroupRequest'>GetGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupResponse.html"
+                                  title='struct rusoto_greengrass::GetGroupResponse'>GetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetGroupVersionRequest'>GetGroupVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetGroupVersionResponse'>GetGroupVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggerDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetLoggerDefinitionRequest'>GetLoggerDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggerDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetLoggerDefinitionResponse'>GetLoggerDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggerDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetLoggerDefinitionVersionRequest'>GetLoggerDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoggerDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetLoggerDefinitionVersionResponse'>GetLoggerDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetResourceDefinitionRequest'>GetResourceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetResourceDefinitionResponse'>GetResourceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourceDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetResourceDefinitionVersionRequest'>GetResourceDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetResourceDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetResourceDefinitionVersionResponse'>GetResourceDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServiceRoleForAccountRequest.html"
+                                  title='struct rusoto_greengrass::GetServiceRoleForAccountRequest'>GetServiceRoleForAccountRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServiceRoleForAccountResponse.html"
+                                  title='struct rusoto_greengrass::GetServiceRoleForAccountResponse'>GetServiceRoleForAccountResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::GetSubscriptionDefinitionRequest'>GetSubscriptionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::GetSubscriptionDefinitionResponse'>GetSubscriptionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionDefinitionVersionRequest.html"
+                                  title='struct rusoto_greengrass::GetSubscriptionDefinitionVersionRequest'>GetSubscriptionDefinitionVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionDefinitionVersionResponse.html"
+                                  title='struct rusoto_greengrass::GetSubscriptionDefinitionVersionResponse'>GetSubscriptionDefinitionVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GreenGrassClient.html"
+                                  title='struct rusoto_greengrass::GreenGrassClient'>GreenGrassClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Greengrass API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupCertificateAuthorityProperties.html"
+                                  title='struct rusoto_greengrass::GroupCertificateAuthorityProperties'>GroupCertificateAuthorityProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a certificate authority for a group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupCertificateConfiguration.html"
+                                  title='struct rusoto_greengrass::GroupCertificateConfiguration'>GroupCertificateConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a group certificate configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupInformation.html"
+                                  title='struct rusoto_greengrass::GroupInformation'>GroupInformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupOwnerSetting.html"
+                                  title='struct rusoto_greengrass::GroupOwnerSetting'>GroupOwnerSetting</a></td>
+                           <td class='docblock-short'>
+                                <p>Group owner related settings for local resources.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupVersion.html"
+                                  title='struct rusoto_greengrass::GroupVersion'>GroupVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a group version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCoreDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListCoreDefinitionVersionsRequest'>ListCoreDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCoreDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListCoreDefinitionVersionsResponse'>ListCoreDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCoreDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListCoreDefinitionsRequest'>ListCoreDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCoreDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListCoreDefinitionsResponse'>ListCoreDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListDefinitionsResponse'>ListDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of definitions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeploymentsRequest.html"
+                                  title='struct rusoto_greengrass::ListDeploymentsRequest'>ListDeploymentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeploymentsResponse.html"
+                                  title='struct rusoto_greengrass::ListDeploymentsResponse'>ListDeploymentsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListDeviceDefinitionVersionsRequest'>ListDeviceDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListDeviceDefinitionVersionsResponse'>ListDeviceDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListDeviceDefinitionsRequest'>ListDeviceDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListDeviceDefinitionsResponse'>ListDeviceDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFunctionDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListFunctionDefinitionVersionsRequest'>ListFunctionDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFunctionDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListFunctionDefinitionVersionsResponse'>ListFunctionDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFunctionDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListFunctionDefinitionsRequest'>ListFunctionDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFunctionDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListFunctionDefinitionsResponse'>ListFunctionDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupCertificateAuthoritiesRequest.html"
+                                  title='struct rusoto_greengrass::ListGroupCertificateAuthoritiesRequest'>ListGroupCertificateAuthoritiesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupCertificateAuthoritiesResponse.html"
+                                  title='struct rusoto_greengrass::ListGroupCertificateAuthoritiesResponse'>ListGroupCertificateAuthoritiesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListGroupVersionsRequest'>ListGroupVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListGroupVersionsResponse'>ListGroupVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsRequest.html"
+                                  title='struct rusoto_greengrass::ListGroupsRequest'>ListGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsResponse.html"
+                                  title='struct rusoto_greengrass::ListGroupsResponse'>ListGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListLoggerDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListLoggerDefinitionVersionsRequest'>ListLoggerDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListLoggerDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListLoggerDefinitionVersionsResponse'>ListLoggerDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListLoggerDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListLoggerDefinitionsRequest'>ListLoggerDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListLoggerDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListLoggerDefinitionsResponse'>ListLoggerDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListResourceDefinitionVersionsRequest'>ListResourceDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListResourceDefinitionVersionsResponse'>ListResourceDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListResourceDefinitionsRequest'>ListResourceDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListResourceDefinitionsResponse'>ListResourceDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscriptionDefinitionVersionsRequest.html"
+                                  title='struct rusoto_greengrass::ListSubscriptionDefinitionVersionsRequest'>ListSubscriptionDefinitionVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscriptionDefinitionVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListSubscriptionDefinitionVersionsResponse'>ListSubscriptionDefinitionVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscriptionDefinitionsRequest.html"
+                                  title='struct rusoto_greengrass::ListSubscriptionDefinitionsRequest'>ListSubscriptionDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSubscriptionDefinitionsResponse.html"
+                                  title='struct rusoto_greengrass::ListSubscriptionDefinitionsResponse'>ListSubscriptionDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListVersionsResponse.html"
+                                  title='struct rusoto_greengrass::ListVersionsResponse'>ListVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>A list of versions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LocalDeviceResourceData.html"
+                                  title='struct rusoto_greengrass::LocalDeviceResourceData'>LocalDeviceResourceData</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes that define a local device resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LocalVolumeResourceData.html"
+                                  title='struct rusoto_greengrass::LocalVolumeResourceData'>LocalVolumeResourceData</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes that define a local volume resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Logger.html"
+                                  title='struct rusoto_greengrass::Logger'>Logger</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a logger</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoggerDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::LoggerDefinitionVersion'>LoggerDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a logger definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetDeploymentsRequest.html"
+                                  title='struct rusoto_greengrass::ResetDeploymentsRequest'>ResetDeploymentsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Information needed to reset deployments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetDeploymentsResponse.html"
+                                  title='struct rusoto_greengrass::ResetDeploymentsResponse'>ResetDeploymentsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Resource.html"
+                                  title='struct rusoto_greengrass::Resource'>Resource</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceAccessPolicy.html"
+                                  title='struct rusoto_greengrass::ResourceAccessPolicy'>ResourceAccessPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>A policy used by the function to access a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceDataContainer.html"
+                                  title='struct rusoto_greengrass::ResourceDataContainer'>ResourceDataContainer</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for resource data. The container takes only one of the following supported resource data types: &#39;&#39;LocalDeviceResourceData&#39;&#39;, &#39;&#39;LocalVolumeResourceData&#39;&#39;, &#39;&#39;SageMakerMachineLearningModelResourceData&#39;&#39;, &#39;&#39;S3MachineLearningModelResourceData&#39;&#39;.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::ResourceDefinitionVersion'>ResourceDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a resource definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3MachineLearningModelResourceData.html"
+                                  title='struct rusoto_greengrass::S3MachineLearningModelResourceData'>S3MachineLearningModelResourceData</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes that define an S3 machine learning resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SageMakerMachineLearningModelResourceData.html"
+                                  title='struct rusoto_greengrass::SageMakerMachineLearningModelResourceData'>SageMakerMachineLearningModelResourceData</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes that define an SageMaker machine learning resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subscription.html"
+                                  title='struct rusoto_greengrass::Subscription'>Subscription</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a subscription.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubscriptionDefinitionVersion.html"
+                                  title='struct rusoto_greengrass::SubscriptionDefinitionVersion'>SubscriptionDefinitionVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a subscription definition version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateConnectivityInfoRequest.html"
+                                  title='struct rusoto_greengrass::UpdateConnectivityInfoRequest'>UpdateConnectivityInfoRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Connectivity information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateConnectivityInfoResponse.html"
+                                  title='struct rusoto_greengrass::UpdateConnectivityInfoResponse'>UpdateConnectivityInfoResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateCoreDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateCoreDefinitionRequest'>UpdateCoreDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateCoreDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateCoreDefinitionResponse'>UpdateCoreDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateDeviceDefinitionRequest'>UpdateDeviceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateDeviceDefinitionResponse'>UpdateDeviceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateFunctionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateFunctionDefinitionRequest'>UpdateFunctionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateFunctionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateFunctionDefinitionResponse'>UpdateFunctionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupCertificateConfigurationRequest.html"
+                                  title='struct rusoto_greengrass::UpdateGroupCertificateConfigurationRequest'>UpdateGroupCertificateConfigurationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupCertificateConfigurationResponse.html"
+                                  title='struct rusoto_greengrass::UpdateGroupCertificateConfigurationResponse'>UpdateGroupCertificateConfigurationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupRequest.html"
+                                  title='struct rusoto_greengrass::UpdateGroupRequest'>UpdateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupResponse.html"
+                                  title='struct rusoto_greengrass::UpdateGroupResponse'>UpdateGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLoggerDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateLoggerDefinitionRequest'>UpdateLoggerDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLoggerDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateLoggerDefinitionResponse'>UpdateLoggerDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateResourceDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateResourceDefinitionRequest'>UpdateResourceDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateResourceDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateResourceDefinitionResponse'>UpdateResourceDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSubscriptionDefinitionRequest.html"
+                                  title='struct rusoto_greengrass::UpdateSubscriptionDefinitionRequest'>UpdateSubscriptionDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSubscriptionDefinitionResponse.html"
+                                  title='struct rusoto_greengrass::UpdateSubscriptionDefinitionResponse'>UpdateSubscriptionDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VersionInformation.html"
+                                  title='struct rusoto_greengrass::VersionInformation'>VersionInformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a version.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateRoleToGroupError.html"
+                                  title='enum rusoto_greengrass::AssociateRoleToGroupError'>AssociateRoleToGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateRoleToGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateServiceRoleToAccountError.html"
+                                  title='enum rusoto_greengrass::AssociateServiceRoleToAccountError'>AssociateServiceRoleToAccountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateServiceRoleToAccount</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCoreDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateCoreDefinitionError'>CreateCoreDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCoreDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCoreDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateCoreDefinitionVersionError'>CreateCoreDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCoreDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeploymentError.html"
+                                  title='enum rusoto_greengrass::CreateDeploymentError'>CreateDeploymentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeployment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeviceDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateDeviceDefinitionError'>CreateDeviceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeviceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeviceDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateDeviceDefinitionVersionError'>CreateDeviceDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeviceDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateFunctionDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateFunctionDefinitionError'>CreateFunctionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateFunctionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateFunctionDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateFunctionDefinitionVersionError'>CreateFunctionDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateFunctionDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGroupCertificateAuthorityError.html"
+                                  title='enum rusoto_greengrass::CreateGroupCertificateAuthorityError'>CreateGroupCertificateAuthorityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGroupCertificateAuthority</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGroupError.html"
+                                  title='enum rusoto_greengrass::CreateGroupError'>CreateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGroupVersionError.html"
+                                  title='enum rusoto_greengrass::CreateGroupVersionError'>CreateGroupVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGroupVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoggerDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateLoggerDefinitionError'>CreateLoggerDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoggerDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoggerDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateLoggerDefinitionVersionError'>CreateLoggerDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoggerDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateResourceDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateResourceDefinitionError'>CreateResourceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateResourceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateResourceDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateResourceDefinitionVersionError'>CreateResourceDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateResourceDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSoftwareUpdateJobError.html"
+                                  title='enum rusoto_greengrass::CreateSoftwareUpdateJobError'>CreateSoftwareUpdateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSoftwareUpdateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSubscriptionDefinitionError.html"
+                                  title='enum rusoto_greengrass::CreateSubscriptionDefinitionError'>CreateSubscriptionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSubscriptionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSubscriptionDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::CreateSubscriptionDefinitionVersionError'>CreateSubscriptionDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSubscriptionDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCoreDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteCoreDefinitionError'>DeleteCoreDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCoreDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDeviceDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteDeviceDefinitionError'>DeleteDeviceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDeviceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteFunctionDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteFunctionDefinitionError'>DeleteFunctionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteFunctionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGroupError.html"
+                                  title='enum rusoto_greengrass::DeleteGroupError'>DeleteGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLoggerDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteLoggerDefinitionError'>DeleteLoggerDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLoggerDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteResourceDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteResourceDefinitionError'>DeleteResourceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteResourceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSubscriptionDefinitionError.html"
+                                  title='enum rusoto_greengrass::DeleteSubscriptionDefinitionError'>DeleteSubscriptionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSubscriptionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateRoleFromGroupError.html"
+                                  title='enum rusoto_greengrass::DisassociateRoleFromGroupError'>DisassociateRoleFromGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateRoleFromGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateServiceRoleFromAccountError.html"
+                                  title='enum rusoto_greengrass::DisassociateServiceRoleFromAccountError'>DisassociateServiceRoleFromAccountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateServiceRoleFromAccount</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAssociatedRoleError.html"
+                                  title='enum rusoto_greengrass::GetAssociatedRoleError'>GetAssociatedRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAssociatedRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetConnectivityInfoError.html"
+                                  title='enum rusoto_greengrass::GetConnectivityInfoError'>GetConnectivityInfoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetConnectivityInfo</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCoreDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetCoreDefinitionError'>GetCoreDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCoreDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCoreDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetCoreDefinitionVersionError'>GetCoreDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCoreDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeploymentStatusError.html"
+                                  title='enum rusoto_greengrass::GetDeploymentStatusError'>GetDeploymentStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeploymentStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeviceDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetDeviceDefinitionError'>GetDeviceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeviceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeviceDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetDeviceDefinitionVersionError'>GetDeviceDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeviceDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetFunctionDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetFunctionDefinitionError'>GetFunctionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetFunctionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetFunctionDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetFunctionDefinitionVersionError'>GetFunctionDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetFunctionDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupCertificateAuthorityError.html"
+                                  title='enum rusoto_greengrass::GetGroupCertificateAuthorityError'>GetGroupCertificateAuthorityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroupCertificateAuthority</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupCertificateConfigurationError.html"
+                                  title='enum rusoto_greengrass::GetGroupCertificateConfigurationError'>GetGroupCertificateConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroupCertificateConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupError.html"
+                                  title='enum rusoto_greengrass::GetGroupError'>GetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupVersionError.html"
+                                  title='enum rusoto_greengrass::GetGroupVersionError'>GetGroupVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroupVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoggerDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetLoggerDefinitionError'>GetLoggerDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoggerDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoggerDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetLoggerDefinitionVersionError'>GetLoggerDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoggerDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetResourceDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetResourceDefinitionError'>GetResourceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetResourceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetResourceDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetResourceDefinitionVersionError'>GetResourceDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetResourceDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetServiceRoleForAccountError.html"
+                                  title='enum rusoto_greengrass::GetServiceRoleForAccountError'>GetServiceRoleForAccountError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetServiceRoleForAccount</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSubscriptionDefinitionError.html"
+                                  title='enum rusoto_greengrass::GetSubscriptionDefinitionError'>GetSubscriptionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSubscriptionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSubscriptionDefinitionVersionError.html"
+                                  title='enum rusoto_greengrass::GetSubscriptionDefinitionVersionError'>GetSubscriptionDefinitionVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSubscriptionDefinitionVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCoreDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListCoreDefinitionVersionsError'>ListCoreDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCoreDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCoreDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListCoreDefinitionsError'>ListCoreDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCoreDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDeploymentsError.html"
+                                  title='enum rusoto_greengrass::ListDeploymentsError'>ListDeploymentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDeployments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDeviceDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListDeviceDefinitionVersionsError'>ListDeviceDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDeviceDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDeviceDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListDeviceDefinitionsError'>ListDeviceDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDeviceDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListFunctionDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListFunctionDefinitionVersionsError'>ListFunctionDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListFunctionDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListFunctionDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListFunctionDefinitionsError'>ListFunctionDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListFunctionDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupCertificateAuthoritiesError.html"
+                                  title='enum rusoto_greengrass::ListGroupCertificateAuthoritiesError'>ListGroupCertificateAuthoritiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroupCertificateAuthorities</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupVersionsError.html"
+                                  title='enum rusoto_greengrass::ListGroupVersionsError'>ListGroupVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroupVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupsError.html"
+                                  title='enum rusoto_greengrass::ListGroupsError'>ListGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListLoggerDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListLoggerDefinitionVersionsError'>ListLoggerDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListLoggerDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListLoggerDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListLoggerDefinitionsError'>ListLoggerDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListLoggerDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourceDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListResourceDefinitionVersionsError'>ListResourceDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourceDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourceDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListResourceDefinitionsError'>ListResourceDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourceDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSubscriptionDefinitionVersionsError.html"
+                                  title='enum rusoto_greengrass::ListSubscriptionDefinitionVersionsError'>ListSubscriptionDefinitionVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSubscriptionDefinitionVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSubscriptionDefinitionsError.html"
+                                  title='enum rusoto_greengrass::ListSubscriptionDefinitionsError'>ListSubscriptionDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSubscriptionDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResetDeploymentsError.html"
+                                  title='enum rusoto_greengrass::ResetDeploymentsError'>ResetDeploymentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResetDeployments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateConnectivityInfoError.html"
+                                  title='enum rusoto_greengrass::UpdateConnectivityInfoError'>UpdateConnectivityInfoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateConnectivityInfo</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateCoreDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateCoreDefinitionError'>UpdateCoreDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCoreDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDeviceDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateDeviceDefinitionError'>UpdateDeviceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDeviceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateFunctionDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateFunctionDefinitionError'>UpdateFunctionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateFunctionDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGroupCertificateConfigurationError.html"
+                                  title='enum rusoto_greengrass::UpdateGroupCertificateConfigurationError'>UpdateGroupCertificateConfigurationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGroupCertificateConfiguration</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGroupError.html"
+                                  title='enum rusoto_greengrass::UpdateGroupError'>UpdateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateLoggerDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateLoggerDefinitionError'>UpdateLoggerDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateLoggerDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateResourceDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateResourceDefinitionError'>UpdateResourceDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateResourceDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSubscriptionDefinitionError.html"
+                                  title='enum rusoto_greengrass::UpdateSubscriptionDefinitionError'>UpdateSubscriptionDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSubscriptionDefinition</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.GreenGrass.html"
+                                  title='trait rusoto_greengrass::GreenGrass'>GreenGrass</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Greengrass API. AWS Greengrass clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_greengrass";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

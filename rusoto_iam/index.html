@@ -1,0 +1,2588 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_iam` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_iam"><title>rusoto_iam - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_iam/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_iam</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_iam', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_iam</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_iam/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Identity and Access Management</fullname> <p>AWS Identity and Access Management (IAM) is a web service that you can use to manage users and user permissions under your AWS account. This guide provides descriptions of IAM actions that you can call programmatically. For general information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>. For the user guide for IAM, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/">Using IAM</a>. </p> <note> <p>AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to IAM and AWS. For example, the SDKs take care of tasks such as cryptographically signing requests (see below), managing errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a> page. </p> </note> <p>We recommend that you use the AWS SDKs to make programmatic API calls to IAM. However, you can also use the IAM Query API to make direct calls to the IAM web service. To learn more about the IAM Query API, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>Using IAM</i> guide. IAM supports GET and POST requests for all actions. That is, the API does not require you to use GET for some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for operations that require larger sizes, use a POST request. </p> <p> <b>Signing Requests</b> </p> <p>Requests must be signed using an access key ID and a secret access key. We strongly recommend that you do not use your AWS account access key ID and secret access key for everyday work with IAM. You can use the access key ID and secret access key for an IAM user or you can use the AWS Security Token Service to generate temporary security credentials and use those to sign requests.</p> <p>To sign requests, we recommend that you use <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However, some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this requirement. </p> <p> <b>Additional Resources</b> </p> <p>For more information, see the following:</p> <ul> <li> <p> <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a>. This topic provides general information about the types of credentials used for accessing AWS. </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html">IAM Best Practices</a>. This topic presents a list of suggestions for using the IAM service to help secure your AWS resources. </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a>. This set of topics walk you through the process of signing a request using an access key ID and secret access key. </p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.IamClient.html">IamClient</a> and <a href="trait.Iam.html">Iam</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccessKey.html"
+                                  title='struct rusoto_iam::AccessKey'>AccessKey</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains information about an AWS access key.</p> <p> This data type is used as a response element in the <a>CreateAccessKey</a> and <a>ListAccessKeys</a> operations. </p> <note> <p>The <code>SecretAccessKey</code> value is returned only in response to <a>CreateAccessKey</a>. You can get a secret access key only when you first create an access key; you cannot recover the secret access key later. If you lose a secret access key, you must create a new access key.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccessKeyLastUsed.html"
+                                  title='struct rusoto_iam::AccessKeyLastUsed'>AccessKeyLastUsed</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the last time an AWS access key was used.</p> <p>This data type is used as a response element in the <a>GetAccessKeyLastUsed</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccessKeyMetadata.html"
+                                  title='struct rusoto_iam::AccessKeyMetadata'>AccessKeyMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an AWS access key, without its secret key.</p> <p>This data type is used as a response element in the <a>ListAccessKeys</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddClientIDToOpenIDConnectProviderRequest.html"
+                                  title='struct rusoto_iam::AddClientIDToOpenIDConnectProviderRequest'>AddClientIDToOpenIDConnectProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddRoleToInstanceProfileRequest.html"
+                                  title='struct rusoto_iam::AddRoleToInstanceProfileRequest'>AddRoleToInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddUserToGroupRequest.html"
+                                  title='struct rusoto_iam::AddUserToGroupRequest'>AddUserToGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachGroupPolicyRequest.html"
+                                  title='struct rusoto_iam::AttachGroupPolicyRequest'>AttachGroupPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachRolePolicyRequest.html"
+                                  title='struct rusoto_iam::AttachRolePolicyRequest'>AttachRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachUserPolicyRequest.html"
+                                  title='struct rusoto_iam::AttachUserPolicyRequest'>AttachUserPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttachedPolicy.html"
+                                  title='struct rusoto_iam::AttachedPolicy'>AttachedPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an attached policy.</p> <p>An attached policy is a managed policy that has been attached to a user, group, or role. This data type is used as a response element in the <a>ListAttachedGroupPolicies</a>, <a>ListAttachedRolePolicies</a>, <a>ListAttachedUserPolicies</a>, and <a>GetAccountAuthorizationDetails</a> operations. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChangePasswordRequest.html"
+                                  title='struct rusoto_iam::ChangePasswordRequest'>ChangePasswordRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContextEntry.html"
+                                  title='struct rusoto_iam::ContextEntry'>ContextEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a condition context key. It includes the name of the key and specifies the value (or values, if the context key supports multiple values) to use in the simulation. This information is used when evaluating the <code>Condition</code> elements of the input policies.</p> <p>This data type is used as an input parameter to <code> <a>SimulateCustomPolicy</a> </code> and <code> <a>SimulateCustomPolicy</a> </code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAccessKeyRequest.html"
+                                  title='struct rusoto_iam::CreateAccessKeyRequest'>CreateAccessKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAccessKeyResponse.html"
+                                  title='struct rusoto_iam::CreateAccessKeyResponse'>CreateAccessKeyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateAccessKey</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAccountAliasRequest.html"
+                                  title='struct rusoto_iam::CreateAccountAliasRequest'>CreateAccountAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupRequest.html"
+                                  title='struct rusoto_iam::CreateGroupRequest'>CreateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateGroupResponse.html"
+                                  title='struct rusoto_iam::CreateGroupResponse'>CreateGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateGroup</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceProfileRequest.html"
+                                  title='struct rusoto_iam::CreateInstanceProfileRequest'>CreateInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceProfileResponse.html"
+                                  title='struct rusoto_iam::CreateInstanceProfileResponse'>CreateInstanceProfileResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateInstanceProfile</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoginProfileRequest.html"
+                                  title='struct rusoto_iam::CreateLoginProfileRequest'>CreateLoginProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoginProfileResponse.html"
+                                  title='struct rusoto_iam::CreateLoginProfileResponse'>CreateLoginProfileResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateLoginProfile</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOpenIDConnectProviderRequest.html"
+                                  title='struct rusoto_iam::CreateOpenIDConnectProviderRequest'>CreateOpenIDConnectProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateOpenIDConnectProviderResponse.html"
+                                  title='struct rusoto_iam::CreateOpenIDConnectProviderResponse'>CreateOpenIDConnectProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateOpenIDConnectProvider</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyRequest.html"
+                                  title='struct rusoto_iam::CreatePolicyRequest'>CreatePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyResponse.html"
+                                  title='struct rusoto_iam::CreatePolicyResponse'>CreatePolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreatePolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyVersionRequest.html"
+                                  title='struct rusoto_iam::CreatePolicyVersionRequest'>CreatePolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePolicyVersionResponse.html"
+                                  title='struct rusoto_iam::CreatePolicyVersionResponse'>CreatePolicyVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreatePolicyVersion</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRoleRequest.html"
+                                  title='struct rusoto_iam::CreateRoleRequest'>CreateRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRoleResponse.html"
+                                  title='struct rusoto_iam::CreateRoleResponse'>CreateRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateRole</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSAMLProviderRequest.html"
+                                  title='struct rusoto_iam::CreateSAMLProviderRequest'>CreateSAMLProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSAMLProviderResponse.html"
+                                  title='struct rusoto_iam::CreateSAMLProviderResponse'>CreateSAMLProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateSAMLProvider</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateServiceLinkedRoleRequest.html"
+                                  title='struct rusoto_iam::CreateServiceLinkedRoleRequest'>CreateServiceLinkedRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateServiceLinkedRoleResponse.html"
+                                  title='struct rusoto_iam::CreateServiceLinkedRoleResponse'>CreateServiceLinkedRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateServiceSpecificCredentialRequest.html"
+                                  title='struct rusoto_iam::CreateServiceSpecificCredentialRequest'>CreateServiceSpecificCredentialRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateServiceSpecificCredentialResponse.html"
+                                  title='struct rusoto_iam::CreateServiceSpecificCredentialResponse'>CreateServiceSpecificCredentialResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserRequest.html"
+                                  title='struct rusoto_iam::CreateUserRequest'>CreateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserResponse.html"
+                                  title='struct rusoto_iam::CreateUserResponse'>CreateUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateUser</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateVirtualMFADeviceRequest.html"
+                                  title='struct rusoto_iam::CreateVirtualMFADeviceRequest'>CreateVirtualMFADeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateVirtualMFADeviceResponse.html"
+                                  title='struct rusoto_iam::CreateVirtualMFADeviceResponse'>CreateVirtualMFADeviceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>CreateVirtualMFADevice</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeactivateMFADeviceRequest.html"
+                                  title='struct rusoto_iam::DeactivateMFADeviceRequest'>DeactivateMFADeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAccessKeyRequest.html"
+                                  title='struct rusoto_iam::DeleteAccessKeyRequest'>DeleteAccessKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAccountAliasRequest.html"
+                                  title='struct rusoto_iam::DeleteAccountAliasRequest'>DeleteAccountAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGroupPolicyRequest.html"
+                                  title='struct rusoto_iam::DeleteGroupPolicyRequest'>DeleteGroupPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteGroupRequest.html"
+                                  title='struct rusoto_iam::DeleteGroupRequest'>DeleteGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceProfileRequest.html"
+                                  title='struct rusoto_iam::DeleteInstanceProfileRequest'>DeleteInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoginProfileRequest.html"
+                                  title='struct rusoto_iam::DeleteLoginProfileRequest'>DeleteLoginProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteOpenIDConnectProviderRequest.html"
+                                  title='struct rusoto_iam::DeleteOpenIDConnectProviderRequest'>DeleteOpenIDConnectProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePolicyRequest.html"
+                                  title='struct rusoto_iam::DeletePolicyRequest'>DeletePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePolicyVersionRequest.html"
+                                  title='struct rusoto_iam::DeletePolicyVersionRequest'>DeletePolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRolePolicyRequest.html"
+                                  title='struct rusoto_iam::DeleteRolePolicyRequest'>DeleteRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRoleRequest.html"
+                                  title='struct rusoto_iam::DeleteRoleRequest'>DeleteRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSAMLProviderRequest.html"
+                                  title='struct rusoto_iam::DeleteSAMLProviderRequest'>DeleteSAMLProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSSHPublicKeyRequest.html"
+                                  title='struct rusoto_iam::DeleteSSHPublicKeyRequest'>DeleteSSHPublicKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteServerCertificateRequest.html"
+                                  title='struct rusoto_iam::DeleteServerCertificateRequest'>DeleteServerCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteServiceLinkedRoleRequest.html"
+                                  title='struct rusoto_iam::DeleteServiceLinkedRoleRequest'>DeleteServiceLinkedRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteServiceLinkedRoleResponse.html"
+                                  title='struct rusoto_iam::DeleteServiceLinkedRoleResponse'>DeleteServiceLinkedRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteServiceSpecificCredentialRequest.html"
+                                  title='struct rusoto_iam::DeleteServiceSpecificCredentialRequest'>DeleteServiceSpecificCredentialRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSigningCertificateRequest.html"
+                                  title='struct rusoto_iam::DeleteSigningCertificateRequest'>DeleteSigningCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserPolicyRequest.html"
+                                  title='struct rusoto_iam::DeleteUserPolicyRequest'>DeleteUserPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserRequest.html"
+                                  title='struct rusoto_iam::DeleteUserRequest'>DeleteUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVirtualMFADeviceRequest.html"
+                                  title='struct rusoto_iam::DeleteVirtualMFADeviceRequest'>DeleteVirtualMFADeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletionTaskFailureReasonType.html"
+                                  title='struct rusoto_iam::DeletionTaskFailureReasonType'>DeletionTaskFailureReasonType</a></td>
+                           <td class='docblock-short'>
+                                <p>The reason that the service-linked role deletion failed.</p> <p>This data type is used as a response element in the <a>GetServiceLinkedRoleDeletionStatus</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachGroupPolicyRequest.html"
+                                  title='struct rusoto_iam::DetachGroupPolicyRequest'>DetachGroupPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachRolePolicyRequest.html"
+                                  title='struct rusoto_iam::DetachRolePolicyRequest'>DetachRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetachUserPolicyRequest.html"
+                                  title='struct rusoto_iam::DetachUserPolicyRequest'>DetachUserPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableMFADeviceRequest.html"
+                                  title='struct rusoto_iam::EnableMFADeviceRequest'>EnableMFADeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EvaluationResult.html"
+                                  title='struct rusoto_iam::EvaluationResult'>EvaluationResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of a simulation.</p> <p>This data type is used by the return parameter of <code> <a>SimulateCustomPolicy</a> </code> and <code> <a>SimulatePrincipalPolicy</a> </code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GenerateCredentialReportResponse.html"
+                                  title='struct rusoto_iam::GenerateCredentialReportResponse'>GenerateCredentialReportResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GenerateCredentialReport</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccessKeyLastUsedRequest.html"
+                                  title='struct rusoto_iam::GetAccessKeyLastUsedRequest'>GetAccessKeyLastUsedRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccessKeyLastUsedResponse.html"
+                                  title='struct rusoto_iam::GetAccessKeyLastUsedResponse'>GetAccessKeyLastUsedResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetAccessKeyLastUsed</a> request. It is also returned as a member of the <a>AccessKeyMetaData</a> structure returned by the <a>ListAccessKeys</a> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountAuthorizationDetailsRequest.html"
+                                  title='struct rusoto_iam::GetAccountAuthorizationDetailsRequest'>GetAccountAuthorizationDetailsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountAuthorizationDetailsResponse.html"
+                                  title='struct rusoto_iam::GetAccountAuthorizationDetailsResponse'>GetAccountAuthorizationDetailsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetAccountAuthorizationDetails</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountPasswordPolicyResponse.html"
+                                  title='struct rusoto_iam::GetAccountPasswordPolicyResponse'>GetAccountPasswordPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetAccountPasswordPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountSummaryResponse.html"
+                                  title='struct rusoto_iam::GetAccountSummaryResponse'>GetAccountSummaryResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetAccountSummary</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetContextKeysForCustomPolicyRequest.html"
+                                  title='struct rusoto_iam::GetContextKeysForCustomPolicyRequest'>GetContextKeysForCustomPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetContextKeysForPolicyResponse.html"
+                                  title='struct rusoto_iam::GetContextKeysForPolicyResponse'>GetContextKeysForPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetContextKeysForPrincipalPolicy</a> or <a>GetContextKeysForCustomPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetContextKeysForPrincipalPolicyRequest.html"
+                                  title='struct rusoto_iam::GetContextKeysForPrincipalPolicyRequest'>GetContextKeysForPrincipalPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCredentialReportResponse.html"
+                                  title='struct rusoto_iam::GetCredentialReportResponse'>GetCredentialReportResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetCredentialReport</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupPolicyRequest.html"
+                                  title='struct rusoto_iam::GetGroupPolicyRequest'>GetGroupPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupPolicyResponse.html"
+                                  title='struct rusoto_iam::GetGroupPolicyResponse'>GetGroupPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetGroupPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupRequest.html"
+                                  title='struct rusoto_iam::GetGroupRequest'>GetGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetGroupResponse.html"
+                                  title='struct rusoto_iam::GetGroupResponse'>GetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetGroup</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceProfileRequest.html"
+                                  title='struct rusoto_iam::GetInstanceProfileRequest'>GetInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceProfileResponse.html"
+                                  title='struct rusoto_iam::GetInstanceProfileResponse'>GetInstanceProfileResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetInstanceProfile</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoginProfileRequest.html"
+                                  title='struct rusoto_iam::GetLoginProfileRequest'>GetLoginProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLoginProfileResponse.html"
+                                  title='struct rusoto_iam::GetLoginProfileResponse'>GetLoginProfileResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetLoginProfile</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOpenIDConnectProviderRequest.html"
+                                  title='struct rusoto_iam::GetOpenIDConnectProviderRequest'>GetOpenIDConnectProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOpenIDConnectProviderResponse.html"
+                                  title='struct rusoto_iam::GetOpenIDConnectProviderResponse'>GetOpenIDConnectProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetOpenIDConnectProvider</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyRequest.html"
+                                  title='struct rusoto_iam::GetPolicyRequest'>GetPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyResponse.html"
+                                  title='struct rusoto_iam::GetPolicyResponse'>GetPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyVersionRequest.html"
+                                  title='struct rusoto_iam::GetPolicyVersionRequest'>GetPolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPolicyVersionResponse.html"
+                                  title='struct rusoto_iam::GetPolicyVersionResponse'>GetPolicyVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetPolicyVersion</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRolePolicyRequest.html"
+                                  title='struct rusoto_iam::GetRolePolicyRequest'>GetRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRolePolicyResponse.html"
+                                  title='struct rusoto_iam::GetRolePolicyResponse'>GetRolePolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetRolePolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRoleRequest.html"
+                                  title='struct rusoto_iam::GetRoleRequest'>GetRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRoleResponse.html"
+                                  title='struct rusoto_iam::GetRoleResponse'>GetRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetRole</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSAMLProviderRequest.html"
+                                  title='struct rusoto_iam::GetSAMLProviderRequest'>GetSAMLProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSAMLProviderResponse.html"
+                                  title='struct rusoto_iam::GetSAMLProviderResponse'>GetSAMLProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetSAMLProvider</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSSHPublicKeyRequest.html"
+                                  title='struct rusoto_iam::GetSSHPublicKeyRequest'>GetSSHPublicKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSSHPublicKeyResponse.html"
+                                  title='struct rusoto_iam::GetSSHPublicKeyResponse'>GetSSHPublicKeyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetSSHPublicKey</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServerCertificateRequest.html"
+                                  title='struct rusoto_iam::GetServerCertificateRequest'>GetServerCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServerCertificateResponse.html"
+                                  title='struct rusoto_iam::GetServerCertificateResponse'>GetServerCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetServerCertificate</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServiceLinkedRoleDeletionStatusRequest.html"
+                                  title='struct rusoto_iam::GetServiceLinkedRoleDeletionStatusRequest'>GetServiceLinkedRoleDeletionStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetServiceLinkedRoleDeletionStatusResponse.html"
+                                  title='struct rusoto_iam::GetServiceLinkedRoleDeletionStatusResponse'>GetServiceLinkedRoleDeletionStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserPolicyRequest.html"
+                                  title='struct rusoto_iam::GetUserPolicyRequest'>GetUserPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserPolicyResponse.html"
+                                  title='struct rusoto_iam::GetUserPolicyResponse'>GetUserPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetUserPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserRequest.html"
+                                  title='struct rusoto_iam::GetUserRequest'>GetUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUserResponse.html"
+                                  title='struct rusoto_iam::GetUserResponse'>GetUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>GetUser</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Group.html"
+                                  title='struct rusoto_iam::Group'>Group</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains information about an IAM group entity.</p> <p>This data type is used as a response element in the following operations:</p> <ul> <li> <p> <a>CreateGroup</a> </p> </li> <li> <p> <a>GetGroup</a> </p> </li> <li> <p> <a>ListGroups</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupDetail.html"
+                                  title='struct rusoto_iam::GroupDetail'>GroupDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an IAM group, including all of the group's policies.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IamClient.html"
+                                  title='struct rusoto_iam::IamClient'>IamClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the IAM API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceProfile.html"
+                                  title='struct rusoto_iam::InstanceProfile'>InstanceProfile</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains information about an instance profile.</p> <p>This data type is used as a response element in the following operations:</p> <ul> <li> <p> <a>CreateInstanceProfile</a> </p> </li> <li> <p> <a>GetInstanceProfile</a> </p> </li> <li> <p> <a>ListInstanceProfiles</a> </p> </li> <li> <p> <a>ListInstanceProfilesForRole</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAccessKeysRequest.html"
+                                  title='struct rusoto_iam::ListAccessKeysRequest'>ListAccessKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAccessKeysResponse.html"
+                                  title='struct rusoto_iam::ListAccessKeysResponse'>ListAccessKeysResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListAccessKeys</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAccountAliasesRequest.html"
+                                  title='struct rusoto_iam::ListAccountAliasesRequest'>ListAccountAliasesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAccountAliasesResponse.html"
+                                  title='struct rusoto_iam::ListAccountAliasesResponse'>ListAccountAliasesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListAccountAliases</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedGroupPoliciesRequest.html"
+                                  title='struct rusoto_iam::ListAttachedGroupPoliciesRequest'>ListAttachedGroupPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedGroupPoliciesResponse.html"
+                                  title='struct rusoto_iam::ListAttachedGroupPoliciesResponse'>ListAttachedGroupPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListAttachedGroupPolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedRolePoliciesRequest.html"
+                                  title='struct rusoto_iam::ListAttachedRolePoliciesRequest'>ListAttachedRolePoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedRolePoliciesResponse.html"
+                                  title='struct rusoto_iam::ListAttachedRolePoliciesResponse'>ListAttachedRolePoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListAttachedRolePolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedUserPoliciesRequest.html"
+                                  title='struct rusoto_iam::ListAttachedUserPoliciesRequest'>ListAttachedUserPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttachedUserPoliciesResponse.html"
+                                  title='struct rusoto_iam::ListAttachedUserPoliciesResponse'>ListAttachedUserPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListAttachedUserPolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListEntitiesForPolicyRequest.html"
+                                  title='struct rusoto_iam::ListEntitiesForPolicyRequest'>ListEntitiesForPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListEntitiesForPolicyResponse.html"
+                                  title='struct rusoto_iam::ListEntitiesForPolicyResponse'>ListEntitiesForPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListEntitiesForPolicy</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupPoliciesRequest.html"
+                                  title='struct rusoto_iam::ListGroupPoliciesRequest'>ListGroupPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupPoliciesResponse.html"
+                                  title='struct rusoto_iam::ListGroupPoliciesResponse'>ListGroupPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListGroupPolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsForUserRequest.html"
+                                  title='struct rusoto_iam::ListGroupsForUserRequest'>ListGroupsForUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsForUserResponse.html"
+                                  title='struct rusoto_iam::ListGroupsForUserResponse'>ListGroupsForUserResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListGroupsForUser</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsRequest.html"
+                                  title='struct rusoto_iam::ListGroupsRequest'>ListGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListGroupsResponse.html"
+                                  title='struct rusoto_iam::ListGroupsResponse'>ListGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListGroups</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesForRoleRequest.html"
+                                  title='struct rusoto_iam::ListInstanceProfilesForRoleRequest'>ListInstanceProfilesForRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesForRoleResponse.html"
+                                  title='struct rusoto_iam::ListInstanceProfilesForRoleResponse'>ListInstanceProfilesForRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListInstanceProfilesForRole</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesRequest.html"
+                                  title='struct rusoto_iam::ListInstanceProfilesRequest'>ListInstanceProfilesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesResponse.html"
+                                  title='struct rusoto_iam::ListInstanceProfilesResponse'>ListInstanceProfilesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListInstanceProfiles</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMFADevicesRequest.html"
+                                  title='struct rusoto_iam::ListMFADevicesRequest'>ListMFADevicesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMFADevicesResponse.html"
+                                  title='struct rusoto_iam::ListMFADevicesResponse'>ListMFADevicesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListMFADevices</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOpenIDConnectProvidersRequest.html"
+                                  title='struct rusoto_iam::ListOpenIDConnectProvidersRequest'>ListOpenIDConnectProvidersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOpenIDConnectProvidersResponse.html"
+                                  title='struct rusoto_iam::ListOpenIDConnectProvidersResponse'>ListOpenIDConnectProvidersResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListOpenIDConnectProviders</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPoliciesRequest.html"
+                                  title='struct rusoto_iam::ListPoliciesRequest'>ListPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPoliciesResponse.html"
+                                  title='struct rusoto_iam::ListPoliciesResponse'>ListPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListPolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyVersionsRequest.html"
+                                  title='struct rusoto_iam::ListPolicyVersionsRequest'>ListPolicyVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPolicyVersionsResponse.html"
+                                  title='struct rusoto_iam::ListPolicyVersionsResponse'>ListPolicyVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListPolicyVersions</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRolePoliciesRequest.html"
+                                  title='struct rusoto_iam::ListRolePoliciesRequest'>ListRolePoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRolePoliciesResponse.html"
+                                  title='struct rusoto_iam::ListRolePoliciesResponse'>ListRolePoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListRolePolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRolesRequest.html"
+                                  title='struct rusoto_iam::ListRolesRequest'>ListRolesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRolesResponse.html"
+                                  title='struct rusoto_iam::ListRolesResponse'>ListRolesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListRoles</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSAMLProvidersRequest.html"
+                                  title='struct rusoto_iam::ListSAMLProvidersRequest'>ListSAMLProvidersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSAMLProvidersResponse.html"
+                                  title='struct rusoto_iam::ListSAMLProvidersResponse'>ListSAMLProvidersResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListSAMLProviders</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSSHPublicKeysRequest.html"
+                                  title='struct rusoto_iam::ListSSHPublicKeysRequest'>ListSSHPublicKeysRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSSHPublicKeysResponse.html"
+                                  title='struct rusoto_iam::ListSSHPublicKeysResponse'>ListSSHPublicKeysResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListSSHPublicKeys</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListServerCertificatesRequest.html"
+                                  title='struct rusoto_iam::ListServerCertificatesRequest'>ListServerCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListServerCertificatesResponse.html"
+                                  title='struct rusoto_iam::ListServerCertificatesResponse'>ListServerCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListServerCertificates</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListServiceSpecificCredentialsRequest.html"
+                                  title='struct rusoto_iam::ListServiceSpecificCredentialsRequest'>ListServiceSpecificCredentialsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListServiceSpecificCredentialsResponse.html"
+                                  title='struct rusoto_iam::ListServiceSpecificCredentialsResponse'>ListServiceSpecificCredentialsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSigningCertificatesRequest.html"
+                                  title='struct rusoto_iam::ListSigningCertificatesRequest'>ListSigningCertificatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSigningCertificatesResponse.html"
+                                  title='struct rusoto_iam::ListSigningCertificatesResponse'>ListSigningCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListSigningCertificates</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoliciesRequest.html"
+                                  title='struct rusoto_iam::ListUserPoliciesRequest'>ListUserPoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUserPoliciesResponse.html"
+                                  title='struct rusoto_iam::ListUserPoliciesResponse'>ListUserPoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListUserPolicies</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersRequest.html"
+                                  title='struct rusoto_iam::ListUsersRequest'>ListUsersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUsersResponse.html"
+                                  title='struct rusoto_iam::ListUsersResponse'>ListUsersResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListUsers</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListVirtualMFADevicesRequest.html"
+                                  title='struct rusoto_iam::ListVirtualMFADevicesRequest'>ListVirtualMFADevicesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListVirtualMFADevicesResponse.html"
+                                  title='struct rusoto_iam::ListVirtualMFADevicesResponse'>ListVirtualMFADevicesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>ListVirtualMFADevices</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoginProfile.html"
+                                  title='struct rusoto_iam::LoginProfile'>LoginProfile</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the user name and password create date for a user.</p> <p> This data type is used as a response element in the <a>CreateLoginProfile</a> and <a>GetLoginProfile</a> operations. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MFADevice.html"
+                                  title='struct rusoto_iam::MFADevice'>MFADevice</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an MFA device.</p> <p>This data type is used as a response element in the <a>ListMFADevices</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ManagedPolicyDetail.html"
+                                  title='struct rusoto_iam::ManagedPolicyDetail'>ManagedPolicyDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a managed policy, including the policy's ARN, versions, and the number of principal entities (users, groups, and roles) that the policy is attached to.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p> <p>For more information about managed policies, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OpenIDConnectProviderListEntry.html"
+                                  title='struct rusoto_iam::OpenIDConnectProviderListEntry'>OpenIDConnectProviderListEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the Amazon Resource Name (ARN) for an IAM OpenID Connect provider.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OrganizationsDecisionDetail.html"
+                                  title='struct rusoto_iam::OrganizationsDecisionDetail'>OrganizationsDecisionDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about AWS Organizations's effect on a policy simulation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PasswordPolicy.html"
+                                  title='struct rusoto_iam::PasswordPolicy'>PasswordPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the account password policy.</p> <p> This data type is used as a response element in the <a>GetAccountPasswordPolicy</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Policy.html"
+                                  title='struct rusoto_iam::Policy'>Policy</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a managed policy.</p> <p>This data type is used as a response element in the <a>CreatePolicy</a>, <a>GetPolicy</a>, and <a>ListPolicies</a> operations. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyDetail.html"
+                                  title='struct rusoto_iam::PolicyDetail'>PolicyDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an IAM policy, including the policy document.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyGroup.html"
+                                  title='struct rusoto_iam::PolicyGroup'>PolicyGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a group that a managed policy is attached to.</p> <p>This data type is used as a response element in the <a>ListEntitiesForPolicy</a> operation. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyRole.html"
+                                  title='struct rusoto_iam::PolicyRole'>PolicyRole</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a role that a managed policy is attached to.</p> <p>This data type is used as a response element in the <a>ListEntitiesForPolicy</a> operation. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyUser.html"
+                                  title='struct rusoto_iam::PolicyUser'>PolicyUser</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a user that a managed policy is attached to.</p> <p>This data type is used as a response element in the <a>ListEntitiesForPolicy</a> operation. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PolicyVersion.html"
+                                  title='struct rusoto_iam::PolicyVersion'>PolicyVersion</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a version of a managed policy.</p> <p>This data type is used as a response element in the <a>CreatePolicyVersion</a>, <a>GetPolicyVersion</a>, <a>ListPolicyVersions</a>, and <a>GetAccountAuthorizationDetails</a> operations. </p> <p>For more information about managed policies, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline Policies</a> in the <i>Using IAM</i> guide. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Position.html"
+                                  title='struct rusoto_iam::Position'>Position</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the row and column of a location of a <code>Statement</code> element in a policy document.</p> <p>This data type is used as a member of the <code> <a>Statement</a> </code> type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutGroupPolicyRequest.html"
+                                  title='struct rusoto_iam::PutGroupPolicyRequest'>PutGroupPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRolePolicyRequest.html"
+                                  title='struct rusoto_iam::PutRolePolicyRequest'>PutRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutUserPolicyRequest.html"
+                                  title='struct rusoto_iam::PutUserPolicyRequest'>PutUserPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveClientIDFromOpenIDConnectProviderRequest.html"
+                                  title='struct rusoto_iam::RemoveClientIDFromOpenIDConnectProviderRequest'>RemoveClientIDFromOpenIDConnectProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveRoleFromInstanceProfileRequest.html"
+                                  title='struct rusoto_iam::RemoveRoleFromInstanceProfileRequest'>RemoveRoleFromInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveUserFromGroupRequest.html"
+                                  title='struct rusoto_iam::RemoveUserFromGroupRequest'>RemoveUserFromGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetServiceSpecificCredentialRequest.html"
+                                  title='struct rusoto_iam::ResetServiceSpecificCredentialRequest'>ResetServiceSpecificCredentialRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResetServiceSpecificCredentialResponse.html"
+                                  title='struct rusoto_iam::ResetServiceSpecificCredentialResponse'>ResetServiceSpecificCredentialResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceSpecificResult.html"
+                                  title='struct rusoto_iam::ResourceSpecificResult'>ResourceSpecificResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the result of the simulation of a single API operation call on a single resource.</p> <p>This data type is used by a member of the <a>EvaluationResult</a> data type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResyncMFADeviceRequest.html"
+                                  title='struct rusoto_iam::ResyncMFADeviceRequest'>ResyncMFADeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Role.html"
+                                  title='struct rusoto_iam::Role'>Role</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an IAM role. This structure is returned as a response element in several API operations that interact with roles.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RoleDetail.html"
+                                  title='struct rusoto_iam::RoleDetail'>RoleDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an IAM role, including all of the role's policies.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RoleUsageType.html"
+                                  title='struct rusoto_iam::RoleUsageType'>RoleUsageType</a></td>
+                           <td class='docblock-short'>
+                                <p>An object that contains details about how a service-linked role is used, if that information is returned by the service.</p> <p>This data type is used as a response element in the <a>GetServiceLinkedRoleDeletionStatus</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SAMLProviderListEntry.html"
+                                  title='struct rusoto_iam::SAMLProviderListEntry'>SAMLProviderListEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the list of SAML providers for this account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SSHPublicKey.html"
+                                  title='struct rusoto_iam::SSHPublicKey'>SSHPublicKey</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an SSH public key.</p> <p>This data type is used as a response element in the <a>GetSSHPublicKey</a> and <a>UploadSSHPublicKey</a> operations. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SSHPublicKeyMetadata.html"
+                                  title='struct rusoto_iam::SSHPublicKeyMetadata'>SSHPublicKeyMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an SSH public key, without the key's body or fingerprint.</p> <p>This data type is used as a response element in the <a>ListSSHPublicKeys</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServerCertificate.html"
+                                  title='struct rusoto_iam::ServerCertificate'>ServerCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a server certificate.</p> <p> This data type is used as a response element in the <a>GetServerCertificate</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServerCertificateMetadata.html"
+                                  title='struct rusoto_iam::ServerCertificateMetadata'>ServerCertificateMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a server certificate without its certificate body, certificate chain, and private key.</p> <p> This data type is used as a response element in the <a>UploadServerCertificate</a> and <a>ListServerCertificates</a> operations. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServiceSpecificCredential.html"
+                                  title='struct rusoto_iam::ServiceSpecificCredential'>ServiceSpecificCredential</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the details of a service-specific credential.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServiceSpecificCredentialMetadata.html"
+                                  title='struct rusoto_iam::ServiceSpecificCredentialMetadata'>ServiceSpecificCredentialMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains additional details about a service-specific credential.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetDefaultPolicyVersionRequest.html"
+                                  title='struct rusoto_iam::SetDefaultPolicyVersionRequest'>SetDefaultPolicyVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SigningCertificate.html"
+                                  title='struct rusoto_iam::SigningCertificate'>SigningCertificate</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an X.509 signing certificate.</p> <p>This data type is used as a response element in the <a>UploadSigningCertificate</a> and <a>ListSigningCertificates</a> operations. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SimulateCustomPolicyRequest.html"
+                                  title='struct rusoto_iam::SimulateCustomPolicyRequest'>SimulateCustomPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SimulatePolicyResponse.html"
+                                  title='struct rusoto_iam::SimulatePolicyResponse'>SimulatePolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>SimulatePrincipalPolicy</a> or <a>SimulateCustomPolicy</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SimulatePrincipalPolicyRequest.html"
+                                  title='struct rusoto_iam::SimulatePrincipalPolicyRequest'>SimulatePrincipalPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Statement.html"
+                                  title='struct rusoto_iam::Statement'>Statement</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a reference to a <code>Statement</code> element in a policy document that determines the result of the simulation.</p> <p>This data type is used by the <code>MatchedStatements</code> member of the <code> <a>EvaluationResult</a> </code> type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAccessKeyRequest.html"
+                                  title='struct rusoto_iam::UpdateAccessKeyRequest'>UpdateAccessKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAccountPasswordPolicyRequest.html"
+                                  title='struct rusoto_iam::UpdateAccountPasswordPolicyRequest'>UpdateAccountPasswordPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAssumeRolePolicyRequest.html"
+                                  title='struct rusoto_iam::UpdateAssumeRolePolicyRequest'>UpdateAssumeRolePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateGroupRequest.html"
+                                  title='struct rusoto_iam::UpdateGroupRequest'>UpdateGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLoginProfileRequest.html"
+                                  title='struct rusoto_iam::UpdateLoginProfileRequest'>UpdateLoginProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateOpenIDConnectProviderThumbprintRequest.html"
+                                  title='struct rusoto_iam::UpdateOpenIDConnectProviderThumbprintRequest'>UpdateOpenIDConnectProviderThumbprintRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleDescriptionRequest.html"
+                                  title='struct rusoto_iam::UpdateRoleDescriptionRequest'>UpdateRoleDescriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleDescriptionResponse.html"
+                                  title='struct rusoto_iam::UpdateRoleDescriptionResponse'>UpdateRoleDescriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleRequest.html"
+                                  title='struct rusoto_iam::UpdateRoleRequest'>UpdateRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRoleResponse.html"
+                                  title='struct rusoto_iam::UpdateRoleResponse'>UpdateRoleResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSAMLProviderRequest.html"
+                                  title='struct rusoto_iam::UpdateSAMLProviderRequest'>UpdateSAMLProviderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSAMLProviderResponse.html"
+                                  title='struct rusoto_iam::UpdateSAMLProviderResponse'>UpdateSAMLProviderResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>UpdateSAMLProvider</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSSHPublicKeyRequest.html"
+                                  title='struct rusoto_iam::UpdateSSHPublicKeyRequest'>UpdateSSHPublicKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateServerCertificateRequest.html"
+                                  title='struct rusoto_iam::UpdateServerCertificateRequest'>UpdateServerCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateServiceSpecificCredentialRequest.html"
+                                  title='struct rusoto_iam::UpdateServiceSpecificCredentialRequest'>UpdateServiceSpecificCredentialRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSigningCertificateRequest.html"
+                                  title='struct rusoto_iam::UpdateSigningCertificateRequest'>UpdateSigningCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserRequest.html"
+                                  title='struct rusoto_iam::UpdateUserRequest'>UpdateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadSSHPublicKeyRequest.html"
+                                  title='struct rusoto_iam::UploadSSHPublicKeyRequest'>UploadSSHPublicKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadSSHPublicKeyResponse.html"
+                                  title='struct rusoto_iam::UploadSSHPublicKeyResponse'>UploadSSHPublicKeyResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>UploadSSHPublicKey</a> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadServerCertificateRequest.html"
+                                  title='struct rusoto_iam::UploadServerCertificateRequest'>UploadServerCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadServerCertificateResponse.html"
+                                  title='struct rusoto_iam::UploadServerCertificateResponse'>UploadServerCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>UploadServerCertificate</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadSigningCertificateRequest.html"
+                                  title='struct rusoto_iam::UploadSigningCertificateRequest'>UploadSigningCertificateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadSigningCertificateResponse.html"
+                                  title='struct rusoto_iam::UploadSigningCertificateResponse'>UploadSigningCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the response to a successful <a>UploadSigningCertificate</a> request. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.User.html"
+                                  title='struct rusoto_iam::User'>User</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Contains information about an IAM user entity.</p> <p>This data type is used as a response element in the following operations:</p> <ul> <li> <p> <a>CreateUser</a> </p> </li> <li> <p> <a>GetUser</a> </p> </li> <li> <p> <a>ListUsers</a> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserDetail.html"
+                                  title='struct rusoto_iam::UserDetail'>UserDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an IAM user, including all the user's policies and all the IAM groups the user is in.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VirtualMFADevice.html"
+                                  title='struct rusoto_iam::VirtualMFADevice'>VirtualMFADevice</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a virtual MFA device.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddClientIDToOpenIDConnectProviderError.html"
+                                  title='enum rusoto_iam::AddClientIDToOpenIDConnectProviderError'>AddClientIDToOpenIDConnectProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddClientIDToOpenIDConnectProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddRoleToInstanceProfileError.html"
+                                  title='enum rusoto_iam::AddRoleToInstanceProfileError'>AddRoleToInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddRoleToInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddUserToGroupError.html"
+                                  title='enum rusoto_iam::AddUserToGroupError'>AddUserToGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddUserToGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachGroupPolicyError.html"
+                                  title='enum rusoto_iam::AttachGroupPolicyError'>AttachGroupPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachGroupPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachRolePolicyError.html"
+                                  title='enum rusoto_iam::AttachRolePolicyError'>AttachRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AttachUserPolicyError.html"
+                                  title='enum rusoto_iam::AttachUserPolicyError'>AttachUserPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AttachUserPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ChangePasswordError.html"
+                                  title='enum rusoto_iam::ChangePasswordError'>ChangePasswordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ChangePassword</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAccessKeyError.html"
+                                  title='enum rusoto_iam::CreateAccessKeyError'>CreateAccessKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAccessKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAccountAliasError.html"
+                                  title='enum rusoto_iam::CreateAccountAliasError'>CreateAccountAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAccountAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateGroupError.html"
+                                  title='enum rusoto_iam::CreateGroupError'>CreateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstanceProfileError.html"
+                                  title='enum rusoto_iam::CreateInstanceProfileError'>CreateInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoginProfileError.html"
+                                  title='enum rusoto_iam::CreateLoginProfileError'>CreateLoginProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoginProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateOpenIDConnectProviderError.html"
+                                  title='enum rusoto_iam::CreateOpenIDConnectProviderError'>CreateOpenIDConnectProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateOpenIDConnectProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePolicyError.html"
+                                  title='enum rusoto_iam::CreatePolicyError'>CreatePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePolicyVersionError.html"
+                                  title='enum rusoto_iam::CreatePolicyVersionError'>CreatePolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRoleError.html"
+                                  title='enum rusoto_iam::CreateRoleError'>CreateRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSAMLProviderError.html"
+                                  title='enum rusoto_iam::CreateSAMLProviderError'>CreateSAMLProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSAMLProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateServiceLinkedRoleError.html"
+                                  title='enum rusoto_iam::CreateServiceLinkedRoleError'>CreateServiceLinkedRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateServiceLinkedRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateServiceSpecificCredentialError.html"
+                                  title='enum rusoto_iam::CreateServiceSpecificCredentialError'>CreateServiceSpecificCredentialError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateServiceSpecificCredential</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserError.html"
+                                  title='enum rusoto_iam::CreateUserError'>CreateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateVirtualMFADeviceError.html"
+                                  title='enum rusoto_iam::CreateVirtualMFADeviceError'>CreateVirtualMFADeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateVirtualMFADevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeactivateMFADeviceError.html"
+                                  title='enum rusoto_iam::DeactivateMFADeviceError'>DeactivateMFADeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeactivateMFADevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAccessKeyError.html"
+                                  title='enum rusoto_iam::DeleteAccessKeyError'>DeleteAccessKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAccessKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAccountAliasError.html"
+                                  title='enum rusoto_iam::DeleteAccountAliasError'>DeleteAccountAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAccountAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAccountPasswordPolicyError.html"
+                                  title='enum rusoto_iam::DeleteAccountPasswordPolicyError'>DeleteAccountPasswordPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAccountPasswordPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGroupError.html"
+                                  title='enum rusoto_iam::DeleteGroupError'>DeleteGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteGroupPolicyError.html"
+                                  title='enum rusoto_iam::DeleteGroupPolicyError'>DeleteGroupPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteGroupPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInstanceProfileError.html"
+                                  title='enum rusoto_iam::DeleteInstanceProfileError'>DeleteInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLoginProfileError.html"
+                                  title='enum rusoto_iam::DeleteLoginProfileError'>DeleteLoginProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLoginProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteOpenIDConnectProviderError.html"
+                                  title='enum rusoto_iam::DeleteOpenIDConnectProviderError'>DeleteOpenIDConnectProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteOpenIDConnectProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePolicyError.html"
+                                  title='enum rusoto_iam::DeletePolicyError'>DeletePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePolicyVersionError.html"
+                                  title='enum rusoto_iam::DeletePolicyVersionError'>DeletePolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRoleError.html"
+                                  title='enum rusoto_iam::DeleteRoleError'>DeleteRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRolePolicyError.html"
+                                  title='enum rusoto_iam::DeleteRolePolicyError'>DeleteRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSAMLProviderError.html"
+                                  title='enum rusoto_iam::DeleteSAMLProviderError'>DeleteSAMLProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSAMLProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSSHPublicKeyError.html"
+                                  title='enum rusoto_iam::DeleteSSHPublicKeyError'>DeleteSSHPublicKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSSHPublicKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteServerCertificateError.html"
+                                  title='enum rusoto_iam::DeleteServerCertificateError'>DeleteServerCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteServerCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteServiceLinkedRoleError.html"
+                                  title='enum rusoto_iam::DeleteServiceLinkedRoleError'>DeleteServiceLinkedRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteServiceLinkedRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteServiceSpecificCredentialError.html"
+                                  title='enum rusoto_iam::DeleteServiceSpecificCredentialError'>DeleteServiceSpecificCredentialError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteServiceSpecificCredential</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSigningCertificateError.html"
+                                  title='enum rusoto_iam::DeleteSigningCertificateError'>DeleteSigningCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSigningCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserError.html"
+                                  title='enum rusoto_iam::DeleteUserError'>DeleteUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserPolicyError.html"
+                                  title='enum rusoto_iam::DeleteUserPolicyError'>DeleteUserPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUserPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVirtualMFADeviceError.html"
+                                  title='enum rusoto_iam::DeleteVirtualMFADeviceError'>DeleteVirtualMFADeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVirtualMFADevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachGroupPolicyError.html"
+                                  title='enum rusoto_iam::DetachGroupPolicyError'>DetachGroupPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachGroupPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachRolePolicyError.html"
+                                  title='enum rusoto_iam::DetachRolePolicyError'>DetachRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetachUserPolicyError.html"
+                                  title='enum rusoto_iam::DetachUserPolicyError'>DetachUserPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetachUserPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableMFADeviceError.html"
+                                  title='enum rusoto_iam::EnableMFADeviceError'>EnableMFADeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableMFADevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GenerateCredentialReportError.html"
+                                  title='enum rusoto_iam::GenerateCredentialReportError'>GenerateCredentialReportError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GenerateCredentialReport</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccessKeyLastUsedError.html"
+                                  title='enum rusoto_iam::GetAccessKeyLastUsedError'>GetAccessKeyLastUsedError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccessKeyLastUsed</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccountAuthorizationDetailsError.html"
+                                  title='enum rusoto_iam::GetAccountAuthorizationDetailsError'>GetAccountAuthorizationDetailsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccountAuthorizationDetails</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccountPasswordPolicyError.html"
+                                  title='enum rusoto_iam::GetAccountPasswordPolicyError'>GetAccountPasswordPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccountPasswordPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccountSummaryError.html"
+                                  title='enum rusoto_iam::GetAccountSummaryError'>GetAccountSummaryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccountSummary</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetContextKeysForCustomPolicyError.html"
+                                  title='enum rusoto_iam::GetContextKeysForCustomPolicyError'>GetContextKeysForCustomPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetContextKeysForCustomPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetContextKeysForPrincipalPolicyError.html"
+                                  title='enum rusoto_iam::GetContextKeysForPrincipalPolicyError'>GetContextKeysForPrincipalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetContextKeysForPrincipalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCredentialReportError.html"
+                                  title='enum rusoto_iam::GetCredentialReportError'>GetCredentialReportError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCredentialReport</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupError.html"
+                                  title='enum rusoto_iam::GetGroupError'>GetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetGroupPolicyError.html"
+                                  title='enum rusoto_iam::GetGroupPolicyError'>GetGroupPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetGroupPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceProfileError.html"
+                                  title='enum rusoto_iam::GetInstanceProfileError'>GetInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLoginProfileError.html"
+                                  title='enum rusoto_iam::GetLoginProfileError'>GetLoginProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLoginProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOpenIDConnectProviderError.html"
+                                  title='enum rusoto_iam::GetOpenIDConnectProviderError'>GetOpenIDConnectProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOpenIDConnectProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPolicyError.html"
+                                  title='enum rusoto_iam::GetPolicyError'>GetPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPolicyVersionError.html"
+                                  title='enum rusoto_iam::GetPolicyVersionError'>GetPolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRoleError.html"
+                                  title='enum rusoto_iam::GetRoleError'>GetRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRolePolicyError.html"
+                                  title='enum rusoto_iam::GetRolePolicyError'>GetRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSAMLProviderError.html"
+                                  title='enum rusoto_iam::GetSAMLProviderError'>GetSAMLProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSAMLProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSSHPublicKeyError.html"
+                                  title='enum rusoto_iam::GetSSHPublicKeyError'>GetSSHPublicKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSSHPublicKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetServerCertificateError.html"
+                                  title='enum rusoto_iam::GetServerCertificateError'>GetServerCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetServerCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetServiceLinkedRoleDeletionStatusError.html"
+                                  title='enum rusoto_iam::GetServiceLinkedRoleDeletionStatusError'>GetServiceLinkedRoleDeletionStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetServiceLinkedRoleDeletionStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUserError.html"
+                                  title='enum rusoto_iam::GetUserError'>GetUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUserPolicyError.html"
+                                  title='enum rusoto_iam::GetUserPolicyError'>GetUserPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUserPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAccessKeysError.html"
+                                  title='enum rusoto_iam::ListAccessKeysError'>ListAccessKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAccessKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAccountAliasesError.html"
+                                  title='enum rusoto_iam::ListAccountAliasesError'>ListAccountAliasesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAccountAliases</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAttachedGroupPoliciesError.html"
+                                  title='enum rusoto_iam::ListAttachedGroupPoliciesError'>ListAttachedGroupPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAttachedGroupPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAttachedRolePoliciesError.html"
+                                  title='enum rusoto_iam::ListAttachedRolePoliciesError'>ListAttachedRolePoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAttachedRolePolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAttachedUserPoliciesError.html"
+                                  title='enum rusoto_iam::ListAttachedUserPoliciesError'>ListAttachedUserPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAttachedUserPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListEntitiesForPolicyError.html"
+                                  title='enum rusoto_iam::ListEntitiesForPolicyError'>ListEntitiesForPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListEntitiesForPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupPoliciesError.html"
+                                  title='enum rusoto_iam::ListGroupPoliciesError'>ListGroupPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroupPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupsError.html"
+                                  title='enum rusoto_iam::ListGroupsError'>ListGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListGroupsForUserError.html"
+                                  title='enum rusoto_iam::ListGroupsForUserError'>ListGroupsForUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListGroupsForUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstanceProfilesError.html"
+                                  title='enum rusoto_iam::ListInstanceProfilesError'>ListInstanceProfilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstanceProfiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstanceProfilesForRoleError.html"
+                                  title='enum rusoto_iam::ListInstanceProfilesForRoleError'>ListInstanceProfilesForRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstanceProfilesForRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListMFADevicesError.html"
+                                  title='enum rusoto_iam::ListMFADevicesError'>ListMFADevicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListMFADevices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOpenIDConnectProvidersError.html"
+                                  title='enum rusoto_iam::ListOpenIDConnectProvidersError'>ListOpenIDConnectProvidersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOpenIDConnectProviders</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPoliciesError.html"
+                                  title='enum rusoto_iam::ListPoliciesError'>ListPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPolicyVersionsError.html"
+                                  title='enum rusoto_iam::ListPolicyVersionsError'>ListPolicyVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPolicyVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRolePoliciesError.html"
+                                  title='enum rusoto_iam::ListRolePoliciesError'>ListRolePoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRolePolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRolesError.html"
+                                  title='enum rusoto_iam::ListRolesError'>ListRolesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRoles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSAMLProvidersError.html"
+                                  title='enum rusoto_iam::ListSAMLProvidersError'>ListSAMLProvidersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSAMLProviders</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSSHPublicKeysError.html"
+                                  title='enum rusoto_iam::ListSSHPublicKeysError'>ListSSHPublicKeysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSSHPublicKeys</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListServerCertificatesError.html"
+                                  title='enum rusoto_iam::ListServerCertificatesError'>ListServerCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListServerCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListServiceSpecificCredentialsError.html"
+                                  title='enum rusoto_iam::ListServiceSpecificCredentialsError'>ListServiceSpecificCredentialsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListServiceSpecificCredentials</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSigningCertificatesError.html"
+                                  title='enum rusoto_iam::ListSigningCertificatesError'>ListSigningCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSigningCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUserPoliciesError.html"
+                                  title='enum rusoto_iam::ListUserPoliciesError'>ListUserPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUserPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUsersError.html"
+                                  title='enum rusoto_iam::ListUsersError'>ListUsersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUsers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListVirtualMFADevicesError.html"
+                                  title='enum rusoto_iam::ListVirtualMFADevicesError'>ListVirtualMFADevicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListVirtualMFADevices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutGroupPolicyError.html"
+                                  title='enum rusoto_iam::PutGroupPolicyError'>PutGroupPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutGroupPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRolePolicyError.html"
+                                  title='enum rusoto_iam::PutRolePolicyError'>PutRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutUserPolicyError.html"
+                                  title='enum rusoto_iam::PutUserPolicyError'>PutUserPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutUserPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveClientIDFromOpenIDConnectProviderError.html"
+                                  title='enum rusoto_iam::RemoveClientIDFromOpenIDConnectProviderError'>RemoveClientIDFromOpenIDConnectProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveClientIDFromOpenIDConnectProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveRoleFromInstanceProfileError.html"
+                                  title='enum rusoto_iam::RemoveRoleFromInstanceProfileError'>RemoveRoleFromInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveRoleFromInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveUserFromGroupError.html"
+                                  title='enum rusoto_iam::RemoveUserFromGroupError'>RemoveUserFromGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveUserFromGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResetServiceSpecificCredentialError.html"
+                                  title='enum rusoto_iam::ResetServiceSpecificCredentialError'>ResetServiceSpecificCredentialError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResetServiceSpecificCredential</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ResyncMFADeviceError.html"
+                                  title='enum rusoto_iam::ResyncMFADeviceError'>ResyncMFADeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ResyncMFADevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetDefaultPolicyVersionError.html"
+                                  title='enum rusoto_iam::SetDefaultPolicyVersionError'>SetDefaultPolicyVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetDefaultPolicyVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SimulateCustomPolicyError.html"
+                                  title='enum rusoto_iam::SimulateCustomPolicyError'>SimulateCustomPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SimulateCustomPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SimulatePrincipalPolicyError.html"
+                                  title='enum rusoto_iam::SimulatePrincipalPolicyError'>SimulatePrincipalPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SimulatePrincipalPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAccessKeyError.html"
+                                  title='enum rusoto_iam::UpdateAccessKeyError'>UpdateAccessKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAccessKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAccountPasswordPolicyError.html"
+                                  title='enum rusoto_iam::UpdateAccountPasswordPolicyError'>UpdateAccountPasswordPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAccountPasswordPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAssumeRolePolicyError.html"
+                                  title='enum rusoto_iam::UpdateAssumeRolePolicyError'>UpdateAssumeRolePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAssumeRolePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateGroupError.html"
+                                  title='enum rusoto_iam::UpdateGroupError'>UpdateGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateLoginProfileError.html"
+                                  title='enum rusoto_iam::UpdateLoginProfileError'>UpdateLoginProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateLoginProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateOpenIDConnectProviderThumbprintError.html"
+                                  title='enum rusoto_iam::UpdateOpenIDConnectProviderThumbprintError'>UpdateOpenIDConnectProviderThumbprintError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateOpenIDConnectProviderThumbprint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRoleDescriptionError.html"
+                                  title='enum rusoto_iam::UpdateRoleDescriptionError'>UpdateRoleDescriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRoleDescription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRoleError.html"
+                                  title='enum rusoto_iam::UpdateRoleError'>UpdateRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSAMLProviderError.html"
+                                  title='enum rusoto_iam::UpdateSAMLProviderError'>UpdateSAMLProviderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSAMLProvider</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSSHPublicKeyError.html"
+                                  title='enum rusoto_iam::UpdateSSHPublicKeyError'>UpdateSSHPublicKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSSHPublicKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateServerCertificateError.html"
+                                  title='enum rusoto_iam::UpdateServerCertificateError'>UpdateServerCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateServerCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateServiceSpecificCredentialError.html"
+                                  title='enum rusoto_iam::UpdateServiceSpecificCredentialError'>UpdateServiceSpecificCredentialError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateServiceSpecificCredential</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSigningCertificateError.html"
+                                  title='enum rusoto_iam::UpdateSigningCertificateError'>UpdateSigningCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSigningCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserError.html"
+                                  title='enum rusoto_iam::UpdateUserError'>UpdateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UploadSSHPublicKeyError.html"
+                                  title='enum rusoto_iam::UploadSSHPublicKeyError'>UploadSSHPublicKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UploadSSHPublicKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UploadServerCertificateError.html"
+                                  title='enum rusoto_iam::UploadServerCertificateError'>UploadServerCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UploadServerCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UploadSigningCertificateError.html"
+                                  title='enum rusoto_iam::UploadSigningCertificateError'>UploadSigningCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UploadSigningCertificate</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Iam.html"
+                                  title='trait rusoto_iam::Iam'>Iam</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the IAM API. IAM clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_iam";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

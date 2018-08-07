@@ -1,0 +1,1035 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_ds` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_ds"><title>rusoto_ds - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_ds/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_ds</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_ds', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_ds</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_ds/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Directory Service</fullname> <p>AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration Guide</a>.</p> <note> <p>AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> </note></p>
+<p>If you're using the service, you're probably looking for <a href="struct.DirectoryServiceClient.html">DirectoryServiceClient</a> and <a href="trait.DirectoryService.html">DirectoryService</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddIpRoutesRequest.html"
+                                  title='struct rusoto_ds::AddIpRoutesRequest'>AddIpRoutesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddIpRoutesResult.html"
+                                  title='struct rusoto_ds::AddIpRoutesResult'>AddIpRoutesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceRequest.html"
+                                  title='struct rusoto_ds::AddTagsToResourceRequest'>AddTagsToResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceResult.html"
+                                  title='struct rusoto_ds::AddTagsToResourceResult'>AddTagsToResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Attribute.html"
+                                  title='struct rusoto_ds::Attribute'>Attribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a named directory attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelSchemaExtensionRequest.html"
+                                  title='struct rusoto_ds::CancelSchemaExtensionRequest'>CancelSchemaExtensionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelSchemaExtensionResult.html"
+                                  title='struct rusoto_ds::CancelSchemaExtensionResult'>CancelSchemaExtensionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Computer.html"
+                                  title='struct rusoto_ds::Computer'>Computer</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a computer account in a directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConditionalForwarder.html"
+                                  title='struct rusoto_ds::ConditionalForwarder'>ConditionalForwarder</a></td>
+                           <td class='docblock-short'>
+                                <p>Points to a remote domain with which you are setting up a trust relationship. Conditional forwarders are required in order to set up a trust relationship with another domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConnectDirectoryRequest.html"
+                                  title='struct rusoto_ds::ConnectDirectoryRequest'>ConnectDirectoryRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>ConnectDirectory</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConnectDirectoryResult.html"
+                                  title='struct rusoto_ds::ConnectDirectoryResult'>ConnectDirectoryResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>ConnectDirectory</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAliasRequest.html"
+                                  title='struct rusoto_ds::CreateAliasRequest'>CreateAliasRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>CreateAlias</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAliasResult.html"
+                                  title='struct rusoto_ds::CreateAliasResult'>CreateAliasResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>CreateAlias</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateComputerRequest.html"
+                                  title='struct rusoto_ds::CreateComputerRequest'>CreateComputerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>CreateComputer</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateComputerResult.html"
+                                  title='struct rusoto_ds::CreateComputerResult'>CreateComputerResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results for the <a>CreateComputer</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateConditionalForwarderRequest.html"
+                                  title='struct rusoto_ds::CreateConditionalForwarderRequest'>CreateConditionalForwarderRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the creation of a conditional forwarder for your AWS Directory Service for Microsoft Active Directory. Conditional forwarders are required in order to set up a trust relationship with another domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateConditionalForwarderResult.html"
+                                  title='struct rusoto_ds::CreateConditionalForwarderResult'>CreateConditionalForwarderResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a CreateConditinalForwarder request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectoryRequest.html"
+                                  title='struct rusoto_ds::CreateDirectoryRequest'>CreateDirectoryRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>CreateDirectory</a> operation. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectoryResult.html"
+                                  title='struct rusoto_ds::CreateDirectoryResult'>CreateDirectoryResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>CreateDirectory</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMicrosoftADRequest.html"
+                                  title='struct rusoto_ds::CreateMicrosoftADRequest'>CreateMicrosoftADRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates a Microsoft AD in the AWS cloud.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMicrosoftADResult.html"
+                                  title='struct rusoto_ds::CreateMicrosoftADResult'>CreateMicrosoftADResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Result of a CreateMicrosoftAD request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSnapshotRequest.html"
+                                  title='struct rusoto_ds::CreateSnapshotRequest'>CreateSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>CreateSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSnapshotResult.html"
+                                  title='struct rusoto_ds::CreateSnapshotResult'>CreateSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>CreateSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTrustRequest.html"
+                                  title='struct rusoto_ds::CreateTrustRequest'>CreateTrustRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can establish a trust between your Microsoft AD in the AWS cloud, and your existing on-premises Microsoft Active Directory. This would allow you to provide users and groups access to resources in either domain, with a single set of credentials.</p> <p>This action initiates the creation of the AWS side of a trust relationship between a Microsoft AD in the AWS cloud and an external domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTrustResult.html"
+                                  title='struct rusoto_ds::CreateTrustResult'>CreateTrustResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a CreateTrust request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteConditionalForwarderRequest.html"
+                                  title='struct rusoto_ds::DeleteConditionalForwarderRequest'>DeleteConditionalForwarderRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes a conditional forwarder.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteConditionalForwarderResult.html"
+                                  title='struct rusoto_ds::DeleteConditionalForwarderResult'>DeleteConditionalForwarderResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DeleteConditionalForwarder request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectoryRequest.html"
+                                  title='struct rusoto_ds::DeleteDirectoryRequest'>DeleteDirectoryRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DeleteDirectory</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectoryResult.html"
+                                  title='struct rusoto_ds::DeleteDirectoryResult'>DeleteDirectoryResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DeleteDirectory</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSnapshotRequest.html"
+                                  title='struct rusoto_ds::DeleteSnapshotRequest'>DeleteSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DeleteSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSnapshotResult.html"
+                                  title='struct rusoto_ds::DeleteSnapshotResult'>DeleteSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DeleteSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTrustRequest.html"
+                                  title='struct rusoto_ds::DeleteTrustRequest'>DeleteTrustRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Deletes the local side of an existing trust relationship between the Microsoft AD in the AWS cloud and the external domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTrustResult.html"
+                                  title='struct rusoto_ds::DeleteTrustResult'>DeleteTrustResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DeleteTrust request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterEventTopicRequest.html"
+                                  title='struct rusoto_ds::DeregisterEventTopicRequest'>DeregisterEventTopicRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Removes the specified directory as a publisher to the specified SNS topic.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterEventTopicResult.html"
+                                  title='struct rusoto_ds::DeregisterEventTopicResult'>DeregisterEventTopicResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DeregisterEventTopic request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConditionalForwardersRequest.html"
+                                  title='struct rusoto_ds::DescribeConditionalForwardersRequest'>DescribeConditionalForwardersRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a conditional forwarder.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConditionalForwardersResult.html"
+                                  title='struct rusoto_ds::DescribeConditionalForwardersResult'>DescribeConditionalForwardersResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DescribeConditionalForwarder request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectoriesRequest.html"
+                                  title='struct rusoto_ds::DescribeDirectoriesRequest'>DescribeDirectoriesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DescribeDirectories</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectoriesResult.html"
+                                  title='struct rusoto_ds::DescribeDirectoriesResult'>DescribeDirectoriesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DescribeDirectories</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDomainControllersRequest.html"
+                                  title='struct rusoto_ds::DescribeDomainControllersRequest'>DescribeDomainControllersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDomainControllersResult.html"
+                                  title='struct rusoto_ds::DescribeDomainControllersResult'>DescribeDomainControllersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventTopicsRequest.html"
+                                  title='struct rusoto_ds::DescribeEventTopicsRequest'>DescribeEventTopicsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes event topics.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventTopicsResult.html"
+                                  title='struct rusoto_ds::DescribeEventTopicsResult'>DescribeEventTopicsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DescribeEventTopic request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSnapshotsRequest.html"
+                                  title='struct rusoto_ds::DescribeSnapshotsRequest'>DescribeSnapshotsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DescribeSnapshots</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSnapshotsResult.html"
+                                  title='struct rusoto_ds::DescribeSnapshotsResult'>DescribeSnapshotsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DescribeSnapshots</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTrustsRequest.html"
+                                  title='struct rusoto_ds::DescribeTrustsRequest'>DescribeTrustsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the trust relationships for a particular Microsoft AD in the AWS cloud. If no input parameters are are provided, such as directory ID or trust ID, this request describes all the trust relationships.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTrustsResult.html"
+                                  title='struct rusoto_ds::DescribeTrustsResult'>DescribeTrustsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a DescribeTrust request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryConnectSettings.html"
+                                  title='struct rusoto_ds::DirectoryConnectSettings'>DirectoryConnectSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information for the <a>ConnectDirectory</a> operation when an AD Connector directory is being created.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryConnectSettingsDescription.html"
+                                  title='struct rusoto_ds::DirectoryConnectSettingsDescription'>DirectoryConnectSettingsDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an AD Connector directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryDescription.html"
+                                  title='struct rusoto_ds::DirectoryDescription'>DirectoryDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an AWS Directory Service directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryLimits.html"
+                                  title='struct rusoto_ds::DirectoryLimits'>DirectoryLimits</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains directory limit information for a region.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryServiceClient.html"
+                                  title='struct rusoto_ds::DirectoryServiceClient'>DirectoryServiceClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Directory Service API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryVpcSettings.html"
+                                  title='struct rusoto_ds::DirectoryVpcSettings'>DirectoryVpcSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains VPC information for the <a>CreateDirectory</a> or <a>CreateMicrosoftAD</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectoryVpcSettingsDescription.html"
+                                  title='struct rusoto_ds::DirectoryVpcSettingsDescription'>DirectoryVpcSettingsDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableRadiusRequest.html"
+                                  title='struct rusoto_ds::DisableRadiusRequest'>DisableRadiusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DisableRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableRadiusResult.html"
+                                  title='struct rusoto_ds::DisableRadiusResult'>DisableRadiusResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DisableRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableSsoRequest.html"
+                                  title='struct rusoto_ds::DisableSsoRequest'>DisableSsoRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DisableSso</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableSsoResult.html"
+                                  title='struct rusoto_ds::DisableSsoResult'>DisableSsoResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DisableSso</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DomainController.html"
+                                  title='struct rusoto_ds::DomainController'>DomainController</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the domain controllers for a specified directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableRadiusRequest.html"
+                                  title='struct rusoto_ds::EnableRadiusRequest'>EnableRadiusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>EnableRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableRadiusResult.html"
+                                  title='struct rusoto_ds::EnableRadiusResult'>EnableRadiusResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>EnableRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableSsoRequest.html"
+                                  title='struct rusoto_ds::EnableSsoRequest'>EnableSsoRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>EnableSso</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableSsoResult.html"
+                                  title='struct rusoto_ds::EnableSsoResult'>EnableSsoResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>EnableSso</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventTopic.html"
+                                  title='struct rusoto_ds::EventTopic'>EventTopic</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about SNS topic and AWS Directory Service directory associations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDirectoryLimitsRequest.html"
+                                  title='struct rusoto_ds::GetDirectoryLimitsRequest'>GetDirectoryLimitsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>GetDirectoryLimits</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDirectoryLimitsResult.html"
+                                  title='struct rusoto_ds::GetDirectoryLimitsResult'>GetDirectoryLimitsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>GetDirectoryLimits</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSnapshotLimitsRequest.html"
+                                  title='struct rusoto_ds::GetSnapshotLimitsRequest'>GetSnapshotLimitsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>GetSnapshotLimits</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSnapshotLimitsResult.html"
+                                  title='struct rusoto_ds::GetSnapshotLimitsResult'>GetSnapshotLimitsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>GetSnapshotLimits</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IpRoute.html"
+                                  title='struct rusoto_ds::IpRoute'>IpRoute</a></td>
+                           <td class='docblock-short'>
+                                <p>IP address block. This is often the address block of the DNS server used for your on-premises domain. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IpRouteInfo.html"
+                                  title='struct rusoto_ds::IpRouteInfo'>IpRouteInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about one or more IP address blocks.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIpRoutesRequest.html"
+                                  title='struct rusoto_ds::ListIpRoutesRequest'>ListIpRoutesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListIpRoutesResult.html"
+                                  title='struct rusoto_ds::ListIpRoutesResult'>ListIpRoutesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSchemaExtensionsRequest.html"
+                                  title='struct rusoto_ds::ListSchemaExtensionsRequest'>ListSchemaExtensionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSchemaExtensionsResult.html"
+                                  title='struct rusoto_ds::ListSchemaExtensionsResult'>ListSchemaExtensionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceRequest.html"
+                                  title='struct rusoto_ds::ListTagsForResourceRequest'>ListTagsForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceResult.html"
+                                  title='struct rusoto_ds::ListTagsForResourceResult'>ListTagsForResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RadiusSettings.html"
+                                  title='struct rusoto_ds::RadiusSettings'>RadiusSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a Remote Authentication Dial In User Service (RADIUS) server.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterEventTopicRequest.html"
+                                  title='struct rusoto_ds::RegisterEventTopicRequest'>RegisterEventTopicRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Registers a new event topic.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterEventTopicResult.html"
+                                  title='struct rusoto_ds::RegisterEventTopicResult'>RegisterEventTopicResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a RegisterEventTopic request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveIpRoutesRequest.html"
+                                  title='struct rusoto_ds::RemoveIpRoutesRequest'>RemoveIpRoutesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveIpRoutesResult.html"
+                                  title='struct rusoto_ds::RemoveIpRoutesResult'>RemoveIpRoutesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceRequest.html"
+                                  title='struct rusoto_ds::RemoveTagsFromResourceRequest'>RemoveTagsFromResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceResult.html"
+                                  title='struct rusoto_ds::RemoveTagsFromResourceResult'>RemoveTagsFromResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreFromSnapshotRequest.html"
+                                  title='struct rusoto_ds::RestoreFromSnapshotRequest'>RestoreFromSnapshotRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the inputs for the <a>RestoreFromSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RestoreFromSnapshotResult.html"
+                                  title='struct rusoto_ds::RestoreFromSnapshotResult'>RestoreFromSnapshotResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>RestoreFromSnapshot</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SchemaExtensionInfo.html"
+                                  title='struct rusoto_ds::SchemaExtensionInfo'>SchemaExtensionInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a schema extension.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Snapshot.html"
+                                  title='struct rusoto_ds::Snapshot'>Snapshot</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a directory snapshot.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SnapshotLimits.html"
+                                  title='struct rusoto_ds::SnapshotLimits'>SnapshotLimits</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains manual snapshot limit information for a directory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartSchemaExtensionRequest.html"
+                                  title='struct rusoto_ds::StartSchemaExtensionRequest'>StartSchemaExtensionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartSchemaExtensionResult.html"
+                                  title='struct rusoto_ds::StartSchemaExtensionResult'>StartSchemaExtensionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_ds::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Metadata assigned to a directory consisting of a key-value pair.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Trust.html"
+                                  title='struct rusoto_ds::Trust'>Trust</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a trust relationship between an Microsoft AD in the AWS cloud and an external domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateConditionalForwarderRequest.html"
+                                  title='struct rusoto_ds::UpdateConditionalForwarderRequest'>UpdateConditionalForwarderRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Updates a conditional forwarder.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateConditionalForwarderResult.html"
+                                  title='struct rusoto_ds::UpdateConditionalForwarderResult'>UpdateConditionalForwarderResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of an UpdateConditionalForwarder request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNumberOfDomainControllersRequest.html"
+                                  title='struct rusoto_ds::UpdateNumberOfDomainControllersRequest'>UpdateNumberOfDomainControllersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNumberOfDomainControllersResult.html"
+                                  title='struct rusoto_ds::UpdateNumberOfDomainControllersResult'>UpdateNumberOfDomainControllersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRadiusRequest.html"
+                                  title='struct rusoto_ds::UpdateRadiusRequest'>UpdateRadiusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>UpdateRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateRadiusResult.html"
+                                  title='struct rusoto_ds::UpdateRadiusResult'>UpdateRadiusResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>UpdateRadius</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifyTrustRequest.html"
+                                  title='struct rusoto_ds::VerifyTrustRequest'>VerifyTrustRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Initiates the verification of an existing trust relationship between a Microsoft AD in the AWS cloud and an external domain.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VerifyTrustResult.html"
+                                  title='struct rusoto_ds::VerifyTrustResult'>VerifyTrustResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Result of a VerifyTrust request.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddIpRoutesError.html"
+                                  title='enum rusoto_ds::AddIpRoutesError'>AddIpRoutesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddIpRoutes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToResourceError.html"
+                                  title='enum rusoto_ds::AddTagsToResourceError'>AddTagsToResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelSchemaExtensionError.html"
+                                  title='enum rusoto_ds::CancelSchemaExtensionError'>CancelSchemaExtensionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelSchemaExtension</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConnectDirectoryError.html"
+                                  title='enum rusoto_ds::ConnectDirectoryError'>ConnectDirectoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConnectDirectory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAliasError.html"
+                                  title='enum rusoto_ds::CreateAliasError'>CreateAliasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAlias</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateComputerError.html"
+                                  title='enum rusoto_ds::CreateComputerError'>CreateComputerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateComputer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateConditionalForwarderError.html"
+                                  title='enum rusoto_ds::CreateConditionalForwarderError'>CreateConditionalForwarderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateConditionalForwarder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDirectoryError.html"
+                                  title='enum rusoto_ds::CreateDirectoryError'>CreateDirectoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDirectory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateMicrosoftADError.html"
+                                  title='enum rusoto_ds::CreateMicrosoftADError'>CreateMicrosoftADError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateMicrosoftAD</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSnapshotError.html"
+                                  title='enum rusoto_ds::CreateSnapshotError'>CreateSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateTrustError.html"
+                                  title='enum rusoto_ds::CreateTrustError'>CreateTrustError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateTrust</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteConditionalForwarderError.html"
+                                  title='enum rusoto_ds::DeleteConditionalForwarderError'>DeleteConditionalForwarderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteConditionalForwarder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDirectoryError.html"
+                                  title='enum rusoto_ds::DeleteDirectoryError'>DeleteDirectoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDirectory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSnapshotError.html"
+                                  title='enum rusoto_ds::DeleteSnapshotError'>DeleteSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTrustError.html"
+                                  title='enum rusoto_ds::DeleteTrustError'>DeleteTrustError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTrust</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterEventTopicError.html"
+                                  title='enum rusoto_ds::DeregisterEventTopicError'>DeregisterEventTopicError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterEventTopic</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConditionalForwardersError.html"
+                                  title='enum rusoto_ds::DescribeConditionalForwardersError'>DescribeConditionalForwardersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConditionalForwarders</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDirectoriesError.html"
+                                  title='enum rusoto_ds::DescribeDirectoriesError'>DescribeDirectoriesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDirectories</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDomainControllersError.html"
+                                  title='enum rusoto_ds::DescribeDomainControllersError'>DescribeDomainControllersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDomainControllers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventTopicsError.html"
+                                  title='enum rusoto_ds::DescribeEventTopicsError'>DescribeEventTopicsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventTopics</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSnapshotsError.html"
+                                  title='enum rusoto_ds::DescribeSnapshotsError'>DescribeSnapshotsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSnapshots</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTrustsError.html"
+                                  title='enum rusoto_ds::DescribeTrustsError'>DescribeTrustsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTrusts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableRadiusError.html"
+                                  title='enum rusoto_ds::DisableRadiusError'>DisableRadiusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableRadius</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableSsoError.html"
+                                  title='enum rusoto_ds::DisableSsoError'>DisableSsoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableSso</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableRadiusError.html"
+                                  title='enum rusoto_ds::EnableRadiusError'>EnableRadiusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableRadius</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableSsoError.html"
+                                  title='enum rusoto_ds::EnableSsoError'>EnableSsoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableSso</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDirectoryLimitsError.html"
+                                  title='enum rusoto_ds::GetDirectoryLimitsError'>GetDirectoryLimitsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDirectoryLimits</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSnapshotLimitsError.html"
+                                  title='enum rusoto_ds::GetSnapshotLimitsError'>GetSnapshotLimitsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSnapshotLimits</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListIpRoutesError.html"
+                                  title='enum rusoto_ds::ListIpRoutesError'>ListIpRoutesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListIpRoutes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSchemaExtensionsError.html"
+                                  title='enum rusoto_ds::ListSchemaExtensionsError'>ListSchemaExtensionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSchemaExtensions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_ds::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterEventTopicError.html"
+                                  title='enum rusoto_ds::RegisterEventTopicError'>RegisterEventTopicError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterEventTopic</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveIpRoutesError.html"
+                                  title='enum rusoto_ds::RemoveIpRoutesError'>RemoveIpRoutesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveIpRoutes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromResourceError.html"
+                                  title='enum rusoto_ds::RemoveTagsFromResourceError'>RemoveTagsFromResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RestoreFromSnapshotError.html"
+                                  title='enum rusoto_ds::RestoreFromSnapshotError'>RestoreFromSnapshotError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RestoreFromSnapshot</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartSchemaExtensionError.html"
+                                  title='enum rusoto_ds::StartSchemaExtensionError'>StartSchemaExtensionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartSchemaExtension</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateConditionalForwarderError.html"
+                                  title='enum rusoto_ds::UpdateConditionalForwarderError'>UpdateConditionalForwarderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateConditionalForwarder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateNumberOfDomainControllersError.html"
+                                  title='enum rusoto_ds::UpdateNumberOfDomainControllersError'>UpdateNumberOfDomainControllersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateNumberOfDomainControllers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateRadiusError.html"
+                                  title='enum rusoto_ds::UpdateRadiusError'>UpdateRadiusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateRadius</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.VerifyTrustError.html"
+                                  title='enum rusoto_ds::VerifyTrustError'>VerifyTrustError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by VerifyTrust</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.DirectoryService.html"
+                                  title='trait rusoto_ds::DirectoryService'>DirectoryService</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Directory Service API. Directory Service clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_ds";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

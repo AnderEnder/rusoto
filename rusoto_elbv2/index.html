@@ -1,0 +1,931 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_elbv2` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_elbv2"><title>rusoto_elbv2 - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_elbv2/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_elbv2</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_elbv2', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_elbv2</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_elbv2/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Elastic Load Balancing</fullname> <p>A load balancer distributes incoming traffic across targets, such as your EC2 instances. This enables you to increase the availability of your application. The load balancer also monitors the health of its registered targets and ensures that it routes traffic only to healthy targets. You configure your load balancer to accept incoming traffic by specifying one or more listeners, which are configured with a protocol and port number for connections from clients to the load balancer. You configure a target group with a protocol and port number for connections from the load balancer to the targets, and with health check settings to be used when checking the health status of the targets.</p> <p>Elastic Load Balancing supports the following types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers.</p> <p>An Application Load Balancer makes routing and load balancing decisions at the application layer (HTTP/HTTPS). A Network Load Balancer makes routing and load balancing decisions at the transport layer (TCP). Both Application Load Balancers and Network Load Balancers can route requests to one or more ports on each EC2 instance or container instance in your virtual private cloud (VPC).</p> <p>A Classic Load Balancer makes routing and load balancing decisions either at the transport layer (TCP/SSL) or the application layer (HTTP/HTTPS), and supports either EC2-Classic or a VPC. For more information, see the <a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User Guide</a>.</p> <p>This reference covers the 2015-12-01 API, which supports Application Load Balancers and Network Load Balancers. The 2012-06-01 API supports Classic Load Balancers.</p> <p>To get started, complete the following tasks:</p> <ol> <li> <p>Create a load balancer using <a>CreateLoadBalancer</a>.</p> </li> <li> <p>Create a target group using <a>CreateTargetGroup</a>.</p> </li> <li> <p>Register targets for the target group using <a>RegisterTargets</a>.</p> </li> <li> <p>Create one or more listeners for your load balancer using <a>CreateListener</a>.</p> </li> </ol> <p>To delete a load balancer and its related resources, complete the following tasks:</p> <ol> <li> <p>Delete the load balancer using <a>DeleteLoadBalancer</a>.</p> </li> <li> <p>Delete the target group using <a>DeleteTargetGroup</a>.</p> </li> </ol> <p>All Elastic Load Balancing operations are idempotent, which means that they complete at most one time. If you repeat an operation, it succeeds.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.ElbClient.html">ElbClient</a> and <a href="trait.Elb.html">Elb</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Action.html"
+                                  title='struct rusoto_elbv2::Action'>Action</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddListenerCertificatesInput.html"
+                                  title='struct rusoto_elbv2::AddListenerCertificatesInput'>AddListenerCertificatesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddListenerCertificatesOutput.html"
+                                  title='struct rusoto_elbv2::AddListenerCertificatesOutput'>AddListenerCertificatesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsInput.html"
+                                  title='struct rusoto_elbv2::AddTagsInput'>AddTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsOutput.html"
+                                  title='struct rusoto_elbv2::AddTagsOutput'>AddTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AvailabilityZone.html"
+                                  title='struct rusoto_elbv2::AvailabilityZone'>AvailabilityZone</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an Availability Zone.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Certificate.html"
+                                  title='struct rusoto_elbv2::Certificate'>Certificate</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an SSL server certificate.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Cipher.html"
+                                  title='struct rusoto_elbv2::Cipher'>Cipher</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a cipher used in a policy.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateListenerInput.html"
+                                  title='struct rusoto_elbv2::CreateListenerInput'>CreateListenerInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateListenerOutput.html"
+                                  title='struct rusoto_elbv2::CreateListenerOutput'>CreateListenerOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerInput.html"
+                                  title='struct rusoto_elbv2::CreateLoadBalancerInput'>CreateLoadBalancerInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLoadBalancerOutput.html"
+                                  title='struct rusoto_elbv2::CreateLoadBalancerOutput'>CreateLoadBalancerOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleInput.html"
+                                  title='struct rusoto_elbv2::CreateRuleInput'>CreateRuleInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRuleOutput.html"
+                                  title='struct rusoto_elbv2::CreateRuleOutput'>CreateRuleOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTargetGroupInput.html"
+                                  title='struct rusoto_elbv2::CreateTargetGroupInput'>CreateTargetGroupInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTargetGroupOutput.html"
+                                  title='struct rusoto_elbv2::CreateTargetGroupOutput'>CreateTargetGroupOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteListenerInput.html"
+                                  title='struct rusoto_elbv2::DeleteListenerInput'>DeleteListenerInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteListenerOutput.html"
+                                  title='struct rusoto_elbv2::DeleteListenerOutput'>DeleteListenerOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerInput.html"
+                                  title='struct rusoto_elbv2::DeleteLoadBalancerInput'>DeleteLoadBalancerInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLoadBalancerOutput.html"
+                                  title='struct rusoto_elbv2::DeleteLoadBalancerOutput'>DeleteLoadBalancerOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleInput.html"
+                                  title='struct rusoto_elbv2::DeleteRuleInput'>DeleteRuleInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRuleOutput.html"
+                                  title='struct rusoto_elbv2::DeleteRuleOutput'>DeleteRuleOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTargetGroupInput.html"
+                                  title='struct rusoto_elbv2::DeleteTargetGroupInput'>DeleteTargetGroupInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTargetGroupOutput.html"
+                                  title='struct rusoto_elbv2::DeleteTargetGroupOutput'>DeleteTargetGroupOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTargetsInput.html"
+                                  title='struct rusoto_elbv2::DeregisterTargetsInput'>DeregisterTargetsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTargetsOutput.html"
+                                  title='struct rusoto_elbv2::DeregisterTargetsOutput'>DeregisterTargetsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountLimitsInput.html"
+                                  title='struct rusoto_elbv2::DescribeAccountLimitsInput'>DescribeAccountLimitsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountLimitsOutput.html"
+                                  title='struct rusoto_elbv2::DescribeAccountLimitsOutput'>DescribeAccountLimitsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeListenerCertificatesInput.html"
+                                  title='struct rusoto_elbv2::DescribeListenerCertificatesInput'>DescribeListenerCertificatesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeListenerCertificatesOutput.html"
+                                  title='struct rusoto_elbv2::DescribeListenerCertificatesOutput'>DescribeListenerCertificatesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeListenersInput.html"
+                                  title='struct rusoto_elbv2::DescribeListenersInput'>DescribeListenersInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeListenersOutput.html"
+                                  title='struct rusoto_elbv2::DescribeListenersOutput'>DescribeListenersOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancerAttributesInput.html"
+                                  title='struct rusoto_elbv2::DescribeLoadBalancerAttributesInput'>DescribeLoadBalancerAttributesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancerAttributesOutput.html"
+                                  title='struct rusoto_elbv2::DescribeLoadBalancerAttributesOutput'>DescribeLoadBalancerAttributesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancersInput.html"
+                                  title='struct rusoto_elbv2::DescribeLoadBalancersInput'>DescribeLoadBalancersInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoadBalancersOutput.html"
+                                  title='struct rusoto_elbv2::DescribeLoadBalancersOutput'>DescribeLoadBalancersOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRulesInput.html"
+                                  title='struct rusoto_elbv2::DescribeRulesInput'>DescribeRulesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRulesOutput.html"
+                                  title='struct rusoto_elbv2::DescribeRulesOutput'>DescribeRulesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSSLPoliciesInput.html"
+                                  title='struct rusoto_elbv2::DescribeSSLPoliciesInput'>DescribeSSLPoliciesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSSLPoliciesOutput.html"
+                                  title='struct rusoto_elbv2::DescribeSSLPoliciesOutput'>DescribeSSLPoliciesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsInput.html"
+                                  title='struct rusoto_elbv2::DescribeTagsInput'>DescribeTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsOutput.html"
+                                  title='struct rusoto_elbv2::DescribeTagsOutput'>DescribeTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetGroupAttributesInput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetGroupAttributesInput'>DescribeTargetGroupAttributesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetGroupAttributesOutput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetGroupAttributesOutput'>DescribeTargetGroupAttributesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetGroupsInput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetGroupsInput'>DescribeTargetGroupsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetGroupsOutput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetGroupsOutput'>DescribeTargetGroupsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetHealthInput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetHealthInput'>DescribeTargetHealthInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTargetHealthOutput.html"
+                                  title='struct rusoto_elbv2::DescribeTargetHealthOutput'>DescribeTargetHealthOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElbClient.html"
+                                  title='struct rusoto_elbv2::ElbClient'>ElbClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Elastic Load Balancing v2 API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Limit.html"
+                                  title='struct rusoto_elbv2::Limit'>Limit</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an Elastic Load Balancing resource limit for your AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Listener.html"
+                                  title='struct rusoto_elbv2::Listener'>Listener</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a listener.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancer.html"
+                                  title='struct rusoto_elbv2::LoadBalancer'>LoadBalancer</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a load balancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerAddress.html"
+                                  title='struct rusoto_elbv2::LoadBalancerAddress'>LoadBalancerAddress</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a static IP address for a load balancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerAttribute.html"
+                                  title='struct rusoto_elbv2::LoadBalancerAttribute'>LoadBalancerAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a load balancer attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoadBalancerState.html"
+                                  title='struct rusoto_elbv2::LoadBalancerState'>LoadBalancerState</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the state of the load balancer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Matcher.html"
+                                  title='struct rusoto_elbv2::Matcher'>Matcher</a></td>
+                           <td class='docblock-short'>
+                                <p>Information to use when checking for a successful response from a target.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyListenerInput.html"
+                                  title='struct rusoto_elbv2::ModifyListenerInput'>ModifyListenerInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyListenerOutput.html"
+                                  title='struct rusoto_elbv2::ModifyListenerOutput'>ModifyListenerOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyLoadBalancerAttributesInput.html"
+                                  title='struct rusoto_elbv2::ModifyLoadBalancerAttributesInput'>ModifyLoadBalancerAttributesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyLoadBalancerAttributesOutput.html"
+                                  title='struct rusoto_elbv2::ModifyLoadBalancerAttributesOutput'>ModifyLoadBalancerAttributesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyRuleInput.html"
+                                  title='struct rusoto_elbv2::ModifyRuleInput'>ModifyRuleInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyRuleOutput.html"
+                                  title='struct rusoto_elbv2::ModifyRuleOutput'>ModifyRuleOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyTargetGroupAttributesInput.html"
+                                  title='struct rusoto_elbv2::ModifyTargetGroupAttributesInput'>ModifyTargetGroupAttributesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyTargetGroupAttributesOutput.html"
+                                  title='struct rusoto_elbv2::ModifyTargetGroupAttributesOutput'>ModifyTargetGroupAttributesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyTargetGroupInput.html"
+                                  title='struct rusoto_elbv2::ModifyTargetGroupInput'>ModifyTargetGroupInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyTargetGroupOutput.html"
+                                  title='struct rusoto_elbv2::ModifyTargetGroupOutput'>ModifyTargetGroupOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTargetsInput.html"
+                                  title='struct rusoto_elbv2::RegisterTargetsInput'>RegisterTargetsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTargetsOutput.html"
+                                  title='struct rusoto_elbv2::RegisterTargetsOutput'>RegisterTargetsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveListenerCertificatesInput.html"
+                                  title='struct rusoto_elbv2::RemoveListenerCertificatesInput'>RemoveListenerCertificatesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveListenerCertificatesOutput.html"
+                                  title='struct rusoto_elbv2::RemoveListenerCertificatesOutput'>RemoveListenerCertificatesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsInput.html"
+                                  title='struct rusoto_elbv2::RemoveTagsInput'>RemoveTagsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsOutput.html"
+                                  title='struct rusoto_elbv2::RemoveTagsOutput'>RemoveTagsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Rule.html"
+                                  title='struct rusoto_elbv2::Rule'>Rule</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RuleCondition.html"
+                                  title='struct rusoto_elbv2::RuleCondition'>RuleCondition</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a condition for a rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RulePriorityPair.html"
+                                  title='struct rusoto_elbv2::RulePriorityPair'>RulePriorityPair</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the priorities for the rules for a listener.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetIpAddressTypeInput.html"
+                                  title='struct rusoto_elbv2::SetIpAddressTypeInput'>SetIpAddressTypeInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetIpAddressTypeOutput.html"
+                                  title='struct rusoto_elbv2::SetIpAddressTypeOutput'>SetIpAddressTypeOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetRulePrioritiesInput.html"
+                                  title='struct rusoto_elbv2::SetRulePrioritiesInput'>SetRulePrioritiesInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetRulePrioritiesOutput.html"
+                                  title='struct rusoto_elbv2::SetRulePrioritiesOutput'>SetRulePrioritiesOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetSecurityGroupsInput.html"
+                                  title='struct rusoto_elbv2::SetSecurityGroupsInput'>SetSecurityGroupsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetSecurityGroupsOutput.html"
+                                  title='struct rusoto_elbv2::SetSecurityGroupsOutput'>SetSecurityGroupsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetSubnetsInput.html"
+                                  title='struct rusoto_elbv2::SetSubnetsInput'>SetSubnetsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetSubnetsOutput.html"
+                                  title='struct rusoto_elbv2::SetSubnetsOutput'>SetSubnetsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SslPolicy.html"
+                                  title='struct rusoto_elbv2::SslPolicy'>SslPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a policy used for SSL negotiation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubnetMapping.html"
+                                  title='struct rusoto_elbv2::SubnetMapping'>SubnetMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a subnet mapping.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_elbv2::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a tag.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagDescription.html"
+                                  title='struct rusoto_elbv2::TagDescription'>TagDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The tags associated with a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetDescription.html"
+                                  title='struct rusoto_elbv2::TargetDescription'>TargetDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a target.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetGroup.html"
+                                  title='struct rusoto_elbv2::TargetGroup'>TargetGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a target group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetGroupAttribute.html"
+                                  title='struct rusoto_elbv2::TargetGroupAttribute'>TargetGroupAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a target group attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetHealth.html"
+                                  title='struct rusoto_elbv2::TargetHealth'>TargetHealth</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the current health of a target.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TargetHealthDescription.html"
+                                  title='struct rusoto_elbv2::TargetHealthDescription'>TargetHealthDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the health of a target.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddListenerCertificatesError.html"
+                                  title='enum rusoto_elbv2::AddListenerCertificatesError'>AddListenerCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddListenerCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsError.html"
+                                  title='enum rusoto_elbv2::AddTagsError'>AddTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateListenerError.html"
+                                  title='enum rusoto_elbv2::CreateListenerError'>CreateListenerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateListener</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLoadBalancerError.html"
+                                  title='enum rusoto_elbv2::CreateLoadBalancerError'>CreateLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRuleError.html"
+                                  title='enum rusoto_elbv2::CreateRuleError'>CreateRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateTargetGroupError.html"
+                                  title='enum rusoto_elbv2::CreateTargetGroupError'>CreateTargetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateTargetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteListenerError.html"
+                                  title='enum rusoto_elbv2::DeleteListenerError'>DeleteListenerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteListener</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLoadBalancerError.html"
+                                  title='enum rusoto_elbv2::DeleteLoadBalancerError'>DeleteLoadBalancerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLoadBalancer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRuleError.html"
+                                  title='enum rusoto_elbv2::DeleteRuleError'>DeleteRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTargetGroupError.html"
+                                  title='enum rusoto_elbv2::DeleteTargetGroupError'>DeleteTargetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTargetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterTargetsError.html"
+                                  title='enum rusoto_elbv2::DeregisterTargetsError'>DeregisterTargetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterTargets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAccountLimitsError.html"
+                                  title='enum rusoto_elbv2::DescribeAccountLimitsError'>DescribeAccountLimitsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAccountLimits</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeListenerCertificatesError.html"
+                                  title='enum rusoto_elbv2::DescribeListenerCertificatesError'>DescribeListenerCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeListenerCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeListenersError.html"
+                                  title='enum rusoto_elbv2::DescribeListenersError'>DescribeListenersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeListeners</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoadBalancerAttributesError.html"
+                                  title='enum rusoto_elbv2::DescribeLoadBalancerAttributesError'>DescribeLoadBalancerAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoadBalancerAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoadBalancersError.html"
+                                  title='enum rusoto_elbv2::DescribeLoadBalancersError'>DescribeLoadBalancersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoadBalancers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRulesError.html"
+                                  title='enum rusoto_elbv2::DescribeRulesError'>DescribeRulesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRules</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSSLPoliciesError.html"
+                                  title='enum rusoto_elbv2::DescribeSSLPoliciesError'>DescribeSSLPoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSSLPolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTagsError.html"
+                                  title='enum rusoto_elbv2::DescribeTagsError'>DescribeTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTargetGroupAttributesError.html"
+                                  title='enum rusoto_elbv2::DescribeTargetGroupAttributesError'>DescribeTargetGroupAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTargetGroupAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTargetGroupsError.html"
+                                  title='enum rusoto_elbv2::DescribeTargetGroupsError'>DescribeTargetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTargetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTargetHealthError.html"
+                                  title='enum rusoto_elbv2::DescribeTargetHealthError'>DescribeTargetHealthError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTargetHealth</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyListenerError.html"
+                                  title='enum rusoto_elbv2::ModifyListenerError'>ModifyListenerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyListener</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyLoadBalancerAttributesError.html"
+                                  title='enum rusoto_elbv2::ModifyLoadBalancerAttributesError'>ModifyLoadBalancerAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyLoadBalancerAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyRuleError.html"
+                                  title='enum rusoto_elbv2::ModifyRuleError'>ModifyRuleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyRule</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyTargetGroupAttributesError.html"
+                                  title='enum rusoto_elbv2::ModifyTargetGroupAttributesError'>ModifyTargetGroupAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyTargetGroupAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyTargetGroupError.html"
+                                  title='enum rusoto_elbv2::ModifyTargetGroupError'>ModifyTargetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyTargetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterTargetsError.html"
+                                  title='enum rusoto_elbv2::RegisterTargetsError'>RegisterTargetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterTargets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveListenerCertificatesError.html"
+                                  title='enum rusoto_elbv2::RemoveListenerCertificatesError'>RemoveListenerCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveListenerCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsError.html"
+                                  title='enum rusoto_elbv2::RemoveTagsError'>RemoveTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetIpAddressTypeError.html"
+                                  title='enum rusoto_elbv2::SetIpAddressTypeError'>SetIpAddressTypeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetIpAddressType</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetRulePrioritiesError.html"
+                                  title='enum rusoto_elbv2::SetRulePrioritiesError'>SetRulePrioritiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetRulePriorities</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetSecurityGroupsError.html"
+                                  title='enum rusoto_elbv2::SetSecurityGroupsError'>SetSecurityGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetSecurityGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetSubnetsError.html"
+                                  title='enum rusoto_elbv2::SetSubnetsError'>SetSubnetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetSubnets</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Elb.html"
+                                  title='trait rusoto_elbv2::Elb'>Elb</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Elastic Load Balancing v2 API. Elastic Load Balancing v2 clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_elbv2";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

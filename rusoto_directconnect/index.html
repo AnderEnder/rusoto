@@ -1,0 +1,976 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_directconnect` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_directconnect"><title>rusoto_directconnect - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_directconnect/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_directconnect</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_directconnect', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_directconnect</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_directconnect/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US Regions and AWS GovCloud (US).</p>
+<p>If you're using the service, you're probably looking for <a href="struct.DirectConnectClient.html">DirectConnectClient</a> and <a href="trait.DirectConnect.html">DirectConnect</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocateConnectionOnInterconnectRequest.html"
+                                  title='struct rusoto_directconnect::AllocateConnectionOnInterconnectRequest'>AllocateConnectionOnInterconnectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AllocateConnectionOnInterconnect operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocateHostedConnectionRequest.html"
+                                  title='struct rusoto_directconnect::AllocateHostedConnectionRequest'>AllocateHostedConnectionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to theHostedConnection operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocatePrivateVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::AllocatePrivateVirtualInterfaceRequest'>AllocatePrivateVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AllocatePrivateVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AllocatePublicVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::AllocatePublicVirtualInterfaceRequest'>AllocatePublicVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AllocatePublicVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateConnectionWithLagRequest.html"
+                                  title='struct rusoto_directconnect::AssociateConnectionWithLagRequest'>AssociateConnectionWithLagRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AssociateConnectionWithLag operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateHostedConnectionRequest.html"
+                                  title='struct rusoto_directconnect::AssociateHostedConnectionRequest'>AssociateHostedConnectionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AssociateHostedConnection operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::AssociateVirtualInterfaceRequest'>AssociateVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the AssociateVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BGPPeer.html"
+                                  title='struct rusoto_directconnect::BGPPeer'>BGPPeer</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a BGP peer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmConnectionRequest.html"
+                                  title='struct rusoto_directconnect::ConfirmConnectionRequest'>ConfirmConnectionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the ConfirmConnection operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmConnectionResponse.html"
+                                  title='struct rusoto_directconnect::ConfirmConnectionResponse'>ConfirmConnectionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when ConfirmConnection is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmPrivateVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::ConfirmPrivateVirtualInterfaceRequest'>ConfirmPrivateVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the ConfirmPrivateVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmPrivateVirtualInterfaceResponse.html"
+                                  title='struct rusoto_directconnect::ConfirmPrivateVirtualInterfaceResponse'>ConfirmPrivateVirtualInterfaceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when ConfirmPrivateVirtualInterface is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmPublicVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::ConfirmPublicVirtualInterfaceRequest'>ConfirmPublicVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the ConfirmPublicVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ConfirmPublicVirtualInterfaceResponse.html"
+                                  title='struct rusoto_directconnect::ConfirmPublicVirtualInterfaceResponse'>ConfirmPublicVirtualInterfaceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when ConfirmPublicVirtualInterface is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Connection.html"
+                                  title='struct rusoto_directconnect::Connection'>Connection</a></td>
+                           <td class='docblock-short'>
+                                <p>A connection represents the physical network connection between the AWS Direct Connect location and the customer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Connections.html"
+                                  title='struct rusoto_directconnect::Connections'>Connections</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing a list of connections.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBGPPeerRequest.html"
+                                  title='struct rusoto_directconnect::CreateBGPPeerRequest'>CreateBGPPeerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateBGPPeer operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBGPPeerResponse.html"
+                                  title='struct rusoto_directconnect::CreateBGPPeerResponse'>CreateBGPPeerResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when CreateBGPPeer is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateConnectionRequest.html"
+                                  title='struct rusoto_directconnect::CreateConnectionRequest'>CreateConnectionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateConnection operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectConnectGatewayAssociationRequest.html"
+                                  title='struct rusoto_directconnect::CreateDirectConnectGatewayAssociationRequest'>CreateDirectConnectGatewayAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateDirectConnectGatewayAssociation operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectConnectGatewayAssociationResult.html"
+                                  title='struct rusoto_directconnect::CreateDirectConnectGatewayAssociationResult'>CreateDirectConnectGatewayAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the CreateDirectConnectGatewayAssociation API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectConnectGatewayRequest.html"
+                                  title='struct rusoto_directconnect::CreateDirectConnectGatewayRequest'>CreateDirectConnectGatewayRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateDirectConnectGateway operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDirectConnectGatewayResult.html"
+                                  title='struct rusoto_directconnect::CreateDirectConnectGatewayResult'>CreateDirectConnectGatewayResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the CreateDirectConnectGateway API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInterconnectRequest.html"
+                                  title='struct rusoto_directconnect::CreateInterconnectRequest'>CreateInterconnectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateInterconnect operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLagRequest.html"
+                                  title='struct rusoto_directconnect::CreateLagRequest'>CreateLagRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreateLag operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePrivateVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::CreatePrivateVirtualInterfaceRequest'>CreatePrivateVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreatePrivateVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePublicVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::CreatePublicVirtualInterfaceRequest'>CreatePublicVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the CreatePublicVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBGPPeerRequest.html"
+                                  title='struct rusoto_directconnect::DeleteBGPPeerRequest'>DeleteBGPPeerRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteBGPPeer operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBGPPeerResponse.html"
+                                  title='struct rusoto_directconnect::DeleteBGPPeerResponse'>DeleteBGPPeerResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DeleteBGPPeer is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteConnectionRequest.html"
+                                  title='struct rusoto_directconnect::DeleteConnectionRequest'>DeleteConnectionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteConnection operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectConnectGatewayAssociationRequest.html"
+                                  title='struct rusoto_directconnect::DeleteDirectConnectGatewayAssociationRequest'>DeleteDirectConnectGatewayAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteDirectConnectGatewayAssociation operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectConnectGatewayAssociationResult.html"
+                                  title='struct rusoto_directconnect::DeleteDirectConnectGatewayAssociationResult'>DeleteDirectConnectGatewayAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the DeleteDirectConnectGatewayAssociation API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectConnectGatewayRequest.html"
+                                  title='struct rusoto_directconnect::DeleteDirectConnectGatewayRequest'>DeleteDirectConnectGatewayRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteDirectConnectGateway operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDirectConnectGatewayResult.html"
+                                  title='struct rusoto_directconnect::DeleteDirectConnectGatewayResult'>DeleteDirectConnectGatewayResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the DeleteDirectConnectGateway API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInterconnectRequest.html"
+                                  title='struct rusoto_directconnect::DeleteInterconnectRequest'>DeleteInterconnectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteInterconnect operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInterconnectResponse.html"
+                                  title='struct rusoto_directconnect::DeleteInterconnectResponse'>DeleteInterconnectResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DeleteInterconnect is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLagRequest.html"
+                                  title='struct rusoto_directconnect::DeleteLagRequest'>DeleteLagRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteLag operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVirtualInterfaceRequest.html"
+                                  title='struct rusoto_directconnect::DeleteVirtualInterfaceRequest'>DeleteVirtualInterfaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DeleteVirtualInterface operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteVirtualInterfaceResponse.html"
+                                  title='struct rusoto_directconnect::DeleteVirtualInterfaceResponse'>DeleteVirtualInterfaceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DeleteVirtualInterface is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionLoaRequest.html"
+                                  title='struct rusoto_directconnect::DescribeConnectionLoaRequest'>DescribeConnectionLoaRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeConnectionLoa operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionLoaResponse.html"
+                                  title='struct rusoto_directconnect::DescribeConnectionLoaResponse'>DescribeConnectionLoaResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DescribeConnectionLoa is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionsOnInterconnectRequest.html"
+                                  title='struct rusoto_directconnect::DescribeConnectionsOnInterconnectRequest'>DescribeConnectionsOnInterconnectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeConnectionsOnInterconnect operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeConnectionsRequest'>DescribeConnectionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeConnections operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewayAssociationsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewayAssociationsRequest'>DescribeDirectConnectGatewayAssociationsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeDirectConnectGatewayAssociations operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewayAssociationsResult.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewayAssociationsResult'>DescribeDirectConnectGatewayAssociationsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the DescribeDirectConnectGatewayAssociations API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewayAttachmentsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewayAttachmentsRequest'>DescribeDirectConnectGatewayAttachmentsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeDirectConnectGatewayAttachments operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewayAttachmentsResult.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewayAttachmentsResult'>DescribeDirectConnectGatewayAttachmentsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the DescribeDirectConnectGatewayAttachments API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewaysRequest.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewaysRequest'>DescribeDirectConnectGatewaysRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeDirectConnectGateways operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDirectConnectGatewaysResult.html"
+                                  title='struct rusoto_directconnect::DescribeDirectConnectGatewaysResult'>DescribeDirectConnectGatewaysResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the response from the DescribeDirectConnectGateways API call</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeHostedConnectionsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeHostedConnectionsRequest'>DescribeHostedConnectionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeHostedConnections operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInterconnectLoaRequest.html"
+                                  title='struct rusoto_directconnect::DescribeInterconnectLoaRequest'>DescribeInterconnectLoaRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeInterconnectLoa operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInterconnectLoaResponse.html"
+                                  title='struct rusoto_directconnect::DescribeInterconnectLoaResponse'>DescribeInterconnectLoaResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DescribeInterconnectLoa is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInterconnectsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeInterconnectsRequest'>DescribeInterconnectsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeInterconnects operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLagsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeLagsRequest'>DescribeLagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeLags operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLoaRequest.html"
+                                  title='struct rusoto_directconnect::DescribeLoaRequest'>DescribeLoaRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeLoa operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsRequest.html"
+                                  title='struct rusoto_directconnect::DescribeTagsRequest'>DescribeTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeTags operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsResponse.html"
+                                  title='struct rusoto_directconnect::DescribeTagsResponse'>DescribeTagsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when DescribeTags is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeVirtualInterfacesRequest.html"
+                                  title='struct rusoto_directconnect::DescribeVirtualInterfacesRequest'>DescribeVirtualInterfacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DescribeVirtualInterfaces operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectConnectClient.html"
+                                  title='struct rusoto_directconnect::DirectConnectClient'>DirectConnectClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Direct Connect API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectConnectGateway.html"
+                                  title='struct rusoto_directconnect::DirectConnectGateway'>DirectConnectGateway</a></td>
+                           <td class='docblock-short'>
+                                <p>A direct connect gateway is an intermediate object that enables you to connect virtual interfaces and virtual private gateways.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectConnectGatewayAssociation.html"
+                                  title='struct rusoto_directconnect::DirectConnectGatewayAssociation'>DirectConnectGatewayAssociation</a></td>
+                           <td class='docblock-short'>
+                                <p>The association between a direct connect gateway and virtual private gateway.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DirectConnectGatewayAttachment.html"
+                                  title='struct rusoto_directconnect::DirectConnectGatewayAttachment'>DirectConnectGatewayAttachment</a></td>
+                           <td class='docblock-short'>
+                                <p>The association between a direct connect gateway and virtual interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateConnectionFromLagRequest.html"
+                                  title='struct rusoto_directconnect::DisassociateConnectionFromLagRequest'>DisassociateConnectionFromLagRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the DisassociateConnectionFromLag operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Interconnect.html"
+                                  title='struct rusoto_directconnect::Interconnect'>Interconnect</a></td>
+                           <td class='docblock-short'>
+                                <p>An interconnect is a connection that can host other connections.</p> <p>Like a standard AWS Direct Connect connection, an interconnect represents the physical connection between an AWS Direct Connect partner's network and a specific Direct Connect location. An AWS Direct Connect partner who owns an interconnect can provision hosted connections on the interconnect for their end customers, thereby providing the end customers with connectivity to AWS services.</p> <p>The resources of the interconnect, including bandwidth and VLAN numbers, are shared by all of the hosted connections on the interconnect, and the owner of the interconnect determines how these resources are assigned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Interconnects.html"
+                                  title='struct rusoto_directconnect::Interconnects'>Interconnects</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing a list of interconnects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Lag.html"
+                                  title='struct rusoto_directconnect::Lag'>Lag</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a link aggregation group (LAG). A LAG is a connection that uses the Link Aggregation Control Protocol (LACP) to logically aggregate a bundle of physical connections. Like an interconnect, it can host other connections. All connections in a LAG must terminate on the same physical AWS Direct Connect endpoint, and must be the same bandwidth.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Lags.html"
+                                  title='struct rusoto_directconnect::Lags'>Lags</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing a list of LAGs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Loa.html"
+                                  title='struct rusoto_directconnect::Loa'>Loa</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing the Letter of Authorization - Connecting Facility Assignment (LOA-CFA) for a connection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Location.html"
+                                  title='struct rusoto_directconnect::Location'>Location</a></td>
+                           <td class='docblock-short'>
+                                <p>An AWS Direct Connect location where connections and interconnects can be requested.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Locations.html"
+                                  title='struct rusoto_directconnect::Locations'>Locations</a></td>
+                           <td class='docblock-short'>
+                                <p>A location is a network facility where AWS Direct Connect routers are available to be connected. Generally, these are colocation hubs where many network providers have equipment, and where cross connects can be delivered. Locations include a name and facility code, and must be provided when creating a connection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewBGPPeer.html"
+                                  title='struct rusoto_directconnect::NewBGPPeer'>NewBGPPeer</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a new BGP peer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewPrivateVirtualInterface.html"
+                                  title='struct rusoto_directconnect::NewPrivateVirtualInterface'>NewPrivateVirtualInterface</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a new private virtual interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewPrivateVirtualInterfaceAllocation.html"
+                                  title='struct rusoto_directconnect::NewPrivateVirtualInterfaceAllocation'>NewPrivateVirtualInterfaceAllocation</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a private virtual interface that will be provisioned on a connection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewPublicVirtualInterface.html"
+                                  title='struct rusoto_directconnect::NewPublicVirtualInterface'>NewPublicVirtualInterface</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a new public virtual interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NewPublicVirtualInterfaceAllocation.html"
+                                  title='struct rusoto_directconnect::NewPublicVirtualInterfaceAllocation'>NewPublicVirtualInterfaceAllocation</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing information about a public virtual interface that will be provisioned on a connection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceTag.html"
+                                  title='struct rusoto_directconnect::ResourceTag'>ResourceTag</a></td>
+                           <td class='docblock-short'>
+                                <p>The tags associated with a Direct Connect resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RouteFilterPrefix.html"
+                                  title='struct rusoto_directconnect::RouteFilterPrefix'>RouteFilterPrefix</a></td>
+                           <td class='docblock-short'>
+                                <p>A route filter prefix that the customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_directconnect::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a tag.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceRequest.html"
+                                  title='struct rusoto_directconnect::TagResourceRequest'>TagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the TagResource operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceResponse.html"
+                                  title='struct rusoto_directconnect::TagResourceResponse'>TagResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when TagResource is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceRequest.html"
+                                  title='struct rusoto_directconnect::UntagResourceRequest'>UntagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the UntagResource operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceResponse.html"
+                                  title='struct rusoto_directconnect::UntagResourceResponse'>UntagResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>The response received when UntagResource is called.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateLagRequest.html"
+                                  title='struct rusoto_directconnect::UpdateLagRequest'>UpdateLagRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Container for the parameters to the UpdateLag operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VirtualGateway.html"
+                                  title='struct rusoto_directconnect::VirtualGateway'>VirtualGateway</a></td>
+                           <td class='docblock-short'>
+                                <p>You can create one or more AWS Direct Connect private virtual interfaces linking to your virtual private gateway.</p> <p>Virtual private gateways can be managed using the Amazon Virtual Private Cloud (Amazon VPC) console or the <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html">Amazon EC2 CreateVpnGateway action</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VirtualGateways.html"
+                                  title='struct rusoto_directconnect::VirtualGateways'>VirtualGateways</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing a list of virtual private gateways.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VirtualInterface.html"
+                                  title='struct rusoto_directconnect::VirtualInterface'>VirtualInterface</a></td>
+                           <td class='docblock-short'>
+                                <p>A virtual interface (VLAN) transmits the traffic between the AWS Direct Connect location and the customer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VirtualInterfaces.html"
+                                  title='struct rusoto_directconnect::VirtualInterfaces'>VirtualInterfaces</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure containing a list of virtual interfaces.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AllocateConnectionOnInterconnectError.html"
+                                  title='enum rusoto_directconnect::AllocateConnectionOnInterconnectError'>AllocateConnectionOnInterconnectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AllocateConnectionOnInterconnect</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AllocateHostedConnectionError.html"
+                                  title='enum rusoto_directconnect::AllocateHostedConnectionError'>AllocateHostedConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AllocateHostedConnection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AllocatePrivateVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::AllocatePrivateVirtualInterfaceError'>AllocatePrivateVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AllocatePrivateVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AllocatePublicVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::AllocatePublicVirtualInterfaceError'>AllocatePublicVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AllocatePublicVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateConnectionWithLagError.html"
+                                  title='enum rusoto_directconnect::AssociateConnectionWithLagError'>AssociateConnectionWithLagError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateConnectionWithLag</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateHostedConnectionError.html"
+                                  title='enum rusoto_directconnect::AssociateHostedConnectionError'>AssociateHostedConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateHostedConnection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::AssociateVirtualInterfaceError'>AssociateVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmConnectionError.html"
+                                  title='enum rusoto_directconnect::ConfirmConnectionError'>ConfirmConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmConnection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmPrivateVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::ConfirmPrivateVirtualInterfaceError'>ConfirmPrivateVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmPrivateVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ConfirmPublicVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::ConfirmPublicVirtualInterfaceError'>ConfirmPublicVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ConfirmPublicVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateBGPPeerError.html"
+                                  title='enum rusoto_directconnect::CreateBGPPeerError'>CreateBGPPeerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateBGPPeer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateConnectionError.html"
+                                  title='enum rusoto_directconnect::CreateConnectionError'>CreateConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateConnection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDirectConnectGatewayAssociationError.html"
+                                  title='enum rusoto_directconnect::CreateDirectConnectGatewayAssociationError'>CreateDirectConnectGatewayAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDirectConnectGatewayAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDirectConnectGatewayError.html"
+                                  title='enum rusoto_directconnect::CreateDirectConnectGatewayError'>CreateDirectConnectGatewayError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDirectConnectGateway</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInterconnectError.html"
+                                  title='enum rusoto_directconnect::CreateInterconnectError'>CreateInterconnectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInterconnect</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLagError.html"
+                                  title='enum rusoto_directconnect::CreateLagError'>CreateLagError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLag</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePrivateVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::CreatePrivateVirtualInterfaceError'>CreatePrivateVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePrivateVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePublicVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::CreatePublicVirtualInterfaceError'>CreatePublicVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePublicVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteBGPPeerError.html"
+                                  title='enum rusoto_directconnect::DeleteBGPPeerError'>DeleteBGPPeerError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteBGPPeer</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteConnectionError.html"
+                                  title='enum rusoto_directconnect::DeleteConnectionError'>DeleteConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteConnection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDirectConnectGatewayAssociationError.html"
+                                  title='enum rusoto_directconnect::DeleteDirectConnectGatewayAssociationError'>DeleteDirectConnectGatewayAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDirectConnectGatewayAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDirectConnectGatewayError.html"
+                                  title='enum rusoto_directconnect::DeleteDirectConnectGatewayError'>DeleteDirectConnectGatewayError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDirectConnectGateway</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInterconnectError.html"
+                                  title='enum rusoto_directconnect::DeleteInterconnectError'>DeleteInterconnectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInterconnect</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLagError.html"
+                                  title='enum rusoto_directconnect::DeleteLagError'>DeleteLagError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLag</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteVirtualInterfaceError.html"
+                                  title='enum rusoto_directconnect::DeleteVirtualInterfaceError'>DeleteVirtualInterfaceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteVirtualInterface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConnectionLoaError.html"
+                                  title='enum rusoto_directconnect::DescribeConnectionLoaError'>DescribeConnectionLoaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConnectionLoa</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConnectionsError.html"
+                                  title='enum rusoto_directconnect::DescribeConnectionsError'>DescribeConnectionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConnections</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConnectionsOnInterconnectError.html"
+                                  title='enum rusoto_directconnect::DescribeConnectionsOnInterconnectError'>DescribeConnectionsOnInterconnectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConnectionsOnInterconnect</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDirectConnectGatewayAssociationsError.html"
+                                  title='enum rusoto_directconnect::DescribeDirectConnectGatewayAssociationsError'>DescribeDirectConnectGatewayAssociationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDirectConnectGatewayAssociations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDirectConnectGatewayAttachmentsError.html"
+                                  title='enum rusoto_directconnect::DescribeDirectConnectGatewayAttachmentsError'>DescribeDirectConnectGatewayAttachmentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDirectConnectGatewayAttachments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDirectConnectGatewaysError.html"
+                                  title='enum rusoto_directconnect::DescribeDirectConnectGatewaysError'>DescribeDirectConnectGatewaysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDirectConnectGateways</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeHostedConnectionsError.html"
+                                  title='enum rusoto_directconnect::DescribeHostedConnectionsError'>DescribeHostedConnectionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeHostedConnections</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInterconnectLoaError.html"
+                                  title='enum rusoto_directconnect::DescribeInterconnectLoaError'>DescribeInterconnectLoaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInterconnectLoa</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInterconnectsError.html"
+                                  title='enum rusoto_directconnect::DescribeInterconnectsError'>DescribeInterconnectsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInterconnects</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLagsError.html"
+                                  title='enum rusoto_directconnect::DescribeLagsError'>DescribeLagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLoaError.html"
+                                  title='enum rusoto_directconnect::DescribeLoaError'>DescribeLoaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLoa</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLocationsError.html"
+                                  title='enum rusoto_directconnect::DescribeLocationsError'>DescribeLocationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLocations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTagsError.html"
+                                  title='enum rusoto_directconnect::DescribeTagsError'>DescribeTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTags</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeVirtualGatewaysError.html"
+                                  title='enum rusoto_directconnect::DescribeVirtualGatewaysError'>DescribeVirtualGatewaysError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeVirtualGateways</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeVirtualInterfacesError.html"
+                                  title='enum rusoto_directconnect::DescribeVirtualInterfacesError'>DescribeVirtualInterfacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeVirtualInterfaces</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateConnectionFromLagError.html"
+                                  title='enum rusoto_directconnect::DisassociateConnectionFromLagError'>DisassociateConnectionFromLagError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateConnectionFromLag</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagResourceError.html"
+                                  title='enum rusoto_directconnect::TagResourceError'>TagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagResourceError.html"
+                                  title='enum rusoto_directconnect::UntagResourceError'>UntagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateLagError.html"
+                                  title='enum rusoto_directconnect::UpdateLagError'>UpdateLagError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateLag</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.DirectConnect.html"
+                                  title='trait rusoto_directconnect::DirectConnect'>DirectConnect</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Direct Connect API. AWS Direct Connect clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_directconnect";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

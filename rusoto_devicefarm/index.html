@@ -1,0 +1,1549 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_devicefarm` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_devicefarm"><title>rusoto_devicefarm - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_devicefarm/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_devicefarm</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_devicefarm', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_devicefarm</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_devicefarm/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical phones, tablets, and other devices in the cloud.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.DeviceFarmClient.html">DeviceFarmClient</a> and <a href="trait.DeviceFarm.html">DeviceFarm</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountSettings.html"
+                                  title='struct rusoto_devicefarm::AccountSettings'>AccountSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>A container for account-level settings within AWS Device Farm.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Artifact.html"
+                                  title='struct rusoto_devicefarm::Artifact'>Artifact</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the output of a test. Examples of artifacts include logs and screenshots.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CPU.html"
+                                  title='struct rusoto_devicefarm::CPU'>CPU</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the amount of CPU that an app is using on a physical device.</p> <p>Note that this does not represent system-wide CPU usage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Counters.html"
+                                  title='struct rusoto_devicefarm::Counters'>Counters</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents entity counters.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDevicePoolRequest.html"
+                                  title='struct rusoto_devicefarm::CreateDevicePoolRequest'>CreateDevicePoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the create device pool operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDevicePoolResult.html"
+                                  title='struct rusoto_devicefarm::CreateDevicePoolResult'>CreateDevicePoolResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a create device pool request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceProfileRequest.html"
+                                  title='struct rusoto_devicefarm::CreateInstanceProfileRequest'>CreateInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateInstanceProfileResult.html"
+                                  title='struct rusoto_devicefarm::CreateInstanceProfileResult'>CreateInstanceProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNetworkProfileRequest.html"
+                                  title='struct rusoto_devicefarm::CreateNetworkProfileRequest'>CreateNetworkProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNetworkProfileResult.html"
+                                  title='struct rusoto_devicefarm::CreateNetworkProfileResult'>CreateNetworkProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProjectRequest.html"
+                                  title='struct rusoto_devicefarm::CreateProjectRequest'>CreateProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the create project operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProjectResult.html"
+                                  title='struct rusoto_devicefarm::CreateProjectResult'>CreateProjectResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a create project request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRemoteAccessSessionConfiguration.html"
+                                  title='struct rusoto_devicefarm::CreateRemoteAccessSessionConfiguration'>CreateRemoteAccessSessionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Configuration settings for a remote access session, including billing method.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRemoteAccessSessionRequest.html"
+                                  title='struct rusoto_devicefarm::CreateRemoteAccessSessionRequest'>CreateRemoteAccessSessionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Creates and submits a request to start a remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateRemoteAccessSessionResult.html"
+                                  title='struct rusoto_devicefarm::CreateRemoteAccessSessionResult'>CreateRemoteAccessSessionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the server response from a request to create a remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUploadRequest.html"
+                                  title='struct rusoto_devicefarm::CreateUploadRequest'>CreateUploadRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the create upload operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUploadResult.html"
+                                  title='struct rusoto_devicefarm::CreateUploadResult'>CreateUploadResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a create upload request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CustomerArtifactPaths.html"
+                                  title='struct rusoto_devicefarm::CustomerArtifactPaths'>CustomerArtifactPaths</a></td>
+                           <td class='docblock-short'>
+                                <p>A JSON object specifying the paths where the artifacts generated by the customer's tests, on the device or in the test environment, will be pulled from.</p> <p>Specify <code>deviceHostPaths</code> and optionally specify either <code>iosPaths</code> or <code>androidPaths</code>.</p> <p>For web app tests, you can specify both <code>iosPaths</code> and <code>androidPaths</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDevicePoolRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteDevicePoolRequest'>DeleteDevicePoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the delete device pool operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDevicePoolResult.html"
+                                  title='struct rusoto_devicefarm::DeleteDevicePoolResult'>DeleteDevicePoolResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a delete device pool request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceProfileRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteInstanceProfileRequest'>DeleteInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteInstanceProfileResult.html"
+                                  title='struct rusoto_devicefarm::DeleteInstanceProfileResult'>DeleteInstanceProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNetworkProfileRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteNetworkProfileRequest'>DeleteNetworkProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNetworkProfileResult.html"
+                                  title='struct rusoto_devicefarm::DeleteNetworkProfileResult'>DeleteNetworkProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProjectRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteProjectRequest'>DeleteProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the delete project operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProjectResult.html"
+                                  title='struct rusoto_devicefarm::DeleteProjectResult'>DeleteProjectResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a delete project request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRemoteAccessSessionRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteRemoteAccessSessionRequest'>DeleteRemoteAccessSessionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to delete the specified remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRemoteAccessSessionResult.html"
+                                  title='struct rusoto_devicefarm::DeleteRemoteAccessSessionResult'>DeleteRemoteAccessSessionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The response from the server when a request is made to delete the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRunRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteRunRequest'>DeleteRunRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the delete run operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRunResult.html"
+                                  title='struct rusoto_devicefarm::DeleteRunResult'>DeleteRunResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a delete run request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUploadRequest.html"
+                                  title='struct rusoto_devicefarm::DeleteUploadRequest'>DeleteUploadRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the delete upload operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUploadResult.html"
+                                  title='struct rusoto_devicefarm::DeleteUploadResult'>DeleteUploadResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a delete upload request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Device.html"
+                                  title='struct rusoto_devicefarm::Device'>Device</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a device type that an app is tested against.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceFarmClient.html"
+                                  title='struct rusoto_devicefarm::DeviceFarmClient'>DeviceFarmClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Device Farm API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceInstance.html"
+                                  title='struct rusoto_devicefarm::DeviceInstance'>DeviceInstance</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the device instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeviceMinutes.html"
+                                  title='struct rusoto_devicefarm::DeviceMinutes'>DeviceMinutes</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the total (metered or unmetered) minutes used by the resource to run tests. Contains the sum of minutes consumed by all children.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DevicePool.html"
+                                  title='struct rusoto_devicefarm::DevicePool'>DevicePool</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a collection of device types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DevicePoolCompatibilityResult.html"
+                                  title='struct rusoto_devicefarm::DevicePoolCompatibilityResult'>DevicePoolCompatibilityResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a device pool compatibility result.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExecutionConfiguration.html"
+                                  title='struct rusoto_devicefarm::ExecutionConfiguration'>ExecutionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents configuration information about a test run, such as the execution timeout (in minutes).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountSettingsRequest.html"
+                                  title='struct rusoto_devicefarm::GetAccountSettingsRequest'>GetAccountSettingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request sent to retrieve the account settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAccountSettingsResult.html"
+                                  title='struct rusoto_devicefarm::GetAccountSettingsResult'>GetAccountSettingsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the account settings return values from the <code>GetAccountSettings</code> request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceInstanceRequest.html"
+                                  title='struct rusoto_devicefarm::GetDeviceInstanceRequest'>GetDeviceInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceInstanceResult.html"
+                                  title='struct rusoto_devicefarm::GetDeviceInstanceResult'>GetDeviceInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDevicePoolCompatibilityRequest.html"
+                                  title='struct rusoto_devicefarm::GetDevicePoolCompatibilityRequest'>GetDevicePoolCompatibilityRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get device pool compatibility operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDevicePoolCompatibilityResult.html"
+                                  title='struct rusoto_devicefarm::GetDevicePoolCompatibilityResult'>GetDevicePoolCompatibilityResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of describe device pool compatibility request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDevicePoolRequest.html"
+                                  title='struct rusoto_devicefarm::GetDevicePoolRequest'>GetDevicePoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get device pool operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDevicePoolResult.html"
+                                  title='struct rusoto_devicefarm::GetDevicePoolResult'>GetDevicePoolResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get device pool request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceRequest.html"
+                                  title='struct rusoto_devicefarm::GetDeviceRequest'>GetDeviceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get device request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeviceResult.html"
+                                  title='struct rusoto_devicefarm::GetDeviceResult'>GetDeviceResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get device request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceProfileRequest.html"
+                                  title='struct rusoto_devicefarm::GetInstanceProfileRequest'>GetInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInstanceProfileResult.html"
+                                  title='struct rusoto_devicefarm::GetInstanceProfileResult'>GetInstanceProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobRequest.html"
+                                  title='struct rusoto_devicefarm::GetJobRequest'>GetJobRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get job operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobResult.html"
+                                  title='struct rusoto_devicefarm::GetJobResult'>GetJobResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get job request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetNetworkProfileRequest.html"
+                                  title='struct rusoto_devicefarm::GetNetworkProfileRequest'>GetNetworkProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetNetworkProfileResult.html"
+                                  title='struct rusoto_devicefarm::GetNetworkProfileResult'>GetNetworkProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOfferingStatusRequest.html"
+                                  title='struct rusoto_devicefarm::GetOfferingStatusRequest'>GetOfferingStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to retrieve the offering status for the specified customer or account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetOfferingStatusResult.html"
+                                  title='struct rusoto_devicefarm::GetOfferingStatusResult'>GetOfferingStatusResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the status result for a device offering.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetProjectRequest.html"
+                                  title='struct rusoto_devicefarm::GetProjectRequest'>GetProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get project operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetProjectResult.html"
+                                  title='struct rusoto_devicefarm::GetProjectResult'>GetProjectResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get project request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRemoteAccessSessionRequest.html"
+                                  title='struct rusoto_devicefarm::GetRemoteAccessSessionRequest'>GetRemoteAccessSessionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to get information about the specified remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRemoteAccessSessionResult.html"
+                                  title='struct rusoto_devicefarm::GetRemoteAccessSessionResult'>GetRemoteAccessSessionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server that lists detailed information about the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRunRequest.html"
+                                  title='struct rusoto_devicefarm::GetRunRequest'>GetRunRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get run operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetRunResult.html"
+                                  title='struct rusoto_devicefarm::GetRunResult'>GetRunResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get run request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSuiteRequest.html"
+                                  title='struct rusoto_devicefarm::GetSuiteRequest'>GetSuiteRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get suite operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSuiteResult.html"
+                                  title='struct rusoto_devicefarm::GetSuiteResult'>GetSuiteResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get suite request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetTestRequest.html"
+                                  title='struct rusoto_devicefarm::GetTestRequest'>GetTestRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get test operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetTestResult.html"
+                                  title='struct rusoto_devicefarm::GetTestResult'>GetTestResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get test request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUploadRequest.html"
+                                  title='struct rusoto_devicefarm::GetUploadRequest'>GetUploadRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the get upload operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetUploadResult.html"
+                                  title='struct rusoto_devicefarm::GetUploadResult'>GetUploadResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a get upload request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IncompatibilityMessage.html"
+                                  title='struct rusoto_devicefarm::IncompatibilityMessage'>IncompatibilityMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about incompatibility.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstallToRemoteAccessSessionRequest.html"
+                                  title='struct rusoto_devicefarm::InstallToRemoteAccessSessionRequest'>InstallToRemoteAccessSessionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to install an Android application (in .apk format) or an iOS application (in .ipa format) as part of a remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstallToRemoteAccessSessionResult.html"
+                                  title='struct rusoto_devicefarm::InstallToRemoteAccessSessionResult'>InstallToRemoteAccessSessionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server after AWS Device Farm makes a request to install to a remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceProfile.html"
+                                  title='struct rusoto_devicefarm::InstanceProfile'>InstanceProfile</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the instance profile.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Job.html"
+                                  title='struct rusoto_devicefarm::Job'>Job</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a device.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListArtifactsRequest.html"
+                                  title='struct rusoto_devicefarm::ListArtifactsRequest'>ListArtifactsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list artifacts operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListArtifactsResult.html"
+                                  title='struct rusoto_devicefarm::ListArtifactsResult'>ListArtifactsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list artifacts operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceInstancesRequest.html"
+                                  title='struct rusoto_devicefarm::ListDeviceInstancesRequest'>ListDeviceInstancesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeviceInstancesResult.html"
+                                  title='struct rusoto_devicefarm::ListDeviceInstancesResult'>ListDeviceInstancesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicePoolsRequest.html"
+                                  title='struct rusoto_devicefarm::ListDevicePoolsRequest'>ListDevicePoolsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list device pools request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicePoolsResult.html"
+                                  title='struct rusoto_devicefarm::ListDevicePoolsResult'>ListDevicePoolsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list device pools request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicesRequest.html"
+                                  title='struct rusoto_devicefarm::ListDevicesRequest'>ListDevicesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list devices request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDevicesResult.html"
+                                  title='struct rusoto_devicefarm::ListDevicesResult'>ListDevicesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list devices operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesRequest.html"
+                                  title='struct rusoto_devicefarm::ListInstanceProfilesRequest'>ListInstanceProfilesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInstanceProfilesResult.html"
+                                  title='struct rusoto_devicefarm::ListInstanceProfilesResult'>ListInstanceProfilesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsRequest.html"
+                                  title='struct rusoto_devicefarm::ListJobsRequest'>ListJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list jobs operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsResult.html"
+                                  title='struct rusoto_devicefarm::ListJobsResult'>ListJobsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list jobs request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListNetworkProfilesRequest.html"
+                                  title='struct rusoto_devicefarm::ListNetworkProfilesRequest'>ListNetworkProfilesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListNetworkProfilesResult.html"
+                                  title='struct rusoto_devicefarm::ListNetworkProfilesResult'>ListNetworkProfilesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingPromotionsRequest.html"
+                                  title='struct rusoto_devicefarm::ListOfferingPromotionsRequest'>ListOfferingPromotionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingPromotionsResult.html"
+                                  title='struct rusoto_devicefarm::ListOfferingPromotionsResult'>ListOfferingPromotionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingTransactionsRequest.html"
+                                  title='struct rusoto_devicefarm::ListOfferingTransactionsRequest'>ListOfferingTransactionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list the offering transaction history.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingTransactionsResult.html"
+                                  title='struct rusoto_devicefarm::ListOfferingTransactionsResult'>ListOfferingTransactionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the transaction log of the specified offerings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingsRequest.html"
+                                  title='struct rusoto_devicefarm::ListOfferingsRequest'>ListOfferingsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to list all offerings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListOfferingsResult.html"
+                                  title='struct rusoto_devicefarm::ListOfferingsResult'>ListOfferingsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the return values of the list of offerings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProjectsRequest.html"
+                                  title='struct rusoto_devicefarm::ListProjectsRequest'>ListProjectsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list projects operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProjectsResult.html"
+                                  title='struct rusoto_devicefarm::ListProjectsResult'>ListProjectsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list projects request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRemoteAccessSessionsRequest.html"
+                                  title='struct rusoto_devicefarm::ListRemoteAccessSessionsRequest'>ListRemoteAccessSessionsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to return information about the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRemoteAccessSessionsResult.html"
+                                  title='struct rusoto_devicefarm::ListRemoteAccessSessionsResult'>ListRemoteAccessSessionsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server after AWS Device Farm makes a request to return information about the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRunsRequest.html"
+                                  title='struct rusoto_devicefarm::ListRunsRequest'>ListRunsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list runs operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListRunsResult.html"
+                                  title='struct rusoto_devicefarm::ListRunsResult'>ListRunsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list runs request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSamplesRequest.html"
+                                  title='struct rusoto_devicefarm::ListSamplesRequest'>ListSamplesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list samples operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSamplesResult.html"
+                                  title='struct rusoto_devicefarm::ListSamplesResult'>ListSamplesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list samples request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSuitesRequest.html"
+                                  title='struct rusoto_devicefarm::ListSuitesRequest'>ListSuitesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list suites operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListSuitesResult.html"
+                                  title='struct rusoto_devicefarm::ListSuitesResult'>ListSuitesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list suites request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTestsRequest.html"
+                                  title='struct rusoto_devicefarm::ListTestsRequest'>ListTestsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list tests operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTestsResult.html"
+                                  title='struct rusoto_devicefarm::ListTestsResult'>ListTestsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list tests request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUniqueProblemsRequest.html"
+                                  title='struct rusoto_devicefarm::ListUniqueProblemsRequest'>ListUniqueProblemsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list unique problems operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUniqueProblemsResult.html"
+                                  title='struct rusoto_devicefarm::ListUniqueProblemsResult'>ListUniqueProblemsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list unique problems request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUploadsRequest.html"
+                                  title='struct rusoto_devicefarm::ListUploadsRequest'>ListUploadsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the list uploads operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListUploadsResult.html"
+                                  title='struct rusoto_devicefarm::ListUploadsResult'>ListUploadsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a list uploads request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Location.html"
+                                  title='struct rusoto_devicefarm::Location'>Location</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a latitude and longitude pair, expressed in geographic coordinate system degrees (for example 47.6204, -122.3491).</p> <p>Elevation is currently not supported.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MonetaryAmount.html"
+                                  title='struct rusoto_devicefarm::MonetaryAmount'>MonetaryAmount</a></td>
+                           <td class='docblock-short'>
+                                <p>A number representing the monetary amount for an offering or transaction.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NetworkProfile.html"
+                                  title='struct rusoto_devicefarm::NetworkProfile'>NetworkProfile</a></td>
+                           <td class='docblock-short'>
+                                <p>An array of settings that describes characteristics of a network profile.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Offering.html"
+                                  title='struct rusoto_devicefarm::Offering'>Offering</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the metadata of a device offering.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OfferingPromotion.html"
+                                  title='struct rusoto_devicefarm::OfferingPromotion'>OfferingPromotion</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about an offering promotion.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OfferingStatus.html"
+                                  title='struct rusoto_devicefarm::OfferingStatus'>OfferingStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>The status of the offering.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OfferingTransaction.html"
+                                  title='struct rusoto_devicefarm::OfferingTransaction'>OfferingTransaction</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the metadata of an offering transaction.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Problem.html"
+                                  title='struct rusoto_devicefarm::Problem'>Problem</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a specific warning or failure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProblemDetail.html"
+                                  title='struct rusoto_devicefarm::ProblemDetail'>ProblemDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a problem detail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Project.html"
+                                  title='struct rusoto_devicefarm::Project'>Project</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an operating-system neutral workspace for running and managing tests.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseOfferingRequest.html"
+                                  title='struct rusoto_devicefarm::PurchaseOfferingRequest'>PurchaseOfferingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request for a purchase offering.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PurchaseOfferingResult.html"
+                                  title='struct rusoto_devicefarm::PurchaseOfferingResult'>PurchaseOfferingResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of the purchase offering (e.g., success or failure).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Radios.html"
+                                  title='struct rusoto_devicefarm::Radios'>Radios</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the set of radios and their states on a device. Examples of radios include Wi-Fi, GPS, Bluetooth, and NFC.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecurringCharge.html"
+                                  title='struct rusoto_devicefarm::RecurringCharge'>RecurringCharge</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies whether charges for devices will be recurring.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoteAccessSession.html"
+                                  title='struct rusoto_devicefarm::RemoteAccessSession'>RemoteAccessSession</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RenewOfferingRequest.html"
+                                  title='struct rusoto_devicefarm::RenewOfferingRequest'>RenewOfferingRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>A request representing an offering renewal.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RenewOfferingResult.html"
+                                  title='struct rusoto_devicefarm::RenewOfferingResult'>RenewOfferingResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a renewal offering.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Resolution.html"
+                                  title='struct rusoto_devicefarm::Resolution'>Resolution</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the screen resolution of a device in height and width, expressed in pixels.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Rule.html"
+                                  title='struct rusoto_devicefarm::Rule'>Rule</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a condition for a device pool.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Run.html"
+                                  title='struct rusoto_devicefarm::Run'>Run</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a test run on a set of devices with a given app package, test parameters, etc.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Sample.html"
+                                  title='struct rusoto_devicefarm::Sample'>Sample</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a sample of performance data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduleRunConfiguration.html"
+                                  title='struct rusoto_devicefarm::ScheduleRunConfiguration'>ScheduleRunConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the settings for a run. Includes things like location, radio states, auxiliary apps, and network profiles.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduleRunRequest.html"
+                                  title='struct rusoto_devicefarm::ScheduleRunRequest'>ScheduleRunRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the schedule run operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduleRunResult.html"
+                                  title='struct rusoto_devicefarm::ScheduleRunResult'>ScheduleRunResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of a schedule run request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ScheduleRunTest.html"
+                                  title='struct rusoto_devicefarm::ScheduleRunTest'>ScheduleRunTest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents additional test settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopRemoteAccessSessionRequest.html"
+                                  title='struct rusoto_devicefarm::StopRemoteAccessSessionRequest'>StopRemoteAccessSessionRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to stop the remote access session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopRemoteAccessSessionResult.html"
+                                  title='struct rusoto_devicefarm::StopRemoteAccessSessionResult'>StopRemoteAccessSessionResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the response from the server that describes the remote access session when AWS Device Farm stops the session.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopRunRequest.html"
+                                  title='struct rusoto_devicefarm::StopRunRequest'>StopRunRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the request to stop a specific run.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopRunResult.html"
+                                  title='struct rusoto_devicefarm::StopRunResult'>StopRunResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the results of your stop run attempt.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Suite.html"
+                                  title='struct rusoto_devicefarm::Suite'>Suite</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a collection of one or more tests.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Test.html"
+                                  title='struct rusoto_devicefarm::Test'>Test</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a condition that is evaluated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TrialMinutes.html"
+                                  title='struct rusoto_devicefarm::TrialMinutes'>TrialMinutes</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents information about free trial device minutes for an AWS account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UniqueProblem.html"
+                                  title='struct rusoto_devicefarm::UniqueProblem'>UniqueProblem</a></td>
+                           <td class='docblock-short'>
+                                <p>A collection of one or more problems, grouped by their result.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceInstanceRequest.html"
+                                  title='struct rusoto_devicefarm::UpdateDeviceInstanceRequest'>UpdateDeviceInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDeviceInstanceResult.html"
+                                  title='struct rusoto_devicefarm::UpdateDeviceInstanceResult'>UpdateDeviceInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDevicePoolRequest.html"
+                                  title='struct rusoto_devicefarm::UpdateDevicePoolRequest'>UpdateDevicePoolRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the update device pool operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDevicePoolResult.html"
+                                  title='struct rusoto_devicefarm::UpdateDevicePoolResult'>UpdateDevicePoolResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of an update device pool request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateInstanceProfileRequest.html"
+                                  title='struct rusoto_devicefarm::UpdateInstanceProfileRequest'>UpdateInstanceProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateInstanceProfileResult.html"
+                                  title='struct rusoto_devicefarm::UpdateInstanceProfileResult'>UpdateInstanceProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNetworkProfileRequest.html"
+                                  title='struct rusoto_devicefarm::UpdateNetworkProfileRequest'>UpdateNetworkProfileRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNetworkProfileResult.html"
+                                  title='struct rusoto_devicefarm::UpdateNetworkProfileResult'>UpdateNetworkProfileResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateProjectRequest.html"
+                                  title='struct rusoto_devicefarm::UpdateProjectRequest'>UpdateProjectRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a request to the update project operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateProjectResult.html"
+                                  title='struct rusoto_devicefarm::UpdateProjectResult'>UpdateProjectResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the result of an update project request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Upload.html"
+                                  title='struct rusoto_devicefarm::Upload'>Upload</a></td>
+                           <td class='docblock-short'>
+                                <p>An app or a set of one or more tests to upload or that have been uploaded.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDevicePoolError.html"
+                                  title='enum rusoto_devicefarm::CreateDevicePoolError'>CreateDevicePoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDevicePool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateInstanceProfileError.html"
+                                  title='enum rusoto_devicefarm::CreateInstanceProfileError'>CreateInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateNetworkProfileError.html"
+                                  title='enum rusoto_devicefarm::CreateNetworkProfileError'>CreateNetworkProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateNetworkProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateProjectError.html"
+                                  title='enum rusoto_devicefarm::CreateProjectError'>CreateProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateRemoteAccessSessionError.html"
+                                  title='enum rusoto_devicefarm::CreateRemoteAccessSessionError'>CreateRemoteAccessSessionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateRemoteAccessSession</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUploadError.html"
+                                  title='enum rusoto_devicefarm::CreateUploadError'>CreateUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDevicePoolError.html"
+                                  title='enum rusoto_devicefarm::DeleteDevicePoolError'>DeleteDevicePoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDevicePool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteInstanceProfileError.html"
+                                  title='enum rusoto_devicefarm::DeleteInstanceProfileError'>DeleteInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteNetworkProfileError.html"
+                                  title='enum rusoto_devicefarm::DeleteNetworkProfileError'>DeleteNetworkProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteNetworkProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteProjectError.html"
+                                  title='enum rusoto_devicefarm::DeleteProjectError'>DeleteProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRemoteAccessSessionError.html"
+                                  title='enum rusoto_devicefarm::DeleteRemoteAccessSessionError'>DeleteRemoteAccessSessionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRemoteAccessSession</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRunError.html"
+                                  title='enum rusoto_devicefarm::DeleteRunError'>DeleteRunError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRun</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUploadError.html"
+                                  title='enum rusoto_devicefarm::DeleteUploadError'>DeleteUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAccountSettingsError.html"
+                                  title='enum rusoto_devicefarm::GetAccountSettingsError'>GetAccountSettingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAccountSettings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeviceError.html"
+                                  title='enum rusoto_devicefarm::GetDeviceError'>GetDeviceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDevice</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeviceInstanceError.html"
+                                  title='enum rusoto_devicefarm::GetDeviceInstanceError'>GetDeviceInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeviceInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDevicePoolCompatibilityError.html"
+                                  title='enum rusoto_devicefarm::GetDevicePoolCompatibilityError'>GetDevicePoolCompatibilityError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDevicePoolCompatibility</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDevicePoolError.html"
+                                  title='enum rusoto_devicefarm::GetDevicePoolError'>GetDevicePoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDevicePool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInstanceProfileError.html"
+                                  title='enum rusoto_devicefarm::GetInstanceProfileError'>GetInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobError.html"
+                                  title='enum rusoto_devicefarm::GetJobError'>GetJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetNetworkProfileError.html"
+                                  title='enum rusoto_devicefarm::GetNetworkProfileError'>GetNetworkProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetNetworkProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetOfferingStatusError.html"
+                                  title='enum rusoto_devicefarm::GetOfferingStatusError'>GetOfferingStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetOfferingStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetProjectError.html"
+                                  title='enum rusoto_devicefarm::GetProjectError'>GetProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetProject</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRemoteAccessSessionError.html"
+                                  title='enum rusoto_devicefarm::GetRemoteAccessSessionError'>GetRemoteAccessSessionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRemoteAccessSession</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetRunError.html"
+                                  title='enum rusoto_devicefarm::GetRunError'>GetRunError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetRun</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSuiteError.html"
+                                  title='enum rusoto_devicefarm::GetSuiteError'>GetSuiteError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSuite</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetTestError.html"
+                                  title='enum rusoto_devicefarm::GetTestError'>GetTestError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetTest</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetUploadError.html"
+                                  title='enum rusoto_devicefarm::GetUploadError'>GetUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InstallToRemoteAccessSessionError.html"
+                                  title='enum rusoto_devicefarm::InstallToRemoteAccessSessionError'>InstallToRemoteAccessSessionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InstallToRemoteAccessSession</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListArtifactsError.html"
+                                  title='enum rusoto_devicefarm::ListArtifactsError'>ListArtifactsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListArtifacts</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDeviceInstancesError.html"
+                                  title='enum rusoto_devicefarm::ListDeviceInstancesError'>ListDeviceInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDeviceInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDevicePoolsError.html"
+                                  title='enum rusoto_devicefarm::ListDevicePoolsError'>ListDevicePoolsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDevicePools</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDevicesError.html"
+                                  title='enum rusoto_devicefarm::ListDevicesError'>ListDevicesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDevices</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInstanceProfilesError.html"
+                                  title='enum rusoto_devicefarm::ListInstanceProfilesError'>ListInstanceProfilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInstanceProfiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_devicefarm::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListNetworkProfilesError.html"
+                                  title='enum rusoto_devicefarm::ListNetworkProfilesError'>ListNetworkProfilesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListNetworkProfiles</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOfferingPromotionsError.html"
+                                  title='enum rusoto_devicefarm::ListOfferingPromotionsError'>ListOfferingPromotionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOfferingPromotions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOfferingTransactionsError.html"
+                                  title='enum rusoto_devicefarm::ListOfferingTransactionsError'>ListOfferingTransactionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOfferingTransactions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListOfferingsError.html"
+                                  title='enum rusoto_devicefarm::ListOfferingsError'>ListOfferingsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListOfferings</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListProjectsError.html"
+                                  title='enum rusoto_devicefarm::ListProjectsError'>ListProjectsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListProjects</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRemoteAccessSessionsError.html"
+                                  title='enum rusoto_devicefarm::ListRemoteAccessSessionsError'>ListRemoteAccessSessionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRemoteAccessSessions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListRunsError.html"
+                                  title='enum rusoto_devicefarm::ListRunsError'>ListRunsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListRuns</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSamplesError.html"
+                                  title='enum rusoto_devicefarm::ListSamplesError'>ListSamplesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSamples</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListSuitesError.html"
+                                  title='enum rusoto_devicefarm::ListSuitesError'>ListSuitesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListSuites</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTestsError.html"
+                                  title='enum rusoto_devicefarm::ListTestsError'>ListTestsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTests</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUniqueProblemsError.html"
+                                  title='enum rusoto_devicefarm::ListUniqueProblemsError'>ListUniqueProblemsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUniqueProblems</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListUploadsError.html"
+                                  title='enum rusoto_devicefarm::ListUploadsError'>ListUploadsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListUploads</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PurchaseOfferingError.html"
+                                  title='enum rusoto_devicefarm::PurchaseOfferingError'>PurchaseOfferingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PurchaseOffering</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RenewOfferingError.html"
+                                  title='enum rusoto_devicefarm::RenewOfferingError'>RenewOfferingError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RenewOffering</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ScheduleRunError.html"
+                                  title='enum rusoto_devicefarm::ScheduleRunError'>ScheduleRunError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ScheduleRun</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopRemoteAccessSessionError.html"
+                                  title='enum rusoto_devicefarm::StopRemoteAccessSessionError'>StopRemoteAccessSessionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopRemoteAccessSession</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopRunError.html"
+                                  title='enum rusoto_devicefarm::StopRunError'>StopRunError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopRun</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDeviceInstanceError.html"
+                                  title='enum rusoto_devicefarm::UpdateDeviceInstanceError'>UpdateDeviceInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDeviceInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDevicePoolError.html"
+                                  title='enum rusoto_devicefarm::UpdateDevicePoolError'>UpdateDevicePoolError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDevicePool</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateInstanceProfileError.html"
+                                  title='enum rusoto_devicefarm::UpdateInstanceProfileError'>UpdateInstanceProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateInstanceProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateNetworkProfileError.html"
+                                  title='enum rusoto_devicefarm::UpdateNetworkProfileError'>UpdateNetworkProfileError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateNetworkProfile</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateProjectError.html"
+                                  title='enum rusoto_devicefarm::UpdateProjectError'>UpdateProjectError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateProject</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.DeviceFarm.html"
+                                  title='trait rusoto_devicefarm::DeviceFarm'>DeviceFarm</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Device Farm API. AWS Device Farm clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_devicefarm";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

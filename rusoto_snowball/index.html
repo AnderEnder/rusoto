@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_snowball` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_snowball"><title>rusoto_snowball - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_snowball/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_snowball</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_snowball', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_snowball</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_snowball/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User Guide</a>.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.SnowballClient.html">SnowballClient</a> and <a href="trait.Snowball.html">Snowball</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Address.html"
+                                  title='struct rusoto_snowball::Address'>Address</a></td>
+                           <td class='docblock-short'>
+                                <p>The address that you want the Snowball or Snowballs associated with a specific job to be shipped to. Addresses are validated at the time of creation. The address you provide must be located within the serviceable area of your region. Although no individual elements of the <code>Address</code> are required, if the address is invalid or unsupported, then an exception is thrown.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelClusterRequest.html"
+                                  title='struct rusoto_snowball::CancelClusterRequest'>CancelClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelClusterResult.html"
+                                  title='struct rusoto_snowball::CancelClusterResult'>CancelClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobRequest.html"
+                                  title='struct rusoto_snowball::CancelJobRequest'>CancelJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobResult.html"
+                                  title='struct rusoto_snowball::CancelJobResult'>CancelJobResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterListEntry.html"
+                                  title='struct rusoto_snowball::ClusterListEntry'>ClusterListEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a cluster's state, a cluster's ID, and other important information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ClusterMetadata.html"
+                                  title='struct rusoto_snowball::ClusterMetadata'>ClusterMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains metadata about a specific cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAddressRequest.html"
+                                  title='struct rusoto_snowball::CreateAddressRequest'>CreateAddressRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAddressResult.html"
+                                  title='struct rusoto_snowball::CreateAddressResult'>CreateAddressResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateClusterRequest.html"
+                                  title='struct rusoto_snowball::CreateClusterRequest'>CreateClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateClusterResult.html"
+                                  title='struct rusoto_snowball::CreateClusterResult'>CreateClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobRequest.html"
+                                  title='struct rusoto_snowball::CreateJobRequest'>CreateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobResult.html"
+                                  title='struct rusoto_snowball::CreateJobResult'>CreateJobResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DataTransfer.html"
+                                  title='struct rusoto_snowball::DataTransfer'>DataTransfer</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines the real-time status of a Snowball's data transfer while the appliance is at AWS. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and export jobs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAddressRequest.html"
+                                  title='struct rusoto_snowball::DescribeAddressRequest'>DescribeAddressRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAddressResult.html"
+                                  title='struct rusoto_snowball::DescribeAddressResult'>DescribeAddressResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAddressesRequest.html"
+                                  title='struct rusoto_snowball::DescribeAddressesRequest'>DescribeAddressesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAddressesResult.html"
+                                  title='struct rusoto_snowball::DescribeAddressesResult'>DescribeAddressesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeClusterRequest.html"
+                                  title='struct rusoto_snowball::DescribeClusterRequest'>DescribeClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeClusterResult.html"
+                                  title='struct rusoto_snowball::DescribeClusterResult'>DescribeClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobRequest.html"
+                                  title='struct rusoto_snowball::DescribeJobRequest'>DescribeJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobResult.html"
+                                  title='struct rusoto_snowball::DescribeJobResult'>DescribeJobResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventTriggerDefinition.html"
+                                  title='struct rusoto_snowball::EventTriggerDefinition'>EventTriggerDefinition</a></td>
+                           <td class='docblock-short'>
+                                <p>The container for the <a>EventTriggerDefinition$EventResourceARN</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobManifestRequest.html"
+                                  title='struct rusoto_snowball::GetJobManifestRequest'>GetJobManifestRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobManifestResult.html"
+                                  title='struct rusoto_snowball::GetJobManifestResult'>GetJobManifestResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobUnlockCodeRequest.html"
+                                  title='struct rusoto_snowball::GetJobUnlockCodeRequest'>GetJobUnlockCodeRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobUnlockCodeResult.html"
+                                  title='struct rusoto_snowball::GetJobUnlockCodeResult'>GetJobUnlockCodeResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSnowballUsageRequest.html"
+                                  title='struct rusoto_snowball::GetSnowballUsageRequest'>GetSnowballUsageRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSnowballUsageResult.html"
+                                  title='struct rusoto_snowball::GetSnowballUsageResult'>GetSnowballUsageResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobListEntry.html"
+                                  title='struct rusoto_snowball::JobListEntry'>JobListEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Each <code>JobListEntry</code> object contains a job's state, a job's ID, and a value that indicates whether the job is a job part, in the case of an export job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobLogs.html"
+                                  title='struct rusoto_snowball::JobLogs'>JobLogs</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains job logs. Whenever Snowball is used to import data into or export data out of Amazon S3, you'll have the option of downloading a PDF job report. Job logs are returned as a part of the response syntax of the <code>DescribeJob</code> action in the <code>JobMetadata</code> data type. The job logs can be accessed for up to 60 minutes after this request has been made. To access any of the job logs after 60 minutes have passed, you'll have to make another call to the <code>DescribeJob</code> action.</p> <p>For import jobs, the PDF job report becomes available at the end of the import process. For export jobs, your job report typically becomes available while the Snowball for your job part is being delivered to you.</p> <p>The job report provides you insight into the state of your Amazon S3 data transfer. The report includes details about your job or job part for your records.</p> <p>For deeper visibility into the status of your transferred objects, you can look at the two associated logs: a success log and a failure log. The logs are saved in comma-separated value (CSV) format, and the name of each log includes the ID of the job or job part that the log describes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobMetadata.html"
+                                  title='struct rusoto_snowball::JobMetadata'>JobMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a specific job including shipping information, job status, and other important metadata. This information is returned as a part of the response syntax of the <code>DescribeJob</code> action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobResource.html"
+                                  title='struct rusoto_snowball::JobResource'>JobResource</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains an array of <code>S3Resource</code> objects. Each <code>S3Resource</code> object represents an Amazon S3 bucket that your transferred data will be exported from or imported into.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyRange.html"
+                                  title='struct rusoto_snowball::KeyRange'>KeyRange</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains a key range. For export jobs, a <code>S3Resource</code> object can have an optional <code>KeyRange</code> value. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LambdaResource.html"
+                                  title='struct rusoto_snowball::LambdaResource'>LambdaResource</a></td>
+                           <td class='docblock-short'>
+                                <p>Identifies </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClusterJobsRequest.html"
+                                  title='struct rusoto_snowball::ListClusterJobsRequest'>ListClusterJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClusterJobsResult.html"
+                                  title='struct rusoto_snowball::ListClusterJobsResult'>ListClusterJobsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClustersRequest.html"
+                                  title='struct rusoto_snowball::ListClustersRequest'>ListClustersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListClustersResult.html"
+                                  title='struct rusoto_snowball::ListClustersResult'>ListClustersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsRequest.html"
+                                  title='struct rusoto_snowball::ListJobsRequest'>ListJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsResult.html"
+                                  title='struct rusoto_snowball::ListJobsResult'>ListJobsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Notification.html"
+                                  title='struct rusoto_snowball::Notification'>Notification</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon Simple Notification Service (Amazon SNS) notification settings associated with a specific job. The <code>Notification</code> object is returned as a part of the response syntax of the <code>DescribeJob</code> action in the <code>JobMetadata</code> data type.</p> <p>When the notification settings are defined during job creation, you can choose to notify based on a specific set of job states using the <code>JobStatesToNotify</code> array of strings, or you can specify that you want to have Amazon SNS notifications sent out for all job states with <code>NotifyAll</code> set to true.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Resource.html"
+                                  title='struct rusoto_snowball::S3Resource'>S3Resource</a></td>
+                           <td class='docblock-short'>
+                                <p>Each <code>S3Resource</code> object represents an Amazon S3 bucket that your transferred data will be exported from or imported into. For export jobs, this object can have an optional <code>KeyRange</code> value. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Shipment.html"
+                                  title='struct rusoto_snowball::Shipment'>Shipment</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>Status</code> and <code>TrackingNumber</code> information for an inbound or outbound shipment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ShippingDetails.html"
+                                  title='struct rusoto_snowball::ShippingDetails'>ShippingDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>A job's shipping information, including inbound and outbound tracking numbers and shipping speed options.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SnowballClient.html"
+                                  title='struct rusoto_snowball::SnowballClient'>SnowballClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Snowball API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateClusterRequest.html"
+                                  title='struct rusoto_snowball::UpdateClusterRequest'>UpdateClusterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateClusterResult.html"
+                                  title='struct rusoto_snowball::UpdateClusterResult'>UpdateClusterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobRequest.html"
+                                  title='struct rusoto_snowball::UpdateJobRequest'>UpdateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobResult.html"
+                                  title='struct rusoto_snowball::UpdateJobResult'>UpdateJobResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelClusterError.html"
+                                  title='enum rusoto_snowball::CancelClusterError'>CancelClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelJobError.html"
+                                  title='enum rusoto_snowball::CancelJobError'>CancelJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAddressError.html"
+                                  title='enum rusoto_snowball::CreateAddressError'>CreateAddressError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAddress</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateClusterError.html"
+                                  title='enum rusoto_snowball::CreateClusterError'>CreateClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateJobError.html"
+                                  title='enum rusoto_snowball::CreateJobError'>CreateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAddressError.html"
+                                  title='enum rusoto_snowball::DescribeAddressError'>DescribeAddressError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAddress</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAddressesError.html"
+                                  title='enum rusoto_snowball::DescribeAddressesError'>DescribeAddressesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAddresses</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeClusterError.html"
+                                  title='enum rusoto_snowball::DescribeClusterError'>DescribeClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobError.html"
+                                  title='enum rusoto_snowball::DescribeJobError'>DescribeJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobManifestError.html"
+                                  title='enum rusoto_snowball::GetJobManifestError'>GetJobManifestError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobManifest</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobUnlockCodeError.html"
+                                  title='enum rusoto_snowball::GetJobUnlockCodeError'>GetJobUnlockCodeError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobUnlockCode</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSnowballUsageError.html"
+                                  title='enum rusoto_snowball::GetSnowballUsageError'>GetSnowballUsageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSnowballUsage</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListClusterJobsError.html"
+                                  title='enum rusoto_snowball::ListClusterJobsError'>ListClusterJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListClusterJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListClustersError.html"
+                                  title='enum rusoto_snowball::ListClustersError'>ListClustersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListClusters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_snowball::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateClusterError.html"
+                                  title='enum rusoto_snowball::UpdateClusterError'>UpdateClusterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateCluster</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateJobError.html"
+                                  title='enum rusoto_snowball::UpdateJobError'>UpdateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateJob</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Snowball.html"
+                                  title='trait rusoto_snowball::Snowball'>Snowball</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Snowball API. Amazon Snowball clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_snowball";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

@@ -1,0 +1,2807 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_ssm` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_ssm"><title>rusoto_ssm - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_ssm/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_ssm</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_ssm', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_ssm</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_ssm/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Systems Manager</fullname> <p>AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in your hybrid environment that has been configured for Systems Manager.</p> <p>This reference is intended to be used with the <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User Guide</a>.</p> <p>To get started, verify prerequisites and configure managed instances. For more information, see <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager Prerequisites</a>.</p> <p>For information about other API actions you can perform on Amazon EC2 instances, see the <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API Requests</a>. </p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.SsmClient.html">SsmClient</a> and <a href="trait.Ssm.html">Ssm</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Activation.html"
+                                  title='struct rusoto_ssm::Activation'>Activation</a></td>
+                           <td class='docblock-short'>
+                                <p>An activation registers one or more on-premises servers or virtual machines (VMs) with AWS so that you can configure those servers or VMs using Run Command. A server or VM that has been registered with AWS is called a managed instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceRequest.html"
+                                  title='struct rusoto_ssm::AddTagsToResourceRequest'>AddTagsToResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceResult.html"
+                                  title='struct rusoto_ssm::AddTagsToResourceResult'>AddTagsToResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Association.html"
+                                  title='struct rusoto_ssm::Association'>Association</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an association of a Systems Manager document and an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociationDescription.html"
+                                  title='struct rusoto_ssm::AssociationDescription'>AssociationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the parameters for a document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociationFilter.html"
+                                  title='struct rusoto_ssm::AssociationFilter'>AssociationFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociationOverview.html"
+                                  title='struct rusoto_ssm::AssociationOverview'>AssociationOverview</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the association.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociationStatus.html"
+                                  title='struct rusoto_ssm::AssociationStatus'>AssociationStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an association status.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociationVersionInfo.html"
+                                  title='struct rusoto_ssm::AssociationVersionInfo'>AssociationVersionInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the association version.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutomationExecution.html"
+                                  title='struct rusoto_ssm::AutomationExecution'>AutomationExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed information about the current state of an individual Automation execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutomationExecutionFilter.html"
+                                  title='struct rusoto_ssm::AutomationExecutionFilter'>AutomationExecutionFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>A filter used to match specific automation executions. This is used to limit the scope of Automation execution information returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AutomationExecutionMetadata.html"
+                                  title='struct rusoto_ssm::AutomationExecutionMetadata'>AutomationExecutionMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Details about a specific Automation execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelCommandRequest.html"
+                                  title='struct rusoto_ssm::CancelCommandRequest'>CancelCommandRequest</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelCommandResult.html"
+                                  title='struct rusoto_ssm::CancelCommandResult'>CancelCommandResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Whether or not the command was successfully canceled. There is no guarantee that a request can be canceled.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Command.html"
+                                  title='struct rusoto_ssm::Command'>Command</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a command request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CommandFilter.html"
+                                  title='struct rusoto_ssm::CommandFilter'>CommandFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a command filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CommandInvocation.html"
+                                  title='struct rusoto_ssm::CommandInvocation'>CommandInvocation</a></td>
+                           <td class='docblock-short'>
+                                <p>An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command invocation is created for each requested instance ID. A command invocation returns status and detail information about a command you executed. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CommandPlugin.html"
+                                  title='struct rusoto_ssm::CommandPlugin'>CommandPlugin</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes plugin details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComplianceExecutionSummary.html"
+                                  title='struct rusoto_ssm::ComplianceExecutionSummary'>ComplianceExecutionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of the call execution that includes an execution ID, the type of execution (for example, <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following format: yyyy-MM-dd'T'HH:mm:ss'Z'.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComplianceItem.html"
+                                  title='struct rusoto_ssm::ComplianceItem'>ComplianceItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the compliance as defined by the resource type. For example, for a patch resource type, <code>Items</code> includes information about the PatchSeverity, Classification, etc.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComplianceItemEntry.html"
+                                  title='struct rusoto_ssm::ComplianceItemEntry'>ComplianceItemEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a compliance item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComplianceStringFilter.html"
+                                  title='struct rusoto_ssm::ComplianceStringFilter'>ComplianceStringFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>One or more filters. Use a filter to return a more specific list of results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComplianceSummaryItem.html"
+                                  title='struct rusoto_ssm::ComplianceSummaryItem'>ComplianceSummaryItem</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of compliance information by compliance type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompliantSummary.html"
+                                  title='struct rusoto_ssm::CompliantSummary'>CompliantSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of resources that are compliant. The summary is organized according to the resource count for each compliance type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateActivationRequest.html"
+                                  title='struct rusoto_ssm::CreateActivationRequest'>CreateActivationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateActivationResult.html"
+                                  title='struct rusoto_ssm::CreateActivationResult'>CreateActivationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAssociationBatchRequest.html"
+                                  title='struct rusoto_ssm::CreateAssociationBatchRequest'>CreateAssociationBatchRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAssociationBatchRequestEntry.html"
+                                  title='struct rusoto_ssm::CreateAssociationBatchRequestEntry'>CreateAssociationBatchRequestEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the association of a Systems Manager document and an instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAssociationBatchResult.html"
+                                  title='struct rusoto_ssm::CreateAssociationBatchResult'>CreateAssociationBatchResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAssociationRequest.html"
+                                  title='struct rusoto_ssm::CreateAssociationRequest'>CreateAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateAssociationResult.html"
+                                  title='struct rusoto_ssm::CreateAssociationResult'>CreateAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDocumentRequest.html"
+                                  title='struct rusoto_ssm::CreateDocumentRequest'>CreateDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDocumentResult.html"
+                                  title='struct rusoto_ssm::CreateDocumentResult'>CreateDocumentResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::CreateMaintenanceWindowRequest'>CreateMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::CreateMaintenanceWindowResult'>CreateMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::CreatePatchBaselineRequest'>CreatePatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePatchBaselineResult.html"
+                                  title='struct rusoto_ssm::CreatePatchBaselineResult'>CreatePatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDataSyncRequest.html"
+                                  title='struct rusoto_ssm::CreateResourceDataSyncRequest'>CreateResourceDataSyncRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateResourceDataSyncResult.html"
+                                  title='struct rusoto_ssm::CreateResourceDataSyncResult'>CreateResourceDataSyncResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteActivationRequest.html"
+                                  title='struct rusoto_ssm::DeleteActivationRequest'>DeleteActivationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteActivationResult.html"
+                                  title='struct rusoto_ssm::DeleteActivationResult'>DeleteActivationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAssociationRequest.html"
+                                  title='struct rusoto_ssm::DeleteAssociationRequest'>DeleteAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAssociationResult.html"
+                                  title='struct rusoto_ssm::DeleteAssociationResult'>DeleteAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDocumentRequest.html"
+                                  title='struct rusoto_ssm::DeleteDocumentRequest'>DeleteDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDocumentResult.html"
+                                  title='struct rusoto_ssm::DeleteDocumentResult'>DeleteDocumentResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::DeleteMaintenanceWindowRequest'>DeleteMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::DeleteMaintenanceWindowResult'>DeleteMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteParameterRequest.html"
+                                  title='struct rusoto_ssm::DeleteParameterRequest'>DeleteParameterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteParameterResult.html"
+                                  title='struct rusoto_ssm::DeleteParameterResult'>DeleteParameterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteParametersRequest.html"
+                                  title='struct rusoto_ssm::DeleteParametersRequest'>DeleteParametersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteParametersResult.html"
+                                  title='struct rusoto_ssm::DeleteParametersResult'>DeleteParametersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::DeletePatchBaselineRequest'>DeletePatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePatchBaselineResult.html"
+                                  title='struct rusoto_ssm::DeletePatchBaselineResult'>DeletePatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceDataSyncRequest.html"
+                                  title='struct rusoto_ssm::DeleteResourceDataSyncRequest'>DeleteResourceDataSyncRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourceDataSyncResult.html"
+                                  title='struct rusoto_ssm::DeleteResourceDataSyncResult'>DeleteResourceDataSyncResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterManagedInstanceRequest.html"
+                                  title='struct rusoto_ssm::DeregisterManagedInstanceRequest'>DeregisterManagedInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterManagedInstanceResult.html"
+                                  title='struct rusoto_ssm::DeregisterManagedInstanceResult'>DeregisterManagedInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterPatchBaselineForPatchGroupRequest.html"
+                                  title='struct rusoto_ssm::DeregisterPatchBaselineForPatchGroupRequest'>DeregisterPatchBaselineForPatchGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterPatchBaselineForPatchGroupResult.html"
+                                  title='struct rusoto_ssm::DeregisterPatchBaselineForPatchGroupResult'>DeregisterPatchBaselineForPatchGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTargetFromMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::DeregisterTargetFromMaintenanceWindowRequest'>DeregisterTargetFromMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTargetFromMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::DeregisterTargetFromMaintenanceWindowResult'>DeregisterTargetFromMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTaskFromMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::DeregisterTaskFromMaintenanceWindowRequest'>DeregisterTaskFromMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterTaskFromMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::DeregisterTaskFromMaintenanceWindowResult'>DeregisterTaskFromMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeActivationsFilter.html"
+                                  title='struct rusoto_ssm::DescribeActivationsFilter'>DescribeActivationsFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter for the DescribeActivation API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeActivationsRequest.html"
+                                  title='struct rusoto_ssm::DescribeActivationsRequest'>DescribeActivationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeActivationsResult.html"
+                                  title='struct rusoto_ssm::DescribeActivationsResult'>DescribeActivationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAssociationRequest.html"
+                                  title='struct rusoto_ssm::DescribeAssociationRequest'>DescribeAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAssociationResult.html"
+                                  title='struct rusoto_ssm::DescribeAssociationResult'>DescribeAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutomationExecutionsRequest.html"
+                                  title='struct rusoto_ssm::DescribeAutomationExecutionsRequest'>DescribeAutomationExecutionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutomationExecutionsResult.html"
+                                  title='struct rusoto_ssm::DescribeAutomationExecutionsResult'>DescribeAutomationExecutionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutomationStepExecutionsRequest.html"
+                                  title='struct rusoto_ssm::DescribeAutomationStepExecutionsRequest'>DescribeAutomationStepExecutionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAutomationStepExecutionsResult.html"
+                                  title='struct rusoto_ssm::DescribeAutomationStepExecutionsResult'>DescribeAutomationStepExecutionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAvailablePatchesRequest.html"
+                                  title='struct rusoto_ssm::DescribeAvailablePatchesRequest'>DescribeAvailablePatchesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAvailablePatchesResult.html"
+                                  title='struct rusoto_ssm::DescribeAvailablePatchesResult'>DescribeAvailablePatchesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentPermissionRequest.html"
+                                  title='struct rusoto_ssm::DescribeDocumentPermissionRequest'>DescribeDocumentPermissionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentPermissionResponse.html"
+                                  title='struct rusoto_ssm::DescribeDocumentPermissionResponse'>DescribeDocumentPermissionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentRequest.html"
+                                  title='struct rusoto_ssm::DescribeDocumentRequest'>DescribeDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentResult.html"
+                                  title='struct rusoto_ssm::DescribeDocumentResult'>DescribeDocumentResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEffectiveInstanceAssociationsRequest.html"
+                                  title='struct rusoto_ssm::DescribeEffectiveInstanceAssociationsRequest'>DescribeEffectiveInstanceAssociationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEffectiveInstanceAssociationsResult.html"
+                                  title='struct rusoto_ssm::DescribeEffectiveInstanceAssociationsResult'>DescribeEffectiveInstanceAssociationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEffectivePatchesForPatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::DescribeEffectivePatchesForPatchBaselineRequest'>DescribeEffectivePatchesForPatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEffectivePatchesForPatchBaselineResult.html"
+                                  title='struct rusoto_ssm::DescribeEffectivePatchesForPatchBaselineResult'>DescribeEffectivePatchesForPatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstanceAssociationsStatusRequest.html"
+                                  title='struct rusoto_ssm::DescribeInstanceAssociationsStatusRequest'>DescribeInstanceAssociationsStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstanceAssociationsStatusResult.html"
+                                  title='struct rusoto_ssm::DescribeInstanceAssociationsStatusResult'>DescribeInstanceAssociationsStatusResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstanceInformationRequest.html"
+                                  title='struct rusoto_ssm::DescribeInstanceInformationRequest'>DescribeInstanceInformationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstanceInformationResult.html"
+                                  title='struct rusoto_ssm::DescribeInstanceInformationResult'>DescribeInstanceInformationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchStatesForPatchGroupRequest.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchStatesForPatchGroupRequest'>DescribeInstancePatchStatesForPatchGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchStatesForPatchGroupResult.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchStatesForPatchGroupResult'>DescribeInstancePatchStatesForPatchGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchStatesRequest.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchStatesRequest'>DescribeInstancePatchStatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchStatesResult.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchStatesResult'>DescribeInstancePatchStatesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchesRequest.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchesRequest'>DescribeInstancePatchesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeInstancePatchesResult.html"
+                                  title='struct rusoto_ssm::DescribeInstancePatchesResult'>DescribeInstancePatchesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionTaskInvocationsRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionTaskInvocationsRequest'>DescribeMaintenanceWindowExecutionTaskInvocationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionTaskInvocationsResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionTaskInvocationsResult'>DescribeMaintenanceWindowExecutionTaskInvocationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionTasksRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionTasksRequest'>DescribeMaintenanceWindowExecutionTasksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionTasksResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionTasksResult'>DescribeMaintenanceWindowExecutionTasksResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionsRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionsRequest'>DescribeMaintenanceWindowExecutionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowExecutionsResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowExecutionsResult'>DescribeMaintenanceWindowExecutionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowTargetsRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowTargetsRequest'>DescribeMaintenanceWindowTargetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowTargetsResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowTargetsResult'>DescribeMaintenanceWindowTargetsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowTasksRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowTasksRequest'>DescribeMaintenanceWindowTasksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowTasksResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowTasksResult'>DescribeMaintenanceWindowTasksResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowsRequest.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowsRequest'>DescribeMaintenanceWindowsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMaintenanceWindowsResult.html"
+                                  title='struct rusoto_ssm::DescribeMaintenanceWindowsResult'>DescribeMaintenanceWindowsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeParametersRequest.html"
+                                  title='struct rusoto_ssm::DescribeParametersRequest'>DescribeParametersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeParametersResult.html"
+                                  title='struct rusoto_ssm::DescribeParametersResult'>DescribeParametersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchBaselinesRequest.html"
+                                  title='struct rusoto_ssm::DescribePatchBaselinesRequest'>DescribePatchBaselinesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchBaselinesResult.html"
+                                  title='struct rusoto_ssm::DescribePatchBaselinesResult'>DescribePatchBaselinesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchGroupStateRequest.html"
+                                  title='struct rusoto_ssm::DescribePatchGroupStateRequest'>DescribePatchGroupStateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchGroupStateResult.html"
+                                  title='struct rusoto_ssm::DescribePatchGroupStateResult'>DescribePatchGroupStateResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchGroupsRequest.html"
+                                  title='struct rusoto_ssm::DescribePatchGroupsRequest'>DescribePatchGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribePatchGroupsResult.html"
+                                  title='struct rusoto_ssm::DescribePatchGroupsResult'>DescribePatchGroupsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentDefaultVersionDescription.html"
+                                  title='struct rusoto_ssm::DocumentDefaultVersionDescription'>DocumentDefaultVersionDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>A default version of a document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentDescription.html"
+                                  title='struct rusoto_ssm::DocumentDescription'>DocumentDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a Systems Manager document. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentFilter.html"
+                                  title='struct rusoto_ssm::DocumentFilter'>DocumentFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentIdentifier.html"
+                                  title='struct rusoto_ssm::DocumentIdentifier'>DocumentIdentifier</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the name of a Systems Manager document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentKeyValuesFilter.html"
+                                  title='struct rusoto_ssm::DocumentKeyValuesFilter'>DocumentKeyValuesFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>One or more filters. Use a filter to return a more specific list of documents.</p> <p>For keys, you can specify one or more tags that have been applied to a document. </p> <p>Other valid values include Owner, Name, PlatformTypes, and DocumentType.</p> <p>Note that only one Owner can be specified in a request. For example: <code>Key=Owner,Values=Self</code>.</p> <p>If you use Name as a key, you can use a name prefix to return a list of documents. For example, in the AWS CLI, to return a list of all documents that begin with <code>Te</code>, run the following command:</p> <p> <code>aws ssm list-documents --filters Key=Name,Values=Te</code> </p> <p>If you specify more than two keys, only documents that are identified by all the tags are returned in the results. If you specify more than two values for a key, documents that are identified by any of the values are returned in the results.</p> <p>To specify a custom key and value pair, use the format <code>Key=tag:[tagName],Values=[valueName]</code>.</p> <p>For example, if you created a Key called region and are using the AWS CLI to call the <code>list-documents</code> command: </p> <p> <code>aws ssm list-documents --filters Key=tag:region,Values=east,west Key=Owner,Values=Self</code> </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentParameter.html"
+                                  title='struct rusoto_ssm::DocumentParameter'>DocumentParameter</a></td>
+                           <td class='docblock-short'>
+                                <p>Parameters specified in a System Manager document that execute on the server when the command is run. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentVersionInfo.html"
+                                  title='struct rusoto_ssm::DocumentVersionInfo'>DocumentVersionInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Version information about the document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EffectivePatch.html"
+                                  title='struct rusoto_ssm::EffectivePatch'>EffectivePatch</a></td>
+                           <td class='docblock-short'>
+                                <p>The EffectivePatch structure defines metadata about a patch along with the approval state of the patch in a particular patch baseline. The approval state includes information about whether the patch is currently approved, due to be approved by a rule, explicitly approved, or explicitly rejected and the date the patch was or will be approved.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailedCreateAssociation.html"
+                                  title='struct rusoto_ssm::FailedCreateAssociation'>FailedCreateAssociation</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a failed association.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailureDetails.html"
+                                  title='struct rusoto_ssm::FailureDetails'>FailureDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about an Automation failure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAutomationExecutionRequest.html"
+                                  title='struct rusoto_ssm::GetAutomationExecutionRequest'>GetAutomationExecutionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetAutomationExecutionResult.html"
+                                  title='struct rusoto_ssm::GetAutomationExecutionResult'>GetAutomationExecutionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCommandInvocationRequest.html"
+                                  title='struct rusoto_ssm::GetCommandInvocationRequest'>GetCommandInvocationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCommandInvocationResult.html"
+                                  title='struct rusoto_ssm::GetCommandInvocationResult'>GetCommandInvocationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDefaultPatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::GetDefaultPatchBaselineRequest'>GetDefaultPatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDefaultPatchBaselineResult.html"
+                                  title='struct rusoto_ssm::GetDefaultPatchBaselineResult'>GetDefaultPatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeployablePatchSnapshotForInstanceRequest.html"
+                                  title='struct rusoto_ssm::GetDeployablePatchSnapshotForInstanceRequest'>GetDeployablePatchSnapshotForInstanceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDeployablePatchSnapshotForInstanceResult.html"
+                                  title='struct rusoto_ssm::GetDeployablePatchSnapshotForInstanceResult'>GetDeployablePatchSnapshotForInstanceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentRequest.html"
+                                  title='struct rusoto_ssm::GetDocumentRequest'>GetDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentResult.html"
+                                  title='struct rusoto_ssm::GetDocumentResult'>GetDocumentResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInventoryRequest.html"
+                                  title='struct rusoto_ssm::GetInventoryRequest'>GetInventoryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInventoryResult.html"
+                                  title='struct rusoto_ssm::GetInventoryResult'>GetInventoryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInventorySchemaRequest.html"
+                                  title='struct rusoto_ssm::GetInventorySchemaRequest'>GetInventorySchemaRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetInventorySchemaResult.html"
+                                  title='struct rusoto_ssm::GetInventorySchemaResult'>GetInventorySchemaResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionRequest.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionRequest'>GetMaintenanceWindowExecutionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionResult.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionResult'>GetMaintenanceWindowExecutionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionTaskInvocationRequest.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionTaskInvocationRequest'>GetMaintenanceWindowExecutionTaskInvocationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionTaskInvocationResult.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionTaskInvocationResult'>GetMaintenanceWindowExecutionTaskInvocationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionTaskRequest.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionTaskRequest'>GetMaintenanceWindowExecutionTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowExecutionTaskResult.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowExecutionTaskResult'>GetMaintenanceWindowExecutionTaskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowRequest'>GetMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowResult'>GetMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowTaskRequest.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowTaskRequest'>GetMaintenanceWindowTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMaintenanceWindowTaskResult.html"
+                                  title='struct rusoto_ssm::GetMaintenanceWindowTaskResult'>GetMaintenanceWindowTaskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParameterHistoryRequest.html"
+                                  title='struct rusoto_ssm::GetParameterHistoryRequest'>GetParameterHistoryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParameterHistoryResult.html"
+                                  title='struct rusoto_ssm::GetParameterHistoryResult'>GetParameterHistoryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParameterRequest.html"
+                                  title='struct rusoto_ssm::GetParameterRequest'>GetParameterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParameterResult.html"
+                                  title='struct rusoto_ssm::GetParameterResult'>GetParameterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParametersByPathRequest.html"
+                                  title='struct rusoto_ssm::GetParametersByPathRequest'>GetParametersByPathRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParametersByPathResult.html"
+                                  title='struct rusoto_ssm::GetParametersByPathResult'>GetParametersByPathResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParametersRequest.html"
+                                  title='struct rusoto_ssm::GetParametersRequest'>GetParametersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetParametersResult.html"
+                                  title='struct rusoto_ssm::GetParametersResult'>GetParametersResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPatchBaselineForPatchGroupRequest.html"
+                                  title='struct rusoto_ssm::GetPatchBaselineForPatchGroupRequest'>GetPatchBaselineForPatchGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPatchBaselineForPatchGroupResult.html"
+                                  title='struct rusoto_ssm::GetPatchBaselineForPatchGroupResult'>GetPatchBaselineForPatchGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::GetPatchBaselineRequest'>GetPatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPatchBaselineResult.html"
+                                  title='struct rusoto_ssm::GetPatchBaselineResult'>GetPatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAggregatedAssociationOverview.html"
+                                  title='struct rusoto_ssm::InstanceAggregatedAssociationOverview'>InstanceAggregatedAssociationOverview</a></td>
+                           <td class='docblock-short'>
+                                <p>Status information about the aggregated associations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAssociation.html"
+                                  title='struct rusoto_ssm::InstanceAssociation'>InstanceAssociation</a></td>
+                           <td class='docblock-short'>
+                                <p>One or more association documents on the instance. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAssociationOutputLocation.html"
+                                  title='struct rusoto_ssm::InstanceAssociationOutputLocation'>InstanceAssociationOutputLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>An Amazon S3 bucket where you want to store the results of this request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAssociationOutputUrl.html"
+                                  title='struct rusoto_ssm::InstanceAssociationOutputUrl'>InstanceAssociationOutputUrl</a></td>
+                           <td class='docblock-short'>
+                                <p>The URL of Amazon S3 bucket where you want to store the results of this request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceAssociationStatusInfo.html"
+                                  title='struct rusoto_ssm::InstanceAssociationStatusInfo'>InstanceAssociationStatusInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Status information about the instance association.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceInformation.html"
+                                  title='struct rusoto_ssm::InstanceInformation'>InstanceInformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a filter for a specific list of instances. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceInformationFilter.html"
+                                  title='struct rusoto_ssm::InstanceInformationFilter'>InstanceInformationFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a filter for a specific list of instances. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstanceInformationStringFilter.html"
+                                  title='struct rusoto_ssm::InstanceInformationStringFilter'>InstanceInformationStringFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>The filters to describe or get information about your managed instances.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstancePatchState.html"
+                                  title='struct rusoto_ssm::InstancePatchState'>InstancePatchState</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines the high-level patch compliance state for a managed instance, providing information about the number of installed, missing, not applicable, and failed patches along with metadata about the operation when this information was gathered for the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InstancePatchStateFilter.html"
+                                  title='struct rusoto_ssm::InstancePatchStateFilter'>InstancePatchStateFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines a filter used in DescribeInstancePatchStatesForPatchGroup used to scope down the information returned by the API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryAggregator.html"
+                                  title='struct rusoto_ssm::InventoryAggregator'>InventoryAggregator</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies the inventory type and attribute for the aggregation execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryFilter.html"
+                                  title='struct rusoto_ssm::InventoryFilter'>InventoryFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>One or more filters. Use a filter to return a more specific list of results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryItem.html"
+                                  title='struct rusoto_ssm::InventoryItem'>InventoryItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Information collected from managed instances based on your inventory policy document</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryItemAttribute.html"
+                                  title='struct rusoto_ssm::InventoryItemAttribute'>InventoryItemAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>Attributes are the entries within the inventory item content. It contains name and value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryItemSchema.html"
+                                  title='struct rusoto_ssm::InventoryItemSchema'>InventoryItemSchema</a></td>
+                           <td class='docblock-short'>
+                                <p>The inventory item schema definition. Users can use this to compose inventory query filters.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryResultEntity.html"
+                                  title='struct rusoto_ssm::InventoryResultEntity'>InventoryResultEntity</a></td>
+                           <td class='docblock-short'>
+                                <p>Inventory query results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InventoryResultItem.html"
+                                  title='struct rusoto_ssm::InventoryResultItem'>InventoryResultItem</a></td>
+                           <td class='docblock-short'>
+                                <p>The inventory result item.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAssociationVersionsRequest.html"
+                                  title='struct rusoto_ssm::ListAssociationVersionsRequest'>ListAssociationVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAssociationVersionsResult.html"
+                                  title='struct rusoto_ssm::ListAssociationVersionsResult'>ListAssociationVersionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAssociationsRequest.html"
+                                  title='struct rusoto_ssm::ListAssociationsRequest'>ListAssociationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAssociationsResult.html"
+                                  title='struct rusoto_ssm::ListAssociationsResult'>ListAssociationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCommandInvocationsRequest.html"
+                                  title='struct rusoto_ssm::ListCommandInvocationsRequest'>ListCommandInvocationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCommandInvocationsResult.html"
+                                  title='struct rusoto_ssm::ListCommandInvocationsResult'>ListCommandInvocationsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCommandsRequest.html"
+                                  title='struct rusoto_ssm::ListCommandsRequest'>ListCommandsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCommandsResult.html"
+                                  title='struct rusoto_ssm::ListCommandsResult'>ListCommandsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListComplianceItemsRequest.html"
+                                  title='struct rusoto_ssm::ListComplianceItemsRequest'>ListComplianceItemsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListComplianceItemsResult.html"
+                                  title='struct rusoto_ssm::ListComplianceItemsResult'>ListComplianceItemsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListComplianceSummariesRequest.html"
+                                  title='struct rusoto_ssm::ListComplianceSummariesRequest'>ListComplianceSummariesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListComplianceSummariesResult.html"
+                                  title='struct rusoto_ssm::ListComplianceSummariesResult'>ListComplianceSummariesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDocumentVersionsRequest.html"
+                                  title='struct rusoto_ssm::ListDocumentVersionsRequest'>ListDocumentVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDocumentVersionsResult.html"
+                                  title='struct rusoto_ssm::ListDocumentVersionsResult'>ListDocumentVersionsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDocumentsRequest.html"
+                                  title='struct rusoto_ssm::ListDocumentsRequest'>ListDocumentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDocumentsResult.html"
+                                  title='struct rusoto_ssm::ListDocumentsResult'>ListDocumentsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInventoryEntriesRequest.html"
+                                  title='struct rusoto_ssm::ListInventoryEntriesRequest'>ListInventoryEntriesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListInventoryEntriesResult.html"
+                                  title='struct rusoto_ssm::ListInventoryEntriesResult'>ListInventoryEntriesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceComplianceSummariesRequest.html"
+                                  title='struct rusoto_ssm::ListResourceComplianceSummariesRequest'>ListResourceComplianceSummariesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceComplianceSummariesResult.html"
+                                  title='struct rusoto_ssm::ListResourceComplianceSummariesResult'>ListResourceComplianceSummariesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDataSyncRequest.html"
+                                  title='struct rusoto_ssm::ListResourceDataSyncRequest'>ListResourceDataSyncRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListResourceDataSyncResult.html"
+                                  title='struct rusoto_ssm::ListResourceDataSyncResult'>ListResourceDataSyncResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceRequest.html"
+                                  title='struct rusoto_ssm::ListTagsForResourceRequest'>ListTagsForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceResult.html"
+                                  title='struct rusoto_ssm::ListTagsForResourceResult'>ListTagsForResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LoggingInfo.html"
+                                  title='struct rusoto_ssm::LoggingInfo'>LoggingInfo</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Information about an Amazon S3 bucket to write instance-level logs to.</p> <note> <p> <code>LoggingInfo</code> has been deprecated. To specify an S3 bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code> options in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowAutomationParameters.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowAutomationParameters'>MaintenanceWindowAutomationParameters</a></td>
+                           <td class='docblock-short'>
+                                <p>The parameters for an AUTOMATION task type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowExecution.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowExecution'>MaintenanceWindowExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the information about an execution of a Maintenance Window. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowExecutionTaskIdentity.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowExecutionTaskIdentity'>MaintenanceWindowExecutionTaskIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a task execution performed as part of a Maintenance Window execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowExecutionTaskInvocationIdentity.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowExecutionTaskInvocationIdentity'>MaintenanceWindowExecutionTaskInvocationIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the information about a task invocation for a particular target as part of a task execution performed as part of a Maintenance Window execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowFilter.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowFilter'>MaintenanceWindowFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter used in the request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowIdentity.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowIdentity'>MaintenanceWindowIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the Maintenance Window.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowLambdaParameters.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowLambdaParameters'>MaintenanceWindowLambdaParameters</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The parameters for a LAMBDA task type.</p> <p>For information about specifying and updating task parameters, see <a>RegisterTaskWithMaintenanceWindow</a> and <a>UpdateMaintenanceWindowTask</a>.</p> <note> <p> <code>LoggingInfo</code> has been deprecated. To specify an S3 bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code> options in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p> <code>TaskParameters</code> has been deprecated. To specify parameters to pass to a task when it runs, instead use the <code>Parameters</code> option in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p>For Lambda tasks, Systems Manager ignores any values specified for TaskParameters and LoggingInfo.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowRunCommandParameters.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowRunCommandParameters'>MaintenanceWindowRunCommandParameters</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The parameters for a RUN_COMMAND task type.</p> <p>For information about specifying and updating task parameters, see <a>RegisterTaskWithMaintenanceWindow</a> and <a>UpdateMaintenanceWindowTask</a>.</p> <note> <p> <code>LoggingInfo</code> has been deprecated. To specify an S3 bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code> options in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p> <code>TaskParameters</code> has been deprecated. To specify parameters to pass to a task when it runs, instead use the <code>Parameters</code> option in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p>For Run Command tasks, Systems Manager uses specified values for <code>TaskParameters</code> and <code>LoggingInfo</code> only if no values are specified for <code>TaskInvocationParameters</code>. </p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowStepFunctionsParameters.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowStepFunctionsParameters'>MaintenanceWindowStepFunctionsParameters</a></td>
+                           <td class='docblock-short'>
+                                <p><p>The parameters for a STEP_FUNCTION task.</p> <p>For information about specifying and updating task parameters, see <a>RegisterTaskWithMaintenanceWindow</a> and <a>UpdateMaintenanceWindowTask</a>.</p> <note> <p> <code>LoggingInfo</code> has been deprecated. To specify an S3 bucket to contain logs, instead use the <code>OutputS3BucketName</code> and <code>OutputS3KeyPrefix</code> options in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p> <code>TaskParameters</code> has been deprecated. To specify parameters to pass to a task when it runs, instead use the <code>Parameters</code> option in the <code>TaskInvocationParameters</code> structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see <a>MaintenanceWindowTaskInvocationParameters</a>.</p> <p>For Step Functions tasks, Systems Manager ignores any values specified for <code>TaskParameters</code> and <code>LoggingInfo</code>.</p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowTarget.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowTarget'>MaintenanceWindowTarget</a></td>
+                           <td class='docblock-short'>
+                                <p>The target registered with the Maintenance Window.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowTask.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowTask'>MaintenanceWindowTask</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a task defined for a Maintenance Window.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowTaskInvocationParameters.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowTaskInvocationParameters'>MaintenanceWindowTaskInvocationParameters</a></td>
+                           <td class='docblock-short'>
+                                <p>The parameters for task execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MaintenanceWindowTaskParameterValueExpression.html"
+                                  title='struct rusoto_ssm::MaintenanceWindowTaskParameterValueExpression'>MaintenanceWindowTaskParameterValueExpression</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines the values for a task parameter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDocumentPermissionRequest.html"
+                                  title='struct rusoto_ssm::ModifyDocumentPermissionRequest'>ModifyDocumentPermissionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyDocumentPermissionResponse.html"
+                                  title='struct rusoto_ssm::ModifyDocumentPermissionResponse'>ModifyDocumentPermissionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NonCompliantSummary.html"
+                                  title='struct rusoto_ssm::NonCompliantSummary'>NonCompliantSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of resources that are not compliant. The summary is organized according to resource type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotificationConfig.html"
+                                  title='struct rusoto_ssm::NotificationConfig'>NotificationConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Configurations for sending notifications.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Parameter.html"
+                                  title='struct rusoto_ssm::Parameter'>Parameter</a></td>
+                           <td class='docblock-short'>
+                                <p>An Amazon EC2 Systems Manager parameter in Parameter Store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterHistory.html"
+                                  title='struct rusoto_ssm::ParameterHistory'>ParameterHistory</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about parameter usage.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterMetadata.html"
+                                  title='struct rusoto_ssm::ParameterMetadata'>ParameterMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Metada includes information like the ARN of the last user and the date/time the parameter was last used.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterStringFilter.html"
+                                  title='struct rusoto_ssm::ParameterStringFilter'>ParameterStringFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>One or more filters. Use a filter to return a more specific list of results.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParametersFilter.html"
+                                  title='struct rusoto_ssm::ParametersFilter'>ParametersFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>This data type is deprecated. Instead, use <a>ParameterStringFilter</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Patch.html"
+                                  title='struct rusoto_ssm::Patch'>Patch</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents metadata about a patch.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchBaselineIdentity.html"
+                                  title='struct rusoto_ssm::PatchBaselineIdentity'>PatchBaselineIdentity</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines the basic information about a patch baseline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchComplianceData.html"
+                                  title='struct rusoto_ssm::PatchComplianceData'>PatchComplianceData</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the state of a patch on a particular instance as it relates to the patch baseline used to patch the instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchFilter.html"
+                                  title='struct rusoto_ssm::PatchFilter'>PatchFilter</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Defines a patch filter.</p> <p>A patch filter consists of key/value pairs, but not all keys are valid for all operating system types. For example, the key <code>PRODUCT</code> is valid for all supported operating system types. The key <code>MSRC<em>SEVERITY</code>, however, is valid only for Windows operating systems, and the key <code>SECTION</code> is valid only for Ubuntu operating systems.</p> <p>Refer to the following sections for information about which keys may be used with each major operating system, and which values are valid for each key.</p> <p> <b>Windows Operating Systems</b> </p> <p>The supported keys for Windows operating systems are <code>PRODUCT</code>, <code>CLASSIFICATION</code>, and <code>MSRC</em>SEVERITY</code>. See the following lists for valid values for each of these keys.</p> <p> <i>Supported key:</i> <code>PRODUCT</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Windows7</code> </p> </li> <li> <p> <code>Windows8</code> </p> </li> <li> <p> <code>Windows8.1</code> </p> </li> <li> <p> <code>Windows8Embedded</code> </p> </li> <li> <p> <code>Windows10</code> </p> </li> <li> <p> <code>Windows10LTSB</code> </p> </li> <li> <p> <code>WindowsServer2008</code> </p> </li> <li> <p> <code>WindowsServer2008R2</code> </p> </li> <li> <p> <code>WindowsServer2012</code> </p> </li> <li> <p> <code>WindowsServer2012R2</code> </p> </li> <li> <p> <code>WindowsServer2016</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>CLASSIFICATION</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>CriticalUpdates</code> </p> </li> <li> <p> <code>DefinitionUpdates</code> </p> </li> <li> <p> <code>Drivers</code> </p> </li> <li> <p> <code>FeaturePacks</code> </p> </li> <li> <p> <code>SecurityUpdates</code> </p> </li> <li> <p> <code>ServicePacks</code> </p> </li> <li> <p> <code>Tools</code> </p> </li> <li> <p> <code>UpdateRollups</code> </p> </li> <li> <p> <code>Updates</code> </p> </li> <li> <p> <code>Upgrades</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>MSRC_SEVERITY</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Critical</code> </p> </li> <li> <p> <code>Important</code> </p> </li> <li> <p> <code>Moderate</code> </p> </li> <li> <p> <code>Low</code> </p> </li> <li> <p> <code>Unspecified</code> </p> </li> </ul> <p> <b>Ubuntu Operating Systems</b> </p> <p>The supported keys for Ubuntu operating systems are <code>PRODUCT</code>, <code>PRIORITY</code>, and <code>SECTION</code>. See the following lists for valid values for each of these keys.</p> <p> <i>Supported key:</i> <code>PRODUCT</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Ubuntu14.04</code> </p> </li> <li> <p> <code>Ubuntu16.04</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>PRIORITY</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Required</code> </p> </li> <li> <p> <code>Important</code> </p> </li> <li> <p> <code>Standard</code> </p> </li> <li> <p> <code>Optional</code> </p> </li> <li> <p> <code>Extra</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>SECTION</code> </p> <p>Only the length of the key value is validated. Minimum length is 1. Maximum length is 64.</p> <p> <b>Amazon Linux Operating Systems</b> </p> <p>The supported keys for Amazon Linux operating systems are <code>PRODUCT</code>, <code>CLASSIFICATION</code>, and <code>SEVERITY</code>. See the following lists for valid values for each of these keys.</p> <p> <i>Supported key:</i> <code>PRODUCT</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>AmazonLinux2012.03</code> </p> </li> <li> <p> <code>AmazonLinux2012.09</code> </p> </li> <li> <p> <code>AmazonLinux2013.03</code> </p> </li> <li> <p> <code>AmazonLinux2013.09</code> </p> </li> <li> <p> <code>AmazonLinux2014.03</code> </p> </li> <li> <p> <code>AmazonLinux2014.09</code> </p> </li> <li> <p> <code>AmazonLinux2015.03</code> </p> </li> <li> <p> <code>AmazonLinux2015.09</code> </p> </li> <li> <p> <code>AmazonLinux2016.03</code> </p> </li> <li> <p> <code>AmazonLinux2016.09</code> </p> </li> <li> <p> <code>AmazonLinux2017.03</code> </p> </li> <li> <p> <code>AmazonLinux2017.09</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>CLASSIFICATION</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Security</code> </p> </li> <li> <p> <code>Bugfix</code> </p> </li> <li> <p> <code>Enhancement</code> </p> </li> <li> <p> <code>Recommended</code> </p> </li> <li> <p> <code>Newpackage</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>SEVERITY</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Critical</code> </p> </li> <li> <p> <code>Important</code> </p> </li> <li> <p> <code>Medium</code> </p> </li> <li> <p> <code>Low</code> </p> </li> </ul> <p> <b>RedHat Enterprise Linux (RHEL) Operating Systems</b> </p> <p>The supported keys for RedHat Enterprise Linux operating systems are <code>PRODUCT</code>, <code>CLASSIFICATION</code>, and <code>SEVERITY</code>. See the following lists for valid values for each of these keys.</p> <p> <i>Supported key:</i> <code>PRODUCT</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>RedhatEnterpriseLinux6.5</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux6.6</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux6.7</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux6.8</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux6.9</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux7.0</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux7.1</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux7.2</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux7.3</code> </p> </li> <li> <p> <code>RedhatEnterpriseLinux7.4</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>CLASSIFICATION</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Security</code> </p> </li> <li> <p> <code>Bugfix</code> </p> </li> <li> <p> <code>Enhancement</code> </p> </li> <li> <p> <code>Recommended</code> </p> </li> <li> <p> <code>Newpackage</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>SEVERITY</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Critical</code> </p> </li> <li> <p> <code>Important</code> </p> </li> <li> <p> <code>Medium</code> </p> </li> <li> <p> <code>Low</code> </p> </li> </ul> <p> <b>SUSE Linux Enterprise Server (SUSE) Operating Systems</b> </p> <p>The supported keys for SUSE operating systems are <code>PRODUCT</code>, <code>CLASSIFICATION</code>, and <code>SEVERITY</code>. See the following lists for valid values for each of these keys.</p> <p> <i>Supported key:</i> <code>PRODUCT</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Suse12.0</code> </p> </li> <li> <p> <code>Suse12.1</code> </p> </li> <li> <p> <code>Suse12.2</code> </p> </li> <li> <p> <code>Suse12.3</code> </p> </li> <li> <p> <code>Suse12.4</code> </p> </li> <li> <p> <code>Suse12.5</code> </p> </li> <li> <p> <code>Suse12.6</code> </p> </li> <li> <p> <code>Suse12.7</code> </p> </li> <li> <p> <code>Suse12.8</code> </p> </li> <li> <p> <code>Suse12.9</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>CLASSIFICATION</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Security</code> </p> </li> <li> <p> <code>Recommended</code> </p> </li> <li> <p> <code>Optional</code> </p> </li> <li> <p> <code>Feature</code> </p> </li> <li> <p> <code>Document</code> </p> </li> <li> <p> <code>Yast</code> </p> </li> </ul> <p> <i>Supported key:</i> <code>SEVERITY</code> </p> <p> <i>Supported values:</i> </p> <ul> <li> <p> <code>Critical</code> </p> </li> <li> <p> <code>Important</code> </p> </li> <li> <p> <code>Moderate</code> </p> </li> <li> <p> <code>Low</code> </p> </li> </ul></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchFilterGroup.html"
+                                  title='struct rusoto_ssm::PatchFilterGroup'>PatchFilterGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of patch filters, typically used for approval rules.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchGroupPatchBaselineMapping.html"
+                                  title='struct rusoto_ssm::PatchGroupPatchBaselineMapping'>PatchGroupPatchBaselineMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>The mapping between a patch group and the patch baseline the patch group is registered with.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchOrchestratorFilter.html"
+                                  title='struct rusoto_ssm::PatchOrchestratorFilter'>PatchOrchestratorFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines a filter used in Patch Manager APIs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchRule.html"
+                                  title='struct rusoto_ssm::PatchRule'>PatchRule</a></td>
+                           <td class='docblock-short'>
+                                <p>Defines an approval rule for a patch baseline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchRuleGroup.html"
+                                  title='struct rusoto_ssm::PatchRuleGroup'>PatchRuleGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of rules defining the approval rules for a patch baseline.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchSource.html"
+                                  title='struct rusoto_ssm::PatchSource'>PatchSource</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the patches to use to update the instances, including target operating systems and source repository. Applies to Linux instances only.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PatchStatus.html"
+                                  title='struct rusoto_ssm::PatchStatus'>PatchStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the approval status of a patch.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutComplianceItemsRequest.html"
+                                  title='struct rusoto_ssm::PutComplianceItemsRequest'>PutComplianceItemsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutComplianceItemsResult.html"
+                                  title='struct rusoto_ssm::PutComplianceItemsResult'>PutComplianceItemsResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutInventoryRequest.html"
+                                  title='struct rusoto_ssm::PutInventoryRequest'>PutInventoryRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutInventoryResult.html"
+                                  title='struct rusoto_ssm::PutInventoryResult'>PutInventoryResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutParameterRequest.html"
+                                  title='struct rusoto_ssm::PutParameterRequest'>PutParameterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutParameterResult.html"
+                                  title='struct rusoto_ssm::PutParameterResult'>PutParameterResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterDefaultPatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::RegisterDefaultPatchBaselineRequest'>RegisterDefaultPatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterDefaultPatchBaselineResult.html"
+                                  title='struct rusoto_ssm::RegisterDefaultPatchBaselineResult'>RegisterDefaultPatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterPatchBaselineForPatchGroupRequest.html"
+                                  title='struct rusoto_ssm::RegisterPatchBaselineForPatchGroupRequest'>RegisterPatchBaselineForPatchGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterPatchBaselineForPatchGroupResult.html"
+                                  title='struct rusoto_ssm::RegisterPatchBaselineForPatchGroupResult'>RegisterPatchBaselineForPatchGroupResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTargetWithMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::RegisterTargetWithMaintenanceWindowRequest'>RegisterTargetWithMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTargetWithMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::RegisterTargetWithMaintenanceWindowResult'>RegisterTargetWithMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTaskWithMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::RegisterTaskWithMaintenanceWindowRequest'>RegisterTaskWithMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterTaskWithMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::RegisterTaskWithMaintenanceWindowResult'>RegisterTaskWithMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceRequest.html"
+                                  title='struct rusoto_ssm::RemoveTagsFromResourceRequest'>RemoveTagsFromResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceResult.html"
+                                  title='struct rusoto_ssm::RemoveTagsFromResourceResult'>RemoveTagsFromResourceResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResolvedTargets.html"
+                                  title='struct rusoto_ssm::ResolvedTargets'>ResolvedTargets</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about targets that resolved during the Automation execution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceComplianceSummaryItem.html"
+                                  title='struct rusoto_ssm::ResourceComplianceSummaryItem'>ResourceComplianceSummaryItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Compliance summary information for a specific resource. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceDataSyncItem.html"
+                                  title='struct rusoto_ssm::ResourceDataSyncItem'>ResourceDataSyncItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about a Resource Data Sync configuration, including its current status and last successful sync.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceDataSyncS3Destination.html"
+                                  title='struct rusoto_ssm::ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the target Amazon S3 bucket for the Resource Data Sync.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResultAttribute.html"
+                                  title='struct rusoto_ssm::ResultAttribute'>ResultAttribute</a></td>
+                           <td class='docblock-short'>
+                                <p>The inventory item result attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3OutputLocation.html"
+                                  title='struct rusoto_ssm::S3OutputLocation'>S3OutputLocation</a></td>
+                           <td class='docblock-short'>
+                                <p>An Amazon S3 bucket where you want to store the results of this request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3OutputUrl.html"
+                                  title='struct rusoto_ssm::S3OutputUrl'>S3OutputUrl</a></td>
+                           <td class='docblock-short'>
+                                <p>A URL for the Amazon S3 bucket where you want to store the results of this request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SendAutomationSignalRequest.html"
+                                  title='struct rusoto_ssm::SendAutomationSignalRequest'>SendAutomationSignalRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SendAutomationSignalResult.html"
+                                  title='struct rusoto_ssm::SendAutomationSignalResult'>SendAutomationSignalResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SendCommandRequest.html"
+                                  title='struct rusoto_ssm::SendCommandRequest'>SendCommandRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SendCommandResult.html"
+                                  title='struct rusoto_ssm::SendCommandResult'>SendCommandResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SeveritySummary.html"
+                                  title='struct rusoto_ssm::SeveritySummary'>SeveritySummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The number of managed instances found for each patch severity level defined in the request filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SsmClient.html"
+                                  title='struct rusoto_ssm::SsmClient'>SsmClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon SSM API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartAutomationExecutionRequest.html"
+                                  title='struct rusoto_ssm::StartAutomationExecutionRequest'>StartAutomationExecutionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartAutomationExecutionResult.html"
+                                  title='struct rusoto_ssm::StartAutomationExecutionResult'>StartAutomationExecutionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepExecution.html"
+                                  title='struct rusoto_ssm::StepExecution'>StepExecution</a></td>
+                           <td class='docblock-short'>
+                                <p>Detailed information about an the execution state of an Automation step.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StepExecutionFilter.html"
+                                  title='struct rusoto_ssm::StepExecutionFilter'>StepExecutionFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>A filter to limit the amount of step execution information returned by the call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopAutomationExecutionRequest.html"
+                                  title='struct rusoto_ssm::StopAutomationExecutionRequest'>StopAutomationExecutionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopAutomationExecutionResult.html"
+                                  title='struct rusoto_ssm::StopAutomationExecutionResult'>StopAutomationExecutionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_ssm::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Metadata that you assign to your AWS resources. Tags enable you to categorize your resources in different ways, for example, by purpose, owner, or environment. In Systems Manager, you can apply tags to documents, managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Target.html"
+                                  title='struct rusoto_ssm::Target'>Target</a></td>
+                           <td class='docblock-short'>
+                                <p><p>An array of search criteria that targets instances using a Key,Value combination that you specify. <code>Targets</code> is required if you don&#39;t provide one or more instance IDs in the call.</p> <p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAssociationRequest.html"
+                                  title='struct rusoto_ssm::UpdateAssociationRequest'>UpdateAssociationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAssociationResult.html"
+                                  title='struct rusoto_ssm::UpdateAssociationResult'>UpdateAssociationResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAssociationStatusRequest.html"
+                                  title='struct rusoto_ssm::UpdateAssociationStatusRequest'>UpdateAssociationStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateAssociationStatusResult.html"
+                                  title='struct rusoto_ssm::UpdateAssociationStatusResult'>UpdateAssociationStatusResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentDefaultVersionRequest.html"
+                                  title='struct rusoto_ssm::UpdateDocumentDefaultVersionRequest'>UpdateDocumentDefaultVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentDefaultVersionResult.html"
+                                  title='struct rusoto_ssm::UpdateDocumentDefaultVersionResult'>UpdateDocumentDefaultVersionResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentRequest.html"
+                                  title='struct rusoto_ssm::UpdateDocumentRequest'>UpdateDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentResult.html"
+                                  title='struct rusoto_ssm::UpdateDocumentResult'>UpdateDocumentResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowRequest.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowRequest'>UpdateMaintenanceWindowRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowResult.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowResult'>UpdateMaintenanceWindowResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowTargetRequest.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowTargetRequest'>UpdateMaintenanceWindowTargetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowTargetResult.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowTargetResult'>UpdateMaintenanceWindowTargetResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowTaskRequest.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowTaskRequest'>UpdateMaintenanceWindowTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateMaintenanceWindowTaskResult.html"
+                                  title='struct rusoto_ssm::UpdateMaintenanceWindowTaskResult'>UpdateMaintenanceWindowTaskResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateManagedInstanceRoleRequest.html"
+                                  title='struct rusoto_ssm::UpdateManagedInstanceRoleRequest'>UpdateManagedInstanceRoleRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateManagedInstanceRoleResult.html"
+                                  title='struct rusoto_ssm::UpdateManagedInstanceRoleResult'>UpdateManagedInstanceRoleResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePatchBaselineRequest.html"
+                                  title='struct rusoto_ssm::UpdatePatchBaselineRequest'>UpdatePatchBaselineRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePatchBaselineResult.html"
+                                  title='struct rusoto_ssm::UpdatePatchBaselineResult'>UpdatePatchBaselineResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToResourceError.html"
+                                  title='enum rusoto_ssm::AddTagsToResourceError'>AddTagsToResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelCommandError.html"
+                                  title='enum rusoto_ssm::CancelCommandError'>CancelCommandError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelCommand</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateActivationError.html"
+                                  title='enum rusoto_ssm::CreateActivationError'>CreateActivationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateActivation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAssociationBatchError.html"
+                                  title='enum rusoto_ssm::CreateAssociationBatchError'>CreateAssociationBatchError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAssociationBatch</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateAssociationError.html"
+                                  title='enum rusoto_ssm::CreateAssociationError'>CreateAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDocumentError.html"
+                                  title='enum rusoto_ssm::CreateDocumentError'>CreateDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::CreateMaintenanceWindowError'>CreateMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePatchBaselineError.html"
+                                  title='enum rusoto_ssm::CreatePatchBaselineError'>CreatePatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateResourceDataSyncError.html"
+                                  title='enum rusoto_ssm::CreateResourceDataSyncError'>CreateResourceDataSyncError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateResourceDataSync</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteActivationError.html"
+                                  title='enum rusoto_ssm::DeleteActivationError'>DeleteActivationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteActivation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAssociationError.html"
+                                  title='enum rusoto_ssm::DeleteAssociationError'>DeleteAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDocumentError.html"
+                                  title='enum rusoto_ssm::DeleteDocumentError'>DeleteDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::DeleteMaintenanceWindowError'>DeleteMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteParameterError.html"
+                                  title='enum rusoto_ssm::DeleteParameterError'>DeleteParameterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteParameter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteParametersError.html"
+                                  title='enum rusoto_ssm::DeleteParametersError'>DeleteParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePatchBaselineError.html"
+                                  title='enum rusoto_ssm::DeletePatchBaselineError'>DeletePatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteResourceDataSyncError.html"
+                                  title='enum rusoto_ssm::DeleteResourceDataSyncError'>DeleteResourceDataSyncError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteResourceDataSync</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterManagedInstanceError.html"
+                                  title='enum rusoto_ssm::DeregisterManagedInstanceError'>DeregisterManagedInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterManagedInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterPatchBaselineForPatchGroupError.html"
+                                  title='enum rusoto_ssm::DeregisterPatchBaselineForPatchGroupError'>DeregisterPatchBaselineForPatchGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterPatchBaselineForPatchGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterTargetFromMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::DeregisterTargetFromMaintenanceWindowError'>DeregisterTargetFromMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterTargetFromMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterTaskFromMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::DeregisterTaskFromMaintenanceWindowError'>DeregisterTaskFromMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterTaskFromMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeActivationsError.html"
+                                  title='enum rusoto_ssm::DescribeActivationsError'>DescribeActivationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeActivations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAssociationError.html"
+                                  title='enum rusoto_ssm::DescribeAssociationError'>DescribeAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAutomationExecutionsError.html"
+                                  title='enum rusoto_ssm::DescribeAutomationExecutionsError'>DescribeAutomationExecutionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAutomationExecutions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAutomationStepExecutionsError.html"
+                                  title='enum rusoto_ssm::DescribeAutomationStepExecutionsError'>DescribeAutomationStepExecutionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAutomationStepExecutions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAvailablePatchesError.html"
+                                  title='enum rusoto_ssm::DescribeAvailablePatchesError'>DescribeAvailablePatchesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAvailablePatches</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDocumentError.html"
+                                  title='enum rusoto_ssm::DescribeDocumentError'>DescribeDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDocumentPermissionError.html"
+                                  title='enum rusoto_ssm::DescribeDocumentPermissionError'>DescribeDocumentPermissionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDocumentPermission</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEffectiveInstanceAssociationsError.html"
+                                  title='enum rusoto_ssm::DescribeEffectiveInstanceAssociationsError'>DescribeEffectiveInstanceAssociationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEffectiveInstanceAssociations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEffectivePatchesForPatchBaselineError.html"
+                                  title='enum rusoto_ssm::DescribeEffectivePatchesForPatchBaselineError'>DescribeEffectivePatchesForPatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEffectivePatchesForPatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstanceAssociationsStatusError.html"
+                                  title='enum rusoto_ssm::DescribeInstanceAssociationsStatusError'>DescribeInstanceAssociationsStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstanceAssociationsStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstanceInformationError.html"
+                                  title='enum rusoto_ssm::DescribeInstanceInformationError'>DescribeInstanceInformationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstanceInformation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstancePatchStatesError.html"
+                                  title='enum rusoto_ssm::DescribeInstancePatchStatesError'>DescribeInstancePatchStatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstancePatchStates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstancePatchStatesForPatchGroupError.html"
+                                  title='enum rusoto_ssm::DescribeInstancePatchStatesForPatchGroupError'>DescribeInstancePatchStatesForPatchGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstancePatchStatesForPatchGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeInstancePatchesError.html"
+                                  title='enum rusoto_ssm::DescribeInstancePatchesError'>DescribeInstancePatchesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeInstancePatches</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowExecutionTaskInvocationsError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowExecutionTaskInvocationsError'>DescribeMaintenanceWindowExecutionTaskInvocationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindowExecutionTaskInvocations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowExecutionTasksError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowExecutionTasksError'>DescribeMaintenanceWindowExecutionTasksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindowExecutionTasks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowExecutionsError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowExecutionsError'>DescribeMaintenanceWindowExecutionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindowExecutions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowTargetsError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowTargetsError'>DescribeMaintenanceWindowTargetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindowTargets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowTasksError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowTasksError'>DescribeMaintenanceWindowTasksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindowTasks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMaintenanceWindowsError.html"
+                                  title='enum rusoto_ssm::DescribeMaintenanceWindowsError'>DescribeMaintenanceWindowsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMaintenanceWindows</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeParametersError.html"
+                                  title='enum rusoto_ssm::DescribeParametersError'>DescribeParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePatchBaselinesError.html"
+                                  title='enum rusoto_ssm::DescribePatchBaselinesError'>DescribePatchBaselinesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePatchBaselines</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePatchGroupStateError.html"
+                                  title='enum rusoto_ssm::DescribePatchGroupStateError'>DescribePatchGroupStateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePatchGroupState</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribePatchGroupsError.html"
+                                  title='enum rusoto_ssm::DescribePatchGroupsError'>DescribePatchGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribePatchGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetAutomationExecutionError.html"
+                                  title='enum rusoto_ssm::GetAutomationExecutionError'>GetAutomationExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetAutomationExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCommandInvocationError.html"
+                                  title='enum rusoto_ssm::GetCommandInvocationError'>GetCommandInvocationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCommandInvocation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDefaultPatchBaselineError.html"
+                                  title='enum rusoto_ssm::GetDefaultPatchBaselineError'>GetDefaultPatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDefaultPatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDeployablePatchSnapshotForInstanceError.html"
+                                  title='enum rusoto_ssm::GetDeployablePatchSnapshotForInstanceError'>GetDeployablePatchSnapshotForInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDeployablePatchSnapshotForInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentError.html"
+                                  title='enum rusoto_ssm::GetDocumentError'>GetDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInventoryError.html"
+                                  title='enum rusoto_ssm::GetInventoryError'>GetInventoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInventory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetInventorySchemaError.html"
+                                  title='enum rusoto_ssm::GetInventorySchemaError'>GetInventorySchemaError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetInventorySchema</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::GetMaintenanceWindowError'>GetMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMaintenanceWindowExecutionError.html"
+                                  title='enum rusoto_ssm::GetMaintenanceWindowExecutionError'>GetMaintenanceWindowExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMaintenanceWindowExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMaintenanceWindowExecutionTaskError.html"
+                                  title='enum rusoto_ssm::GetMaintenanceWindowExecutionTaskError'>GetMaintenanceWindowExecutionTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMaintenanceWindowExecutionTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMaintenanceWindowExecutionTaskInvocationError.html"
+                                  title='enum rusoto_ssm::GetMaintenanceWindowExecutionTaskInvocationError'>GetMaintenanceWindowExecutionTaskInvocationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMaintenanceWindowExecutionTaskInvocation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMaintenanceWindowTaskError.html"
+                                  title='enum rusoto_ssm::GetMaintenanceWindowTaskError'>GetMaintenanceWindowTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMaintenanceWindowTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetParameterError.html"
+                                  title='enum rusoto_ssm::GetParameterError'>GetParameterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetParameter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetParameterHistoryError.html"
+                                  title='enum rusoto_ssm::GetParameterHistoryError'>GetParameterHistoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetParameterHistory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetParametersByPathError.html"
+                                  title='enum rusoto_ssm::GetParametersByPathError'>GetParametersByPathError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetParametersByPath</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetParametersError.html"
+                                  title='enum rusoto_ssm::GetParametersError'>GetParametersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetParameters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPatchBaselineError.html"
+                                  title='enum rusoto_ssm::GetPatchBaselineError'>GetPatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPatchBaselineForPatchGroupError.html"
+                                  title='enum rusoto_ssm::GetPatchBaselineForPatchGroupError'>GetPatchBaselineForPatchGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPatchBaselineForPatchGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAssociationVersionsError.html"
+                                  title='enum rusoto_ssm::ListAssociationVersionsError'>ListAssociationVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAssociationVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAssociationsError.html"
+                                  title='enum rusoto_ssm::ListAssociationsError'>ListAssociationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAssociations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCommandInvocationsError.html"
+                                  title='enum rusoto_ssm::ListCommandInvocationsError'>ListCommandInvocationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCommandInvocations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCommandsError.html"
+                                  title='enum rusoto_ssm::ListCommandsError'>ListCommandsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCommands</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListComplianceItemsError.html"
+                                  title='enum rusoto_ssm::ListComplianceItemsError'>ListComplianceItemsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListComplianceItems</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListComplianceSummariesError.html"
+                                  title='enum rusoto_ssm::ListComplianceSummariesError'>ListComplianceSummariesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListComplianceSummaries</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDocumentVersionsError.html"
+                                  title='enum rusoto_ssm::ListDocumentVersionsError'>ListDocumentVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDocumentVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDocumentsError.html"
+                                  title='enum rusoto_ssm::ListDocumentsError'>ListDocumentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDocuments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListInventoryEntriesError.html"
+                                  title='enum rusoto_ssm::ListInventoryEntriesError'>ListInventoryEntriesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListInventoryEntries</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourceComplianceSummariesError.html"
+                                  title='enum rusoto_ssm::ListResourceComplianceSummariesError'>ListResourceComplianceSummariesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourceComplianceSummaries</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListResourceDataSyncError.html"
+                                  title='enum rusoto_ssm::ListResourceDataSyncError'>ListResourceDataSyncError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListResourceDataSync</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_ssm::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyDocumentPermissionError.html"
+                                  title='enum rusoto_ssm::ModifyDocumentPermissionError'>ModifyDocumentPermissionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyDocumentPermission</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutComplianceItemsError.html"
+                                  title='enum rusoto_ssm::PutComplianceItemsError'>PutComplianceItemsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutComplianceItems</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutInventoryError.html"
+                                  title='enum rusoto_ssm::PutInventoryError'>PutInventoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutInventory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutParameterError.html"
+                                  title='enum rusoto_ssm::PutParameterError'>PutParameterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutParameter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterDefaultPatchBaselineError.html"
+                                  title='enum rusoto_ssm::RegisterDefaultPatchBaselineError'>RegisterDefaultPatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterDefaultPatchBaseline</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterPatchBaselineForPatchGroupError.html"
+                                  title='enum rusoto_ssm::RegisterPatchBaselineForPatchGroupError'>RegisterPatchBaselineForPatchGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterPatchBaselineForPatchGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterTargetWithMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::RegisterTargetWithMaintenanceWindowError'>RegisterTargetWithMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterTargetWithMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterTaskWithMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::RegisterTaskWithMaintenanceWindowError'>RegisterTaskWithMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterTaskWithMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromResourceError.html"
+                                  title='enum rusoto_ssm::RemoveTagsFromResourceError'>RemoveTagsFromResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SendAutomationSignalError.html"
+                                  title='enum rusoto_ssm::SendAutomationSignalError'>SendAutomationSignalError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SendAutomationSignal</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SendCommandError.html"
+                                  title='enum rusoto_ssm::SendCommandError'>SendCommandError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SendCommand</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartAutomationExecutionError.html"
+                                  title='enum rusoto_ssm::StartAutomationExecutionError'>StartAutomationExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartAutomationExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopAutomationExecutionError.html"
+                                  title='enum rusoto_ssm::StopAutomationExecutionError'>StopAutomationExecutionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopAutomationExecution</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAssociationError.html"
+                                  title='enum rusoto_ssm::UpdateAssociationError'>UpdateAssociationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAssociation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateAssociationStatusError.html"
+                                  title='enum rusoto_ssm::UpdateAssociationStatusError'>UpdateAssociationStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateAssociationStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentDefaultVersionError.html"
+                                  title='enum rusoto_ssm::UpdateDocumentDefaultVersionError'>UpdateDocumentDefaultVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocumentDefaultVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentError.html"
+                                  title='enum rusoto_ssm::UpdateDocumentError'>UpdateDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMaintenanceWindowError.html"
+                                  title='enum rusoto_ssm::UpdateMaintenanceWindowError'>UpdateMaintenanceWindowError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMaintenanceWindow</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMaintenanceWindowTargetError.html"
+                                  title='enum rusoto_ssm::UpdateMaintenanceWindowTargetError'>UpdateMaintenanceWindowTargetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMaintenanceWindowTarget</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateMaintenanceWindowTaskError.html"
+                                  title='enum rusoto_ssm::UpdateMaintenanceWindowTaskError'>UpdateMaintenanceWindowTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateMaintenanceWindowTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateManagedInstanceRoleError.html"
+                                  title='enum rusoto_ssm::UpdateManagedInstanceRoleError'>UpdateManagedInstanceRoleError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateManagedInstanceRole</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdatePatchBaselineError.html"
+                                  title='enum rusoto_ssm::UpdatePatchBaselineError'>UpdatePatchBaselineError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdatePatchBaseline</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Ssm.html"
+                                  title='trait rusoto_ssm::Ssm'>Ssm</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon SSM API. Amazon SSM clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_ssm";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

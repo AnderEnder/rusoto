@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_serverlessrepo` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_serverlessrepo"><title>rusoto_serverlessrepo - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_serverlessrepo/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_serverlessrepo</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_serverlessrepo', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_serverlessrepo</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_serverlessrepo/lib.rs.html#14-52' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find
+and deploy serverless applications in the AWS Cloud. For more information about serverless applications,
+see Serverless Computing and Applications on the AWS website.</p><p>The AWS Serverless Application Repository is deeply integrated with the AWS Lambda console, so that developers of
+all levels can get started with serverless computing without needing to learn anything new. You can use category
+keywords to browse for applications such as web and mobile backends, data processing applications, or chatbots.
+You can also search for applications by name, publisher, or event source. To use an application, you simply choose it,
+configure any required fields, and deploy it with a few clicks. </p><p>You can also easily publish applications, sharing them publicly with the community at large, or privately
+within your team or across your organization. To publish a serverless application (or app), you can use the
+AWS Management Console, AWS Command Line Interface (AWS CLI), or AWS SDKs to upload the code. Along with the
+code, you upload a simple manifest file, also known as the AWS Serverless Application Model (AWS SAM) template.
+For more information about AWS SAM, see AWS Serverless Application Model (AWS SAM) on the AWS Labs
+GitHub repository.</p><p>The AWS Serverless Application Repository Developer Guide contains more information about the two developer
+experiences available:</p><ul>
+<li>
+<p>Consuming Applications – Browse for applications and view information about them, including
+source code and readme files. Also install, configure, and deploy applications of your choosing. </p>
+<p><p>Publishing Applications – Configure and upload applications to make them available to other
+developers, and publish new versions of applications. </p>
+</li>
+</ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.ServerlessRepoClient.html">ServerlessRepoClient</a> and <a href="trait.ServerlessRepo.html">ServerlessRepo</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Application.html"
+                                  title='struct rusoto_serverlessrepo::Application'>Application</a></td>
+                           <td class='docblock-short'>
+                                <p>Details about the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationPage.html"
+                                  title='struct rusoto_serverlessrepo::ApplicationPage'>ApplicationPage</a></td>
+                           <td class='docblock-short'>
+                                <p>List of application details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationPolicy.html"
+                                  title='struct rusoto_serverlessrepo::ApplicationPolicy'>ApplicationPolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>Policy statements applied to the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationPolicyStatement.html"
+                                  title='struct rusoto_serverlessrepo::ApplicationPolicyStatement'>ApplicationPolicyStatement</a></td>
+                           <td class='docblock-short'>
+                                <p>Policy statement applied to the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationSummary.html"
+                                  title='struct rusoto_serverlessrepo::ApplicationSummary'>ApplicationSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summary of details about the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ApplicationVersionPage.html"
+                                  title='struct rusoto_serverlessrepo::ApplicationVersionPage'>ApplicationVersionPage</a></td>
+                           <td class='docblock-short'>
+                                <p>List of version summaries for the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChangeSetDetails.html"
+                                  title='struct rusoto_serverlessrepo::ChangeSetDetails'>ChangeSetDetails</a></td>
+                           <td class='docblock-short'>
+                                <p>Details of the change set.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationInput.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationInput'>CreateApplicationInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Create application request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationRequest.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationRequest'>CreateApplicationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationResponse.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationResponse'>CreateApplicationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationVersionInput.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationVersionInput'>CreateApplicationVersionInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Create version request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationVersionRequest.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationVersionRequest'>CreateApplicationVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateApplicationVersionResponse.html"
+                                  title='struct rusoto_serverlessrepo::CreateApplicationVersionResponse'>CreateApplicationVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCloudFormationChangeSetInput.html"
+                                  title='struct rusoto_serverlessrepo::CreateCloudFormationChangeSetInput'>CreateCloudFormationChangeSetInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Create application ChangeSet request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCloudFormationChangeSetRequest.html"
+                                  title='struct rusoto_serverlessrepo::CreateCloudFormationChangeSetRequest'>CreateCloudFormationChangeSetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCloudFormationChangeSetResponse.html"
+                                  title='struct rusoto_serverlessrepo::CreateCloudFormationChangeSetResponse'>CreateCloudFormationChangeSetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteApplicationRequest.html"
+                                  title='struct rusoto_serverlessrepo::DeleteApplicationRequest'>DeleteApplicationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApplicationPolicyRequest.html"
+                                  title='struct rusoto_serverlessrepo::GetApplicationPolicyRequest'>GetApplicationPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApplicationPolicyResponse.html"
+                                  title='struct rusoto_serverlessrepo::GetApplicationPolicyResponse'>GetApplicationPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApplicationRequest.html"
+                                  title='struct rusoto_serverlessrepo::GetApplicationRequest'>GetApplicationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetApplicationResponse.html"
+                                  title='struct rusoto_serverlessrepo::GetApplicationResponse'>GetApplicationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListApplicationVersionsRequest.html"
+                                  title='struct rusoto_serverlessrepo::ListApplicationVersionsRequest'>ListApplicationVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListApplicationVersionsResponse.html"
+                                  title='struct rusoto_serverlessrepo::ListApplicationVersionsResponse'>ListApplicationVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListApplicationsRequest.html"
+                                  title='struct rusoto_serverlessrepo::ListApplicationsRequest'>ListApplicationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListApplicationsResponse.html"
+                                  title='struct rusoto_serverlessrepo::ListApplicationsResponse'>ListApplicationsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterDefinition.html"
+                                  title='struct rusoto_serverlessrepo::ParameterDefinition'>ParameterDefinition</a></td>
+                           <td class='docblock-short'>
+                                <p>Parameters supported by the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ParameterValue.html"
+                                  title='struct rusoto_serverlessrepo::ParameterValue'>ParameterValue</a></td>
+                           <td class='docblock-short'>
+                                <p>Parameter value of the application.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutApplicationPolicyRequest.html"
+                                  title='struct rusoto_serverlessrepo::PutApplicationPolicyRequest'>PutApplicationPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutApplicationPolicyResponse.html"
+                                  title='struct rusoto_serverlessrepo::PutApplicationPolicyResponse'>PutApplicationPolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ServerlessRepoClient.html"
+                                  title='struct rusoto_serverlessrepo::ServerlessRepoClient'>ServerlessRepoClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWSServerlessApplicationRepository API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationInput.html"
+                                  title='struct rusoto_serverlessrepo::UpdateApplicationInput'>UpdateApplicationInput</a></td>
+                           <td class='docblock-short'>
+                                <p>Update application request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationRequest.html"
+                                  title='struct rusoto_serverlessrepo::UpdateApplicationRequest'>UpdateApplicationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateApplicationResponse.html"
+                                  title='struct rusoto_serverlessrepo::UpdateApplicationResponse'>UpdateApplicationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Version.html"
+                                  title='struct rusoto_serverlessrepo::Version'>Version</a></td>
+                           <td class='docblock-short'>
+                                <p>Application version details.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VersionSummary.html"
+                                  title='struct rusoto_serverlessrepo::VersionSummary'>VersionSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Application version summary.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateApplicationError.html"
+                                  title='enum rusoto_serverlessrepo::CreateApplicationError'>CreateApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateApplicationVersionError.html"
+                                  title='enum rusoto_serverlessrepo::CreateApplicationVersionError'>CreateApplicationVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateApplicationVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCloudFormationChangeSetError.html"
+                                  title='enum rusoto_serverlessrepo::CreateCloudFormationChangeSetError'>CreateCloudFormationChangeSetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCloudFormationChangeSet</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteApplicationError.html"
+                                  title='enum rusoto_serverlessrepo::DeleteApplicationError'>DeleteApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetApplicationError.html"
+                                  title='enum rusoto_serverlessrepo::GetApplicationError'>GetApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetApplication</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetApplicationPolicyError.html"
+                                  title='enum rusoto_serverlessrepo::GetApplicationPolicyError'>GetApplicationPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetApplicationPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListApplicationVersionsError.html"
+                                  title='enum rusoto_serverlessrepo::ListApplicationVersionsError'>ListApplicationVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListApplicationVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListApplicationsError.html"
+                                  title='enum rusoto_serverlessrepo::ListApplicationsError'>ListApplicationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListApplications</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutApplicationPolicyError.html"
+                                  title='enum rusoto_serverlessrepo::PutApplicationPolicyError'>PutApplicationPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutApplicationPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateApplicationError.html"
+                                  title='enum rusoto_serverlessrepo::UpdateApplicationError'>UpdateApplicationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateApplication</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.ServerlessRepo.html"
+                                  title='trait rusoto_serverlessrepo::ServerlessRepo'>ServerlessRepo</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWSServerlessApplicationRepository API. AWSServerlessApplicationRepository clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_serverlessrepo";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

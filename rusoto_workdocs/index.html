@@ -1,0 +1,965 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_workdocs` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_workdocs"><title>rusoto_workdocs - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_workdocs/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_workdocs</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_workdocs', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_workdocs</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_workdocs/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>The WorkDocs API is designed for the following use cases:</p> <ul> <li> <p>File Migration: File migration applications are supported for users who want to migrate their files from an on-premises or off-premises file system or service. Users can insert files into a user directory structure, as well as allow for basic metadata changes, such as modifications to the permissions of files.</p> </li> <li> <p>Security: Support security applications are supported for users who have additional security needs, such as antivirus or data loss prevention. The API actions, along with AWS CloudTrail, allow these applications to detect when changes occur in Amazon WorkDocs. Then, the application can take the necessary actions and replace the target file. If the target file violates the policy, the application can also choose to email the user.</p> </li> <li> <p>eDiscovery/Analytics: General administrative applications are supported, such as eDiscovery and analytics. These applications can choose to mimic or record the actions in an Amazon WorkDocs site, along with AWS CloudTrail, to replicate data for eDiscovery, backup, or analytical applications.</p> </li> </ul> <p>All Amazon WorkDocs API actions are Amazon authenticated and certificate-signed. They not only require the use of the AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission policies. By creating a role and allowing an IAM user to access the Amazon WorkDocs site, the IAM user gains full administrative visibility into the entire Amazon WorkDocs site (or as set in the IAM policy). This includes, but is not limited to, the ability to modify file permissions and upload any file to any user. This allows developers to perform the three use cases above, as well as give users the ability to grant access on a selective basis using the IAM model.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.WorkdocsClient.html">WorkdocsClient</a> and <a href="trait.Workdocs.html">Workdocs</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AbortDocumentVersionUploadRequest.html"
+                                  title='struct rusoto_workdocs::AbortDocumentVersionUploadRequest'>AbortDocumentVersionUploadRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivateUserRequest.html"
+                                  title='struct rusoto_workdocs::ActivateUserRequest'>ActivateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ActivateUserResponse.html"
+                                  title='struct rusoto_workdocs::ActivateUserResponse'>ActivateUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Activity.html"
+                                  title='struct rusoto_workdocs::Activity'>Activity</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the activity information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddResourcePermissionsRequest.html"
+                                  title='struct rusoto_workdocs::AddResourcePermissionsRequest'>AddResourcePermissionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddResourcePermissionsResponse.html"
+                                  title='struct rusoto_workdocs::AddResourcePermissionsResponse'>AddResourcePermissionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Comment.html"
+                                  title='struct rusoto_workdocs::Comment'>Comment</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a comment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CommentMetadata.html"
+                                  title='struct rusoto_workdocs::CommentMetadata'>CommentMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the metadata of a comment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCommentRequest.html"
+                                  title='struct rusoto_workdocs::CreateCommentRequest'>CreateCommentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCommentResponse.html"
+                                  title='struct rusoto_workdocs::CreateCommentResponse'>CreateCommentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCustomMetadataRequest.html"
+                                  title='struct rusoto_workdocs::CreateCustomMetadataRequest'>CreateCustomMetadataRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCustomMetadataResponse.html"
+                                  title='struct rusoto_workdocs::CreateCustomMetadataResponse'>CreateCustomMetadataResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFolderRequest.html"
+                                  title='struct rusoto_workdocs::CreateFolderRequest'>CreateFolderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateFolderResponse.html"
+                                  title='struct rusoto_workdocs::CreateFolderResponse'>CreateFolderResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLabelsRequest.html"
+                                  title='struct rusoto_workdocs::CreateLabelsRequest'>CreateLabelsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLabelsResponse.html"
+                                  title='struct rusoto_workdocs::CreateLabelsResponse'>CreateLabelsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNotificationSubscriptionRequest.html"
+                                  title='struct rusoto_workdocs::CreateNotificationSubscriptionRequest'>CreateNotificationSubscriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNotificationSubscriptionResponse.html"
+                                  title='struct rusoto_workdocs::CreateNotificationSubscriptionResponse'>CreateNotificationSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserRequest.html"
+                                  title='struct rusoto_workdocs::CreateUserRequest'>CreateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateUserResponse.html"
+                                  title='struct rusoto_workdocs::CreateUserResponse'>CreateUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeactivateUserRequest.html"
+                                  title='struct rusoto_workdocs::DeactivateUserRequest'>DeactivateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCommentRequest.html"
+                                  title='struct rusoto_workdocs::DeleteCommentRequest'>DeleteCommentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCustomMetadataRequest.html"
+                                  title='struct rusoto_workdocs::DeleteCustomMetadataRequest'>DeleteCustomMetadataRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCustomMetadataResponse.html"
+                                  title='struct rusoto_workdocs::DeleteCustomMetadataResponse'>DeleteCustomMetadataResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDocumentRequest.html"
+                                  title='struct rusoto_workdocs::DeleteDocumentRequest'>DeleteDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFolderContentsRequest.html"
+                                  title='struct rusoto_workdocs::DeleteFolderContentsRequest'>DeleteFolderContentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFolderRequest.html"
+                                  title='struct rusoto_workdocs::DeleteFolderRequest'>DeleteFolderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLabelsRequest.html"
+                                  title='struct rusoto_workdocs::DeleteLabelsRequest'>DeleteLabelsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLabelsResponse.html"
+                                  title='struct rusoto_workdocs::DeleteLabelsResponse'>DeleteLabelsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNotificationSubscriptionRequest.html"
+                                  title='struct rusoto_workdocs::DeleteNotificationSubscriptionRequest'>DeleteNotificationSubscriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteUserRequest.html"
+                                  title='struct rusoto_workdocs::DeleteUserRequest'>DeleteUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeActivitiesRequest.html"
+                                  title='struct rusoto_workdocs::DescribeActivitiesRequest'>DescribeActivitiesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeActivitiesResponse.html"
+                                  title='struct rusoto_workdocs::DescribeActivitiesResponse'>DescribeActivitiesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCommentsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeCommentsRequest'>DescribeCommentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCommentsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeCommentsResponse'>DescribeCommentsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentVersionsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeDocumentVersionsRequest'>DescribeDocumentVersionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDocumentVersionsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeDocumentVersionsResponse'>DescribeDocumentVersionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeFolderContentsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeFolderContentsRequest'>DescribeFolderContentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeFolderContentsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeFolderContentsResponse'>DescribeFolderContentsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeGroupsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeGroupsRequest'>DescribeGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeGroupsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeGroupsResponse'>DescribeGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationSubscriptionsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeNotificationSubscriptionsRequest'>DescribeNotificationSubscriptionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationSubscriptionsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeNotificationSubscriptionsResponse'>DescribeNotificationSubscriptionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourcePermissionsRequest.html"
+                                  title='struct rusoto_workdocs::DescribeResourcePermissionsRequest'>DescribeResourcePermissionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourcePermissionsResponse.html"
+                                  title='struct rusoto_workdocs::DescribeResourcePermissionsResponse'>DescribeResourcePermissionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRootFoldersRequest.html"
+                                  title='struct rusoto_workdocs::DescribeRootFoldersRequest'>DescribeRootFoldersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRootFoldersResponse.html"
+                                  title='struct rusoto_workdocs::DescribeRootFoldersResponse'>DescribeRootFoldersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUsersRequest.html"
+                                  title='struct rusoto_workdocs::DescribeUsersRequest'>DescribeUsersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeUsersResponse.html"
+                                  title='struct rusoto_workdocs::DescribeUsersResponse'>DescribeUsersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentMetadata.html"
+                                  title='struct rusoto_workdocs::DocumentMetadata'>DocumentMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DocumentVersionMetadata.html"
+                                  title='struct rusoto_workdocs::DocumentVersionMetadata'>DocumentVersionMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a version of a document.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FolderMetadata.html"
+                                  title='struct rusoto_workdocs::FolderMetadata'>FolderMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a folder.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCurrentUserRequest.html"
+                                  title='struct rusoto_workdocs::GetCurrentUserRequest'>GetCurrentUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCurrentUserResponse.html"
+                                  title='struct rusoto_workdocs::GetCurrentUserResponse'>GetCurrentUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentPathRequest.html"
+                                  title='struct rusoto_workdocs::GetDocumentPathRequest'>GetDocumentPathRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentPathResponse.html"
+                                  title='struct rusoto_workdocs::GetDocumentPathResponse'>GetDocumentPathResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentRequest.html"
+                                  title='struct rusoto_workdocs::GetDocumentRequest'>GetDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentResponse.html"
+                                  title='struct rusoto_workdocs::GetDocumentResponse'>GetDocumentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentVersionRequest.html"
+                                  title='struct rusoto_workdocs::GetDocumentVersionRequest'>GetDocumentVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDocumentVersionResponse.html"
+                                  title='struct rusoto_workdocs::GetDocumentVersionResponse'>GetDocumentVersionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFolderPathRequest.html"
+                                  title='struct rusoto_workdocs::GetFolderPathRequest'>GetFolderPathRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFolderPathResponse.html"
+                                  title='struct rusoto_workdocs::GetFolderPathResponse'>GetFolderPathResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFolderRequest.html"
+                                  title='struct rusoto_workdocs::GetFolderRequest'>GetFolderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetFolderResponse.html"
+                                  title='struct rusoto_workdocs::GetFolderResponse'>GetFolderResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GroupMetadata.html"
+                                  title='struct rusoto_workdocs::GroupMetadata'>GroupMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the metadata of a user group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateDocumentVersionUploadRequest.html"
+                                  title='struct rusoto_workdocs::InitiateDocumentVersionUploadRequest'>InitiateDocumentVersionUploadRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InitiateDocumentVersionUploadResponse.html"
+                                  title='struct rusoto_workdocs::InitiateDocumentVersionUploadResponse'>InitiateDocumentVersionUploadResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotificationOptions.html"
+                                  title='struct rusoto_workdocs::NotificationOptions'>NotificationOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Set of options which defines notification preferences of given action.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Participants.html"
+                                  title='struct rusoto_workdocs::Participants'>Participants</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the users or user groups.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PermissionInfo.html"
+                                  title='struct rusoto_workdocs::PermissionInfo'>PermissionInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the permissions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Principal.html"
+                                  title='struct rusoto_workdocs::Principal'>Principal</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveAllResourcePermissionsRequest.html"
+                                  title='struct rusoto_workdocs::RemoveAllResourcePermissionsRequest'>RemoveAllResourcePermissionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveResourcePermissionRequest.html"
+                                  title='struct rusoto_workdocs::RemoveResourcePermissionRequest'>RemoveResourcePermissionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceMetadata.html"
+                                  title='struct rusoto_workdocs::ResourceMetadata'>ResourceMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the metadata of a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourcePath.html"
+                                  title='struct rusoto_workdocs::ResourcePath'>ResourcePath</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the path information of a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourcePathComponent.html"
+                                  title='struct rusoto_workdocs::ResourcePathComponent'>ResourcePathComponent</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the resource path.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SharePrincipal.html"
+                                  title='struct rusoto_workdocs::SharePrincipal'>SharePrincipal</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the recipient type and ID, if available.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ShareResult.html"
+                                  title='struct rusoto_workdocs::ShareResult'>ShareResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the share results of a resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StorageRuleType.html"
+                                  title='struct rusoto_workdocs::StorageRuleType'>StorageRuleType</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the storage for a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subscription.html"
+                                  title='struct rusoto_workdocs::Subscription'>Subscription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a subscription.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentRequest.html"
+                                  title='struct rusoto_workdocs::UpdateDocumentRequest'>UpdateDocumentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDocumentVersionRequest.html"
+                                  title='struct rusoto_workdocs::UpdateDocumentVersionRequest'>UpdateDocumentVersionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateFolderRequest.html"
+                                  title='struct rusoto_workdocs::UpdateFolderRequest'>UpdateFolderRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserRequest.html"
+                                  title='struct rusoto_workdocs::UpdateUserRequest'>UpdateUserRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateUserResponse.html"
+                                  title='struct rusoto_workdocs::UpdateUserResponse'>UpdateUserResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UploadMetadata.html"
+                                  title='struct rusoto_workdocs::UploadMetadata'>UploadMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the upload.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.User.html"
+                                  title='struct rusoto_workdocs::User'>User</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserMetadata.html"
+                                  title='struct rusoto_workdocs::UserMetadata'>UserMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the metadata of the user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserStorageMetadata.html"
+                                  title='struct rusoto_workdocs::UserStorageMetadata'>UserStorageMetadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the storage for a user.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkdocsClient.html"
+                                  title='struct rusoto_workdocs::WorkdocsClient'>WorkdocsClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon WorkDocs API.</p>
+
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AbortDocumentVersionUploadError.html"
+                                  title='enum rusoto_workdocs::AbortDocumentVersionUploadError'>AbortDocumentVersionUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AbortDocumentVersionUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ActivateUserError.html"
+                                  title='enum rusoto_workdocs::ActivateUserError'>ActivateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ActivateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddResourcePermissionsError.html"
+                                  title='enum rusoto_workdocs::AddResourcePermissionsError'>AddResourcePermissionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddResourcePermissions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCommentError.html"
+                                  title='enum rusoto_workdocs::CreateCommentError'>CreateCommentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateComment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCustomMetadataError.html"
+                                  title='enum rusoto_workdocs::CreateCustomMetadataError'>CreateCustomMetadataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCustomMetadata</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateFolderError.html"
+                                  title='enum rusoto_workdocs::CreateFolderError'>CreateFolderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateFolder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLabelsError.html"
+                                  title='enum rusoto_workdocs::CreateLabelsError'>CreateLabelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLabels</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateNotificationSubscriptionError.html"
+                                  title='enum rusoto_workdocs::CreateNotificationSubscriptionError'>CreateNotificationSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateNotificationSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateUserError.html"
+                                  title='enum rusoto_workdocs::CreateUserError'>CreateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeactivateUserError.html"
+                                  title='enum rusoto_workdocs::DeactivateUserError'>DeactivateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeactivateUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCommentError.html"
+                                  title='enum rusoto_workdocs::DeleteCommentError'>DeleteCommentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteComment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCustomMetadataError.html"
+                                  title='enum rusoto_workdocs::DeleteCustomMetadataError'>DeleteCustomMetadataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCustomMetadata</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDocumentError.html"
+                                  title='enum rusoto_workdocs::DeleteDocumentError'>DeleteDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteFolderContentsError.html"
+                                  title='enum rusoto_workdocs::DeleteFolderContentsError'>DeleteFolderContentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteFolderContents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteFolderError.html"
+                                  title='enum rusoto_workdocs::DeleteFolderError'>DeleteFolderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteFolder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLabelsError.html"
+                                  title='enum rusoto_workdocs::DeleteLabelsError'>DeleteLabelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLabels</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteNotificationSubscriptionError.html"
+                                  title='enum rusoto_workdocs::DeleteNotificationSubscriptionError'>DeleteNotificationSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteNotificationSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteUserError.html"
+                                  title='enum rusoto_workdocs::DeleteUserError'>DeleteUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeActivitiesError.html"
+                                  title='enum rusoto_workdocs::DescribeActivitiesError'>DescribeActivitiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeActivities</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCommentsError.html"
+                                  title='enum rusoto_workdocs::DescribeCommentsError'>DescribeCommentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeComments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDocumentVersionsError.html"
+                                  title='enum rusoto_workdocs::DescribeDocumentVersionsError'>DescribeDocumentVersionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDocumentVersions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeFolderContentsError.html"
+                                  title='enum rusoto_workdocs::DescribeFolderContentsError'>DescribeFolderContentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeFolderContents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeGroupsError.html"
+                                  title='enum rusoto_workdocs::DescribeGroupsError'>DescribeGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeNotificationSubscriptionsError.html"
+                                  title='enum rusoto_workdocs::DescribeNotificationSubscriptionsError'>DescribeNotificationSubscriptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeNotificationSubscriptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeResourcePermissionsError.html"
+                                  title='enum rusoto_workdocs::DescribeResourcePermissionsError'>DescribeResourcePermissionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeResourcePermissions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRootFoldersError.html"
+                                  title='enum rusoto_workdocs::DescribeRootFoldersError'>DescribeRootFoldersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRootFolders</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeUsersError.html"
+                                  title='enum rusoto_workdocs::DescribeUsersError'>DescribeUsersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeUsers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCurrentUserError.html"
+                                  title='enum rusoto_workdocs::GetCurrentUserError'>GetCurrentUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCurrentUser</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentError.html"
+                                  title='enum rusoto_workdocs::GetDocumentError'>GetDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentPathError.html"
+                                  title='enum rusoto_workdocs::GetDocumentPathError'>GetDocumentPathError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentPath</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDocumentVersionError.html"
+                                  title='enum rusoto_workdocs::GetDocumentVersionError'>GetDocumentVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDocumentVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetFolderError.html"
+                                  title='enum rusoto_workdocs::GetFolderError'>GetFolderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetFolder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetFolderPathError.html"
+                                  title='enum rusoto_workdocs::GetFolderPathError'>GetFolderPathError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetFolderPath</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.InitiateDocumentVersionUploadError.html"
+                                  title='enum rusoto_workdocs::InitiateDocumentVersionUploadError'>InitiateDocumentVersionUploadError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by InitiateDocumentVersionUpload</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveAllResourcePermissionsError.html"
+                                  title='enum rusoto_workdocs::RemoveAllResourcePermissionsError'>RemoveAllResourcePermissionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveAllResourcePermissions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveResourcePermissionError.html"
+                                  title='enum rusoto_workdocs::RemoveResourcePermissionError'>RemoveResourcePermissionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveResourcePermission</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentError.html"
+                                  title='enum rusoto_workdocs::UpdateDocumentError'>UpdateDocumentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocument</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDocumentVersionError.html"
+                                  title='enum rusoto_workdocs::UpdateDocumentVersionError'>UpdateDocumentVersionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDocumentVersion</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateFolderError.html"
+                                  title='enum rusoto_workdocs::UpdateFolderError'>UpdateFolderError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateFolder</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateUserError.html"
+                                  title='enum rusoto_workdocs::UpdateUserError'>UpdateUserError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateUser</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Workdocs.html"
+                                  title='trait rusoto_workdocs::Workdocs'>Workdocs</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon WorkDocs API. Amazon WorkDocs clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_workdocs";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

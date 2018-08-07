@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_dms` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_dms"><title>rusoto_dms - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_dms/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_dms</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_dms', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_dms</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_dms/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Database Migration Service</fullname> <p>AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL, and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to PostgreSQL.</p> <p>For more information about AWS DMS, see the AWS DMS user guide at <a href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a> </p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.DatabaseMigrationServiceClient.html">DatabaseMigrationServiceClient</a> and <a href="trait.DatabaseMigrationService.html">DatabaseMigrationService</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AccountQuota.html"
+                                  title='struct rusoto_dms::AccountQuota'>AccountQuota</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a quota for an AWS account, for example, the number of replication instances allowed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceMessage.html"
+                                  title='struct rusoto_dms::AddTagsToResourceMessage'>AddTagsToResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AddTagsToResourceResponse.html"
+                                  title='struct rusoto_dms::AddTagsToResourceResponse'>AddTagsToResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AvailabilityZone.html"
+                                  title='struct rusoto_dms::AvailabilityZone'>AvailabilityZone</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Certificate.html"
+                                  title='struct rusoto_dms::Certificate'>Certificate</a></td>
+                           <td class='docblock-short'>
+                                <p>The SSL certificate that can be used to encrypt connections between the endpoints and the replication instance.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Connection.html"
+                                  title='struct rusoto_dms::Connection'>Connection</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEndpointMessage.html"
+                                  title='struct rusoto_dms::CreateEndpointMessage'>CreateEndpointMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEndpointResponse.html"
+                                  title='struct rusoto_dms::CreateEndpointResponse'>CreateEndpointResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEventSubscriptionMessage.html"
+                                  title='struct rusoto_dms::CreateEventSubscriptionMessage'>CreateEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateEventSubscriptionResponse.html"
+                                  title='struct rusoto_dms::CreateEventSubscriptionResponse'>CreateEventSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationInstanceMessage.html"
+                                  title='struct rusoto_dms::CreateReplicationInstanceMessage'>CreateReplicationInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationInstanceResponse.html"
+                                  title='struct rusoto_dms::CreateReplicationInstanceResponse'>CreateReplicationInstanceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationSubnetGroupMessage.html"
+                                  title='struct rusoto_dms::CreateReplicationSubnetGroupMessage'>CreateReplicationSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationSubnetGroupResponse.html"
+                                  title='struct rusoto_dms::CreateReplicationSubnetGroupResponse'>CreateReplicationSubnetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationTaskMessage.html"
+                                  title='struct rusoto_dms::CreateReplicationTaskMessage'>CreateReplicationTaskMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateReplicationTaskResponse.html"
+                                  title='struct rusoto_dms::CreateReplicationTaskResponse'>CreateReplicationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DatabaseMigrationServiceClient.html"
+                                  title='struct rusoto_dms::DatabaseMigrationServiceClient'>DatabaseMigrationServiceClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Database Migration Service API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCertificateMessage.html"
+                                  title='struct rusoto_dms::DeleteCertificateMessage'>DeleteCertificateMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCertificateResponse.html"
+                                  title='struct rusoto_dms::DeleteCertificateResponse'>DeleteCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEndpointMessage.html"
+                                  title='struct rusoto_dms::DeleteEndpointMessage'>DeleteEndpointMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEndpointResponse.html"
+                                  title='struct rusoto_dms::DeleteEndpointResponse'>DeleteEndpointResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEventSubscriptionMessage.html"
+                                  title='struct rusoto_dms::DeleteEventSubscriptionMessage'>DeleteEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteEventSubscriptionResponse.html"
+                                  title='struct rusoto_dms::DeleteEventSubscriptionResponse'>DeleteEventSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationInstanceMessage.html"
+                                  title='struct rusoto_dms::DeleteReplicationInstanceMessage'>DeleteReplicationInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationInstanceResponse.html"
+                                  title='struct rusoto_dms::DeleteReplicationInstanceResponse'>DeleteReplicationInstanceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationSubnetGroupMessage.html"
+                                  title='struct rusoto_dms::DeleteReplicationSubnetGroupMessage'>DeleteReplicationSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationSubnetGroupResponse.html"
+                                  title='struct rusoto_dms::DeleteReplicationSubnetGroupResponse'>DeleteReplicationSubnetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationTaskMessage.html"
+                                  title='struct rusoto_dms::DeleteReplicationTaskMessage'>DeleteReplicationTaskMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteReplicationTaskResponse.html"
+                                  title='struct rusoto_dms::DeleteReplicationTaskResponse'>DeleteReplicationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountAttributesMessage.html"
+                                  title='struct rusoto_dms::DescribeAccountAttributesMessage'>DescribeAccountAttributesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAccountAttributesResponse.html"
+                                  title='struct rusoto_dms::DescribeAccountAttributesResponse'>DescribeAccountAttributesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificatesMessage.html"
+                                  title='struct rusoto_dms::DescribeCertificatesMessage'>DescribeCertificatesMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeCertificatesResponse.html"
+                                  title='struct rusoto_dms::DescribeCertificatesResponse'>DescribeCertificatesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionsMessage.html"
+                                  title='struct rusoto_dms::DescribeConnectionsMessage'>DescribeConnectionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeConnectionsResponse.html"
+                                  title='struct rusoto_dms::DescribeConnectionsResponse'>DescribeConnectionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointTypesMessage.html"
+                                  title='struct rusoto_dms::DescribeEndpointTypesMessage'>DescribeEndpointTypesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointTypesResponse.html"
+                                  title='struct rusoto_dms::DescribeEndpointTypesResponse'>DescribeEndpointTypesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointsMessage.html"
+                                  title='struct rusoto_dms::DescribeEndpointsMessage'>DescribeEndpointsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointsResponse.html"
+                                  title='struct rusoto_dms::DescribeEndpointsResponse'>DescribeEndpointsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventCategoriesMessage.html"
+                                  title='struct rusoto_dms::DescribeEventCategoriesMessage'>DescribeEventCategoriesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventCategoriesResponse.html"
+                                  title='struct rusoto_dms::DescribeEventCategoriesResponse'>DescribeEventCategoriesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventSubscriptionsMessage.html"
+                                  title='struct rusoto_dms::DescribeEventSubscriptionsMessage'>DescribeEventSubscriptionsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventSubscriptionsResponse.html"
+                                  title='struct rusoto_dms::DescribeEventSubscriptionsResponse'>DescribeEventSubscriptionsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventsMessage.html"
+                                  title='struct rusoto_dms::DescribeEventsMessage'>DescribeEventsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEventsResponse.html"
+                                  title='struct rusoto_dms::DescribeEventsResponse'>DescribeEventsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOrderableReplicationInstancesMessage.html"
+                                  title='struct rusoto_dms::DescribeOrderableReplicationInstancesMessage'>DescribeOrderableReplicationInstancesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeOrderableReplicationInstancesResponse.html"
+                                  title='struct rusoto_dms::DescribeOrderableReplicationInstancesResponse'>DescribeOrderableReplicationInstancesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRefreshSchemasStatusMessage.html"
+                                  title='struct rusoto_dms::DescribeRefreshSchemasStatusMessage'>DescribeRefreshSchemasStatusMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeRefreshSchemasStatusResponse.html"
+                                  title='struct rusoto_dms::DescribeRefreshSchemasStatusResponse'>DescribeRefreshSchemasStatusResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationInstanceTaskLogsMessage.html"
+                                  title='struct rusoto_dms::DescribeReplicationInstanceTaskLogsMessage'>DescribeReplicationInstanceTaskLogsMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationInstanceTaskLogsResponse.html"
+                                  title='struct rusoto_dms::DescribeReplicationInstanceTaskLogsResponse'>DescribeReplicationInstanceTaskLogsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationInstancesMessage.html"
+                                  title='struct rusoto_dms::DescribeReplicationInstancesMessage'>DescribeReplicationInstancesMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationInstancesResponse.html"
+                                  title='struct rusoto_dms::DescribeReplicationInstancesResponse'>DescribeReplicationInstancesResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationSubnetGroupsMessage.html"
+                                  title='struct rusoto_dms::DescribeReplicationSubnetGroupsMessage'>DescribeReplicationSubnetGroupsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationSubnetGroupsResponse.html"
+                                  title='struct rusoto_dms::DescribeReplicationSubnetGroupsResponse'>DescribeReplicationSubnetGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationTaskAssessmentResultsMessage.html"
+                                  title='struct rusoto_dms::DescribeReplicationTaskAssessmentResultsMessage'>DescribeReplicationTaskAssessmentResultsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationTaskAssessmentResultsResponse.html"
+                                  title='struct rusoto_dms::DescribeReplicationTaskAssessmentResultsResponse'>DescribeReplicationTaskAssessmentResultsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationTasksMessage.html"
+                                  title='struct rusoto_dms::DescribeReplicationTasksMessage'>DescribeReplicationTasksMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeReplicationTasksResponse.html"
+                                  title='struct rusoto_dms::DescribeReplicationTasksResponse'>DescribeReplicationTasksResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSchemasMessage.html"
+                                  title='struct rusoto_dms::DescribeSchemasMessage'>DescribeSchemasMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSchemasResponse.html"
+                                  title='struct rusoto_dms::DescribeSchemasResponse'>DescribeSchemasResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTableStatisticsMessage.html"
+                                  title='struct rusoto_dms::DescribeTableStatisticsMessage'>DescribeTableStatisticsMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTableStatisticsResponse.html"
+                                  title='struct rusoto_dms::DescribeTableStatisticsResponse'>DescribeTableStatisticsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DynamoDbSettings.html"
+                                  title='struct rusoto_dms::DynamoDbSettings'>DynamoDbSettings</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Endpoint.html"
+                                  title='struct rusoto_dms::Endpoint'>Endpoint</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Event.html"
+                                  title='struct rusoto_dms::Event'>Event</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventCategoryGroup.html"
+                                  title='struct rusoto_dms::EventCategoryGroup'>EventCategoryGroup</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EventSubscription.html"
+                                  title='struct rusoto_dms::EventSubscription'>EventSubscription</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Filter.html"
+                                  title='struct rusoto_dms::Filter'>Filter</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportCertificateMessage.html"
+                                  title='struct rusoto_dms::ImportCertificateMessage'>ImportCertificateMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImportCertificateResponse.html"
+                                  title='struct rusoto_dms::ImportCertificateResponse'>ImportCertificateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceMessage.html"
+                                  title='struct rusoto_dms::ListTagsForResourceMessage'>ListTagsForResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceResponse.html"
+                                  title='struct rusoto_dms::ListTagsForResourceResponse'>ListTagsForResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEndpointMessage.html"
+                                  title='struct rusoto_dms::ModifyEndpointMessage'>ModifyEndpointMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEndpointResponse.html"
+                                  title='struct rusoto_dms::ModifyEndpointResponse'>ModifyEndpointResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEventSubscriptionMessage.html"
+                                  title='struct rusoto_dms::ModifyEventSubscriptionMessage'>ModifyEventSubscriptionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyEventSubscriptionResponse.html"
+                                  title='struct rusoto_dms::ModifyEventSubscriptionResponse'>ModifyEventSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationInstanceMessage.html"
+                                  title='struct rusoto_dms::ModifyReplicationInstanceMessage'>ModifyReplicationInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationInstanceResponse.html"
+                                  title='struct rusoto_dms::ModifyReplicationInstanceResponse'>ModifyReplicationInstanceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationSubnetGroupMessage.html"
+                                  title='struct rusoto_dms::ModifyReplicationSubnetGroupMessage'>ModifyReplicationSubnetGroupMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationSubnetGroupResponse.html"
+                                  title='struct rusoto_dms::ModifyReplicationSubnetGroupResponse'>ModifyReplicationSubnetGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationTaskMessage.html"
+                                  title='struct rusoto_dms::ModifyReplicationTaskMessage'>ModifyReplicationTaskMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyReplicationTaskResponse.html"
+                                  title='struct rusoto_dms::ModifyReplicationTaskResponse'>ModifyReplicationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MongoDbSettings.html"
+                                  title='struct rusoto_dms::MongoDbSettings'>MongoDbSettings</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OrderableReplicationInstance.html"
+                                  title='struct rusoto_dms::OrderableReplicationInstance'>OrderableReplicationInstance</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootReplicationInstanceMessage.html"
+                                  title='struct rusoto_dms::RebootReplicationInstanceMessage'>RebootReplicationInstanceMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootReplicationInstanceResponse.html"
+                                  title='struct rusoto_dms::RebootReplicationInstanceResponse'>RebootReplicationInstanceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RefreshSchemasMessage.html"
+                                  title='struct rusoto_dms::RefreshSchemasMessage'>RefreshSchemasMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RefreshSchemasResponse.html"
+                                  title='struct rusoto_dms::RefreshSchemasResponse'>RefreshSchemasResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RefreshSchemasStatus.html"
+                                  title='struct rusoto_dms::RefreshSchemasStatus'>RefreshSchemasStatus</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReloadTablesMessage.html"
+                                  title='struct rusoto_dms::ReloadTablesMessage'>ReloadTablesMessage</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReloadTablesResponse.html"
+                                  title='struct rusoto_dms::ReloadTablesResponse'>ReloadTablesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceMessage.html"
+                                  title='struct rusoto_dms::RemoveTagsFromResourceMessage'>RemoveTagsFromResourceMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemoveTagsFromResourceResponse.html"
+                                  title='struct rusoto_dms::RemoveTagsFromResourceResponse'>RemoveTagsFromResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationInstance.html"
+                                  title='struct rusoto_dms::ReplicationInstance'>ReplicationInstance</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationInstanceTaskLog.html"
+                                  title='struct rusoto_dms::ReplicationInstanceTaskLog'>ReplicationInstanceTaskLog</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains metadata for a replication instance task log.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationPendingModifiedValues.html"
+                                  title='struct rusoto_dms::ReplicationPendingModifiedValues'>ReplicationPendingModifiedValues</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationSubnetGroup.html"
+                                  title='struct rusoto_dms::ReplicationSubnetGroup'>ReplicationSubnetGroup</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationTask.html"
+                                  title='struct rusoto_dms::ReplicationTask'>ReplicationTask</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationTaskAssessmentResult.html"
+                                  title='struct rusoto_dms::ReplicationTaskAssessmentResult'>ReplicationTaskAssessmentResult</a></td>
+                           <td class='docblock-short'>
+                                <p> The task assessment report in JSON format. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ReplicationTaskStats.html"
+                                  title='struct rusoto_dms::ReplicationTaskStats'>ReplicationTaskStats</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Settings.html"
+                                  title='struct rusoto_dms::S3Settings'>S3Settings</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartReplicationTaskAssessmentMessage.html"
+                                  title='struct rusoto_dms::StartReplicationTaskAssessmentMessage'>StartReplicationTaskAssessmentMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartReplicationTaskAssessmentResponse.html"
+                                  title='struct rusoto_dms::StartReplicationTaskAssessmentResponse'>StartReplicationTaskAssessmentResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartReplicationTaskMessage.html"
+                                  title='struct rusoto_dms::StartReplicationTaskMessage'>StartReplicationTaskMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartReplicationTaskResponse.html"
+                                  title='struct rusoto_dms::StartReplicationTaskResponse'>StartReplicationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopReplicationTaskMessage.html"
+                                  title='struct rusoto_dms::StopReplicationTaskMessage'>StopReplicationTaskMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopReplicationTaskResponse.html"
+                                  title='struct rusoto_dms::StopReplicationTaskResponse'>StopReplicationTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subnet.html"
+                                  title='struct rusoto_dms::Subnet'>Subnet</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SupportedEndpointType.html"
+                                  title='struct rusoto_dms::SupportedEndpointType'>SupportedEndpointType</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TableStatistics.html"
+                                  title='struct rusoto_dms::TableStatistics'>TableStatistics</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TableToReload.html"
+                                  title='struct rusoto_dms::TableToReload'>TableToReload</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_dms::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestConnectionMessage.html"
+                                  title='struct rusoto_dms::TestConnectionMessage'>TestConnectionMessage</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestConnectionResponse.html"
+                                  title='struct rusoto_dms::TestConnectionResponse'>TestConnectionResponse</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VpcSecurityGroupMembership.html"
+                                  title='struct rusoto_dms::VpcSecurityGroupMembership'>VpcSecurityGroupMembership</a></td>
+                           <td class='docblock-short'>
+                                <p><p/></p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddTagsToResourceError.html"
+                                  title='enum rusoto_dms::AddTagsToResourceError'>AddTagsToResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AddTagsToResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateEndpointError.html"
+                                  title='enum rusoto_dms::CreateEndpointError'>CreateEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateEventSubscriptionError.html"
+                                  title='enum rusoto_dms::CreateEventSubscriptionError'>CreateEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateReplicationInstanceError.html"
+                                  title='enum rusoto_dms::CreateReplicationInstanceError'>CreateReplicationInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateReplicationInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateReplicationSubnetGroupError.html"
+                                  title='enum rusoto_dms::CreateReplicationSubnetGroupError'>CreateReplicationSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateReplicationSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateReplicationTaskError.html"
+                                  title='enum rusoto_dms::CreateReplicationTaskError'>CreateReplicationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateReplicationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCertificateError.html"
+                                  title='enum rusoto_dms::DeleteCertificateError'>DeleteCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteEndpointError.html"
+                                  title='enum rusoto_dms::DeleteEndpointError'>DeleteEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteEventSubscriptionError.html"
+                                  title='enum rusoto_dms::DeleteEventSubscriptionError'>DeleteEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteReplicationInstanceError.html"
+                                  title='enum rusoto_dms::DeleteReplicationInstanceError'>DeleteReplicationInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteReplicationInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteReplicationSubnetGroupError.html"
+                                  title='enum rusoto_dms::DeleteReplicationSubnetGroupError'>DeleteReplicationSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteReplicationSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteReplicationTaskError.html"
+                                  title='enum rusoto_dms::DeleteReplicationTaskError'>DeleteReplicationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteReplicationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAccountAttributesError.html"
+                                  title='enum rusoto_dms::DescribeAccountAttributesError'>DescribeAccountAttributesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAccountAttributes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeCertificatesError.html"
+                                  title='enum rusoto_dms::DescribeCertificatesError'>DescribeCertificatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeCertificates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeConnectionsError.html"
+                                  title='enum rusoto_dms::DescribeConnectionsError'>DescribeConnectionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeConnections</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEndpointTypesError.html"
+                                  title='enum rusoto_dms::DescribeEndpointTypesError'>DescribeEndpointTypesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEndpointTypes</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEndpointsError.html"
+                                  title='enum rusoto_dms::DescribeEndpointsError'>DescribeEndpointsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEndpoints</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventCategoriesError.html"
+                                  title='enum rusoto_dms::DescribeEventCategoriesError'>DescribeEventCategoriesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventCategories</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventSubscriptionsError.html"
+                                  title='enum rusoto_dms::DescribeEventSubscriptionsError'>DescribeEventSubscriptionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEventSubscriptions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEventsError.html"
+                                  title='enum rusoto_dms::DescribeEventsError'>DescribeEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeOrderableReplicationInstancesError.html"
+                                  title='enum rusoto_dms::DescribeOrderableReplicationInstancesError'>DescribeOrderableReplicationInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeOrderableReplicationInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeRefreshSchemasStatusError.html"
+                                  title='enum rusoto_dms::DescribeRefreshSchemasStatusError'>DescribeRefreshSchemasStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeRefreshSchemasStatus</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReplicationInstanceTaskLogsError.html"
+                                  title='enum rusoto_dms::DescribeReplicationInstanceTaskLogsError'>DescribeReplicationInstanceTaskLogsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReplicationInstanceTaskLogs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReplicationInstancesError.html"
+                                  title='enum rusoto_dms::DescribeReplicationInstancesError'>DescribeReplicationInstancesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReplicationInstances</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReplicationSubnetGroupsError.html"
+                                  title='enum rusoto_dms::DescribeReplicationSubnetGroupsError'>DescribeReplicationSubnetGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReplicationSubnetGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReplicationTaskAssessmentResultsError.html"
+                                  title='enum rusoto_dms::DescribeReplicationTaskAssessmentResultsError'>DescribeReplicationTaskAssessmentResultsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReplicationTaskAssessmentResults</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeReplicationTasksError.html"
+                                  title='enum rusoto_dms::DescribeReplicationTasksError'>DescribeReplicationTasksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeReplicationTasks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSchemasError.html"
+                                  title='enum rusoto_dms::DescribeSchemasError'>DescribeSchemasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSchemas</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTableStatisticsError.html"
+                                  title='enum rusoto_dms::DescribeTableStatisticsError'>DescribeTableStatisticsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTableStatistics</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ImportCertificateError.html"
+                                  title='enum rusoto_dms::ImportCertificateError'>ImportCertificateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ImportCertificate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_dms::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyEndpointError.html"
+                                  title='enum rusoto_dms::ModifyEndpointError'>ModifyEndpointError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyEndpoint</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyEventSubscriptionError.html"
+                                  title='enum rusoto_dms::ModifyEventSubscriptionError'>ModifyEventSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyEventSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyReplicationInstanceError.html"
+                                  title='enum rusoto_dms::ModifyReplicationInstanceError'>ModifyReplicationInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyReplicationInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyReplicationSubnetGroupError.html"
+                                  title='enum rusoto_dms::ModifyReplicationSubnetGroupError'>ModifyReplicationSubnetGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyReplicationSubnetGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyReplicationTaskError.html"
+                                  title='enum rusoto_dms::ModifyReplicationTaskError'>ModifyReplicationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyReplicationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebootReplicationInstanceError.html"
+                                  title='enum rusoto_dms::RebootReplicationInstanceError'>RebootReplicationInstanceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebootReplicationInstance</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RefreshSchemasError.html"
+                                  title='enum rusoto_dms::RefreshSchemasError'>RefreshSchemasError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RefreshSchemas</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ReloadTablesError.html"
+                                  title='enum rusoto_dms::ReloadTablesError'>ReloadTablesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ReloadTables</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RemoveTagsFromResourceError.html"
+                                  title='enum rusoto_dms::RemoveTagsFromResourceError'>RemoveTagsFromResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RemoveTagsFromResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartReplicationTaskAssessmentError.html"
+                                  title='enum rusoto_dms::StartReplicationTaskAssessmentError'>StartReplicationTaskAssessmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartReplicationTaskAssessment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartReplicationTaskError.html"
+                                  title='enum rusoto_dms::StartReplicationTaskError'>StartReplicationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartReplicationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopReplicationTaskError.html"
+                                  title='enum rusoto_dms::StopReplicationTaskError'>StopReplicationTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopReplicationTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestConnectionError.html"
+                                  title='enum rusoto_dms::TestConnectionError'>TestConnectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestConnection</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.DatabaseMigrationService.html"
+                                  title='trait rusoto_dms::DatabaseMigrationService'>DatabaseMigrationService</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Database Migration Service API. AWS Database Migration Service clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_dms";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

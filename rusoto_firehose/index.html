@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_firehose` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_firehose"><title>rusoto_firehose - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_firehose/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_firehose</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_firehose', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_firehose</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_firehose/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>Amazon Kinesis Firehose API Reference</fullname> <p>Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon Redshift.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.KinesisFirehoseClient.html">KinesisFirehoseClient</a> and <a href="trait.KinesisFirehose.html">KinesisFirehose</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BufferingHints.html"
+                                  title='struct rusoto_firehose::BufferingHints'>BufferingHints</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes hints for the buffering to perform before delivering data to the destination. Please note that these options are treated as hints, and therefore Kinesis Firehose may choose to use different values when it is optimal.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchLoggingOptions.html"
+                                  title='struct rusoto_firehose::CloudWatchLoggingOptions'>CloudWatchLoggingOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the Amazon CloudWatch logging options for your delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CopyCommand.html"
+                                  title='struct rusoto_firehose::CopyCommand'>CopyCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a <code>COPY</code> command for Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeliveryStreamInput.html"
+                                  title='struct rusoto_firehose::CreateDeliveryStreamInput'>CreateDeliveryStreamInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateDeliveryStreamOutput.html"
+                                  title='struct rusoto_firehose::CreateDeliveryStreamOutput'>CreateDeliveryStreamOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDeliveryStreamInput.html"
+                                  title='struct rusoto_firehose::DeleteDeliveryStreamInput'>DeleteDeliveryStreamInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDeliveryStreamOutput.html"
+                                  title='struct rusoto_firehose::DeleteDeliveryStreamOutput'>DeleteDeliveryStreamOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeliveryStreamDescription.html"
+                                  title='struct rusoto_firehose::DeliveryStreamDescription'>DeliveryStreamDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDeliveryStreamInput.html"
+                                  title='struct rusoto_firehose::DescribeDeliveryStreamInput'>DescribeDeliveryStreamInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDeliveryStreamOutput.html"
+                                  title='struct rusoto_firehose::DescribeDeliveryStreamOutput'>DescribeDeliveryStreamOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DestinationDescription.html"
+                                  title='struct rusoto_firehose::DestinationDescription'>DestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the destination for a delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchBufferingHints.html"
+                                  title='struct rusoto_firehose::ElasticsearchBufferingHints'>ElasticsearchBufferingHints</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the buffering to perform before delivering data to the Amazon ES destination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchDestinationConfiguration.html"
+                                  title='struct rusoto_firehose::ElasticsearchDestinationConfiguration'>ElasticsearchDestinationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration of a destination in Amazon ES.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchDestinationDescription.html"
+                                  title='struct rusoto_firehose::ElasticsearchDestinationDescription'>ElasticsearchDestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>The destination description in Amazon ES.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchDestinationUpdate.html"
+                                  title='struct rusoto_firehose::ElasticsearchDestinationUpdate'>ElasticsearchDestinationUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an update for a destination in Amazon ES.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ElasticsearchRetryOptions.html"
+                                  title='struct rusoto_firehose::ElasticsearchRetryOptions'>ElasticsearchRetryOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Configures retry behavior in case Kinesis Firehose is unable to deliver documents to Amazon ES.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EncryptionConfiguration.html"
+                                  title='struct rusoto_firehose::EncryptionConfiguration'>EncryptionConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the encryption for a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExtendedS3DestinationConfiguration.html"
+                                  title='struct rusoto_firehose::ExtendedS3DestinationConfiguration'>ExtendedS3DestinationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration of a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExtendedS3DestinationDescription.html"
+                                  title='struct rusoto_firehose::ExtendedS3DestinationDescription'>ExtendedS3DestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExtendedS3DestinationUpdate.html"
+                                  title='struct rusoto_firehose::ExtendedS3DestinationUpdate'>ExtendedS3DestinationUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an update for a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KMSEncryptionConfig.html"
+                                  title='struct rusoto_firehose::KMSEncryptionConfig'>KMSEncryptionConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an encryption key for a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KinesisFirehoseClient.html"
+                                  title='struct rusoto_firehose::KinesisFirehoseClient'>KinesisFirehoseClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Firehose API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KinesisStreamSourceConfiguration.html"
+                                  title='struct rusoto_firehose::KinesisStreamSourceConfiguration'>KinesisStreamSourceConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>The stream and role ARNs for a Kinesis stream used as the source for a delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KinesisStreamSourceDescription.html"
+                                  title='struct rusoto_firehose::KinesisStreamSourceDescription'>KinesisStreamSourceDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Details about a Kinesis stream used as the source for a Kinesis Firehose delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeliveryStreamsInput.html"
+                                  title='struct rusoto_firehose::ListDeliveryStreamsInput'>ListDeliveryStreamsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDeliveryStreamsOutput.html"
+                                  title='struct rusoto_firehose::ListDeliveryStreamsOutput'>ListDeliveryStreamsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProcessingConfiguration.html"
+                                  title='struct rusoto_firehose::ProcessingConfiguration'>ProcessingConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a data processing configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Processor.html"
+                                  title='struct rusoto_firehose::Processor'>Processor</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a data processor.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProcessorParameter.html"
+                                  title='struct rusoto_firehose::ProcessorParameter'>ProcessorParameter</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the processor parameter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordBatchInput.html"
+                                  title='struct rusoto_firehose::PutRecordBatchInput'>PutRecordBatchInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordBatchOutput.html"
+                                  title='struct rusoto_firehose::PutRecordBatchOutput'>PutRecordBatchOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordBatchResponseEntry.html"
+                                  title='struct rusoto_firehose::PutRecordBatchResponseEntry'>PutRecordBatchResponseEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the result for an individual record from a <a>PutRecordBatch</a> request. If the record is successfully added to your delivery stream, it receives a record ID. If the record fails to be added to your delivery stream, the result includes an error code and an error message.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordInput.html"
+                                  title='struct rusoto_firehose::PutRecordInput'>PutRecordInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRecordOutput.html"
+                                  title='struct rusoto_firehose::PutRecordOutput'>PutRecordOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Record.html"
+                                  title='struct rusoto_firehose::Record'>Record</a></td>
+                           <td class='docblock-short'>
+                                <p>The unit of data in a delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDestinationConfiguration.html"
+                                  title='struct rusoto_firehose::RedshiftDestinationConfiguration'>RedshiftDestinationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration of a destination in Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDestinationDescription.html"
+                                  title='struct rusoto_firehose::RedshiftDestinationDescription'>RedshiftDestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a destination in Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftDestinationUpdate.html"
+                                  title='struct rusoto_firehose::RedshiftDestinationUpdate'>RedshiftDestinationUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an update for a destination in Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RedshiftRetryOptions.html"
+                                  title='struct rusoto_firehose::RedshiftRetryOptions'>RedshiftRetryOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Configures retry behavior in case Kinesis Firehose is unable to deliver documents to Amazon Redshift.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3DestinationConfiguration.html"
+                                  title='struct rusoto_firehose::S3DestinationConfiguration'>S3DestinationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration of a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3DestinationDescription.html"
+                                  title='struct rusoto_firehose::S3DestinationDescription'>S3DestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3DestinationUpdate.html"
+                                  title='struct rusoto_firehose::S3DestinationUpdate'>S3DestinationUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an update for a destination in Amazon S3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SourceDescription.html"
+                                  title='struct rusoto_firehose::SourceDescription'>SourceDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Details about a Kinesis stream used as the source for a Kinesis Firehose delivery stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SplunkDestinationConfiguration.html"
+                                  title='struct rusoto_firehose::SplunkDestinationConfiguration'>SplunkDestinationConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the configuration of a destination in Splunk.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SplunkDestinationDescription.html"
+                                  title='struct rusoto_firehose::SplunkDestinationDescription'>SplunkDestinationDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes a destination in Splunk.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SplunkDestinationUpdate.html"
+                                  title='struct rusoto_firehose::SplunkDestinationUpdate'>SplunkDestinationUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes an update for a destination in Splunk.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SplunkRetryOptions.html"
+                                  title='struct rusoto_firehose::SplunkRetryOptions'>SplunkRetryOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>Configures retry behavior in case Kinesis Firehose is unable to deliver documents to Splunk or if it doesn't receive an acknowledgment from Splunk.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDestinationInput.html"
+                                  title='struct rusoto_firehose::UpdateDestinationInput'>UpdateDestinationInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateDestinationOutput.html"
+                                  title='struct rusoto_firehose::UpdateDestinationOutput'>UpdateDestinationOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateDeliveryStreamError.html"
+                                  title='enum rusoto_firehose::CreateDeliveryStreamError'>CreateDeliveryStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateDeliveryStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDeliveryStreamError.html"
+                                  title='enum rusoto_firehose::DeleteDeliveryStreamError'>DeleteDeliveryStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDeliveryStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDeliveryStreamError.html"
+                                  title='enum rusoto_firehose::DescribeDeliveryStreamError'>DescribeDeliveryStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDeliveryStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDeliveryStreamsError.html"
+                                  title='enum rusoto_firehose::ListDeliveryStreamsError'>ListDeliveryStreamsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDeliveryStreams</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRecordBatchError.html"
+                                  title='enum rusoto_firehose::PutRecordBatchError'>PutRecordBatchError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRecordBatch</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRecordError.html"
+                                  title='enum rusoto_firehose::PutRecordError'>PutRecordError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRecord</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateDestinationError.html"
+                                  title='enum rusoto_firehose::UpdateDestinationError'>UpdateDestinationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateDestination</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.KinesisFirehose.html"
+                                  title='trait rusoto_firehose::KinesisFirehose'>KinesisFirehose</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Firehose API. Firehose clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_firehose";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

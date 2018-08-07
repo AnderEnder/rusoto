@@ -1,0 +1,549 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_batch` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_batch"><title>rusoto_batch - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_batch/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_batch</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_batch', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_batch</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_batch/lib.rs.html#14-32' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers, scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional batch computing software. This service can efficiently provision resources in response to jobs submitted in order to eliminate capacity constraints, reduce compute costs, and deliver results quickly.</p> <p>As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software, which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the AWS Cloud.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.BatchClient.html">BatchClient</a> and <a href="trait.Batch.html">Batch</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArrayProperties.html"
+                                  title='struct rusoto_batch::ArrayProperties'>ArrayProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch array job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArrayPropertiesDetail.html"
+                                  title='struct rusoto_batch::ArrayPropertiesDetail'>ArrayPropertiesDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the array properties of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ArrayPropertiesSummary.html"
+                                  title='struct rusoto_batch::ArrayPropertiesSummary'>ArrayPropertiesSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the array properties of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttemptContainerDetail.html"
+                                  title='struct rusoto_batch::AttemptContainerDetail'>AttemptContainerDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the details of a container that is part of a job attempt.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttemptDetail.html"
+                                  title='struct rusoto_batch::AttemptDetail'>AttemptDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing a job attempt.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BatchClient.html"
+                                  title='struct rusoto_batch::BatchClient'>BatchClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Batch API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobRequest.html"
+                                  title='struct rusoto_batch::CancelJobRequest'>CancelJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobResponse.html"
+                                  title='struct rusoto_batch::CancelJobResponse'>CancelJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComputeEnvironmentDetail.html"
+                                  title='struct rusoto_batch::ComputeEnvironmentDetail'>ComputeEnvironmentDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch compute environment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComputeEnvironmentOrder.html"
+                                  title='struct rusoto_batch::ComputeEnvironmentOrder'>ComputeEnvironmentOrder</a></td>
+                           <td class='docblock-short'>
+                                <p>The order in which compute environments are tried for job placement within a queue. Compute environments are tried in ascending order. For example, if two compute environments are associated with a job queue, the compute environment with a lower order integer value is tried for job placement first.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComputeResource.html"
+                                  title='struct rusoto_batch::ComputeResource'>ComputeResource</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch compute resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComputeResourceUpdate.html"
+                                  title='struct rusoto_batch::ComputeResourceUpdate'>ComputeResourceUpdate</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the attributes of a compute environment that can be updated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContainerDetail.html"
+                                  title='struct rusoto_batch::ContainerDetail'>ContainerDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the details of a container that is part of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContainerOverrides.html"
+                                  title='struct rusoto_batch::ContainerOverrides'>ContainerOverrides</a></td>
+                           <td class='docblock-short'>
+                                <p>The overrides that should be sent to a container.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContainerProperties.html"
+                                  title='struct rusoto_batch::ContainerProperties'>ContainerProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>Container properties are used in job definitions to describe the container that is launched as part of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContainerSummary.html"
+                                  title='struct rusoto_batch::ContainerSummary'>ContainerSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing summary details of a container within a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateComputeEnvironmentRequest.html"
+                                  title='struct rusoto_batch::CreateComputeEnvironmentRequest'>CreateComputeEnvironmentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateComputeEnvironmentResponse.html"
+                                  title='struct rusoto_batch::CreateComputeEnvironmentResponse'>CreateComputeEnvironmentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobQueueRequest.html"
+                                  title='struct rusoto_batch::CreateJobQueueRequest'>CreateJobQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobQueueResponse.html"
+                                  title='struct rusoto_batch::CreateJobQueueResponse'>CreateJobQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteComputeEnvironmentRequest.html"
+                                  title='struct rusoto_batch::DeleteComputeEnvironmentRequest'>DeleteComputeEnvironmentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteComputeEnvironmentResponse.html"
+                                  title='struct rusoto_batch::DeleteComputeEnvironmentResponse'>DeleteComputeEnvironmentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteJobQueueRequest.html"
+                                  title='struct rusoto_batch::DeleteJobQueueRequest'>DeleteJobQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteJobQueueResponse.html"
+                                  title='struct rusoto_batch::DeleteJobQueueResponse'>DeleteJobQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterJobDefinitionRequest.html"
+                                  title='struct rusoto_batch::DeregisterJobDefinitionRequest'>DeregisterJobDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeregisterJobDefinitionResponse.html"
+                                  title='struct rusoto_batch::DeregisterJobDefinitionResponse'>DeregisterJobDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeComputeEnvironmentsRequest.html"
+                                  title='struct rusoto_batch::DescribeComputeEnvironmentsRequest'>DescribeComputeEnvironmentsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeComputeEnvironmentsResponse.html"
+                                  title='struct rusoto_batch::DescribeComputeEnvironmentsResponse'>DescribeComputeEnvironmentsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobDefinitionsRequest.html"
+                                  title='struct rusoto_batch::DescribeJobDefinitionsRequest'>DescribeJobDefinitionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobDefinitionsResponse.html"
+                                  title='struct rusoto_batch::DescribeJobDefinitionsResponse'>DescribeJobDefinitionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobQueuesRequest.html"
+                                  title='struct rusoto_batch::DescribeJobQueuesRequest'>DescribeJobQueuesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobQueuesResponse.html"
+                                  title='struct rusoto_batch::DescribeJobQueuesResponse'>DescribeJobQueuesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobsRequest.html"
+                                  title='struct rusoto_batch::DescribeJobsRequest'>DescribeJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeJobsResponse.html"
+                                  title='struct rusoto_batch::DescribeJobsResponse'>DescribeJobsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Host.html"
+                                  title='struct rusoto_batch::Host'>Host</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of the <code>host</code> parameter determine whether your data volume persists on the host container instance and where it is stored. If the host parameter is empty, then the Docker daemon assigns a host path for your data volume, but the data is not guaranteed to persist after the containers associated with it stop running.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobDefinition.html"
+                                  title='struct rusoto_batch::JobDefinition'>JobDefinition</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch job definition.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobDependency.html"
+                                  title='struct rusoto_batch::JobDependency'>JobDependency</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch job dependency.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobDetail.html"
+                                  title='struct rusoto_batch::JobDetail'>JobDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing an AWS Batch job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobQueueDetail.html"
+                                  title='struct rusoto_batch::JobQueueDetail'>JobQueueDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing the details of an AWS Batch job queue.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobSummary.html"
+                                  title='struct rusoto_batch::JobSummary'>JobSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing summary details of a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobTimeout.html"
+                                  title='struct rusoto_batch::JobTimeout'>JobTimeout</a></td>
+                           <td class='docblock-short'>
+                                <p>An object representing a job timeout configuration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.KeyValuePair.html"
+                                  title='struct rusoto_batch::KeyValuePair'>KeyValuePair</a></td>
+                           <td class='docblock-short'>
+                                <p>A key-value pair object.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsRequest.html"
+                                  title='struct rusoto_batch::ListJobsRequest'>ListJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsResponse.html"
+                                  title='struct rusoto_batch::ListJobsResponse'>ListJobsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MountPoint.html"
+                                  title='struct rusoto_batch::MountPoint'>MountPoint</a></td>
+                           <td class='docblock-short'>
+                                <p>Details on a Docker volume mount point that is used in a job's container properties.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterJobDefinitionRequest.html"
+                                  title='struct rusoto_batch::RegisterJobDefinitionRequest'>RegisterJobDefinitionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterJobDefinitionResponse.html"
+                                  title='struct rusoto_batch::RegisterJobDefinitionResponse'>RegisterJobDefinitionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RetryStrategy.html"
+                                  title='struct rusoto_batch::RetryStrategy'>RetryStrategy</a></td>
+                           <td class='docblock-short'>
+                                <p>The retry strategy associated with a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubmitJobRequest.html"
+                                  title='struct rusoto_batch::SubmitJobRequest'>SubmitJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubmitJobResponse.html"
+                                  title='struct rusoto_batch::SubmitJobResponse'>SubmitJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateJobRequest.html"
+                                  title='struct rusoto_batch::TerminateJobRequest'>TerminateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateJobResponse.html"
+                                  title='struct rusoto_batch::TerminateJobResponse'>TerminateJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Ulimit.html"
+                                  title='struct rusoto_batch::Ulimit'>Ulimit</a></td>
+                           <td class='docblock-short'>
+                                <p>The <code>ulimit</code> settings to pass to the container.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateComputeEnvironmentRequest.html"
+                                  title='struct rusoto_batch::UpdateComputeEnvironmentRequest'>UpdateComputeEnvironmentRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateComputeEnvironmentResponse.html"
+                                  title='struct rusoto_batch::UpdateComputeEnvironmentResponse'>UpdateComputeEnvironmentResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobQueueRequest.html"
+                                  title='struct rusoto_batch::UpdateJobQueueRequest'>UpdateJobQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobQueueResponse.html"
+                                  title='struct rusoto_batch::UpdateJobQueueResponse'>UpdateJobQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Volume.html"
+                                  title='struct rusoto_batch::Volume'>Volume</a></td>
+                           <td class='docblock-short'>
+                                <p>A data volume used in a job's container properties.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelJobError.html"
+                                  title='enum rusoto_batch::CancelJobError'>CancelJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateComputeEnvironmentError.html"
+                                  title='enum rusoto_batch::CreateComputeEnvironmentError'>CreateComputeEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateComputeEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateJobQueueError.html"
+                                  title='enum rusoto_batch::CreateJobQueueError'>CreateJobQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateJobQueue</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteComputeEnvironmentError.html"
+                                  title='enum rusoto_batch::DeleteComputeEnvironmentError'>DeleteComputeEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteComputeEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteJobQueueError.html"
+                                  title='enum rusoto_batch::DeleteJobQueueError'>DeleteJobQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteJobQueue</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeregisterJobDefinitionError.html"
+                                  title='enum rusoto_batch::DeregisterJobDefinitionError'>DeregisterJobDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeregisterJobDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeComputeEnvironmentsError.html"
+                                  title='enum rusoto_batch::DescribeComputeEnvironmentsError'>DescribeComputeEnvironmentsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeComputeEnvironments</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobDefinitionsError.html"
+                                  title='enum rusoto_batch::DescribeJobDefinitionsError'>DescribeJobDefinitionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJobDefinitions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobQueuesError.html"
+                                  title='enum rusoto_batch::DescribeJobQueuesError'>DescribeJobQueuesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJobQueues</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeJobsError.html"
+                                  title='enum rusoto_batch::DescribeJobsError'>DescribeJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_batch::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RegisterJobDefinitionError.html"
+                                  title='enum rusoto_batch::RegisterJobDefinitionError'>RegisterJobDefinitionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RegisterJobDefinition</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SubmitJobError.html"
+                                  title='enum rusoto_batch::SubmitJobError'>SubmitJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SubmitJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TerminateJobError.html"
+                                  title='enum rusoto_batch::TerminateJobError'>TerminateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TerminateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateComputeEnvironmentError.html"
+                                  title='enum rusoto_batch::UpdateComputeEnvironmentError'>UpdateComputeEnvironmentError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateComputeEnvironment</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateJobQueueError.html"
+                                  title='enum rusoto_batch::UpdateJobQueueError'>UpdateJobQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateJobQueue</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Batch.html"
+                                  title='trait rusoto_batch::Batch'>Batch</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Batch API. AWS Batch clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_batch";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

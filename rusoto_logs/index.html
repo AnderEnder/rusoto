@@ -1,0 +1,734 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_logs` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_logs"><title>rusoto_logs - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_logs/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_logs</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_logs', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_logs</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_logs/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><p>You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch console, CloudWatch Logs commands in the AWS CLI, CloudWatch Logs API, or CloudWatch Logs SDK.</p> <p>You can use CloudWatch Logs to:</p> <ul> <li> <p> <b>Monitor logs from EC2 instances in real-time</b>: You can use CloudWatch Logs to monitor applications and systems using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs and send you a notification whenever the rate of errors exceeds a threshold that you specify. CloudWatch Logs uses your log data for monitoring; so, no code changes are required. For example, you can monitor application logs for specific literal terms (such as &quot;NullReferenceException&quot;) or count the number of occurrences of a literal term at a particular position in log data (such as &quot;404&quot; status codes in an Apache access log). When the term you are searching for is found, CloudWatch Logs reports the data to a CloudWatch metric that you specify.</p> </li> <li> <p> <b>Monitor AWS CloudTrail logged events</b>: You can create alarms in CloudWatch and receive notifications of particular API activity as captured by CloudTrail and use the notification to perform troubleshooting.</p> </li> <li> <p> <b>Archive log data</b>: You can use CloudWatch Logs to store your log data in highly durable storage. You can change the log retention setting so that any log events older than this setting are automatically deleted. The CloudWatch Logs agent makes it easy to quickly send both rotated and non-rotated log data off of a host and into the log service. You can then access the raw log data when you need it.</p> </li> </ul></p>
+<p>If you're using the service, you're probably looking for <a href="struct.CloudWatchLogsClient.html">CloudWatchLogsClient</a> and <a href="trait.CloudWatchLogs.html">CloudWatchLogs</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AssociateKmsKeyRequest.html"
+                                  title='struct rusoto_logs::AssociateKmsKeyRequest'>AssociateKmsKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelExportTaskRequest.html"
+                                  title='struct rusoto_logs::CancelExportTaskRequest'>CancelExportTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchLogsClient.html"
+                                  title='struct rusoto_logs::CloudWatchLogsClient'>CloudWatchLogsClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon CloudWatch Logs API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateExportTaskRequest.html"
+                                  title='struct rusoto_logs::CreateExportTaskRequest'>CreateExportTaskRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateExportTaskResponse.html"
+                                  title='struct rusoto_logs::CreateExportTaskResponse'>CreateExportTaskResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLogGroupRequest.html"
+                                  title='struct rusoto_logs::CreateLogGroupRequest'>CreateLogGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateLogStreamRequest.html"
+                                  title='struct rusoto_logs::CreateLogStreamRequest'>CreateLogStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDestinationRequest.html"
+                                  title='struct rusoto_logs::DeleteDestinationRequest'>DeleteDestinationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLogGroupRequest.html"
+                                  title='struct rusoto_logs::DeleteLogGroupRequest'>DeleteLogGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteLogStreamRequest.html"
+                                  title='struct rusoto_logs::DeleteLogStreamRequest'>DeleteLogStreamRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteMetricFilterRequest.html"
+                                  title='struct rusoto_logs::DeleteMetricFilterRequest'>DeleteMetricFilterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteResourcePolicyRequest.html"
+                                  title='struct rusoto_logs::DeleteResourcePolicyRequest'>DeleteResourcePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteRetentionPolicyRequest.html"
+                                  title='struct rusoto_logs::DeleteRetentionPolicyRequest'>DeleteRetentionPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriptionFilterRequest.html"
+                                  title='struct rusoto_logs::DeleteSubscriptionFilterRequest'>DeleteSubscriptionFilterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDestinationsRequest.html"
+                                  title='struct rusoto_logs::DescribeDestinationsRequest'>DescribeDestinationsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeDestinationsResponse.html"
+                                  title='struct rusoto_logs::DescribeDestinationsResponse'>DescribeDestinationsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeExportTasksRequest.html"
+                                  title='struct rusoto_logs::DescribeExportTasksRequest'>DescribeExportTasksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeExportTasksResponse.html"
+                                  title='struct rusoto_logs::DescribeExportTasksResponse'>DescribeExportTasksResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLogGroupsRequest.html"
+                                  title='struct rusoto_logs::DescribeLogGroupsRequest'>DescribeLogGroupsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLogGroupsResponse.html"
+                                  title='struct rusoto_logs::DescribeLogGroupsResponse'>DescribeLogGroupsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLogStreamsRequest.html"
+                                  title='struct rusoto_logs::DescribeLogStreamsRequest'>DescribeLogStreamsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeLogStreamsResponse.html"
+                                  title='struct rusoto_logs::DescribeLogStreamsResponse'>DescribeLogStreamsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMetricFiltersRequest.html"
+                                  title='struct rusoto_logs::DescribeMetricFiltersRequest'>DescribeMetricFiltersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeMetricFiltersResponse.html"
+                                  title='struct rusoto_logs::DescribeMetricFiltersResponse'>DescribeMetricFiltersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourcePoliciesRequest.html"
+                                  title='struct rusoto_logs::DescribeResourcePoliciesRequest'>DescribeResourcePoliciesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeResourcePoliciesResponse.html"
+                                  title='struct rusoto_logs::DescribeResourcePoliciesResponse'>DescribeResourcePoliciesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscriptionFiltersRequest.html"
+                                  title='struct rusoto_logs::DescribeSubscriptionFiltersRequest'>DescribeSubscriptionFiltersRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscriptionFiltersResponse.html"
+                                  title='struct rusoto_logs::DescribeSubscriptionFiltersResponse'>DescribeSubscriptionFiltersResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Destination.html"
+                                  title='struct rusoto_logs::Destination'>Destination</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a cross-account destination that receives subscription log events.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisassociateKmsKeyRequest.html"
+                                  title='struct rusoto_logs::DisassociateKmsKeyRequest'>DisassociateKmsKeyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportTask.html"
+                                  title='struct rusoto_logs::ExportTask'>ExportTask</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an export task.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportTaskExecutionInfo.html"
+                                  title='struct rusoto_logs::ExportTaskExecutionInfo'>ExportTaskExecutionInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the status of an export task.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExportTaskStatus.html"
+                                  title='struct rusoto_logs::ExportTaskStatus'>ExportTaskStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the status of an export task.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FilterLogEventsRequest.html"
+                                  title='struct rusoto_logs::FilterLogEventsRequest'>FilterLogEventsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FilterLogEventsResponse.html"
+                                  title='struct rusoto_logs::FilterLogEventsResponse'>FilterLogEventsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FilteredLogEvent.html"
+                                  title='struct rusoto_logs::FilteredLogEvent'>FilteredLogEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a matched event.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLogEventsRequest.html"
+                                  title='struct rusoto_logs::GetLogEventsRequest'>GetLogEventsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetLogEventsResponse.html"
+                                  title='struct rusoto_logs::GetLogEventsResponse'>GetLogEventsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InputLogEvent.html"
+                                  title='struct rusoto_logs::InputLogEvent'>InputLogEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a log event, which is a record of activity that was recorded by the application or resource being monitored.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsLogGroupRequest.html"
+                                  title='struct rusoto_logs::ListTagsLogGroupRequest'>ListTagsLogGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsLogGroupResponse.html"
+                                  title='struct rusoto_logs::ListTagsLogGroupResponse'>ListTagsLogGroupResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LogGroup.html"
+                                  title='struct rusoto_logs::LogGroup'>LogGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a log group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LogStream.html"
+                                  title='struct rusoto_logs::LogStream'>LogStream</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a log stream, which is a sequence of log events from a single emitter of logs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricFilter.html"
+                                  title='struct rusoto_logs::MetricFilter'>MetricFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Metric filters express how CloudWatch Logs would extract metric observations from ingested log events and transform them into metric data in a CloudWatch metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricFilterMatchRecord.html"
+                                  title='struct rusoto_logs::MetricFilterMatchRecord'>MetricFilterMatchRecord</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a matched event.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricTransformation.html"
+                                  title='struct rusoto_logs::MetricTransformation'>MetricTransformation</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates how to transform ingested log events in to metric data in a CloudWatch metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputLogEvent.html"
+                                  title='struct rusoto_logs::OutputLogEvent'>OutputLogEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a log event.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutDestinationPolicyRequest.html"
+                                  title='struct rusoto_logs::PutDestinationPolicyRequest'>PutDestinationPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutDestinationRequest.html"
+                                  title='struct rusoto_logs::PutDestinationRequest'>PutDestinationRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutDestinationResponse.html"
+                                  title='struct rusoto_logs::PutDestinationResponse'>PutDestinationResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutLogEventsRequest.html"
+                                  title='struct rusoto_logs::PutLogEventsRequest'>PutLogEventsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutLogEventsResponse.html"
+                                  title='struct rusoto_logs::PutLogEventsResponse'>PutLogEventsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutMetricFilterRequest.html"
+                                  title='struct rusoto_logs::PutMetricFilterRequest'>PutMetricFilterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutResourcePolicyRequest.html"
+                                  title='struct rusoto_logs::PutResourcePolicyRequest'>PutResourcePolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutResourcePolicyResponse.html"
+                                  title='struct rusoto_logs::PutResourcePolicyResponse'>PutResourcePolicyResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutRetentionPolicyRequest.html"
+                                  title='struct rusoto_logs::PutRetentionPolicyRequest'>PutRetentionPolicyRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutSubscriptionFilterRequest.html"
+                                  title='struct rusoto_logs::PutSubscriptionFilterRequest'>PutSubscriptionFilterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RejectedLogEventsInfo.html"
+                                  title='struct rusoto_logs::RejectedLogEventsInfo'>RejectedLogEventsInfo</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the rejected events.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourcePolicy.html"
+                                  title='struct rusoto_logs::ResourcePolicy'>ResourcePolicy</a></td>
+                           <td class='docblock-short'>
+                                <p>A policy enabling one or more entities to put logs to a log group in this account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchedLogStream.html"
+                                  title='struct rusoto_logs::SearchedLogStream'>SearchedLogStream</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the search status of a log stream.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubscriptionFilter.html"
+                                  title='struct rusoto_logs::SubscriptionFilter'>SubscriptionFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a subscription filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagLogGroupRequest.html"
+                                  title='struct rusoto_logs::TagLogGroupRequest'>TagLogGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestMetricFilterRequest.html"
+                                  title='struct rusoto_logs::TestMetricFilterRequest'>TestMetricFilterRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TestMetricFilterResponse.html"
+                                  title='struct rusoto_logs::TestMetricFilterResponse'>TestMetricFilterResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagLogGroupRequest.html"
+                                  title='struct rusoto_logs::UntagLogGroupRequest'>UntagLogGroupRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AssociateKmsKeyError.html"
+                                  title='enum rusoto_logs::AssociateKmsKeyError'>AssociateKmsKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by AssociateKmsKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelExportTaskError.html"
+                                  title='enum rusoto_logs::CancelExportTaskError'>CancelExportTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelExportTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateExportTaskError.html"
+                                  title='enum rusoto_logs::CreateExportTaskError'>CreateExportTaskError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateExportTask</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLogGroupError.html"
+                                  title='enum rusoto_logs::CreateLogGroupError'>CreateLogGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLogGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateLogStreamError.html"
+                                  title='enum rusoto_logs::CreateLogStreamError'>CreateLogStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateLogStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDestinationError.html"
+                                  title='enum rusoto_logs::DeleteDestinationError'>DeleteDestinationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDestination</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLogGroupError.html"
+                                  title='enum rusoto_logs::DeleteLogGroupError'>DeleteLogGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLogGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteLogStreamError.html"
+                                  title='enum rusoto_logs::DeleteLogStreamError'>DeleteLogStreamError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteLogStream</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteMetricFilterError.html"
+                                  title='enum rusoto_logs::DeleteMetricFilterError'>DeleteMetricFilterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteMetricFilter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteResourcePolicyError.html"
+                                  title='enum rusoto_logs::DeleteResourcePolicyError'>DeleteResourcePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteResourcePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteRetentionPolicyError.html"
+                                  title='enum rusoto_logs::DeleteRetentionPolicyError'>DeleteRetentionPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteRetentionPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSubscriptionFilterError.html"
+                                  title='enum rusoto_logs::DeleteSubscriptionFilterError'>DeleteSubscriptionFilterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSubscriptionFilter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeDestinationsError.html"
+                                  title='enum rusoto_logs::DescribeDestinationsError'>DescribeDestinationsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeDestinations</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeExportTasksError.html"
+                                  title='enum rusoto_logs::DescribeExportTasksError'>DescribeExportTasksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeExportTasks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLogGroupsError.html"
+                                  title='enum rusoto_logs::DescribeLogGroupsError'>DescribeLogGroupsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLogGroups</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeLogStreamsError.html"
+                                  title='enum rusoto_logs::DescribeLogStreamsError'>DescribeLogStreamsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeLogStreams</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeMetricFiltersError.html"
+                                  title='enum rusoto_logs::DescribeMetricFiltersError'>DescribeMetricFiltersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeMetricFilters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeResourcePoliciesError.html"
+                                  title='enum rusoto_logs::DescribeResourcePoliciesError'>DescribeResourcePoliciesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeResourcePolicies</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSubscriptionFiltersError.html"
+                                  title='enum rusoto_logs::DescribeSubscriptionFiltersError'>DescribeSubscriptionFiltersError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSubscriptionFilters</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisassociateKmsKeyError.html"
+                                  title='enum rusoto_logs::DisassociateKmsKeyError'>DisassociateKmsKeyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisassociateKmsKey</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.FilterLogEventsError.html"
+                                  title='enum rusoto_logs::FilterLogEventsError'>FilterLogEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by FilterLogEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetLogEventsError.html"
+                                  title='enum rusoto_logs::GetLogEventsError'>GetLogEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetLogEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsLogGroupError.html"
+                                  title='enum rusoto_logs::ListTagsLogGroupError'>ListTagsLogGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsLogGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutDestinationError.html"
+                                  title='enum rusoto_logs::PutDestinationError'>PutDestinationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutDestination</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutDestinationPolicyError.html"
+                                  title='enum rusoto_logs::PutDestinationPolicyError'>PutDestinationPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutDestinationPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutLogEventsError.html"
+                                  title='enum rusoto_logs::PutLogEventsError'>PutLogEventsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutLogEvents</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutMetricFilterError.html"
+                                  title='enum rusoto_logs::PutMetricFilterError'>PutMetricFilterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutMetricFilter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutResourcePolicyError.html"
+                                  title='enum rusoto_logs::PutResourcePolicyError'>PutResourcePolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutResourcePolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutRetentionPolicyError.html"
+                                  title='enum rusoto_logs::PutRetentionPolicyError'>PutRetentionPolicyError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutRetentionPolicy</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutSubscriptionFilterError.html"
+                                  title='enum rusoto_logs::PutSubscriptionFilterError'>PutSubscriptionFilterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutSubscriptionFilter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagLogGroupError.html"
+                                  title='enum rusoto_logs::TagLogGroupError'>TagLogGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagLogGroup</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TestMetricFilterError.html"
+                                  title='enum rusoto_logs::TestMetricFilterError'>TestMetricFilterError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TestMetricFilter</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagLogGroupError.html"
+                                  title='enum rusoto_logs::UntagLogGroupError'>UntagLogGroupError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagLogGroup</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.CloudWatchLogs.html"
+                                  title='trait rusoto_logs::CloudWatchLogs'>CloudWatchLogs</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon CloudWatch Logs API. Amazon CloudWatch Logs clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_logs";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

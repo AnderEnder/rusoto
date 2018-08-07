@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_shield` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_shield"><title>rusoto_shield - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_shield/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_shield</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_shield', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_shield</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_shield/lib.rs.html#14-30' title='goto source code'>[src]</a></span></h1><div class='docblock'><p><fullname>AWS Shield Advanced</fullname> <p>This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer Guide</a>.</p></p>
+<p>If you're using the service, you're probably looking for <a href="struct.ShieldClient.html">ShieldClient</a> and <a href="trait.Shield.html">Shield</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttackDetail.html"
+                                  title='struct rusoto_shield::AttackDetail'>AttackDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>The details of a DDoS attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttackProperty.html"
+                                  title='struct rusoto_shield::AttackProperty'>AttackProperty</a></td>
+                           <td class='docblock-short'>
+                                <p>Details of the described attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttackSummary.html"
+                                  title='struct rusoto_shield::AttackSummary'>AttackSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>Summarizes all DDoS attacks for a specified time period.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AttackVectorDescription.html"
+                                  title='struct rusoto_shield::AttackVectorDescription'>AttackVectorDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Contributor.html"
+                                  title='struct rusoto_shield::Contributor'>Contributor</a></td>
+                           <td class='docblock-short'>
+                                <p>A contributor to the attack and their contribution.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProtectionRequest.html"
+                                  title='struct rusoto_shield::CreateProtectionRequest'>CreateProtectionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateProtectionResponse.html"
+                                  title='struct rusoto_shield::CreateProtectionResponse'>CreateProtectionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionRequest.html"
+                                  title='struct rusoto_shield::CreateSubscriptionRequest'>CreateSubscriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriptionResponse.html"
+                                  title='struct rusoto_shield::CreateSubscriptionResponse'>CreateSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProtectionRequest.html"
+                                  title='struct rusoto_shield::DeleteProtectionRequest'>DeleteProtectionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteProtectionResponse.html"
+                                  title='struct rusoto_shield::DeleteProtectionResponse'>DeleteProtectionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriptionRequest.html"
+                                  title='struct rusoto_shield::DeleteSubscriptionRequest'>DeleteSubscriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriptionResponse.html"
+                                  title='struct rusoto_shield::DeleteSubscriptionResponse'>DeleteSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAttackRequest.html"
+                                  title='struct rusoto_shield::DescribeAttackRequest'>DescribeAttackRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAttackResponse.html"
+                                  title='struct rusoto_shield::DescribeAttackResponse'>DescribeAttackResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeProtectionRequest.html"
+                                  title='struct rusoto_shield::DescribeProtectionRequest'>DescribeProtectionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeProtectionResponse.html"
+                                  title='struct rusoto_shield::DescribeProtectionResponse'>DescribeProtectionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscriptionRequest.html"
+                                  title='struct rusoto_shield::DescribeSubscriptionRequest'>DescribeSubscriptionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscriptionResponse.html"
+                                  title='struct rusoto_shield::DescribeSubscriptionResponse'>DescribeSubscriptionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionStateRequest.html"
+                                  title='struct rusoto_shield::GetSubscriptionStateRequest'>GetSubscriptionStateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSubscriptionStateResponse.html"
+                                  title='struct rusoto_shield::GetSubscriptionStateResponse'>GetSubscriptionStateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttacksRequest.html"
+                                  title='struct rusoto_shield::ListAttacksRequest'>ListAttacksRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListAttacksResponse.html"
+                                  title='struct rusoto_shield::ListAttacksResponse'>ListAttacksResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProtectionsRequest.html"
+                                  title='struct rusoto_shield::ListProtectionsRequest'>ListProtectionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListProtectionsResponse.html"
+                                  title='struct rusoto_shield::ListProtectionsResponse'>ListProtectionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mitigation.html"
+                                  title='struct rusoto_shield::Mitigation'>Mitigation</a></td>
+                           <td class='docblock-short'>
+                                <p>The mitigation applied to a DDoS attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Protection.html"
+                                  title='struct rusoto_shield::Protection'>Protection</a></td>
+                           <td class='docblock-short'>
+                                <p>An object that represents a resource that is under DDoS protection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ShieldClient.html"
+                                  title='struct rusoto_shield::ShieldClient'>ShieldClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWS Shield API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SubResourceSummary.html"
+                                  title='struct rusoto_shield::SubResourceSummary'>SubResourceSummary</a></td>
+                           <td class='docblock-short'>
+                                <p>The attack information for the specified SubResource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subscription.html"
+                                  title='struct rusoto_shield::Subscription'>Subscription</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the AWS Shield Advanced subscription for an account.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SummarizedAttackVector.html"
+                                  title='struct rusoto_shield::SummarizedAttackVector'>SummarizedAttackVector</a></td>
+                           <td class='docblock-short'>
+                                <p>A summary of information about the attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SummarizedCounter.html"
+                                  title='struct rusoto_shield::SummarizedCounter'>SummarizedCounter</a></td>
+                           <td class='docblock-short'>
+                                <p>The counter that describes a DDoS attack.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimeRange.html"
+                                  title='struct rusoto_shield::TimeRange'>TimeRange</a></td>
+                           <td class='docblock-short'>
+                                <p>The time range.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateProtectionError.html"
+                                  title='enum rusoto_shield::CreateProtectionError'>CreateProtectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateProtection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSubscriptionError.html"
+                                  title='enum rusoto_shield::CreateSubscriptionError'>CreateSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteProtectionError.html"
+                                  title='enum rusoto_shield::DeleteProtectionError'>DeleteProtectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteProtection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSubscriptionError.html"
+                                  title='enum rusoto_shield::DeleteSubscriptionError'>DeleteSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAttackError.html"
+                                  title='enum rusoto_shield::DescribeAttackError'>DescribeAttackError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAttack</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeProtectionError.html"
+                                  title='enum rusoto_shield::DescribeProtectionError'>DescribeProtectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeProtection</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSubscriptionError.html"
+                                  title='enum rusoto_shield::DescribeSubscriptionError'>DescribeSubscriptionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSubscription</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetSubscriptionStateError.html"
+                                  title='enum rusoto_shield::GetSubscriptionStateError'>GetSubscriptionStateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetSubscriptionState</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListAttacksError.html"
+                                  title='enum rusoto_shield::ListAttacksError'>ListAttacksError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListAttacks</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListProtectionsError.html"
+                                  title='enum rusoto_shield::ListProtectionsError'>ListProtectionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListProtections</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Shield.html"
+                                  title='trait rusoto_shield::Shield'>Shield</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWS Shield API. AWS Shield clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_shield";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

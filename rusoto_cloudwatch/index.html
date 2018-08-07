@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_cloudwatch` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_cloudwatch"><title>rusoto_cloudwatch - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_cloudwatch/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_cloudwatch</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_cloudwatch', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_cloudwatch</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_cloudwatch/lib.rs.html#14-27' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and applications.</p> <p>CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use this data to determine whether you should launch additional instances to handle increased load. You can also use this data to stop under-used instances to save money.</p> <p>In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational health.</p>
+<p>If you're using the service, you're probably looking for <a href="struct.CloudWatchClient.html">CloudWatchClient</a> and <a href="trait.CloudWatch.html">CloudWatch</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AlarmHistoryItem.html"
+                                  title='struct rusoto_cloudwatch::AlarmHistoryItem'>AlarmHistoryItem</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents the history of a specific alarm.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CloudWatchClient.html"
+                                  title='struct rusoto_cloudwatch::CloudWatchClient'>CloudWatchClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the CloudWatch API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DashboardEntry.html"
+                                  title='struct rusoto_cloudwatch::DashboardEntry'>DashboardEntry</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a specific dashboard.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DashboardValidationMessage.html"
+                                  title='struct rusoto_cloudwatch::DashboardValidationMessage'>DashboardValidationMessage</a></td>
+                           <td class='docblock-short'>
+                                <p>An error or warning for the operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Datapoint.html"
+                                  title='struct rusoto_cloudwatch::Datapoint'>Datapoint</a></td>
+                           <td class='docblock-short'>
+                                <p>Encapsulates the statistical data that CloudWatch computes from metric data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteAlarmsInput.html"
+                                  title='struct rusoto_cloudwatch::DeleteAlarmsInput'>DeleteAlarmsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDashboardsInput.html"
+                                  title='struct rusoto_cloudwatch::DeleteDashboardsInput'>DeleteDashboardsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteDashboardsOutput.html"
+                                  title='struct rusoto_cloudwatch::DeleteDashboardsOutput'>DeleteDashboardsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmHistoryInput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmHistoryInput'>DescribeAlarmHistoryInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmHistoryOutput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmHistoryOutput'>DescribeAlarmHistoryOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmsForMetricInput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmsForMetricInput'>DescribeAlarmsForMetricInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmsForMetricOutput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmsForMetricOutput'>DescribeAlarmsForMetricOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmsInput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmsInput'>DescribeAlarmsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeAlarmsOutput.html"
+                                  title='struct rusoto_cloudwatch::DescribeAlarmsOutput'>DescribeAlarmsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Dimension.html"
+                                  title='struct rusoto_cloudwatch::Dimension'>Dimension</a></td>
+                           <td class='docblock-short'>
+                                <p>Expands the identity of a metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DimensionFilter.html"
+                                  title='struct rusoto_cloudwatch::DimensionFilter'>DimensionFilter</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents filters for a dimension.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DisableAlarmActionsInput.html"
+                                  title='struct rusoto_cloudwatch::DisableAlarmActionsInput'>DisableAlarmActionsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EnableAlarmActionsInput.html"
+                                  title='struct rusoto_cloudwatch::EnableAlarmActionsInput'>EnableAlarmActionsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDashboardInput.html"
+                                  title='struct rusoto_cloudwatch::GetDashboardInput'>GetDashboardInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetDashboardOutput.html"
+                                  title='struct rusoto_cloudwatch::GetDashboardOutput'>GetDashboardOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMetricDataInput.html"
+                                  title='struct rusoto_cloudwatch::GetMetricDataInput'>GetMetricDataInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMetricDataOutput.html"
+                                  title='struct rusoto_cloudwatch::GetMetricDataOutput'>GetMetricDataOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMetricStatisticsInput.html"
+                                  title='struct rusoto_cloudwatch::GetMetricStatisticsInput'>GetMetricStatisticsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetMetricStatisticsOutput.html"
+                                  title='struct rusoto_cloudwatch::GetMetricStatisticsOutput'>GetMetricStatisticsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDashboardsInput.html"
+                                  title='struct rusoto_cloudwatch::ListDashboardsInput'>ListDashboardsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListDashboardsOutput.html"
+                                  title='struct rusoto_cloudwatch::ListDashboardsOutput'>ListDashboardsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMetricsInput.html"
+                                  title='struct rusoto_cloudwatch::ListMetricsInput'>ListMetricsInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListMetricsOutput.html"
+                                  title='struct rusoto_cloudwatch::ListMetricsOutput'>ListMetricsOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MessageData.html"
+                                  title='struct rusoto_cloudwatch::MessageData'>MessageData</a></td>
+                           <td class='docblock-short'>
+                                <p>A message returned by the <code>GetMetricData</code>API, including a code and a description.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Metric.html"
+                                  title='struct rusoto_cloudwatch::Metric'>Metric</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a specific metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricAlarm.html"
+                                  title='struct rusoto_cloudwatch::MetricAlarm'>MetricAlarm</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents an alarm.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDataQuery.html"
+                                  title='struct rusoto_cloudwatch::MetricDataQuery'>MetricDataQuery</a></td>
+                           <td class='docblock-short'>
+                                <p>This structure indicates the metric data to return, and whether this call is just retrieving a batch set of data for one metric, or is performing a math expression on metric data. A single <code>GetMetricData</code> call can include up to 100 <code>MetricDataQuery</code> structures.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDataResult.html"
+                                  title='struct rusoto_cloudwatch::MetricDataResult'>MetricDataResult</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>GetMetricData</code> call returns an array of <code>MetricDataResult</code> structures. Each of these structures includes the data points for that metric, along with the time stamps of those data points and other identifying information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricDatum.html"
+                                  title='struct rusoto_cloudwatch::MetricDatum'>MetricDatum</a></td>
+                           <td class='docblock-short'>
+                                <p>Encapsulates the information sent to either create a metric or add new values to be aggregated into an existing metric.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MetricStat.html"
+                                  title='struct rusoto_cloudwatch::MetricStat'>MetricStat</a></td>
+                           <td class='docblock-short'>
+                                <p>This structure defines the metric to be returned, along with the statistics, period, and units.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutDashboardInput.html"
+                                  title='struct rusoto_cloudwatch::PutDashboardInput'>PutDashboardInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutDashboardOutput.html"
+                                  title='struct rusoto_cloudwatch::PutDashboardOutput'>PutDashboardOutput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutMetricAlarmInput.html"
+                                  title='struct rusoto_cloudwatch::PutMetricAlarmInput'>PutMetricAlarmInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PutMetricDataInput.html"
+                                  title='struct rusoto_cloudwatch::PutMetricDataInput'>PutMetricDataInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SetAlarmStateInput.html"
+                                  title='struct rusoto_cloudwatch::SetAlarmStateInput'>SetAlarmStateInput</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StatisticSet.html"
+                                  title='struct rusoto_cloudwatch::StatisticSet'>StatisticSet</a></td>
+                           <td class='docblock-short'>
+                                <p>Represents a set of statistics that describes a specific metric. </p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteAlarmsError.html"
+                                  title='enum rusoto_cloudwatch::DeleteAlarmsError'>DeleteAlarmsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteAlarms</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteDashboardsError.html"
+                                  title='enum rusoto_cloudwatch::DeleteDashboardsError'>DeleteDashboardsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteDashboards</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAlarmHistoryError.html"
+                                  title='enum rusoto_cloudwatch::DescribeAlarmHistoryError'>DescribeAlarmHistoryError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAlarmHistory</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAlarmsError.html"
+                                  title='enum rusoto_cloudwatch::DescribeAlarmsError'>DescribeAlarmsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAlarms</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeAlarmsForMetricError.html"
+                                  title='enum rusoto_cloudwatch::DescribeAlarmsForMetricError'>DescribeAlarmsForMetricError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeAlarmsForMetric</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DisableAlarmActionsError.html"
+                                  title='enum rusoto_cloudwatch::DisableAlarmActionsError'>DisableAlarmActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DisableAlarmActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.EnableAlarmActionsError.html"
+                                  title='enum rusoto_cloudwatch::EnableAlarmActionsError'>EnableAlarmActionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by EnableAlarmActions</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetDashboardError.html"
+                                  title='enum rusoto_cloudwatch::GetDashboardError'>GetDashboardError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetDashboard</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMetricDataError.html"
+                                  title='enum rusoto_cloudwatch::GetMetricDataError'>GetMetricDataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMetricData</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetMetricStatisticsError.html"
+                                  title='enum rusoto_cloudwatch::GetMetricStatisticsError'>GetMetricStatisticsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetMetricStatistics</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListDashboardsError.html"
+                                  title='enum rusoto_cloudwatch::ListDashboardsError'>ListDashboardsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListDashboards</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListMetricsError.html"
+                                  title='enum rusoto_cloudwatch::ListMetricsError'>ListMetricsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListMetrics</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutDashboardError.html"
+                                  title='enum rusoto_cloudwatch::PutDashboardError'>PutDashboardError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutDashboard</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutMetricAlarmError.html"
+                                  title='enum rusoto_cloudwatch::PutMetricAlarmError'>PutMetricAlarmError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutMetricAlarm</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.PutMetricDataError.html"
+                                  title='enum rusoto_cloudwatch::PutMetricDataError'>PutMetricDataError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by PutMetricData</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SetAlarmStateError.html"
+                                  title='enum rusoto_cloudwatch::SetAlarmStateError'>SetAlarmStateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SetAlarmState</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.CloudWatch.html"
+                                  title='trait rusoto_cloudwatch::CloudWatch'>CloudWatch</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the CloudWatch API. CloudWatch clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_cloudwatch";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>
